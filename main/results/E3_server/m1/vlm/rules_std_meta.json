@@ -1,0 +1,25 @@
+{
+ "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+ "revision": [
+  "cc594898137f460bfe9f0759e9844b3ce807cfb5"
+ ],
+ "transformers": "4.57.1",
+ "torch": "2.7.0+cu126",
+ "variant": "std",
+ "prompt": "You are checking whether a robot finished a pushing task. These are two top-down images of a 2D scene. The light-green T-shaped area marks the target. The first image shows the goal: the gray T-shaped block placed exactly on the light-green target. The second image shows the result after the robot pushed the block. Ignore the small blue circle. Is the gray T-shaped block on the target, at the same place and in the same orientation as in the goal image, up to a small tolerance? Answer with Yes or No.",
+ "pairs": "goal:final",
+ "npz": "/home/yonghwi/pmx/B/feat/E3/m1/rules_std.npz",
+ "bs": 64,
+ "gpu_mem": "11GiB",
+ "modules_on_cpu": 14,
+ "n_modules": 33,
+ "load_s": 11.44083285331726,
+ "timing": {
+  "final": {
+   "n": 4398,
+   "s": 1042.8935248851776
+  }
+ },
+ "yes_id": 9454,
+ "no_id": 2753
+}

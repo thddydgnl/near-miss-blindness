@@ -1,0 +1,23 @@
+# OS and Python caches
+.DS_Store
+__pycache__/
+*.pyc
+
+# Runner lock files
+*.lock
+
+# Raw E0b counterfactual records and cached DINO features (~128 MB, ~14,800 files).
+# They stay on disk and are distributed as a release asset (see README).
+/main/results/E0b_runpod/cf_json/
+/main/results/E0b_runpod/cf_json_v2/
+/main/results/E0b_runpod/e0b_validate/
+/main/results/E0b_runpod/e0b_validate_v2/
+/main/results/E0b_runpod/b-e0_results/judge_a/dino_feats.npz
+
+# LaTeX build files
+/paper/**/*.aux
+/paper/**/*.out
+/paper/**/*.synctex.gz
+/paper/**/*.fls
+/paper/**/*.fdb_latexmk
+/paper/**/*.xdv

@@ -1,0 +1,113 @@
+/workspace/code/analyze_e1.py:130: RuntimeWarning: overflow encountered in exp
+  res[name] = float(np.exp((sp_logit(q) - a) / b)) if b < 0 else np.nan
+[25s] a|pooled6 done
+[32s] a|t1 done
+[38s] a|t2 done
+[46s] a|t4 done
+[52s] a|t5 done
+[59s] a|t6 done
+[66s] a|t8 done
+[91s] c|pooled6 done
+[97s] c|t0 done
+[104s] c|t1 done
+[111s] c|t2 done
+[117s] c|t4 done
+[123s] c|t5 done
+[129s] c|t6 done
+[136s] c|t8 done
+[157s] d|pooled6 done
+[165s] d|t0 done
+[172s] d|t1 done
+[177s] d|t2 done
+[183s] d|t4 done
+[190s] d|t5 done
+[197s] d|t6 done
+[203s] d|t8 done
+[228s] c_lift|pooled6 done
+[235s] c_lift|t0 done
+[242s] c_lift|t1 done
+[248s] c_lift|t2 done
+[255s] c_lift|t4 done
+[261s] c_lift|t5 done
+[267s] c_lift|t6 done
+[274s] c_lift|t8 done
+[276s] sensitivity a|k1
+[278s] sensitivity a|k2
+[280s] sensitivity a|k3
+[283s] sensitivity a|k4
+[286s] sensitivity c|k1
+[289s] sensitivity c|k2
+[292s] sensitivity c|k3
+[295s] sensitivity c|k4
+[298s] sensitivity d|k1
+[301s] sensitivity d|k2
+[304s] sensitivity d|k3
+[307s] sensitivity d|k4
+[320s] D3 feat_real
+[330s] D3 feat_imag_k1
+[340s] D3 feat_imag_k2
+[352s] D3 feat_imag_k3
+[365s] D3 feat_imag_k4
+{
+ "cell": "a|pooled6",
+ "k": 1,
+ "verdict": {
+  "H1a": {
+   "slope": -1.4449079503942626,
+   "slope_ci95": [
+    -1.8223594208013545,
+    -1.1164208967175808
+   ],
+   "slope_ci_holm": [
+    -1.8825707280258832,
+    -1.0613356800589617
+   ],
+   "near": 0.2975609756097561,
+   "near_ci95": [
+    0.24074074074074073,
+    0.35467980295566504
+   ],
+   "far": 0.11815068493150685,
+   "far_ci95": [
+    0.07081174438687392,
+    0.17009345794392525
+   ],
+   "near_over_far": 2.5184870979144574,
+   "near_over_far_ci95": [
+    1.7880821151849189,
+    3.947339269737122
+   ],
+   "i_monotone": true,
+   "ii_near>=0.3": false,
+   "iii_near/far>=3": false,
+   "holds": false
+  },
+  "H1b": {
+   "d_auroc_near": 0.27518928865051095,
+   "d_auroc_near_ci95": [
+    0.24045026524487856,
+    0.31123101573106327
+   ],
+   "d_auroc_far": 0.13710943512390328,
+   "d_auroc_far_ci95": [
+    0.10431669461707938,
+    0.17315665219968523
+   ],
+   "horizon_slope": -0.06456794425087105,
+   "horizon_slope_ci95": [
+    -0.07717870894677237,
+    -0.052066875806350194
+   ],
+   "horizon_slope_ci_holm": [
+    -0.08019766333139466,
+    -0.04969319286677418
+   ],
+   "i_d_near>=0.05": true,
+   "ii_d_far<=0.02": false,
+   "iii_slope_ci<0": true,
+   "holds": false
+  },
+  "go": false
+ }
+}
+ANALYSIS_DONE 366s

@@ -1,0 +1,26 @@
+{
+ "identity": {
+  "bins_equal": true,
+  "bins_obj_equal": true,
+  "n_val_episodes_equal": true,
+  "bins": {
+   "success": 0.5329375,
+   "near": 0.1709375,
+   "mid": 0.0925,
+   "far": 0.203625
+  },
+  "bins_ref": {
+   "success": 0.5329375,
+   "near": 0.1709375,
+   "mid": 0.0925,
+   "far": 0.203625
+  }
+ },
+ "n_rows": 5304,
+ "n_held": 3304,
+ "n_train": 2000,
+ "n_held_expert": 413,
+ "held_success_frac_r": 0.5378329297820823,
+ "held_success_frac_robj": 0.7388014527845036,
+ "time_s": 89.54481792449951
+}

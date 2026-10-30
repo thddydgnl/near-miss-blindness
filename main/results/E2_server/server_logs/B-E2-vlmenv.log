@@ -1,0 +1,70 @@
+Using Python 3.11.17 environment at: pmx/envs/b-vlm
+Resolved 28 packages in 1.71s
+Downloading numpy (16.1MiB)
+Downloading torch (825.1MiB)
+Downloading triton (149.3MiB)
+Downloading torchvision (7.1MiB)
+ Downloaded torchvision
+ Downloaded numpy
+ Downloaded triton
+ Downloaded torch
+Prepared 4 packages in 14.97s
+Installed 28 packages in 219ms
+ + filelock==4.2.4
+ + fsspec==2026.9.0
+ + jinja2==3.1.6
+ + markupsafe==3.0.4
+ + mpmath==1.3.0
+ + networkx==3.6.1
+ + numpy==2.4.6
+ + nvidia-cublas-cu12==12.6.4.1
+ + nvidia-cuda-cupti-cu12==12.6.80
+ + nvidia-cuda-nvrtc-cu12==12.6.77
+ + nvidia-cuda-runtime-cu12==12.6.77
+ + nvidia-cudnn-cu12==9.5.1.17
+ + nvidia-cufft-cu12==11.3.0.4
+ + nvidia-cufile-cu12==1.11.1.6
+ + nvidia-curand-cu12==10.3.7.77
+ + nvidia-cusolver-cu12==11.7.1.2
+ + nvidia-cusparse-cu12==12.5.4.2
+ + nvidia-cusparselt-cu12==0.6.3
+ + nvidia-nccl-cu12==2.26.2
+ + nvidia-nvjitlink-cu12==12.6.85
+ + nvidia-nvtx-cu12==12.6.77
+ + pillow==13.0.0
+ + setuptools==84.2.1
+ + sympy==1.14.0
+ + torch==2.7.0
+ + torchvision==0.22.0
+ + triton==3.3.0
+ + typing-extensions==4.16.0
+Using Python 3.11.17 environment at: pmx/envs/b-vlm
+Resolved 44 packages in 97ms
+Downloading transformers (11.4MiB)
+ Downloaded transformers
+Prepared 2 packages in 242ms
+Uninstalled 1 package in 32ms
+Installed 18 packages in 60ms
+ + accelerate==1.10.1
+ + certifi==2026.10.19
+ + charset-normalizer==3.5.2
+ + hf-xet==1.7.0
+ + huggingface-hub==0.36.2
+ + idna==3.20
+ - numpy==2.4.6
+ + numpy==1.26.4
+ + packaging==26.3
+ + psutil==7.2.2
+ + pyyaml==6.0.3
+ + regex==2026.9.29
+ + requests==2.34.2
+ + safetensors==0.8.0
+ + scipy==1.13.1
+ + tokenizers==0.22.2
+ + tqdm==4.70.1
+ + transformers==4.57.1
+ + urllib3==2.8.0
+b-vlm 2.7.0+cu126 12.6 0.22.0+cu126 4.57.1 1.10.1 0.36.2
+Fetching 16 files:   0%|          | 0/16 [00:00<?, ?it/s]Fetching 16 files:  50%|█████     | 8/16 [00:00<00:00, 14.28it/s]Fetching 16 files:  69%|██████▉   | 11/16 [00:20<00:09,  1.82s/it]Fetching 16 files:  75%|███████▌  | 12/16 [01:27<00:29,  7.27s/it]Fetching 16 files:  81%|████████▏ | 13/16 [02:46<00:38, 12.84s/it]Fetching 16 files:  88%|████████▊ | 14/16 [02:47<00:23, 11.99s/it]Fetching 16 files:  94%|█████████▍| 15/16 [02:53<00:11, 11.57s/it]Fetching 16 files: 100%|██████████| 16/16 [02:53<00:00, 10.87s/it]Fetching 16 files: 100%|██████████| 16/16 [02:53<00:00, 10.87s/it]
+QWEN_REVISION cc594898137f460bfe9f0759e9844b3ce807cfb5 /home/yonghwi/pmx/hf/hub/models--Qwen--Qwen2.5-VL-7B-Instruct/snapshots/cc594898137f460bfe9f0759e9844b3ce807cfb5
+SETUP_VLM_DONE

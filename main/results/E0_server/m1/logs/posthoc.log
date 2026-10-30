@@ -1,0 +1,79 @@
+=== main
+  P1[a] near: imag 0.260 real 0.197 shift +0.063 CI [0.02, 0.107] | success: imag 0.832 real 0.951 shift -0.119 CI [-0.161, -0.082]
+  P1[b] near: imag 0.383 real 0.283 shift +0.100 CI [0.06, 0.145] | success: imag 0.793 real 0.886 shift -0.093 CI [-0.157, -0.042]
+  P1[b2] near: imag 0.294 real 0.216 shift +0.078 CI [0.045, 0.113] | success: imag 0.778 real 0.877 shift -0.099 CI [-0.162, -0.048]
+  P2[a] {'near_realfail_to_imagsucc': 0.155, 'near_realsucc_to_imagfail': 0.092, 'succ_realsucc_to_imagfail': 0.145, 'succ_realfail_to_imagsucc': 0.026, 'far_realfail_to_imagsucc': 0.0}
+  P3[a] spearman(near, perception) 0.667 spearman(near, imagination) 0.216
+     far_L   near 0.007 true 0.525 realjudge 0.520 imag 0.497 | perception -0.005 imagination -0.023
+     mixA_L  near 0.170 true 0.507 realjudge 0.525 imag 0.470 | perception +0.018 imagination -0.055
+     mixB_L  near 0.345 true 0.475 realjudge 0.507 imag 0.480 | perception +0.032 imagination -0.027
+     near_L  near 0.475 true 0.472 realjudge 0.507 imag 0.480 | perception +0.035 imagination -0.027
+     iid_L   near 0.380 true 0.502 realjudge 0.525 imag 0.487 | perception +0.023 imagination -0.038
+     far_H   near 0.000 true 0.770 realjudge 0.770 imag 0.693 | perception +0.000 imagination -0.078
+     near_H  near 0.240 true 0.738 realjudge 0.780 imag 0.698 | perception +0.042 imagination -0.083
+     iid_H   near 0.210 true 0.765 realjudge 0.750 imag 0.635 | perception -0.015 imagination -0.115
+  P2[b] {'near_realfail_to_imagsucc': 0.167, 'near_realsucc_to_imagfail': 0.067, 'succ_realsucc_to_imagfail': 0.132, 'succ_realfail_to_imagsucc': 0.039, 'far_realfail_to_imagsucc': 0.002}
+  P3[b] spearman(near, perception) 0.500 spearman(near, imagination) 0.910
+     far_L   near 0.007 true 0.525 realjudge 0.520 imag 0.470 | perception -0.005 imagination -0.050
+     mixA_L  near 0.170 true 0.507 realjudge 0.497 imag 0.477 | perception -0.010 imagination -0.020
+     mixB_L  near 0.345 true 0.475 realjudge 0.542 imag 0.537 | perception +0.068 imagination -0.005
+     near_L  near 0.475 true 0.472 realjudge 0.520 imag 0.550 | perception +0.048 imagination +0.030
+     iid_L   near 0.380 true 0.502 realjudge 0.510 imag 0.510 | perception +0.008 imagination +0.000
+     far_H   near 0.000 true 0.770 realjudge 0.762 imag 0.647 | perception -0.008 imagination -0.115
+     near_H  near 0.240 true 0.738 realjudge 0.715 imag 0.667 | perception -0.023 imagination -0.047
+     iid_H   near 0.210 true 0.765 realjudge 0.680 imag 0.630 | perception -0.085 imagination -0.050
+  P4 ai: p_success 0.916 p_near 0.335 p_far 0.011; spearman 0.802 CI [0.5952380952380953, 0.9285714285714287]; kendall 0.286; max gap 0.062 CI [0.039785659279541315, 0.12443226011737804]; mean over +0.033; over [-0.005, 0.04, 0.08, 0.085, 0.08, -0.018, 0.035, -0.03]
+  P5 {'a_real': (0.971, [0.966, 0.976]), 'a_imag': (0.875, [0.849, 0.897]), 'ai_imag': (0.9, [0.878, 0.92]), 'b_real': (0.906, [0.889, 0.922]), 'b_imag': (0.802, [0.775, 0.833])}
+=== H10
+  P1[a] near: imag 0.259 real 0.199 shift +0.060 CI [-0.007, 0.129] | success: imag 0.519 real 0.946 shift -0.427 CI [-0.518, -0.332]
+  P1[b] near: imag 0.267 real 0.186 shift +0.081 CI [0.016, 0.142] | success: imag 0.504 real 0.850 shift -0.345 CI [-0.428, -0.266]
+  P1[b2] near: imag 0.256 real 0.145 shift +0.111 CI [0.047, 0.172] | success: imag 0.474 real 0.843 shift -0.368 CI [-0.45, -0.291]
+  P2[a] {'near_realfail_to_imagsucc': 0.16, 'near_realsucc_to_imagfail': 0.1, 'succ_realsucc_to_imagfail': 0.449, 'succ_realfail_to_imagsucc': 0.022, 'far_realfail_to_imagsucc': 0.013}
+  P3[a] spearman(near, perception) 0.643 spearman(near, imagination) 0.667
+     far_L   near 0.010 true 0.547 realjudge 0.550 imag 0.283 | perception +0.003 imagination -0.267
+     mixA_L  near 0.147 true 0.510 realjudge 0.500 imag 0.317 | perception -0.010 imagination -0.183
+     mixB_L  near 0.287 true 0.480 realjudge 0.493 imag 0.337 | perception +0.013 imagination -0.157
+     near_L  near 0.427 true 0.460 realjudge 0.513 imag 0.347 | perception +0.053 imagination -0.167
+     iid_L   near 0.327 true 0.523 realjudge 0.550 imag 0.373 | perception +0.027 imagination -0.177
+     far_H   near 0.003 true 0.750 realjudge 0.750 imag 0.427 | perception +0.000 imagination -0.323
+     near_H  near 0.220 true 0.740 realjudge 0.737 imag 0.403 | perception -0.003 imagination -0.333
+     iid_H   near 0.140 true 0.777 realjudge 0.750 imag 0.460 | perception -0.027 imagination -0.290
+  P2[b] {'near_realfail_to_imagsucc': 0.188, 'near_realsucc_to_imagfail': 0.107, 'succ_realsucc_to_imagfail': 0.389, 'succ_realfail_to_imagsucc': 0.044, 'far_realfail_to_imagsucc': 0.013}
+  P3[b] spearman(near, perception) 0.024 spearman(near, imagination) 0.833
+     far_L   near 0.010 true 0.547 realjudge 0.533 imag 0.303 | perception -0.013 imagination -0.230
+     mixA_L  near 0.147 true 0.510 realjudge 0.450 imag 0.313 | perception -0.060 imagination -0.137
+     mixB_L  near 0.287 true 0.480 realjudge 0.427 imag 0.317 | perception -0.053 imagination -0.110
+     near_L  near 0.427 true 0.460 realjudge 0.457 imag 0.360 | perception -0.003 imagination -0.097
+     iid_L   near 0.327 true 0.523 realjudge 0.440 imag 0.350 | perception -0.083 imagination -0.090
+     far_H   near 0.003 true 0.750 realjudge 0.730 imag 0.410 | perception -0.020 imagination -0.320
+     near_H  near 0.220 true 0.740 realjudge 0.687 imag 0.403 | perception -0.053 imagination -0.283
+     iid_H   near 0.140 true 0.777 realjudge 0.633 imag 0.437 | perception -0.143 imagination -0.197
+  P4 ai: p_success 0.705 p_near 0.376 p_far 0.039; spearman 0.929 CI [0.6346866238557247, 0.9523809523809524]; kendall 0.429; max gap 0.093 CI [0.04697593768938968, 0.16830843913368182]; mean over -0.084; over [-0.137, -0.06, -0.013, 0.017, -0.02, -0.183, -0.127, -0.147]
+  P5 {'a_real': (0.969, [0.959, 0.978]), 'a_imag': (0.673, [0.605, 0.735]), 'ai_imag': (0.73, [0.685, 0.773]), 'b_real': (0.916, [0.897, 0.935]), 'b_imag': (0.639, [0.575, 0.689])}
+=== trainsplit
+  P1[a] near: imag 0.268 real 0.231 shift +0.037 CI [0.004, 0.072] | success: imag 0.837 real 0.950 shift -0.113 CI [-0.138, -0.09]
+  P1[b] near: imag 0.434 real 0.332 shift +0.102 CI [0.063, 0.14] | success: imag 0.822 real 0.906 shift -0.084 CI [-0.106, -0.059]
+  P1[b2] near: imag 0.360 real 0.283 shift +0.077 CI [0.04, 0.112] | success: imag 0.807 real 0.901 shift -0.094 CI [-0.117, -0.069]
+  P2[a] {'near_realfail_to_imagsucc': 0.13, 'near_realsucc_to_imagfail': 0.093, 'succ_realsucc_to_imagfail': 0.137, 'succ_realfail_to_imagsucc': 0.024, 'far_realfail_to_imagsucc': 0.004}
+  P3[a] spearman(near, perception) 0.548 spearman(near, imagination) 0.024
+     far_L   near 0.007 true 0.507 realjudge 0.507 imag 0.468 | perception +0.000 imagination -0.040
+     mixA_L  near 0.188 true 0.465 realjudge 0.512 imag 0.460 | perception +0.047 imagination -0.052
+     mixB_L  near 0.362 true 0.445 realjudge 0.497 imag 0.465 | perception +0.052 imagination -0.032
+     near_L  near 0.398 true 0.510 realjudge 0.552 imag 0.495 | perception +0.042 imagination -0.057
+     iid_L   near 0.372 true 0.515 realjudge 0.535 imag 0.492 | perception +0.020 imagination -0.043
+     far_H   near 0.003 true 0.777 realjudge 0.775 imag 0.723 | perception -0.002 imagination -0.052
+     near_H  near 0.310 true 0.682 realjudge 0.743 imag 0.650 | perception +0.060 imagination -0.093
+     iid_H   near 0.180 true 0.792 realjudge 0.762 imag 0.680 | perception -0.030 imagination -0.082
+  P2[b] {'near_realfail_to_imagsucc': 0.169, 'near_realsucc_to_imagfail': 0.067, 'succ_realsucc_to_imagfail': 0.111, 'succ_realfail_to_imagsucc': 0.027, 'far_realfail_to_imagsucc': 0.004}
+  P3[b] spearman(near, perception) 0.500 spearman(near, imagination) 0.857
+     far_L   near 0.007 true 0.507 realjudge 0.512 imag 0.445 | perception +0.005 imagination -0.067
+     mixA_L  near 0.188 true 0.465 realjudge 0.510 imag 0.475 | perception +0.045 imagination -0.035
+     mixB_L  near 0.362 true 0.445 realjudge 0.515 imag 0.537 | perception +0.070 imagination +0.022
+     near_L  near 0.398 true 0.510 realjudge 0.600 imag 0.573 | perception +0.090 imagination -0.027
+     iid_L   near 0.372 true 0.515 realjudge 0.497 imag 0.540 | perception -0.018 imagination +0.043
+     far_H   near 0.003 true 0.777 realjudge 0.770 imag 0.688 | perception -0.007 imagination -0.083
+     near_H  near 0.310 true 0.682 realjudge 0.718 imag 0.713 | perception +0.035 imagination -0.005
+     iid_H   near 0.180 true 0.792 realjudge 0.750 imag 0.703 | perception -0.042 imagination -0.047
+  P4 ai: p_success 0.935 p_near 0.446 p_far 0.024; spearman 0.929 CI [0.6347419188140273, 0.9761904761904763]; kendall 0.714; max gap 0.150 CI [0.08290420854271359, 0.1995385296065048]; mean over +0.073; over [-0.007, 0.092, 0.132, 0.11, 0.135, -0.012, 0.108, 0.022]
+  P5 {'a_real': (0.962, [0.956, 0.969]), 'a_imag': (0.863, [0.843, 0.878]), 'ai_imag': (0.894, [0.879, 0.906]), 'b_real': (0.899, [0.884, 0.909]), 'b_imag': (0.794, [0.773, 0.815])}
+POSTHOC_DONE

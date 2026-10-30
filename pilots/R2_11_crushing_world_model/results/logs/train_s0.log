@@ -1,0 +1,33 @@
+/workspace/code/train.py:76: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  st = torch.load(f'{args.data}/stats.pt')
+/workspace/code/train.py:23: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  d = torch.load(path, map_location='cpu')
+data loaded 5s train (2500, 41, 64, 384) copy_mse 0.1303 mem 5.2 GB
+w256 (256, 256) params 5156224
+mlp64 (256, 64) params 4565248
+mlp16 (256, 16) params 4417504
+mlp8 (256, 8) params 4392880
+res64 (64, 64) params 367744
+res16 (16, 16) params 34624
+res8 (8, 8) params 12704
+[s0] step 0 id_rel w256:1.000 mlp64:1.000 mlp16:1.000 mlp8:1.000 res64:1.000 res16:1.000 res8:1.000 0.0 min
+[s0] it 500 363.4 ms/it 3.0 min
+[s0] step 500 id_rel w256:0.738 mlp64:0.747 mlp16:0.768 mlp8:0.763 res64:0.876 res16:0.920 res8:0.943 3.1 min
+[s0] it 1000 363.4 ms/it 6.1 min
+[s0] step 1000 id_rel w256:0.643 mlp64:0.657 mlp16:0.683 mlp8:0.681 res64:0.840 res16:0.909 res8:0.936 6.1 min
+[s0] it 1500 367.2 ms/it 9.2 min
+[s0] it 2000 367.4 ms/it 12.2 min
+[s0] step 2000 id_rel w256:0.562 mlp64:0.580 mlp16:0.596 mlp8:0.597 res64:0.768 res16:0.902 res8:0.933 12.3 min
+[s0] it 2500 368.3 ms/it 15.3 min
+[s0] it 3000 368.4 ms/it 18.4 min
+[s0] step 3000 id_rel w256:0.523 mlp64:0.542 mlp16:0.559 mlp8:0.561 res64:0.736 res16:0.897 res8:0.931 18.4 min
+[s0] it 3500 367.7 ms/it 21.5 min
+[s0] it 4000 366.7 ms/it 24.4 min
+[s0] step 4000 id_rel w256:0.501 mlp64:0.521 mlp16:0.538 mlp8:0.538 res64:0.721 res16:0.891 res8:0.929 24.5 min
+[s0] it 4500 366.3 ms/it 27.5 min
+[s0] it 5000 365.6 ms/it 30.5 min
+[s0] step 5000 id_rel w256:0.489 mlp64:0.506 mlp16:0.523 mlp8:0.524 res64:0.707 res16:0.884 res8:0.927 30.5 min
+[s0] it 5500 365.3 ms/it 33.5 min
+[s0] it 6000 364.8 ms/it 36.5 min
+[s0] step 6000 id_rel w256:0.485 mlp64:0.503 mlp16:0.519 mlp8:0.520 res64:0.704 res16:0.879 res8:0.925 36.5 min
+all done 36.7 min

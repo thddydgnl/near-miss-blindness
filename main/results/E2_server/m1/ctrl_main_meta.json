@@ -1,0 +1,12 @@
+{
+ "n_records": 3600,
+ "tau": {
+  "full": 0.2125,
+  "obj": 0.345
+ },
+ "e0_identity": {
+  "n_common": 3600,
+  "max_abs_diff_r": 0.0
+ },
+ "time_s": 134.45968079566956
+}

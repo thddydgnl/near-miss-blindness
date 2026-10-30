@@ -1,0 +1,8 @@
+{"job_id": "cf_t8_d17_place_offset_s0.0500_k0", "kind": "cf", "task": 8, "demo": 17, "family": "place_offset", "severity": 0.05, "dir": 0}
+{"job_id": "im_t8_d17_place_offset_s0.0500_k0", "kind": "imagine", "dep": "cf_t8_d17_place_offset_s0.0500_k0"}
+{"job_id": "cf_t8_d18_nominal_s0.0000_k0", "kind": "cf", "task": 8, "demo": 18, "family": "nominal", "severity": 0.0, "dir": 0}
+{"job_id": "im_t8_d18_nominal_s0.0000_k0", "kind": "imagine", "dep": "cf_t8_d18_nominal_s0.0000_k0"}
+{"job_id": "cf_t5_d17_under_actuation_s0.4000_k0", "kind": "cf", "task": 5, "demo": 17, "family": "under_actuation", "severity": 0.4, "dir": 0}
+{"job_id": "im_t5_d17_under_actuation_s0.4000_k0", "kind": "imagine", "dep": "cf_t5_d17_under_actuation_s0.4000_k0"}
+{"job_id": "cf_t1_d19_premature_release_s0.6000_k0", "kind": "cf", "task": 1, "demo": 19, "family": "premature_release", "severity": 0.6, "dir": 0}
+{"job_id": "im_t1_d19_premature_release_s0.6000_k0", "kind": "imagine", "dep": "cf_t1_d19_premature_release_s0.6000_k0"}

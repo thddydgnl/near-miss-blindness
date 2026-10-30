@@ -1,0 +1,11 @@
+{
+ "val_acc": 1.0,
+ "policy_real_frame_acc": {
+  "pi1_precise": 1.0,
+  "pi2_good": 1.0,
+  "pi3_medium": 1.0,
+  "pi4_sloppy": 1.0,
+  "pi5_far_failer": 1.0,
+  "pi6_near_failer": 1.0
+ }
+}

@@ -1,0 +1,26 @@
+diff --git a/cosmos_policy/config/defaults/tokenizer.py b/cosmos_policy/config/defaults/tokenizer.py
+index ca2834d..4917f14 100644
+--- a/cosmos_policy/config/defaults/tokenizer.py
++++ b/cosmos_policy/config/defaults/tokenizer.py
+@@ -24,7 +24,7 @@ from cosmos_policy.tokenizers.wan2pt1 import Wan2pt1VAEInterface
+ 
+ # Policy-specific wan2pt1 tokenizer with deterministic seeding
+ PolicyWan2pt1VAEConfig = L(Wan2pt1VAEInterface)(
+-    vae_pth="hf://nvidia/Cosmos-Predict2-2B-Video2World/tokenizer/tokenizer.pth",
++    vae_pth="/root/b/cache/hf/hub/models--Wan-AI--Wan2.1-T2V-1.3B/snapshots/37ec512624d61f7aa208f7ea8140a131f93afc9a/Wan2.1_VAE.pth",  # B-E0: public Wan2.1 VAE, identical SHA256 to the gated tokenizer.pth
+     s3_credential_path="credentials/s3_training.secret",
+     load_mean_std=False,
+     temporal_window=4,
+diff --git a/cosmos_policy/config/experiment/cosmos_policy_experiment_configs.py b/cosmos_policy/config/experiment/cosmos_policy_experiment_configs.py
+index ba4f98e..fbe8002 100644
+--- a/cosmos_policy/config/experiment/cosmos_policy_experiment_configs.py
++++ b/cosmos_policy/config/experiment/cosmos_policy_experiment_configs.py
+@@ -145,7 +145,7 @@ cosmos_predict2_2b_480p_libero = LazyDict(
+             context_parallel_size=1,
+         ),
+         checkpoint=dict(
+-            load_path=get_checkpoint_path("hf://nvidia/Cosmos-Predict2-2B-Video2World/model-480p-16fps.pt"),
++            load_path="",  # B-E0: training-only base checkpoint (gated); inference loads the policy checkpoint
+             load_training_state=False,  # This means do not load train state from the base checkpoint above (load_path); but when resuming this job, will load train state
+             strict_resume=False,
+             save_iter=1000,

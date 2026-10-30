@@ -1,0 +1,4 @@
+/workspace/judges/judge_a_cnn.pt: OK
+runner attempt 1 rc=0 00:33:24
+{"cf": {"jobs": 4652, "done": 568}, "imagine": {"jobs": 4652, "done": 568}}
+E1_PHASE2_DONE 00:33:28

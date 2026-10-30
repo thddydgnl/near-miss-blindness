@@ -1,0 +1,79 @@
+2026-10-21T15:37:01Z DP done; starting benchmark
+main_n400: 300/400 episodes, 46s
+main_n400: 400/400 episodes, 58s
+MAIN_DONE main_n400 58s
+BENCH m1_main_400ep_x9 60.928281077 s
+H10_n300: 200/300 episodes, 53s
+H10_n300: 300/300 episodes, 76s
+MAIN_DONE H10_n300 76s
+BENCH m1_H10_300ep_x9 78.535149663 s
+  cmap = cm.get_cmap('tab10')
+  batch 0-50: 24.4s, success_dp 0.60
+SUMMARY {"n": 50, "success_dp": 0.6, "mean_score": 0.9317362370165244, "success_robj": 0.76, "near_robj": 0.06, "mid_robj": 0.0, "far_robj": 0.18, "r_obj_q": [0.05739692687510603, 0.07936829883520054, 0.12935789256589336, 0.8003471591110197, 4.9167721927995425], "T_end_q": [100.6, 208.5, 300.0], "timeout": 0.4, "ckpt": "/home/yonghwi/pmx/B/ckpt/dp/s42/ema_ep1000.pt", "seeds": "200000:200050", "sec": 27.71468472480774}
+BENCH dp_rollout_50ep_s42 30.140914885 s
+  cmap = cm.get_cmap('tab10')
+  batch 0-50: 26.4s, success_dp 0.52
+SUMMARY {"n": 50, "success_dp": 0.52, "mean_score": 0.8750911638154303, "success_robj": 0.78, "near_robj": 0.06, "mid_robj": 0.02, "far_robj": 0.14, "r_obj_q": [0.0599563050971361, 0.09057855304109344, 0.1334335699617945, 0.8188932346000772, 5.897833405594041], "T_end_q": [117.9, 275.5, 300.0], "timeout": 0.48, "ckpt": "/home/yonghwi/pmx/B/ckpt/dp/s43/ema_ep1000.pt", "seeds": "200000:200050", "sec": 29.893765449523926}
+BENCH dp_rollout_50ep_s43 32.223770999 s
+  cmap = cm.get_cmap('tab10')
+  batch 0-50: 24.5s, success_dp 0.58
+SUMMARY {"n": 50, "success_dp": 0.58, "mean_score": 0.8940509373882254, "success_robj": 0.8, "near_robj": 0.04, "mid_robj": 0.02, "far_robj": 0.14, "r_obj_q": [0.06246225630591945, 0.08505061376832923, 0.11881803213594025, 0.3944274502226238, 4.574146981266392], "T_end_q": [100.7, 216.0, 300.0], "timeout": 0.42, "ckpt": "/home/yonghwi/pmx/B/ckpt/dp/s44/ema_ep1000.pt", "seeds": "200000:200050", "sec": 28.266846179962158}
+BENCH dp_rollout_50ep_s44 30.891677187 s
+  cmap = cm.get_cmap('tab10')
+  batch 0-100: 33.7s, success_dp 0.51
+SUMMARY {"n": 100, "success_dp": 0.51, "mean_score": 0.8278880251190158, "success_robj": 0.68, "near_robj": 0.07, "mid_robj": 0.03, "far_robj": 0.22, "r_obj_q": [0.06723908154945249, 0.09255644383756267, 0.15745502979244214, 1.9037925387828327, 9.37134855308763], "T_end_q": [118.5, 287.5, 300.0], "timeout": 0.49, "ckpt": "/home/yonghwi/pmx/B/ckpt/dp/s42/ema_ep1000.pt", "seeds": "900100:900200", "sec": 37.5998375415802}
+BENCH dp_rollout_100ep 40.135751157 s
+TIMING {"n_windows": 100, "load_s": 5.527029991149902, "sim_render_s": 2.6034152507781982, "encode_s": 0.8968906402587891, "imagine_s": 1.0301859378814697, "total_s": 10.310750007629395}
+H5: n 100 replay_err max 1.44e-11 | r_obj<1 0.68 | median d_vis(imag,real) 0.115
+DP_IMAGINE_DONE
+BENCH dp_imagine_100ep_H5 13.067328187 s
+eval bank done (20s)
+seed 0: {'N': 30000, 'n_fail': 916, 'n_alt': 8109, 'n_fail_p01': 3018, 'n_fail_p03': 9025, 'n_frames': 193428} (103s)
+done (103s)
+BENCH m3_bank_seed0 105.182720766 s
+p0.03_std_1x_s0 step 5500 loss 0.1502 (63s)
+p0.03_std_1x_s0 step 6000 loss 0.1452 (69s)
+p0.03_std_1x_s0 done (69s)
+BENCH m3_train_1x 71.025983983 s
+p0.03_std_1x_s0: mean_over=0.144 pi1=+0.002 pi2=+0.073 pi3=+0.140 pi4=+0.169 pi5=+0.041 pi6=+0.441 r*=1.388 n50=558 (untr 935) err_s=0.2170 (33s)
+BENCH m3_eval 35.455260767 s
+M3 determinism: mean_over 0.14436848958333334 0.14436848958333334 max policy diff 0.0
+step 10 loss 0.0619 gpu 0.346s data 0.000s
+step 20 loss 0.0544 gpu 0.346s data 0.001s
+BENCH {"n_slices": 1981721, "batch": 32, "gpu_step_s_median": 0.34453678131103516, "data_s_median": 0.0008754730224609375, "peak_mem_gb": 5.6310912, "slices_per_epoch": 1981721}
+BENCH dinowm_ft_30steps 49.728990945 s
+BENCH_ALL_DONE
+s42 ep   8 succ_robj 0.00 near 0.00 mid 0.00 far 1.00 | succ_dp 0.00 score 0.27 timeout 1.00 | med r_obj 11.20 | 217s
+s42 ep  10 succ_robj 0.04 near 0.00 mid 0.00 far 0.96 | succ_dp 0.02 score 0.28 timeout 0.98 | med r_obj 10.07 | 181s
+s42 ep  13 succ_robj 0.00 near 0.04 mid 0.02 far 0.94 | succ_dp 0.00 score 0.33 timeout 1.00 | med r_obj 10.84 | 230s
+s42 ep  16 succ_robj 0.02 near 0.04 mid 0.02 far 0.92 | succ_dp 0.00 score 0.33 timeout 1.00 | med r_obj 9.46 | 230s
+s42 ep  20 succ_robj 0.08 near 0.10 mid 0.04 far 0.78 | succ_dp 0.00 score 0.47 timeout 1.00 | med r_obj 7.57 | 230s
+s42 ep  25 succ_robj 0.28 near 0.26 mid 0.10 far 0.36 | succ_dp 0.02 score 0.63 timeout 0.98 | med r_obj 1.70 | 176s
+s42 ep  30 succ_robj 0.58 near 0.18 mid 0.16 far 0.08 | succ_dp 0.08 score 0.76 timeout 0.92 | med r_obj 0.85 | 208s
+s42 ep  40 succ_robj 0.58 near 0.20 mid 0.08 far 0.14 | succ_dp 0.06 score 0.81 timeout 0.94 | med r_obj 0.86 | 209s
+s42 ep  50 succ_robj 0.74 near 0.20 mid 0.00 far 0.06 | succ_dp 0.32 score 0.89 timeout 0.68 | med r_obj 0.42 | 162s
+s42 ep  65 succ_robj 0.76 near 0.12 mid 0.02 far 0.10 | succ_dp 0.42 score 0.87 timeout 0.58 | med r_obj 0.24 | 191s
+s42 ep  80 succ_robj 0.82 near 0.10 mid 0.00 far 0.08 | succ_dp 0.44 score 0.90 timeout 0.56 | med r_obj 0.17 | 190s
+s42 ep 100 succ_robj 0.84 near 0.04 mid 0.02 far 0.10 | succ_dp 0.50 score 0.89 timeout 0.50 | med r_obj 0.18 | 168s
+s42 ep 130 succ_robj 0.88 near 0.02 mid 0.02 far 0.08 | succ_dp 0.40 score 0.90 timeout 0.60 | med r_obj 0.30 | 180s
+s42 ep 170 succ_robj 0.86 near 0.04 mid 0.02 far 0.08 | succ_dp 0.52 score 0.91 timeout 0.48 | med r_obj 0.15 | 180s
+s42 ep 220 succ_robj 0.88 near 0.04 mid 0.02 far 0.06 | succ_dp 0.48 score 0.92 timeout 0.52 | med r_obj 0.23 | 191s
+s42 ep1000 succ_robj 0.76 near 0.06 mid 0.00 far 0.18 | succ_dp 0.60 score 0.93 timeout 0.40 | med r_obj 0.13 | 28s
+s43 ep  20 succ_robj 0.04 near 0.06 mid 0.14 far 0.76 | succ_dp 0.00 score 0.37 timeout 1.00 | med r_obj 7.01 | 203s
+s43 ep  25 succ_robj 0.14 near 0.24 mid 0.14 far 0.48 | succ_dp 0.02 score 0.53 timeout 0.98 | med r_obj 2.90 | 215s
+s43 ep  30 succ_robj 0.32 near 0.34 mid 0.10 far 0.24 | succ_dp 0.08 score 0.66 timeout 0.92 | med r_obj 1.43 | 213s
+s43 ep  40 succ_robj 0.52 near 0.26 mid 0.06 far 0.16 | succ_dp 0.08 score 0.79 timeout 0.92 | med r_obj 0.96 | 167s
+s43 ep  50 succ_robj 0.76 near 0.08 mid 0.04 far 0.12 | succ_dp 0.26 score 0.87 timeout 0.76 | med r_obj 0.43 | 151s
+s43 ep  80 succ_robj 0.86 near 0.08 mid 0.00 far 0.06 | succ_dp 0.44 score 0.93 timeout 0.56 | med r_obj 0.25 | 161s
+s43 ep 220 succ_robj 0.88 near 0.02 mid 0.00 far 0.10 | succ_dp 0.62 score 0.93 timeout 0.40 | med r_obj 0.12 | 161s
+s43 ep1000 succ_robj 0.78 near 0.06 mid 0.02 far 0.14 | succ_dp 0.52 score 0.88 timeout 0.48 | med r_obj 0.13 | 30s
+s44 ep  20 succ_robj 0.06 near 0.10 mid 0.12 far 0.72 | succ_dp 0.00 score 0.47 timeout 1.00 | med r_obj 6.35 | 203s
+s44 ep  25 succ_robj 0.14 near 0.36 mid 0.10 far 0.40 | succ_dp 0.02 score 0.56 timeout 0.98 | med r_obj 1.98 | 216s
+s44 ep  30 succ_robj 0.36 near 0.24 mid 0.18 far 0.22 | succ_dp 0.06 score 0.77 timeout 0.94 | med r_obj 1.36 | 213s
+s44 ep  40 succ_robj 0.72 near 0.20 mid 0.00 far 0.08 | succ_dp 0.20 score 0.86 timeout 0.82 | med r_obj 0.73 | 165s
+s44 ep  50 succ_robj 0.72 near 0.16 mid 0.06 far 0.06 | succ_dp 0.20 score 0.86 timeout 0.80 | med r_obj 0.57 | 145s
+s44 ep  80 succ_robj 0.82 near 0.06 mid 0.04 far 0.08 | succ_dp 0.30 score 0.89 timeout 0.70 | med r_obj 0.41 | 163s
+s44 ep 220 succ_robj 0.86 near 0.02 mid 0.02 far 0.10 | succ_dp 0.60 score 0.88 timeout 0.40 | med r_obj 0.12 | 163s
+s44 ep1000 succ_robj 0.80 near 0.04 mid 0.02 far 0.14 | succ_dp 0.58 score 0.89 timeout 0.42 | med r_obj 0.12 | 28s
+FIG_OK
+2026-10-21T15:46:12Z POST_DP_DONE

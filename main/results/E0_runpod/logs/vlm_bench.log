@@ -1,0 +1,17 @@
+items 50
+`torch_dtype` is deprecated! Use `dtype` instead!
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files:  20%|██        | 1/5 [00:28<01:54, 28.68s/it]Fetching 5 files: 100%|██████████| 5/5 [00:28<00:00,  5.74s/it]
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:14<00:59, 14.90s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:29<00:44, 14.81s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:44<00:29, 14.75s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:58<00:14, 14.70s/it]Loading checkpoint shards: 100%|██████████| 5/5 [01:02<00:00, 10.75s/it]Loading checkpoint shards: 100%|██████████| 5/5 [01:02<00:00, 12.54s/it]
+The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
+{
+ "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+ "load_s": 98.47898721694946,
+ "n_items": 50,
+ "batch1_s_per_judgment": 0.13247157573699953,
+ "batch8_s_per_judgment": 0.04044152736663818,
+ "vram_peak_gib": 15.803659915924072,
+ "mean_p_yes_success": 0.04984814591705799,
+ "mean_p_yes_failure": 0.04253369115293026,
+ "frac_yes_failure": 0.0,
+ "frac_yes_success": 0.0
+}

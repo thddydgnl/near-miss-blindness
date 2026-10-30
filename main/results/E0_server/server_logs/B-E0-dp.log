@@ -1,0 +1,22 @@
+2026-10-21T13:32:01Z B-E0-dp start: epochs 1000, snapshots 2,4,6,8,10,13,16,20,25,30,40,50,65,80,100,130,170,220,300,400,550,750,1000, seeds 42 43 44, GPU 1
+2026-10-21T13:32:01Z seed 42 start (try 1)
+2026-10-21T13:32:01Z seed 44 start (try 1)
+2026-10-21T13:32:01Z seed 43 start (try 1)
+2026-10-21T13:33:01Z status | s42 epoch 6 loss 0.0747 sec/ep 7.3 | s43 epoch 6 loss 0.072 sec/ep 7.1 | s44 epoch 6 loss 0.0738 sec/ep 7.2; disk free 297G
+2026-10-21T13:43:01Z status | s42 epoch 70 loss 0.0243 sec/ep 9.0 | s43 epoch 70 loss 0.0256 sec/ep 10.0 | s44 epoch 70 loss 0.0255 sec/ep 10.0; disk free 284G
+2026-10-21T13:53:01Z status | s42 epoch 141 loss 0.018 sec/ep 7.8 | s43 epoch 139 loss 0.0186 sec/ep 7.9 | s44 epoch 139 loss 0.0179 sec/ep 7.9; disk free 278G
+2026-10-21T14:03:01Z status | s42 epoch 217 loss 0.0144 sec/ep 8.5 | s43 epoch 213 loss 0.0143 sec/ep 8.5 | s44 epoch 213 loss 0.0146 sec/ep 8.5; disk free 274G
+2026-10-21T14:13:01Z status | s42 epoch 287 loss 0.0113 sec/ep 10.2 | s43 epoch 281 loss 0.012 sec/ep 10.2 | s44 epoch 281 loss 0.0119 sec/ep 10.2; disk free 274G
+2026-10-21T14:23:01Z status | s42 epoch 344 loss 0.0095 sec/ep 8.9 | s43 epoch 337 loss 0.0104 sec/ep 8.9 | s44 epoch 337 loss 0.0107 sec/ep 8.8; disk free 275G
+2026-10-21T14:33:01Z status | s42 epoch 411 loss 0.008 sec/ep 10.3 | s43 epoch 403 loss 0.008 sec/ep 10.3 | s44 epoch 403 loss 0.0079 sec/ep 10.3; disk free 293G
+2026-10-21T14:43:01Z status | s42 epoch 478 loss 0.0069 sec/ep 7.5 | s43 epoch 469 loss 0.0076 sec/ep 7.5 | s44 epoch 469 loss 0.0069 sec/ep 7.5; disk free 294G
+2026-10-21T14:53:02Z status | s42 epoch 561 loss 0.0063 sec/ep 5.6 | s43 epoch 549 loss 0.0059 sec/ep 5.6 | s44 epoch 549 loss 0.0056 sec/ep 5.6; disk free 294G
+2026-10-21T15:03:02Z status | s42 epoch 674 loss 0.004 sec/ep 2.1 | s43 epoch 650 loss 0.0038 sec/ep 5.6 | s44 epoch 650 loss 0.0043 sec/ep 5.7; disk free 294G
+2026-10-21T15:13:02Z status | s42 epoch 778 loss 0.0026 sec/ep 5.6 | s43 epoch 757 loss 0.0027 sec/ep 5.6 | s44 epoch 753 loss 0.003 sec/ep 5.6; disk free 294G
+2026-10-21T15:23:02Z status | s42 epoch 881 loss 0.0016 sec/ep 5.6 | s43 epoch 867 loss 0.0018 sec/ep 5.6 | s44 epoch 856 loss 0.0017 sec/ep 5.6; disk free 294G
+2026-10-21T15:33:02Z status | s42 epoch 984 loss 0.0015 sec/ep 5.6 | s43 epoch 977 loss 0.0014 sec/ep 5.6 | s44 epoch 959 loss 0.0014 sec/ep 5.6; disk free 294G
+2026-10-21T15:34:37Z seed 42 exit 0 (try 1)
+2026-10-21T15:34:54Z seed 43 exit 0 (try 1)
+2026-10-21T15:35:36Z seed 44 exit 0 (try 1)
+2026-10-21T15:43:02Z status | s42 epoch 1000 loss 0.0015 sec/ep 5.6 | s43 epoch 1000 loss 0.0015 sec/ep 3.8 | s44 epoch 1000 loss 0.0015 sec/ep 1.9; disk free 293G
+2026-10-21T15:43:02Z B-E0-dp DONE

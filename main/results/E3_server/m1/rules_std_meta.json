@@ -1,0 +1,13 @@
+{
+ "identity": {
+  "n_frames": true,
+  "n_val": true,
+  "n_train": true,
+  "bins_equal": true
+ },
+ "n_rows": 4398,
+ "n_held": 2398,
+ "n_train": 2000,
+ "held_success_frac": 0.31984987489574646,
+ "time_s": 41.047038316726685
+}

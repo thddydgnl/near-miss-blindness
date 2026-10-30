@@ -1,0 +1,31 @@
+# R2-12 작업 로그 (UTC, 2026-10-21)
+
+- 08:10Z 규칙(PILOT_RULES.md), IDEAS_ROUND2.md R2-12 절, R2-1 코드·LOG·REPORT, R2-7 setup, R2-9 REPORT를 읽음
+- 08:14Z `pod_up.sh r2n12` → A5000 재고 없음 → **RTX 3090 24GB, $0.50/h**(smq5nhcxm0a18d), 20초 만에 ssh 준비. 마감(자동 삭제) 12:14Z
+  - CPU quota 31코어(nproc 256), RAM 1TB, torch 2.4.1+cu124, Python 3.11
+- 08:15~08:19Z setup12.sh(R2-7 setup7.sh에서 PushT만 남김): 체크포인트 `outputs/pusht`, pusht_noise(obs mp4 제외), DINO-WM clone, pip(hydra-core 1.3.2, gym 0.23.1, pymunk 6.2.1, accelerate 등), DINOv2 hub
+  - 메모: 원격에서 `setsid nohup ... &`로 띄운 작업이 끝날 때까지 로컬 ssh가 붙어 있었다 → `setsid -f`로 바꿔 즉시 반환
+- 08:20Z 스모크(smoke12.py)
+  - val 궤적 21개(길이 76~167, 중앙 114), train 18,685개
+  - 빠른 재생 + 마지막 프레임 렌더링 vs `env.rollout`: 상태 차이 0, 이미지 차이 0, 시작 프레임 차이 0
+  - 속도: 재생 3.0 ms, 재생+렌더 5.1 ms / 궤적. 상상 512개 5.6 s(TF32, SDPA), 최대 메모리 4.9 GB
+  - 전문가 행동열의 상상 최종 특징과 목표의 d_vis가 0.08~0.44로, 실제 near-miss 프레임의 d_vis(0.1~0.5)와 같은 크기였다(상상 오차가 경계 폭과 비슷함)
+- 08:22Z 시뮬레이터 보정(calib12.py, H5·H10, 각 20초): iid만으로는 near-miss가 대부분이라(σ 7에서 성공 49%, near 39%) 50% 수준에서 near-miss 비중을 단계적으로 바꾸도록 gross와 offset의 혼합(mix) 정책을 추가
+- 08:25~08:29Z 판별기 학습 집합(clfset12.py, train 분할 2000 에피소드 × 8 = 16,000 궤적, 255초). 성공 53%, near 17%, mid 9%, far 21%
+- 08:30Z PLAN.md 작성(사전등록)
+- 08:30Z 판별기 학습 시작(judges12.py)
+- 08:37Z 판별기 완료(411초, 출력 버퍼링 때문에 epoch 로그가 늦게 보였음)
+  - (a) 실제 프레임 판별기 d128·2층: held-out 정확도 0.955(균형 0.955) → 큰 변형 불필요(규칙: 0.90 미만일 때만)
+  - (a_imag, 진단) 상상 특징 판별기: held-out 0.870
+  - (b) d_vis 문턱 τ = 0.2125: held-out 실제 프레임 정확도 0.897. (b2) 계획 objective 문턱 0.215: 0.913
+- 08:37Z main12 스모크(별도 seed 999, val 8 에피소드 × 9 정책, 10초)와 analyze12 스모크 정상. 스모크 결과는 판정에 쓰지 않음
+- 08:38Z 본 실행 시작(run_main.sh: main → H10 → trainsplit → analyze)
+- 08:38~08:42Z 본 실행 완료: main(val H5 400 에피소드, 약 90초), H10(300), trainsplit(400, 판별기 학습 궤적 제외) → analyze12(cluster bootstrap 1000회)
+  - main 사전등록 판정: S1 (b)만 통과(near 0.383, far 0.002), S2 (b) ρ 0.714, S3 τ 0.143 → "있음". 지각 단서 발동((b) 상상 − 실제 프레임 = +0.0999 < 0.10)
+- 08:43~08:45Z 그림 2개 다듬기(표식 겹침 해소, 로그 축 눈금) 후 analyze12 main 재실행(수치 동일). 사후 분석 posthoc12(상상 몫 분해, 뒤집힘, D3 판별기의 정책 평가, AUROC 구간)
+- 08:46~08:48Z 사후 점검 hist12: num_hist 3프레임 문맥(main 에피소드 351개)으로 상상해도 결과가 거의 같음(AUROC 0.885 대 0.884)
+- 08:49Z polci12: 정책별 과대 추정 95% 구간
+- 08:49Z 결과·로그 회수(JSON/CSV/PNG/JSONL 9.2 MB, 특징 텐서는 제외). 로컬 code/와 pod 코드가 같음을 cmp로 확인
+- 08:50Z `pod_down.sh r2n12` → budget.py에서 r2n12 **gone**, 장부 비용 $0.31
+- 08:51Z criteria.json을 analysis_{main,H10,trainsplit}.json에서 다시 합침(그림 재생성 때 main만 남았던 것을 복구, 수치 변경 없음)
+- 메모: 하위 에이전트의 Write 도구가 REPORT.md 작성을 막아 PILOT_RULES 6절대로 Bash heredoc으로 작성함

@@ -1,0 +1,14 @@
+s44_ep0020: success_robj 0.00 near 0.17 far 0.72 success_dp 0.00 T_end q10/50/90 [300.0, 300.0, 300.0] (97s, total 97s)
+s44_ep0025: success_robj 0.16 near 0.26 far 0.38 success_dp 0.02 T_end q10/50/90 [300.0, 300.0, 300.0] (95s, total 193s)
+s44_ep0030: success_robj 0.43 near 0.23 far 0.25 success_dp 0.08 T_end q10/50/90 [300.0, 300.0, 300.0] (95s, total 287s)
+s44_ep0040: success_robj 0.66 near 0.17 far 0.14 success_dp 0.14 T_end q10/50/90 [264.8, 300.0, 300.0] (95s, total 382s)
+s44_ep0050: success_robj 0.74 near 0.13 far 0.10 success_dp 0.19 T_end q10/50/90 [229.3, 300.0, 300.0] (94s, total 477s)
+s44_ep0080: success_robj 0.82 near 0.03 far 0.14 success_dp 0.37 T_end q10/50/90 [150.0, 300.0, 300.0] (93s, total 570s)
+s44_ep0220: success_robj 0.81 near 0.05 far 0.12 success_dp 0.55 T_end q10/50/90 [126.8, 261.0, 300.0] (92s, total 661s)
+s44_ep1000: success_robj 0.74 near 0.04 far 0.18 success_dp 0.51 T_end q10/50/90 [102.5, 294.0, 300.0] (91s, total 753s)
+s43_ep0050: success_robj 0.61 near 0.21 far 0.13 success_dp 0.20 T_end q10/50/90 [222.2, 300.0, 300.0] (94s, total 847s)
+s43_ep0080: success_robj 0.77 near 0.07 far 0.16 success_dp 0.39 T_end q10/50/90 [128.9, 300.0, 300.0] (94s, total 941s)
+s43_ep0220: success_robj 0.80 near 0.02 far 0.16 success_dp 0.48 T_end q10/50/90 [133.5, 300.0, 300.0] (93s, total 1033s)
+s43_ep1000: success_robj 0.73 near 0.04 far 0.19 success_dp 0.48 T_end q10/50/90 [124.5, 300.0, 300.0] (92s, total 1125s)
+E2_DP_ROLLOUTS_DONE s44_ep0020,s44_ep0025,s44_ep0030,s44_ep0040,s44_ep0050,s44_ep0080,s44_ep0220,s44_ep1000,s43_ep0050,s43_ep0080,s43_ep0220,s43_ep1000
+DP_LANE_B_DONE 2026-10-22T00:10:14Z

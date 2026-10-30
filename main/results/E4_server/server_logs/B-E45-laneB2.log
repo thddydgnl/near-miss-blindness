@@ -1,0 +1,168 @@
+exists e5_p0.03_rw_s0
+exists e5_p0.03_rw_s1
+exists e5_p0.03_rw_s2
+exists e5_p0.03_near_s0
+exists e5_p0.03_near_s1
+exists e5_p0.03_near_s2
+exists e5_p0.03_full_s0
+exists e5_p0.03_full_s1
+exists e5_p0.03_full_s2
+exists e5_p0.03_cp_s0
+exists e5_p0.03_cp_s1
+exists e5_p0.03_cp_s2
+exists e5_p0.03_bw_s0
+exists e5_p0.03_bw_s1
+exists e5_p0.03_bw_s2
+exists e5_p0.1_rw_s0
+exists e5_p0.1_rw_s1
+exists e5_p0.1_rw_s2
+e5_p0.1_near_s0 done loss 0.1540 (193s)
+e5_p0.1_near_s1 done loss 0.1610 (194s)
+e5_p0.1_near_s2 done loss 0.1574 (194s)
+e5_p0.1_full_s0 done loss 0.1522 (193s)
+e5_p0.1_full_s1 done loss 0.1616 (193s)
+e5_p0.1_full_s2 done loss 0.1602 (191s)
+e5_p0.1_cp_s0 done loss 0.1514 (194s)
+e5_p0.1_cp_s1 done loss 0.1513 (193s)
+e5_p0.1_cp_s2 done loss 0.1578 (193s)
+e5_p0.1_bw_s0 done loss 0.1557 (193s)
+e5_p0.1_bw_s1 done loss 0.1644 (193s)
+e5_p0.1_bw_s2 done loss 0.1655 (193s)
+e5_p0.03_bw_s0: evaluated (5s)
+e5_p0.03_bw_s1: evaluated (4s)
+e5_p0.03_bw_s2: evaluated (5s)
+e5_p0.03_cp_s0: evaluated (5s)
+e5_p0.03_cp_s1: evaluated (5s)
+e5_p0.03_cp_s2: evaluated (5s)
+e5_p0.03_full_s0: evaluated (5s)
+e5_p0.03_full_s1: evaluated (5s)
+e5_p0.03_full_s2: evaluated (5s)
+e5_p0.03_near_s0: evaluated (4s)
+e5_p0.03_near_s1: evaluated (5s)
+e5_p0.03_near_s2: evaluated (5s)
+e5_p0.03_rw_s0: evaluated (5s)
+e5_p0.03_rw_s1: evaluated (5s)
+e5_p0.03_rw_s2: evaluated (5s)
+e5_p0.1_bw_s0: evaluated (5s)
+e5_p0.1_bw_s1: evaluated (5s)
+e5_p0.1_bw_s2: evaluated (4s)
+e5_p0.1_cp_s0: evaluated (5s)
+e5_p0.1_cp_s1: evaluated (5s)
+e5_p0.1_cp_s2: evaluated (5s)
+e5_p0.1_full_s0: evaluated (5s)
+e5_p0.1_full_s1: evaluated (5s)
+e5_p0.1_full_s2: evaluated (5s)
+e5_p0.1_near_s0: evaluated (5s)
+e5_p0.1_near_s1: evaluated (4s)
+e5_p0.1_near_s2: evaluated (5s)
+e5_p0.1_rw_s0: evaluated (4s)
+e5_p0.1_rw_s1: evaluated (3s)
+e5_p0.1_rw_s2: evaluated (3s)
+M3_E5_EVAL_DONE
+p0.03_std_1x_s0: evaluated (5s)
+p0.03_std_1x_s1: evaluated (5s)
+p0.03_std_1x_s2: evaluated (5s)
+p0.1_std_1x_s0: evaluated (5s)
+p0.1_std_1x_s1: evaluated (5s)
+p0.1_std_1x_s2: evaluated (5s)
+M3_E5_EVAL_DONE
+E45_LANEB2_M3E5_DONE 2026-10-22T06:03:09Z
+dev: MC sample 16/16 (340s)
+E5_MCDROP_DONE dev {"n": 600, "mean_agreement": 0.5742708333333333, "time_s": 339.5658423900604}
+eval: MC sample 16/16 (1319s)
+E5_MCDROP_DONE eval {"n": 2400, "mean_agreement": 0.548125, "time_s": 1319.1499998569489}
+E45_LANEB2_H5B_DONE 2026-10-22T06:30:51Z
+near s0 step 500 loss 0.05295 (224s)
+near s0 step 1000 loss 0.05085 (445s)
+near s0 step 1500 loss 0.04535 (665s)
+near s0 step 2000 loss 0.05639 (886s)
+near s0 step 2500 loss 0.04742 (1103s)
+near s0 step 3000 loss 0.05172 (1324s)
+E4_FT_DONE {"cond": "near", "seed": 0, "steps": 3000, "lr": 0.0001, "lam": 1.0, "batch": 32, "fail_fraction_seen": 0.25, "time_s": 1323.5813319683075, "peak_mem_gb": 3.40763648}
+rw s1 step 500 loss 0.05668 (225s)
+rw s1 step 1000 loss 0.05524 (445s)
+rw s1 step 1500 loss 0.05338 (665s)
+rw s1 step 2000 loss 0.04789 (885s)
+rw s1 step 2500 loss 0.05367 (1102s)
+rw s1 step 3000 loss 0.04502 (1322s)
+E4_FT_DONE {"cond": "rw", "seed": 1, "steps": 3000, "lr": 0.0001, "lam": 1.0, "batch": 32, "fail_fraction_seen": 0.25, "time_s": 1321.8090937137604, "peak_mem_gb": 3.40763648}
+full s1 step 500 loss 0.05834 (224s)
+full s1 step 1000 loss 0.05643 (444s)
+full s1 step 1500 loss 0.05503 (663s)
+full s1 step 2000 loss 0.04984 (884s)
+full s1 step 2500 loss 0.05058 (1101s)
+full s1 step 3000 loss 0.04474 (1321s)
+E4_FT_DONE {"cond": "full", "seed": 1, "steps": 3000, "lr": 0.0001, "lam": 1.0, "batch": 32, "fail_fraction_seen": 0.25, "time_s": 1321.422215461731, "peak_mem_gb": 3.40763648}
+near s2 step 500 loss 0.05015 (224s)
+near s2 step 1000 loss 0.05189 (444s)
+near s2 step 1500 loss 0.05701 (664s)
+near s2 step 2000 loss 0.05118 (884s)
+near s2 step 2500 loss 0.06002 (1101s)
+near s2 step 3000 loss 0.04477 (1321s)
+E4_FT_DONE {"cond": "near", "seed": 2, "steps": 3000, "lr": 0.0001, "lam": 1.0, "batch": 32, "fail_fraction_seen": 0.25, "time_s": 1321.3846168518066, "peak_mem_gb": 3.40763648}
+cp s0 step 500 loss 0.05049 (224s)
+cp s0 step 1000 loss 0.05058 (445s)
+cp s0 step 1500 loss 0.04174 (665s)
+cp s0 step 2000 loss 0.04913 (885s)
+cp s0 step 2500 loss 0.04603 (1103s)
+cp s0 step 3000 loss 0.04807 (1323s)
+E4_FT_DONE {"cond": "cp", "seed": 0, "steps": 3000, "lr": 0.0001, "lam": 1.0, "batch": 32, "fail_fraction_seen": 0.25, "time_s": 1322.6354050636292, "peak_mem_gb": 3.40763648}
+cp s2 step 500 loss 0.05713 (224s)
+cp s2 step 1000 loss 0.05327 (444s)
+cp s2 step 1500 loss 0.04895 (664s)
+cp s2 step 2000 loss 0.04989 (884s)
+cp s2 step 2500 loss 0.05017 (1101s)
+cp s2 step 3000 loss 0.04822 (1322s)
+E4_FT_DONE {"cond": "cp", "seed": 2, "steps": 3000, "lr": 0.0001, "lam": 1.0, "batch": 32, "fail_fraction_seen": 0.25, "time_s": 1321.5793437957764, "peak_mem_gb": 3.40763648}
+bw s1 step 500 loss 0.07997 (225s)
+bw s1 step 1000 loss 0.07604 (445s)
+bw s1 step 1500 loss 0.07367 (664s)
+bw s1 step 2000 loss 0.06655 (884s)
+bw s1 step 2500 loss 0.07442 (1103s)
+bw s1 step 3000 loss 0.06213 (1323s)
+E4_FT_DONE {"cond": "bw", "seed": 1, "steps": 3000, "lr": 0.0001, "lam": 4.302113681301566, "batch": 32, "fail_fraction_seen": 0.25, "time_s": 1322.8953578472137, "peak_mem_gb": 3.407860224}
+E4_FT_LANE_DONE 2026-10-22T09:05:19Z
+E45_LANEB2_FT_DONE 2026-10-22T09:05:19Z
+Using cache found in /home/yonghwi/pmx/torch/hub/facebookresearch_dinov2_main
+R1: PCA 64 of 256 tokens, explained 0.9622 (7s)
+R1: evaluation data (106s)
+R1: bank seed 0 (30000, 5, 256, 64) (309s)
+R1: bank seed 1 (30000, 5, 256, 64) (512s)
+R1: bank seed 2 (30000, 5, 256, 64) (714s)
+R1: classifier val acc 1.0000; SWEEP_BANK_DONE (728s)
+Using cache found in /home/yonghwi/pmx/torch/hub/facebookresearch_dinov2_main
+R2: PCA 384 of 64 tokens, explained 1.0000 (7s)
+R2: evaluation data (107s)
+R2: bank seed 0 (30000, 5, 64, 384) (312s)
+R2: bank seed 1 (30000, 5, 64, 384) (523s)
+R2: bank seed 2 (30000, 5, 64, 384) (735s)
+R2: classifier val acc 1.0000; SWEEP_BANK_DONE (754s)
+sweep_R3_s0 done loss 0.2317 (78s)
+sweep_R3_s1 done loss 0.2201 (79s)
+sweep_R3_s2 done loss 0.2265 (78s)
+sweep R3 s0: ceiling val acc 0.9580 (10s)
+sweep R3 s1: ceiling val acc 0.9605 (8s)
+sweep R3 s2: ceiling val acc 0.9675 (8s)
+SWEEP_EVAL_DONE R3
+sweep_R4_s0 done loss 0.0880 (697s)
+sweep_R4_s1 done loss 0.0882 (706s)
+sweep_R4_s2 done loss 0.0867 (698s)
+sweep R4 s0: ceiling val acc 0.9775 (45s)
+sweep R4 s1: ceiling val acc 0.9830 (43s)
+sweep R4 s2: ceiling val acc 0.9780 (46s)
+SWEEP_EVAL_DONE R4
+sweep_R1_s0 done loss 0.1310 (754s)
+sweep_R1_s1 done loss 0.1318 (755s)
+sweep_R1_s2 done loss 0.1354 (751s)
+sweep R1 s0: ceiling val acc 0.9745 (55s)
+sweep R1 s1: ceiling val acc 0.9810 (54s)
+sweep R1 s2: ceiling val acc 0.9690 (53s)
+SWEEP_EVAL_DONE R1
+sweep_R2_s0 done loss 0.8020 (300s)
+sweep_R2_s1 done loss 0.8012 (297s)
+sweep_R2_s2 done loss 0.7956 (295s)
+sweep R2 s0: ceiling val acc 0.9045 (30s)
+sweep R2 s1: ceiling val acc 0.9420 (29s)
+sweep R2 s2: ceiling val acc 0.9175 (29s)
+SWEEP_EVAL_DONE R2
+E45_LANEB2_DONE 2026-10-22T11:08:51Z

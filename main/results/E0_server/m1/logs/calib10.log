@@ -1,0 +1,94 @@
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+iid_0.5          succ 0.983 near 0.003 mid 0.013 far 0.003 r_med 0.12
+iid_1            succ 0.975 near 0.007 mid 0.007 far 0.010 r_med 0.22
+iid_1.5          succ 0.965 near 0.007 mid 0.005 far 0.022 r_med 0.33
+iid_2            succ 0.917 near 0.037 mid 0.015 far 0.030 r_med 0.43
+iid_2.5          succ 0.828 near 0.117 mid 0.020 far 0.035 r_med 0.55
+iid_3            succ 0.735 near 0.193 mid 0.022 far 0.050 r_med 0.67
+iid_4            succ 0.525 near 0.330 mid 0.070 far 0.075 r_med 0.92
+iid_5            succ 0.390 near 0.415 mid 0.100 far 0.095 r_med 1.17
+iid_6            succ 0.302 near 0.463 mid 0.130 far 0.105 r_med 1.34
+iid_7            succ 0.200 near 0.422 mid 0.185 far 0.193 r_med 1.58
+iid_8            succ 0.155 near 0.370 mid 0.250 far 0.225 r_med 1.91
+iid_10           succ 0.058 near 0.352 mid 0.258 far 0.333 r_med 2.31
+iid_12           succ 0.048 near 0.228 mid 0.253 far 0.472 r_med 2.89
+iid_15           succ 0.037 near 0.120 mid 0.212 far 0.630 r_med 3.68
+iid_20           succ 0.013 near 0.058 mid 0.117 far 0.812 r_med 4.72
+offset_0.5       succ 0.970 near 0.003 mid 0.015 far 0.013 r_med 0.31
+offset_0.75      succ 0.943 near 0.030 mid 0.007 far 0.020 r_med 0.45
+offset_1         succ 0.777 near 0.177 mid 0.005 far 0.040 r_med 0.66
+offset_1.25      succ 0.662 near 0.300 mid 0.022 far 0.015 r_med 0.80
+offset_1.5       succ 0.545 near 0.375 mid 0.043 far 0.037 r_med 0.92
+offset_2         succ 0.395 near 0.385 mid 0.163 far 0.058 r_med 1.25
+offset_2.5       succ 0.295 near 0.335 mid 0.253 far 0.117 r_med 1.71
+offset_3         succ 0.275 near 0.278 mid 0.230 far 0.217 r_med 1.84
+offset_3.5       succ 0.217 near 0.250 mid 0.242 far 0.290 r_med 2.09
+offset_4         succ 0.177 near 0.195 mid 0.180 far 0.448 r_med 2.77
+offset_5         succ 0.160 near 0.130 mid 0.165 far 0.545 r_med 3.28
+offset_6         succ 0.130 near 0.145 mid 0.120 far 0.605 r_med 3.89
+offset_7         succ 0.133 near 0.062 mid 0.117 far 0.688 r_med 4.66
+offset_8         succ 0.092 near 0.090 mid 0.140 far 0.677 r_med 4.84
+offset_10        succ 0.075 near 0.085 mid 0.075 far 0.765 r_med 6.42
+offset_12        succ 0.058 near 0.072 mid 0.085 far 0.785 r_med 7.29
+offset_15        succ 0.052 near 0.058 mid 0.070 far 0.820 r_med 8.32
+offset_20        succ 0.025 near 0.035 mid 0.050 far 0.890 r_med 10.99
+scale_0.05       succ 0.950 near 0.020 mid 0.007 far 0.022 r_med 0.24
+scale_0.1        succ 0.795 near 0.135 mid 0.025 far 0.045 r_med 0.51
+scale_0.15       succ 0.632 near 0.233 mid 0.072 far 0.062 r_med 0.75
+scale_0.2        succ 0.522 near 0.290 mid 0.100 far 0.087 r_med 0.95
+scale_0.25       succ 0.432 near 0.245 mid 0.158 far 0.165 r_med 1.27
+scale_0.3        succ 0.357 near 0.265 mid 0.158 far 0.220 r_med 1.54
+scale_0.4        succ 0.240 near 0.205 mid 0.198 far 0.357 r_med 2.19
+scale_0.5        succ 0.225 near 0.155 mid 0.175 far 0.445 r_med 2.71
+scale_0.7        succ 0.160 near 0.125 mid 0.138 far 0.578 r_med 3.48
+scale_1.0        succ 0.102 near 0.077 mid 0.113 far 0.708 r_med 4.88
+grossbig_20      succ 0.013 near 0.048 mid 0.117 far 0.823 r_med 5.04
+grossbig_30      succ 0.003 near 0.007 mid 0.048 far 0.943 r_med 7.43
+grossbig_45      succ 0.000 near 0.007 mid 0.018 far 0.975 r_med 9.22
+grossbig_60      succ 0.000 near 0.003 mid 0.007 far 0.990 r_med 11.86
+grossbig_80      succ 0.000 near 0.000 mid 0.003 far 0.998 r_med 15.11
+grossbig_100     succ 0.000 near 0.000 mid 0.005 far 0.995 r_med 17.61
+grossbig_130     succ 0.000 near 0.000 mid 0.000 far 1.000 r_med 21.47
+clean_0.5        succ 0.980 near 0.005 mid 0.005 far 0.010 r_med 0.11
+clean_1          succ 0.973 near 0.003 mid 0.007 far 0.018 r_med 0.23
+clean_2          succ 0.915 near 0.040 mid 0.013 far 0.033 r_med 0.43
+VERIFY far_H      {'q': 0.2288, 'sig_big': 30, 'beta_max': 0.0, 'sig_small': 1.0} succ 0.672 near 0.020 mid 0.022 far 0.285
+VERIFY far_L      {'q': 0.4859, 'sig_big': 30, 'beta_max': 0.0, 'sig_small': 1.0} succ 0.492 near 0.010 mid 0.043 far 0.455
+VERIFY iid_H      {'sigma': 2.9189} succ 0.772 near 0.140 mid 0.052 far 0.035
+VERIFY iid_L      {'sigma': 4.1852} succ 0.517 near 0.323 mid 0.075 far 0.085
+VERIFY mixA_L     {'q': 0.3333, 'sig_big': 30, 'beta_max': 1.0598, 'sig_small': 0.0} succ 0.480 near 0.168 mid 0.020 far 0.333
+VERIFY mixB_L     {'q': 0.1667, 'sig_big': 30, 'beta_max': 1.383, 'sig_small': 0.0} succ 0.492 near 0.278 mid 0.052 far 0.177
+VERIFY near_H     {'beta_max': 1.0598} succ 0.743 near 0.200 mid 0.028 far 0.030
+VERIFY near_L     {'beta_max': 1.65} succ 0.495 near 0.405 mid 0.060 far 0.040
+CALIB_DONE 10 11s

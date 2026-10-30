@@ -1,0 +1,24 @@
+Using cache found in /root/.cache/torch/hub/facebookresearch_dinov2_main
+num_action_repeat: 1
+num_proprio_repeat: 1
+proprio encoder: ProprioceptiveEmbedding(
+  (patch_embed): Conv1d(4, 10, kernel_size=(1,), stride=(1,))
+)
+action encoder: ProprioceptiveEmbedding(
+  (patch_embed): Conv1d(10, 10, kernel_size=(1,), stride=(1,))
+)
+proprio_dim: 10, after repeat: 10
+action_dim: 10, after repeat: 10
+emb_dim: 404
+Model emb_dim:  404
+H5 chunk 0 done: 200 episodes, 1600 seqs, 28s
+H5 chunk 200 done: 400 episodes, 3200 seqs, 47s
+H5 chunk 400 done: 600 episodes, 4800 seqs, 65s
+H5 chunk 600 done: 800 episodes, 6400 seqs, 84s
+H5 chunk 800 done: 1000 episodes, 8000 seqs, 102s
+H5 chunk 1000 done: 1200 episodes, 9600 seqs, 122s
+H5 chunk 1200 done: 1400 episodes, 11200 seqs, 140s
+H10 chunk 0 done: 1600 episodes, 12800 seqs, 177s
+H10 chunk 200 done: 1800 episodes, 14400 seqs, 214s
+H10 chunk 400 done: 2000 episodes, 16000 seqs, 251s
+CLFSET_DONE {'n_episodes': 2000, 'n_seqs': 16000, 'success_rate': 0.53375, 'bins': {'success': 0.53375, 'near': 0.1726875, 'mid': 0.0880625, 'far': 0.2055}, 'n_val_episodes': 413, 'mags': {5: {'sigma': 7.0588, 'beta': 3.5, 'k': 0.2872549019607843, 'sb': 60}, 10: {'sigma': 4.1852, 'beta': 1.65, 'k': 0.2125, 'sb': 30}}, 'time_s': 255.40528321266174}

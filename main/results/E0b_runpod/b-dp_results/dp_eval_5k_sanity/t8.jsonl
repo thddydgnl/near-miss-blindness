@@ -1,0 +1,5 @@
+{"task": 8, "ckpt": "t8_s0/ckpt_5000.pt", "step": 5000, "episode": 0, "success": true, "steps": 94, "queries": 6, "r_settled": 0.8927709388201424, "success_settled": true, "aux_ok": true, "sec": 17.277634620666504}
+{"task": 8, "ckpt": "t8_s0/ckpt_5000.pt", "step": 5000, "episode": 1, "success": true, "steps": 87, "queries": 5, "r_settled": 0.583086263873369, "success_settled": true, "aux_ok": true, "sec": 12.342434167861938}
+{"task": 8, "ckpt": "t8_s0/ckpt_5000.pt", "step": 5000, "episode": 2, "success": true, "steps": 94, "queries": 6, "r_settled": 1.030378414509307, "success_settled": false, "aux_ok": true, "sec": 14.048970460891724}
+{"task": 8, "ckpt": "t8_s0/ckpt_5000.pt", "step": 5000, "episode": 3, "success": true, "steps": 83, "queries": 5, "r_settled": 0.35244256180479416, "success_settled": true, "aux_ok": true, "sec": 11.600844383239746}
+{"task": 8, "ckpt": "t8_s0/ckpt_5000.pt", "step": 5000, "episode": 4, "success": true, "steps": 86, "queries": 5, "r_settled": 0.4816085262648969, "success_settled": true, "aux_ok": true, "sec": 11.64575719833374}

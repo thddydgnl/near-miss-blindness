@@ -1,0 +1,6 @@
+chain start 14:09:02
+t9 probe rc=0 14:12:55
+e1_smoke rc=0 14:18:19
+tp cosmos rc=0 14:22:18
+dp_bench rc=0 14:22:35
+vlm_bench rc=0 14:24:39

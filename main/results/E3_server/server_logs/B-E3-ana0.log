@@ -1,0 +1,25 @@
+trainsplit_H10_r a: near 0.099->0.195 share 0.491 b: near 0.153->0.241 share 0.366
+trainsplit_H10_r_obj a: near 0.047->0.176 share 0.73 b: near 0.096->0.178 share 0.459
+trainsplit_H3_r a: near 0.113->0.158 share 0.284 b: near 0.423->0.497 share 0.149
+trainsplit_H3_r_obj a: near 0.046->0.236 share 0.804 b: near 0.079->0.196 share 0.599
+trainsplit_H5_r a: near 0.113->0.196 share 0.422 b: near 0.268->0.374 share 0.284
+trainsplit_H5_r_obj a: near 0.041->0.207 share 0.802 b: near 0.115->0.230 share 0.498
+trainsplit_H7_r a: near 0.124->0.183 share 0.32 b: near 0.204->0.289 share 0.294
+trainsplit_H7_r_obj a: near 0.042->0.171 share 0.755 b: near 0.091->0.193 share 0.529
+val_H10_r a: near 0.107->0.204 share 0.475 b: near 0.099->0.184 share 0.46
+val_H10_r_obj a: near 0.046->0.155 share 0.705 b: near 0.108->0.161 share 0.33
+val_H3_r a: near 0.110->0.145 share 0.242 b: near 0.373->0.437 share 0.147
+val_H3_r_obj a: near 0.044->0.218 share 0.798 b: near 0.055->0.150 share 0.634
+val_H5_r a: near 0.112->0.147 share 0.239 b: near 0.242->0.313 share 0.229
+val_H5_r_obj a: near 0.047->0.199 share 0.765 b: near 0.068->0.158 share 0.569
+val_H7_r a: near 0.100->0.172 share 0.417 b: near 0.154->0.258 share 0.402
+val_H7_r_obj a: near 0.050->0.192 share 0.741 b: near 0.078->0.170 share 0.539
+DP H3 a_std: near 0.058->0.133 share 0.568
+DP H5 a_std: near 0.058->0.191 share 0.698
+DP H7 a_std: near 0.058->0.218 share 0.736
+DP H10 a_std: near 0.058->0.258 share 0.776
+M3 p=0.03: near 0.000->0.535 share 1.0
+M3 p=0.1: near 0.000->0.238 share 1.0
+M3 p=0.3: near 0.000->0.104 share 1.0
+VERDICT H3 {"M1": false, "M3": true}
+E3_ANALYZE_DONE 6s

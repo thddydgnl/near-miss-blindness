@@ -1,0 +1,173 @@
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[loader] libero_goal: 4 demos from 1 tasks
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[loader] libero_goal: 4 demos from 1 tasks
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[loader] libero_goal: 4 demos from 1 tasks
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[loader] libero_goal: 4 demos from 1 tasks
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[loader] libero_goal: 4 demos from 1 tasks
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[loader] libero_goal: 4 demos from 1 tasks
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+{
+ "8": {
+  "family": "place_offset",
+  "n": 72,
+  "agree_geom_libero": 1.0,
+  "agree_settled_vs_ever": 1.0,
+  "r_median_by_severity": {
+   "0.0": 0.1595988478590689,
+   "0.01": 0.2763225589735661,
+   "0.02": 0.6260298924487865,
+   "0.03": 0.9023781042890402,
+   "0.04": 1.2522958783848868,
+   "0.05": 1.6326394510297595,
+   "0.06": 2.0134944552162612,
+   "0.07": 2.2380338616756075,
+   "0.08": 2.3787577405756313,
+   "0.1": 2.4195119428663943,
+   "0.12": 2.7218914168161468,
+   "0.15": 3.9737724308435167
+  },
+  "frac_in_0p8_3": 0.625,
+  "bands": {
+   "lt1": 24,
+   "near_1_2": 18,
+   "mid_2_3": 21,
+   "far_ge3": 9
+  },
+  "spearman_sev_r": 0.957682166055695
+ },
+ "6": {
+  "family": "place_offset",
+  "n": 96,
+  "agree_geom_libero": 1.0,
+  "agree_settled_vs_ever": 1.0,
+  "r_median_by_severity": {
+   "0.0": 0.4598622883187808,
+   "0.01": 0.5905569045602858,
+   "0.02": 1.0214937957243435,
+   "0.03": 1.4261048329837671,
+   "0.04": 1.8672906831160743,
+   "0.05": 2.571306041784498,
+   "0.06": 2.8818644057775886,
+   "0.07": 2.9841387522326306,
+   "0.08": 2.8506316183070264,
+   "0.1": 3.490184195998079,
+   "0.12": 3.958079744639865,
+   "0.15": 4.9196949280278
+  },
+  "frac_in_0p8_3": 0.4583333333333333,
+  "bands": {
+   "lt1": 21,
+   "near_1_2": 16,
+   "mid_2_3": 26,
+   "far_ge3": 33
+  },
+  "spearman_sev_r": 0.8760851871947912
+ },
+ "1": {
+  "family": "place_offset",
+  "n": 96,
+  "agree_geom_libero": 1.0,
+  "agree_settled_vs_ever": 0.9791666666666666,
+  "r_median_by_severity": {
+   "0.0": 0.26604935028819443,
+   "0.03": 0.45989786438730146,
+   "0.05": 0.7482768263399036,
+   "0.07": 1.0600817136852823,
+   "0.09": 1.2786238463979134,
+   "0.11": 1.4285211447950705,
+   "0.13": 1.8398402670341496,
+   "0.15": 2.113088993853001,
+   "0.18": 2.559428836039067,
+   "0.21": 2.858263610485581,
+   "0.25": 3.2211820995006835,
+   "0.3": 3.8440370543615767
+  },
+  "frac_in_0p8_3": 0.6041666666666666,
+  "bands": {
+   "lt1": 30,
+   "near_1_2": 24,
+   "mid_2_3": 27,
+   "far_ge3": 15
+  },
+  "spearman_sev_r": 0.9537981551817689
+ },
+ "4": {
+  "family": "place_offset",
+  "n": 72,
+  "agree_geom_libero": 1.0,
+  "agree_settled_vs_ever": 0.9861111111111112,
+  "r_median_by_severity": {
+   "0.0": 0.37690822052932826,
+   "0.03": 0.5328325691638905,
+   "0.06": 0.7447960038124974,
+   "0.09": 0.962155458599836,
+   "0.12": 1.2382302455312195,
+   "0.15": 1.3983904143058843,
+   "0.18": 1.8028303677813047,
+   "0.21": 1.8512743116996226,
+   "0.24": 2.027492628086994,
+   "0.27": 2.5831497207278975,
+   "0.3": 2.569767971032361,
+   "0.35": 2.8555658005120774
+  },
+  "frac_in_0p8_3": 0.6527777777777778,
+  "bands": {
+   "lt1": 24,
+   "near_1_2": 26,
+   "mid_2_3": 16,
+   "far_ge3": 6
+  },
+  "spearman_sev_r": 0.9244967522027142
+ },
+ "5": {
+  "family": "under_actuation",
+  "n": 52,
+  "agree_geom_libero": 1.0,
+  "agree_settled_vs_ever": 0.9423076923076923,
+  "r_median_by_severity": {
+   "0.0": 0.8304479871928898,
+   "0.05": 0.6945991538014303,
+   "0.1": 0.7718858785524441,
+   "0.15": 1.0630158155666947,
+   "0.2": 1.285965253978582,
+   "0.25": 1.4504652057553369,
+   "0.3": 1.6548870058189356,
+   "0.35": 1.776057736347443,
+   "0.4": 1.9719321499025853,
+   "0.5": 2.3871009439291297,
+   "0.6": 2.5043401906432257,
+   "0.7": 2.9517573349455253,
+   "0.8": 3.3104920890931187
+  },
+  "frac_in_0p8_3": 0.6730769230769231,
+  "bands": {
+   "lt1": 14,
+   "near_1_2": 19,
+   "mid_2_3": 11,
+   "far_ge3": 8
+  },
+  "spearman_sev_r": 0.8505079825834543
+ }
+}

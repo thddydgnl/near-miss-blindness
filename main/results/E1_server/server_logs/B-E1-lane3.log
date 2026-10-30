@@ -1,0 +1,29 @@
+multiprocessing.pool.RemoteTraceback: 
+Traceback (most recent call last):
+ValueError: Seed must be between 0 and 2**32 - 1
+Traceback (most recent call last):
+ValueError: Seed must be between 0 and 2**32 - 1
+multiprocessing.pool.RemoteTraceback: 
+Traceback (most recent call last):
+ValueError: Seed must be between 0 and 2**32 - 1
+Traceback (most recent call last):
+ValueError: Seed must be between 0 and 2**32 - 1
+trainsplit H7 r: batch 0 episodes 100 +587 cf, queue 3013, dropped 0, 46s
+trainsplit H7 r: batch 5 episodes 600 +587 cf, queue 70, dropped 0, 221s
+EVAL_CELL_DONE {"set": "trainsplit", "H": 7, "defk": "r", "n_targets": 3600, "n_dropped": 0, "n_episodes": 615, "n_unreachable_attempts": 81, "reach_rate_per_attempt": 0.9779951100244498, "s_max": {"offset": 10.0, "iid": 40.0}, "tau": {"full": 0.2125, "obj": 0.345}, "mean_sim_calls": 15.0, "time_s": 227.04373812675476}
+trainsplit H10 r: batch 0 episodes 100 +592 cf, queue 3008, dropped 0, 56s
+trainsplit H10 r: batch 5 episodes 600 +592 cf, queue 60, dropped 0, 316s
+EVAL_CELL_DONE {"set": "trainsplit", "H": 10, "defk": "r", "n_targets": 3600, "n_dropped": 0, "n_episodes": 613, "n_unreachable_attempts": 73, "reach_rate_per_attempt": 0.9801252382248843, "s_max": {"offset": 6.0, "iid": 30.0}, "tau": {"full": 0.2125, "obj": 0.345}, "mean_sim_calls": 15.0, "time_s": 325.61340069770813}
+trainsplit H5 r_obj: batch 0 episodes 100 +343 cf, queue 3257, dropped 0, 35s
+trainsplit H5 r_obj: batch 5 episodes 600 +355 cf, queue 1420, dropped 0, 138s
+EVAL_CELL_DONE {"set": "trainsplit", "H": 5, "defk": "r_obj", "n_targets": 3600, "n_dropped": 1, "n_episodes": 1123, "n_unreachable_attempts": 3060, "reach_rate_per_attempt": 0.5404715422736146, "s_max": {"offset": 200.0, "iid": 200.0}, "tau": {"full": 0.2125, "obj": 0.345}, "mean_sim_calls": 15.0, "time_s": 220.56409573554993}
+trainsplit H3 r_obj: batch 0 episodes 100 +278 cf, queue 3322, dropped 0, 19s
+trainsplit H3 r_obj: batch 5 episodes 600 +299 cf, queue 1864, dropped 0, 63s
+EVAL_CELL_DONE {"set": "trainsplit", "H": 3, "defk": "r_obj", "n_targets": 3600, "n_dropped": 4, "n_episodes": 1522, "n_unreachable_attempts": 5482, "reach_rate_per_attempt": 0.39612249394139676, "s_max": {"offset": 200.0, "iid": 200.0}, "tau": {"full": 0.2125, "obj": 0.345}, "mean_sim_calls": 15.0, "time_s": 134.3796124458313}
+trainsplit H7 r_obj: batch 0 episodes 100 +398 cf, queue 3202, dropped 0, 38s
+trainsplit H7 r_obj: batch 5 episodes 600 +458 cf, queue 994, dropped 0, 170s
+EVAL_CELL_DONE {"set": "trainsplit", "H": 7, "defk": "r_obj", "n_targets": 3600, "n_dropped": 0, "n_episodes": 899, "n_unreachable_attempts": 1746, "reach_rate_per_attempt": 0.6734006734006734, "s_max": {"offset": 200.0, "iid": 200.0}, "tau": {"full": 0.2125, "obj": 0.345}, "mean_sim_calls": 15.0, "time_s": 237.82071042060852}
+trainsplit H10 r_obj: batch 0 episodes 100 +466 cf, queue 3134, dropped 0, 49s
+trainsplit H10 r_obj: batch 5 episodes 600 +491 cf, queue 679, dropped 0, 264s
+EVAL_CELL_DONE {"set": "trainsplit", "H": 10, "defk": "r_obj", "n_targets": 3600, "n_dropped": 0, "n_episodes": 760, "n_unreachable_attempts": 930, "reach_rate_per_attempt": 0.7947019867549668, "s_max": {"offset": 200.0, "iid": 200.0}, "tau": {"full": 0.2125, "obj": 0.345}, "mean_sim_calls": 15.0, "time_s": 327.1246769428253}
+LANE2_DONE trainsplit 2026-10-21T23:17:08Z

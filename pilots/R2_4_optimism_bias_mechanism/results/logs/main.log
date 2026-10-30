@@ -1,0 +1,58 @@
+T=10000
+[main] M=24 N=100000 B=512 Tmax=10000
+data: [{'n_fail': 29846, 'n_miss': 22477, 'n_slip': 7369}, {'n_fail': 30008, 'n_miss': 22616, 'n_slip': 7392}, {'n_fail': 29936, 'n_miss': 22532, 'n_slip': 7404}, {'n_fail': 29846, 'n_miss': 22477, 'n_slip': 7369}, {'n_fail': 30008, 'n_miss': 22616, 'n_slip': 7392}, {'n_fail': 29936, 'n_miss': 22532, 'n_slip': 7404}, {'n_fail': 9889, 'n_miss': 7399, 'n_slip': 2490}, {'n_fail': 9870, 'n_miss': 7429, 'n_slip': 2441}]
+step 1000 (3s) loss[0]=8.65e-02 opt=[0.128, 0.13, 0.163, 0.08, 0.073, 0.076, 0.312, 0.36]
+step 2000 (6s) loss[0]=1.27e-02 opt=[0.073, 0.078, 0.055, 0.053, 0.029, 0.036, 0.212, 0.216]
+step 3000 (9s) loss[0]=7.51e-03 opt=[0.063, 0.049, 0.045, 0.028, 0.036, 0.039, 0.166, 0.173]
+step 4000 (12s) loss[0]=6.17e-03 opt=[0.039, 0.047, 0.052, 0.034, 0.023, 0.03, 0.136, 0.144]
+step 5000 (15s) loss[0]=5.08e-03 opt=[0.035, 0.033, 0.037, 0.022, 0.038, 0.032, 0.085, 0.114]
+step 6000 (17s) loss[0]=4.03e-03 opt=[0.022, 0.035, 0.034, 0.021, 0.018, 0.02, 0.082, 0.089]
+step 7000 (20s) loss[0]=3.09e-03 opt=[0.023, 0.023, 0.022, 0.016, 0.021, 0.017, 0.056, 0.074]
+step 8000 (23s) loss[0]=2.43e-03 opt=[0.016, 0.024, 0.028, 0.011, 0.014, 0.013, 0.053, 0.068]
+step 9000 (26s) loss[0]=1.98e-03 opt=[0.018, 0.018, 0.023, 0.014, 0.011, 0.018, 0.052, 0.054]
+step 10000 (29s) loss[0]=1.76e-03 opt=[0.017, 0.015, 0.019, 0.01, 0.009, 0.011, 0.051, 0.055]
+[main] done in 29s
+/workspace/code/analyze.py:266: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ck = torch.load(os.path.join(args.ckpt, f'{args.name}.pt'), map_location=dev)
+model 0 {'p': 0.3, 'mode': 'std', 'seed': 0, 'T': 10000, 'N': 100000} opt=0.017 J(fail,succ)=0.179 x3.63 rot x2.74 untr x5.56 (2.6s)
+model 1 {'p': 0.3, 'mode': 'std', 'seed': 1, 'T': 10000, 'N': 100000} opt=0.015 J(fail,succ)=0.193 x3.50 rot x1.90 untr x6.62 (1.6s)
+model 2 {'p': 0.3, 'mode': 'std', 'seed': 2, 'T': 10000, 'N': 100000} opt=0.019 J(fail,succ)=0.179 x3.48 rot x2.45 untr x6.35 (1.8s)
+model 3 {'p': 0.3, 'mode': 'rw', 'seed': 0, 'T': 10000, 'N': 100000} opt=0.010 J(fail,succ)=0.172 x4.00 rot x3.01 untr x5.58 (1.6s)
+model 4 {'p': 0.3, 'mode': 'rw', 'seed': 1, 'T': 10000, 'N': 100000} opt=0.009 J(fail,succ)=0.193 x3.65 rot x2.36 untr x6.53 (1.4s)
+model 5 {'p': 0.3, 'mode': 'rw', 'seed': 2, 'T': 10000, 'N': 100000} opt=0.011 J(fail,succ)=0.172 x3.95 rot x2.62 untr x6.33 (1.5s)
+model 6 {'p': 0.1, 'mode': 'std', 'seed': 0, 'T': 10000, 'N': 100000} opt=0.051 J(fail,succ)=0.172 x3.15 rot x1.86 untr x5.60 (1.7s)
+model 7 {'p': 0.1, 'mode': 'std', 'seed': 1, 'T': 10000, 'N': 100000} opt=0.055 J(fail,succ)=0.179 x3.20 rot x2.20 untr x6.58 (2.0s)
+model 8 {'p': 0.1, 'mode': 'std', 'seed': 2, 'T': 10000, 'N': 100000} opt=0.049 J(fail,succ)=0.109 x2.75 rot x1.68 untr x6.35 (1.8s)
+model 9 {'p': 0.1, 'mode': 'rw', 'seed': 0, 'T': 10000, 'N': 100000} opt=0.026 J(fail,succ)=0.146 x3.18 rot x2.93 untr x5.56 (2.2s)
+model 10 {'p': 0.1, 'mode': 'rw', 'seed': 1, 'T': 10000, 'N': 100000} opt=0.027 J(fail,succ)=0.193 x3.66 rot x2.24 untr x6.57 (2.0s)
+model 11 {'p': 0.1, 'mode': 'rw', 'seed': 2, 'T': 10000, 'N': 100000} opt=0.025 J(fail,succ)=0.179 x3.70 rot x2.10 untr x6.30 (1.6s)
+model 12 {'p': 0.03, 'mode': 'std', 'seed': 0, 'T': 10000, 'N': 100000} opt=0.172 J(fail,succ)=0.159 x2.92 rot x2.28 untr x5.56 (2.3s)
+model 13 {'p': 0.03, 'mode': 'std', 'seed': 1, 'T': 10000, 'N': 100000} opt=0.183 J(fail,succ)=0.159 x2.80 rot x2.27 untr x6.62 (2.5s)
+model 14 {'p': 0.03, 'mode': 'std', 'seed': 2, 'T': 10000, 'N': 100000} opt=0.101 J(fail,succ)=0.103 x2.18 rot x2.47 untr x6.31 (2.3s)
+model 15 {'p': 0.03, 'mode': 'rw', 'seed': 0, 'T': 10000, 'N': 100000} opt=0.082 J(fail,succ)=0.200 x3.64 rot x3.25 untr x5.57 (2.4s)
+model 16 {'p': 0.03, 'mode': 'rw', 'seed': 1, 'T': 10000, 'N': 100000} opt=0.097 J(fail,succ)=0.159 x2.72 rot x2.12 untr x6.53 (2.5s)
+model 17 {'p': 0.03, 'mode': 'rw', 'seed': 2, 'T': 10000, 'N': 100000} opt=0.076 J(fail,succ)=0.172 x3.40 rot x3.00 untr x6.29 (2.3s)
+model 18 {'p': 0.01, 'mode': 'std', 'seed': 0, 'T': 10000, 'N': 100000} opt=0.301 J(fail,succ)=0.146 x2.63 rot x2.43 untr x5.58 (2.0s)
+model 19 {'p': 0.01, 'mode': 'std', 'seed': 1, 'T': 10000, 'N': 100000} opt=0.293 J(fail,succ)=0.103 x1.82 rot x2.36 untr x6.58 (0.4s)
+model 20 {'p': 0.01, 'mode': 'std', 'seed': 2, 'T': 10000, 'N': 100000} opt=0.325 J(fail,succ)=0.097 x1.64 rot x1.90 untr x6.29 (0.4s)
+model 21 {'p': 0.01, 'mode': 'rw', 'seed': 0, 'T': 10000, 'N': 100000} opt=0.233 J(fail,succ)=0.140 x2.64 rot x2.71 untr x5.59 (0.4s)
+model 22 {'p': 0.01, 'mode': 'rw', 'seed': 1, 'T': 10000, 'N': 100000} opt=0.302 J(fail,succ)=0.127 x2.17 rot x2.33 untr x6.56 (0.5s)
+model 23 {'p': 0.01, 'mode': 'rw', 'seed': 2, 'T': 10000, 'N': 100000} opt=0.223 J(fail,succ)=0.153 x2.87 rot x2.66 untr x6.30 (0.4s)
+analysis done
+/workspace/code/finetune.py:96: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ck = torch.load(os.path.join(args.ckpt, f'{args.name}.pt'), map_location=dev)
+model 0 p=0.3 seed=0 lr=0.1 base_miss=0.977 -> 0.950 w_sq_share=[0.28, 0.38, 0.14, 0.1, 0.09]
+model 1 p=0.3 seed=1 lr=0.05 base_miss=0.979 -> 0.965 w_sq_share=[0.23, 0.43, 0.13, 0.13, 0.08]
+model 2 p=0.3 seed=2 lr=0.1 base_miss=0.975 -> 0.955 w_sq_share=[0.32, 0.39, 0.11, 0.09, 0.1]
+model 6 p=0.1 seed=0 lr=0.1 base_miss=0.932 -> 0.920 w_sq_share=[0.13, 0.45, 0.19, 0.11, 0.13]
+model 7 p=0.1 seed=1 lr=0.05 base_miss=0.927 -> 0.932 w_sq_share=[0.26, 0.5, 0.13, 0.07, 0.04]
+model 8 p=0.1 seed=2 lr=0.05 base_miss=0.935 -> 0.932 w_sq_share=[0.18, 0.42, 0.16, 0.13, 0.1]
+model 12 p=0.03 seed=0 lr=0.2 base_miss=0.771 -> 0.797 w_sq_share=[0.22, 0.47, 0.12, 0.07, 0.12]
+model 13 p=0.03 seed=1 lr=0.1 base_miss=0.756 -> 0.821 w_sq_share=[0.23, 0.56, 0.12, 0.05, 0.04]
+model 14 p=0.03 seed=2 lr=0.1 base_miss=0.866 -> 0.850 w_sq_share=[0.23, 0.42, 0.14, 0.1, 0.1]
+model 18 p=0.01 seed=0 lr=0.1 base_miss=0.599 -> 0.670 w_sq_share=[0.21, 0.59, 0.1, 0.03, 0.06]
+model 19 p=0.01 seed=1 lr=0.1 base_miss=0.610 -> 0.690 w_sq_share=[0.18, 0.62, 0.11, 0.04, 0.04]
+model 20 p=0.01 seed=2 lr=0.1 base_miss=0.567 -> 0.651 w_sq_share=[0.25, 0.52, 0.1, 0.04, 0.09]
+finetune done
+figures done
+MAIN_OK

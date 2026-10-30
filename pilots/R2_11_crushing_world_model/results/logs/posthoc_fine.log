@@ -1,0 +1,24 @@
+/workspace/code/posthoc_fine.py:54: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  st = torch.load(f'{args.data}/stats.pt')
+/workspace/code/posthoc_fine.py:56: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  d = torch.load(f'{args.data}/ana.pt')
+n_test {'touch_vs_near': 1535, 'onset': 659, 'box_moves': 1087, 'near_vs_far': 5339, 'agent_moves': 4360} pos {'touch_vs_near': 0.708, 'onset': 0.228, 'box_moves': 0.817, 'near_vs_far': 0.288, 'agent_moves': 0.617}
+copy {'touch_vs_near': 0.74, 'onset': 0.594, 'box_moves': 0.716, 'near_vs_far': 0.993, 'agent_moves': 0.792}
+oracle {'touch_vs_near': 0.831, 'onset': 0.848, 'box_moves': 0.693, 'near_vs_far': 0.997, 'agent_moves': 0.787} 4s
+/workspace/code/posthoc_fine.py:114: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(fn, map_location=DEV))
+w256 0 {'touch_vs_near': 0.822, 'onset': 0.785, 'box_moves': 0.74, 'near_vs_far': 0.997, 'agent_moves': 0.795} 6s
+mlp64 0 {'touch_vs_near': 0.825, 'onset': 0.794, 'box_moves': 0.743, 'near_vs_far': 0.997, 'agent_moves': 0.794} 8s
+mlp16 0 {'touch_vs_near': 0.824, 'onset': 0.781, 'box_moves': 0.743, 'near_vs_far': 0.997, 'agent_moves': 0.795} 11s
+mlp8 0 {'touch_vs_near': 0.823, 'onset': 0.783, 'box_moves': 0.741, 'near_vs_far': 0.996, 'agent_moves': 0.795} 13s
+res64 0 {'touch_vs_near': 0.772, 'onset': 0.67, 'box_moves': 0.729, 'near_vs_far': 0.995, 'agent_moves': 0.795} 14s
+res16 0 {'touch_vs_near': 0.742, 'onset': 0.6, 'box_moves': 0.722, 'near_vs_far': 0.993, 'agent_moves': 0.794} 16s
+res8 0 {'touch_vs_near': 0.741, 'onset': 0.597, 'box_moves': 0.721, 'near_vs_far': 0.993, 'agent_moves': 0.793} 17s
+w256 1 {'touch_vs_near': 0.824, 'onset': 0.79, 'box_moves': 0.74, 'near_vs_far': 0.996, 'agent_moves': 0.794} 19s
+mlp64 1 {'touch_vs_near': 0.827, 'onset': 0.798, 'box_moves': 0.746, 'near_vs_far': 0.996, 'agent_moves': 0.796} 21s
+mlp16 1 {'touch_vs_near': 0.824, 'onset': 0.776, 'box_moves': 0.744, 'near_vs_far': 0.996, 'agent_moves': 0.797} 23s
+mlp8 1 {'touch_vs_near': 0.82, 'onset': 0.782, 'box_moves': 0.739, 'near_vs_far': 0.996, 'agent_moves': 0.796} 26s
+res64 1 {'touch_vs_near': 0.773, 'onset': 0.682, 'box_moves': 0.727, 'near_vs_far': 0.995, 'agent_moves': 0.795} 27s
+res16 1 {'touch_vs_near': 0.744, 'onset': 0.603, 'box_moves': 0.722, 'near_vs_far': 0.993, 'agent_moves': 0.794} 28s
+res8 1 {'touch_vs_near': 0.739, 'onset': 0.594, 'box_moves': 0.719, 'near_vs_far': 0.993, 'agent_moves': 0.793} 30s
+done

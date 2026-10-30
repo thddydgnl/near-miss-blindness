@@ -1,0 +1,26 @@
+Using cache found in /home/yonghwi/pmx/torch/hub/facebookresearch_dinov2_main
+PCA explained 0.972 (8s)
+eval bank done (39s)
+seed 0: {'N': 30000, 'n_fail': 916, 'n_alt': 8109, 'n_fail_p01': 3018, 'n_fail_p03': 9025, 'n_frames': 193428} (270s)
+seed 1: {'N': 30000, 'n_fail': 895, 'n_alt': 8050, 'n_fail_p01': 2945, 'n_fail_p03': 8945, 'n_frames': 192940} (527s)
+seed 2: {'N': 30000, 'n_fail': 888, 'n_alt': 8078, 'n_fail_p01': 2995, 'n_fail_p03': 8966, 'n_frames': 192968} (777s)
+done (777s)
+banks 779s
+classifier {'val_acc': 1.0, 'policy_real_frame_acc': {'pi1_precise': 1.0, 'pi2_good': 1.0, 'pi3_medium': 1.0, 'pi4_sloppy': 1.0, 'pi5_far_failer': 1.0, 'pi6_near_failer': 1.0}}
+p0.03_std_1x_s0 done (179s)
+p0.03_std_1x_s1 done (180s)
+p0.03_std_1x_s2 done (180s)
+p0.1_std_1x_s0 done (165s)
+p0.1_std_1x_s1 done (180s)
+p0.1_std_1x_s2 done (180s)
+p0.3_std_1x_s0 done (180s)
+p0.3_std_1x_s1 done (180s)
+p0.3_std_1x_s2 done (181s)
+E0 vs E1 weights p0.03_std_1x_s0 max abs diff 0.0
+E0 vs E1 weights p0.03_std_1x_s1 max abs diff 0.0
+E0 vs E1 weights p0.03_std_1x_s2 max abs diff 0.0
+E0 vs E1 weights p0.1_std_1x_s0 max abs diff 0.0
+E0 vs E1 weights p0.3_std_1x_s0 max abs diff 0.0
+<stdin>:7: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+classifier max abs diff 0.0
+M3_TRAIN_DONE 2410s

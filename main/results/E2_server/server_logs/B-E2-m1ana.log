@@ -1,0 +1,8 @@
+DP H3: Spearman(n, o_imag) 0.346 [-0.09721179826624461, 0.5403722670656564] perm p 0.0488 | pairs 0 tau_sim 0.7252266687565152 | Pearson 0.998 MMRV 0.005 FGRE 0.017 | near real/imag 0.058/0.133
+DP H5: Spearman(n, o_imag) 0.357 [0.022606076507319564, 0.5975776149562368] perm p 0.0470 | pairs 0 tau_sim 0.7089175569585667 | Pearson 0.998 MMRV 0.010 FGRE 0.023 | near real/imag 0.058/0.191
+DP H7: Spearman(n, o_imag) 0.320 [-0.004224549111337998, 0.5560704098145907] perm p 0.0644 | pairs 0 tau_sim 0.6076436202502 | Pearson 0.995 MMRV 0.016 FGRE 0.022 | near real/imag 0.058/0.218
+DP H10: Spearman(n, o_imag) 0.405 [0.01382210522111336, 0.6446907483013479] perm p 0.0288 | pairs 0 tau_sim 0.45573271518765 | Pearson 0.995 MMRV 0.017 FGRE 0.032 | near real/imag 0.058/0.258
+VERDICT M1 {"cell": "DP 24 checkpoints, H = 5, a_std ensemble, n = P(1 <= r_obj < 2)", "H2a": false, "H2b": false, "H2c": true}
+CTRL judge a: Spearman(n, o_imag) 0.571 [0.09523809523809523, 0.6428571428571429] | Spearman(n, o) 0.571 | pairs 0 tau_sim 0.0 | Pearson 0.958 MMRV 0.023 FGRE 0.117
+CTRL judge b: Spearman(n, o_imag) 0.910 [0.47619047619047616, 0.9761904761904762] | Spearman(n, o) 0.714 | pairs 0 tau_sim -0.8333333333333334 | Pearson 0.872 MMRV 0.039 FGRE 0.275
+E2_M1_ANALYZE_DONE 3s

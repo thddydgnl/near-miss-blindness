@@ -1,0 +1,35 @@
+Using cache found in /home/yonghwi/pmx/torch/hub/facebookresearch_dinov2_main
+load 3.2s; val trajs 21 len min/med/max 76/114.0/167; train trajs 18685 len med 123.0; shapes val {'T'}
+action mean/std [-0.008700000122189522, 0.006800000090152025] [0.20190000534057617, 0.20020000636577606] num_hist 3
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+episode 15 68 margins [0.0, 0.89, 0.401, 1.525, 4.44] agent/block/ang of off5 8.0 0.5 0.007
+episode 3 83 margins [0.0, 0.941, 0.708, 0.561, 3.836] agent/block/ang of off5 10.6 9.4 0.076
+episode 7 92 margins [0.0, 0.72, 1.961, 0.468, 6.704] agent/block/ang of off5 39.2 2.0 0.035
+episode 14 23 margins [0.0, 1.545, 0.802, 0.949, 5.105] agent/block/ang of off5 12.0 10.7 0.001
+fast sim vs env.rollout: max|state diff| 0.00e+00, max|final img diff| 0, start img diff 0
+sim only 2.2 ms/traj, sim+render 4.5 ms/traj
+encode 40 frames 0.18s ; imagine 20 seqs 0.25s
+imagine 512 seqs (bs 256) 5.03s ; peak mem 4.9GB
+expert  r   0.00 | d_vis real 0.0000 imag 0.0819 | d_full real 0.0000 imag 0.0834 | d(imag,real) 0.0819
+iid5    r   0.44 | d_vis real 0.1165 imag 0.1260 | d_full real 0.1180 imag 0.1288 | d(imag,real) 0.0688
+off5    r   1.55 | d_vis real 0.1749 imag 0.1686 | d_full real 0.2078 imag 0.2048 | d(imag,real) 0.0778
+scale3  r   1.10 | d_vis real 0.1166 imag 0.1242 | d_full real 0.1344 imag 0.1354 | d(imag,real) 0.0724
+gross   r   4.87 | d_vis real 0.5688 imag 0.3829 | d_full real 1.2782 imag 0.8042 | d(imag,real) 0.1844
+expert  r   0.00 | d_vis real 0.0000 imag 0.1435 | d_full real 0.0000 imag 0.1455 | d(imag,real) 0.1435
+iid5    r   0.84 | d_vis real 0.2012 imag 0.9400 | d_full real 0.2119 imag 0.9581 | d(imag,real) 0.9516
+off5    r   3.19 | d_vis real 0.9714 imag 0.9592 | d_full real 0.9961 imag 0.9812 | d(imag,real) 0.1256
+scale3  r   0.79 | d_vis real 0.2178 imag 0.3619 | d_full real 0.2232 imag 0.3704 | d(imag,real) 0.2163
+gross   r   7.82 | d_vis real 1.3984 imag 1.3658 | d_full real 2.0747 imag 2.1468 | d(imag,real) 0.0720
+expert  r   0.00 | d_vis real 0.0000 imag 0.0888 | d_full real 0.0000 imag 0.0899 | d(imag,real) 0.0888
+iid5    r   0.40 | d_vis real 0.0707 imag 0.1091 | d_full real 0.0737 imag 0.1135 | d(imag,real) 0.1452
+off5    r   2.32 | d_vis real 0.5429 imag 0.4614 | d_full real 0.6238 imag 0.5818 | d(imag,real) 0.1536
+scale3  r   0.64 | d_vis real 0.1152 imag 0.1477 | d_full real 0.1212 imag 0.1590 | d(imag,real) 0.1405
+gross   r   2.24 | d_vis real 0.4227 imag 0.3315 | d_full real 0.5567 imag 0.4607 | d(imag,real) 0.1512
+expert  r   0.00 | d_vis real 0.0000 imag 0.4368 | d_full real 0.0000 imag 0.4419 | d(imag,real) 0.4368
+iid5    r   0.77 | d_vis real 0.1894 imag 0.1815 | d_full real 0.1982 imag 0.1844 | d(imag,real) 0.4229
+off5    r   0.33 | d_vis real 0.0505 imag 0.3785 | d_full real 0.0514 imag 0.3815 | d(imag,real) 0.4504
+scale3  r   1.96 | d_vis real 0.2671 imag 0.3184 | d_full real 0.2947 imag 0.3456 | d(imag,real) 0.2331
+gross   r   2.60 | d_vis real 0.5019 imag 0.2597 | d_full real 0.6982 imag 0.4279 | d(imag,real) 0.2079
+d_vis(start, goal) per episode [0.5447 1.0374 0.6897 1.7354]
+SMOKE_OK 11s

@@ -1,0 +1,16 @@
+{
+ "n_episodes": 2400,
+ "n_windows": 9600,
+ "padded": {
+  "3": 0,
+  "5": 0,
+  "7": 0,
+  "10": 1
+ },
+ "max_replay_err_px": 0.004090785205406178,
+ "max_replay_r_obj_diff": 0.00012199595547102149,
+ "n_windows_replay_err_gt_1e6": 4,
+ "n_windows_replay_band_flip": 0,
+ "sim_s": 26.909050703048706,
+ "time_s": 443.8043682575226
+}

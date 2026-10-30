@@ -1,0 +1,38 @@
+Using cache found in /home/yonghwi/pmx/torch/hub/facebookresearch_dinov2_main
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+main: 100/400 episodes, 42s
+main: 200/400 episodes, 80s
+main: 300/400 episodes, 125s
+main: 400/400 episodes, 169s
+MAIN_DONE main 169s

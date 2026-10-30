@@ -1,0 +1,24 @@
+val H3 r: a near imag 0.145 real 0.110 far imag 0.000 | AUROC sn real 0.953 imag 0.900 ceil 0.906 | sf real 1.000 imag 0.999 | r50 0.99 dr10 0.15 (16s)
+val H5 r: a near imag 0.147 real 0.112 far imag 0.000 | AUROC sn real 0.953 imag 0.853 ceil 0.889 | sf real 1.000 imag 0.995 | r50 0.90 dr10 0.21 (30s)
+val H7 r: a near imag 0.172 real 0.100 far imag 0.000 | AUROC sn real 0.950 imag 0.767 ceil 0.828 | sf real 1.000 imag 0.979 | r50 0.78 dr10 0.35 (45s)
+val H10 r: a near imag 0.204 real 0.107 far imag 0.003 | AUROC sn real 0.939 imag 0.673 ceil 0.725 | sf real 0.998 imag 0.950 | r50 0.64 dr10 0.47 (58s)
+val H3 r_obj: a near imag 0.218 real 0.044 far imag 0.113 | AUROC sn real 0.958 imag 0.837 ceil 0.827 | sf real 1.000 imag 0.930 | r50 0.95 dr10 1.21 (104s)
+val H5 r_obj: a near imag 0.199 real 0.047 far imag 0.055 | AUROC sn real 0.955 imag 0.805 ceil 0.829 | sf real 1.000 imag 0.942 | r50 0.88 dr10 0.90 (133s)
+val H7 r_obj: a near imag 0.192 real 0.050 far imag 0.021 | AUROC sn real 0.953 imag 0.733 ceil 0.787 | sf real 1.000 imag 0.928 | r50 0.79 dr10 0.83 (154s)
+val H10 r_obj: a near imag 0.155 real 0.046 far imag 0.038 | AUROC sn real 0.963 imag 0.692 ceil 0.762 | sf real 1.000 imag 0.870 | r50 0.64 dr10 0.77 (170s)
+trainsplit H3 r: a near imag 0.158 real 0.113 far imag 0.007 | AUROC sn real 0.952 imag 0.899 ceil 0.902 | sf real 0.997 imag 0.995 | r50 0.99 dr10 0.14 (188s)
+trainsplit H5 r: a near imag 0.196 real 0.113 far imag 0.010 | AUROC sn real 0.946 imag 0.830 ceil 0.862 | sf real 1.000 imag 0.989 | r50 0.93 dr10 0.36 (205s)
+trainsplit H7 r: a near imag 0.183 real 0.124 far imag 0.003 | AUROC sn real 0.946 imag 0.780 ceil 0.822 | sf real 1.000 imag 0.978 | r50 0.82 dr10 0.39 (223s)
+trainsplit H10 r: a near imag 0.195 real 0.099 far imag 0.022 | AUROC sn real 0.947 imag 0.713 ceil 0.769 | sf real 1.000 imag 0.948 | r50 0.66 dr10 0.59 (240s)
+trainsplit H3 r_obj: a near imag 0.236 real 0.046 far imag 0.104 | AUROC sn real 0.957 imag 0.831 ceil 0.833 | sf real 1.000 imag 0.934 | r50 1.00 dr10 1.15 (329s)
+/home/yonghwi/pmx/envs/b-ana/lib/python3.11/site-packages/statsmodels/genmod/bayes_mixed_glm.py:1069: RuntimeWarning: overflow encountered in exp
+  return -np.log(1 + np.exp(tm + np.sqrt(tv) * z))
+trainsplit H5 r_obj: a near imag 0.207 real 0.041 far imag 0.053 | AUROC sn real 0.952 imag 0.825 ceil 0.824 | sf real 0.999 imag 0.949 | r50 0.95 dr10 0.94 (375s)
+/home/yonghwi/pmx/envs/b-ana/lib/python3.11/site-packages/statsmodels/genmod/bayes_mixed_glm.py:1069: RuntimeWarning: overflow encountered in exp
+  return -np.log(1 + np.exp(tm + np.sqrt(tv) * z))
+trainsplit H7 r_obj: a near imag 0.171 real 0.042 far imag 0.054 | AUROC sn real 0.960 imag 0.779 ceil 0.812 | sf real 1.000 imag 0.918 | r50 0.77 dr10 0.87 (407s)
+trainsplit H10 r_obj: a near imag 0.176 real 0.047 far imag 0.049 | AUROC sn real 0.960 imag 0.735 ceil 0.779 | sf real 1.000 imag 0.886 | r50 0.73 dr10 0.85 (431s)
+VERDICT M1 {"cell": "val/H5/r/a", "H1a": {"p_near": 0.14714494875549047, "p_far": 0.0, "ratio": Infinity, "slope_fail": -5.503053778801576, "slope_fail_ci": [-6.456070741465159, -4.864461113878716], "near_ge_0p3": false, "ratio_ge_3": true, "monotone": true, "p_boot_monotone": 0.0, "perception_floor_p_near_real": 0.11200585651537336, "H1a_M1": false}, "H1b": {"delta_auc_sn": 0.09964636050276088, "delta_auc_sn_ci": [0.07538792897209019, 0.12543816866369867], "delta_auc_sf": 0.004720240814270804, "delta_auc_sf_ci": [0.0010323651483904294, 0.009856973849864973], "horizon_slope": -0.03131243790207556, "horizon_slope_ci": [-0.03863124796543452, -0.024612832129420358], "sn_ge_0p05": true, "sf_le_0p02": true, "slope_neg": true, "p_boot_slope": 0.0, "H1b_M1": true}}
+M1_ANALYZE_DONE 432s
+FIGS_OK
+M1ANA_DONE 2026-10-21T23:29:38Z

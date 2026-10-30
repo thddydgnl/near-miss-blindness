@@ -1,0 +1,6 @@
+/root/b/src/cosmos-policy/.venv/bin/python /workspace/code/dp_train.py --task 1 > /workspace/logs/dp/train_t1.log 2>&1
+/root/b/src/cosmos-policy/.venv/bin/python /workspace/code/dp_train.py --task 2 > /workspace/logs/dp/train_t2.log 2>&1
+/root/b/src/cosmos-policy/.venv/bin/python /workspace/code/dp_train.py --task 4 > /workspace/logs/dp/train_t4.log 2>&1
+/root/b/src/cosmos-policy/.venv/bin/python /workspace/code/dp_train.py --task 5 > /workspace/logs/dp/train_t5.log 2>&1
+/root/b/src/cosmos-policy/.venv/bin/python /workspace/code/dp_train.py --task 6 > /workspace/logs/dp/train_t6.log 2>&1
+/root/b/src/cosmos-policy/.venv/bin/python /workspace/code/dp_train.py --task 8 > /workspace/logs/dp/train_t8.log 2>&1

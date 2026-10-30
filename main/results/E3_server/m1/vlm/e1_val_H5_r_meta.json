@@ -1,0 +1,29 @@
+{
+ "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+ "revision": [
+  "cc594898137f460bfe9f0759e9844b3ce807cfb5"
+ ],
+ "transformers": "4.57.1",
+ "torch": "2.7.0+cu126",
+ "variant": "dset_r",
+ "prompt": "You are checking whether a robot finished a pushing task. These are two top-down images of a 2D scene. Each image shows a gray T-shaped block and a small blue circle (the pusher); ignore the light-green T-shaped area, which is not the goal here. The first image shows the goal. The second image shows the result after the robot pushed. Compare the two images. Are the gray T-shaped block and the blue circle both at the same place as in the goal image, with the block in the same orientation, up to a small tolerance? Answer with Yes or No.",
+ "pairs": "goal:real,goal:imag",
+ "npz": "/home/yonghwi/pmx/B/feat/E3/m1/e1dec_val_H5_r.npz",
+ "bs": 64,
+ "gpu_mem": "11GiB",
+ "modules_on_cpu": 14,
+ "n_modules": 33,
+ "load_s": 9.060231924057007,
+ "timing": {
+  "real": {
+   "n": 4215,
+   "s": 1009.6673023700714
+  },
+  "imag": {
+   "n": 4215,
+   "s": 1005.1052279472351
+  }
+ },
+ "yes_id": 9454,
+ "no_id": 2753
+}

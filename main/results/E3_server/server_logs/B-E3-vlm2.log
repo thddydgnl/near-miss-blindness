@@ -1,0 +1,73 @@
+Some parameters are on the meta device because they were offloaded to the cpu.
+The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
+model loaded (9s), modules on cpu: 14/33, gpu mem 9.7 GiB
+rules_dset_r final: 1024/5304 (4.21 pairs/s)
+rules_dset_r final: 2048/5304 (4.23 pairs/s)
+rules_dset_r final: 3072/5304 (4.22 pairs/s)
+rules_dset_r final: 4096/5304 (4.19 pairs/s)
+rules_dset_r final: 5120/5304 (4.20 pairs/s)
+rules_dset_r final: 5304/5304 (4.20 pairs/s)
+E3_VLM_DONE {"model": "Qwen/Qwen2.5-VL-7B-Instruct", "revision": ["cc594898137f460bfe9f0759e9844b3ce807cfb5"], "transformers": "4.57.1", "torch": "2.7.0+cu126", "variant": "dset_r", "pairs": "goal:final", "npz": "/home/yonghwi/pmx/B/feat/E3/m1/rules_dset.npz", "bs": 64, "gpu_mem": "11GiB", "modules_on_cpu": 14, "n_modules": 33, "load_s": 9.424869775772095, "timing": {"final": {"n": 5304, "s": 1262.8719358444214}}, "yes_id": 9454, "no_id": 2753}
+Some parameters are on the meta device because they were offloaded to the cpu.
+The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
+model loaded (9s), modules on cpu: 14/33, gpu mem 9.7 GiB
+rules_dset_robj final: 1024/5304 (4.38 pairs/s)
+rules_dset_robj final: 2048/5304 (4.28 pairs/s)
+rules_dset_robj final: 3072/5304 (4.28 pairs/s)
+rules_dset_robj final: 4096/5304 (4.24 pairs/s)
+rules_dset_robj final: 5120/5304 (4.24 pairs/s)
+rules_dset_robj final: 5304/5304 (4.25 pairs/s)
+E3_VLM_DONE {"model": "Qwen/Qwen2.5-VL-7B-Instruct", "revision": ["cc594898137f460bfe9f0759e9844b3ce807cfb5"], "transformers": "4.57.1", "torch": "2.7.0+cu126", "variant": "dset_robj", "pairs": "goal:final", "npz": "/home/yonghwi/pmx/B/feat/E3/m1/rules_dset.npz", "bs": 64, "gpu_mem": "11GiB", "modules_on_cpu": 14, "n_modules": 33, "load_s": 9.222484350204468, "timing": {"final": {"n": 5304, "s": 1249.2010552883148}}, "yes_id": 9454, "no_id": 2753}
+Some parameters are on the meta device because they were offloaded to the cpu.
+The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
+model loaded (11s), modules on cpu: 14/33, gpu mem 9.7 GiB
+rules_std final: 1024/4398 (4.25 pairs/s)
+rules_std final: 2048/4398 (4.25 pairs/s)
+rules_std final: 3072/4398 (4.22 pairs/s)
+rules_std final: 4096/4398 (4.21 pairs/s)
+rules_std final: 4398/4398 (4.22 pairs/s)
+E3_VLM_DONE {"model": "Qwen/Qwen2.5-VL-7B-Instruct", "revision": ["cc594898137f460bfe9f0759e9844b3ce807cfb5"], "transformers": "4.57.1", "torch": "2.7.0+cu126", "variant": "std", "pairs": "goal:final", "npz": "/home/yonghwi/pmx/B/feat/E3/m1/rules_std.npz", "bs": 64, "gpu_mem": "11GiB", "modules_on_cpu": 14, "n_modules": 33, "load_s": 11.44083285331726, "timing": {"final": {"n": 4398, "s": 1042.8935248851776}}, "yes_id": 9454, "no_id": 2753}
+dset_r {"n_held": 3304, "n_train": 2000, "held_success_frac": 0.5378329297820823, "auroc_held": 0.6139876151612008, "auroc_held_success_vs_near": 0.45092595158089643, "auroc_held_success_vs_far": 0.7775313706325465, "auroc_train": 0.5776718385286307, "threshold": 0.14804719388484955, "train_balanced_acc": 0.6096215113032369, "held_balanced_acc": 0.6190473558114877, "held_acc": 0.6422518159806295, "auroc_held_without_expert": 0.6290269767834886, "n_held_without_expert": 2891, "passes_0p80": false, "passes_0p80_without_expert": false}
+dset_robj {"n_held": 3304, "n_train": 2000, "held_success_frac": 0.7388014527845036, "auroc_held": 0.6824907919602503, "auroc_held_success_vs_near": 0.5830173922758929, "auroc_held_success_vs_far": 0.8049651009097725, "auroc_train": 0.6430953063858557, "threshold": 0.2018132209777832, "train_balanced_acc": 0.628510991374895, "held_balanced_acc": 0.648768645716784, "held_acc": 0.7433414043583535, "auroc_held_without_expert": 0.6911552288814077, "n_held_without_expert": 2891, "passes_0p80": false, "passes_0p80_without_expert": false}
+std {"n_held": 2398, "n_train": 2000, "held_success_frac": 0.31984987489574646, "auroc_held": 0.9089303800149803, "auroc_held_success_vs_near": 0.8193151315284914, "auroc_held_success_vs_far": 0.9650995039828539, "auroc_train": 0.8886285714285714, "threshold": 0.06754669547080994, "train_balanced_acc": 0.8104761904761905, "held_balanced_acc": 0.8388259736190193, "held_acc": 0.8206839032527106, "passes_0p80": true}
+E3_D_RULES_DONE
+D_RULES_FIXED 2026-10-22T01:27:19Z
+Some parameters are on the meta device because they were offloaded to the cpu.
+The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
+model loaded (9s), modules on cpu: 14/33, gpu mem 9.7 GiB
+e1_val_H5_r real: 1024/4215 (4.21 pairs/s)
+e1_val_H5_r real: 2048/4215 (4.17 pairs/s)
+e1_val_H5_r real: 3072/4215 (4.18 pairs/s)
+e1_val_H5_r real: 4096/4215 (4.17 pairs/s)
+e1_val_H5_r real: 4215/4215 (4.17 pairs/s)
+e1_val_H5_r imag: 1024/4215 (4.17 pairs/s)
+e1_val_H5_r imag: 2048/4215 (4.20 pairs/s)
+e1_val_H5_r imag: 3072/4215 (4.19 pairs/s)
+e1_val_H5_r imag: 4096/4215 (4.19 pairs/s)
+e1_val_H5_r imag: 4215/4215 (4.19 pairs/s)
+E3_VLM_DONE {"model": "Qwen/Qwen2.5-VL-7B-Instruct", "revision": ["cc594898137f460bfe9f0759e9844b3ce807cfb5"], "transformers": "4.57.1", "torch": "2.7.0+cu126", "variant": "dset_r", "pairs": "goal:real,goal:imag", "npz": "/home/yonghwi/pmx/B/feat/E3/m1/e1dec_val_H5_r.npz", "bs": 64, "gpu_mem": "11GiB", "modules_on_cpu": 14, "n_modules": 33, "load_s": 9.060231924057007, "timing": {"real": {"n": 4215, "s": 1009.6673023700714}, "imag": {"n": 4215, "s": 1005.1052279472351}}, "yes_id": 9454, "no_id": 2753}
+Some parameters are on the meta device because they were offloaded to the cpu.
+The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
+model loaded (9s), modules on cpu: 14/33, gpu mem 9.7 GiB
+dp_H5 real: 1024/2400 (4.27 pairs/s)
+dp_H5 real: 2048/2400 (4.29 pairs/s)
+dp_H5 real: 2400/2400 (4.28 pairs/s)
+dp_H5 imag: 1024/2400 (4.19 pairs/s)
+dp_H5 imag: 2048/2400 (4.19 pairs/s)
+dp_H5 imag: 2400/2400 (4.19 pairs/s)
+E3_VLM_DONE {"model": "Qwen/Qwen2.5-VL-7B-Instruct", "revision": ["cc594898137f460bfe9f0759e9844b3ce807cfb5"], "transformers": "4.57.1", "torch": "2.7.0+cu126", "variant": "std", "pairs": "goal:real,goal:imag", "npz": "/home/yonghwi/pmx/B/feat/E2/m1/dp_dec_H5.npz", "bs": 64, "gpu_mem": "11GiB", "modules_on_cpu": 14, "n_modules": 33, "load_s": 9.360523223876953, "timing": {"real": {"n": 2400, "s": 561.162680387497}, "imag": {"n": 2400, "s": 572.1844856739044}}, "yes_id": 9454, "no_id": 2753}
+Some parameters are on the meta device because they were offloaded to the cpu.
+The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
+model loaded (11s), modules on cpu: 14/33, gpu mem 9.7 GiB
+e1_val_H5_r_obj real: 1024/4767 (4.19 pairs/s)
+e1_val_H5_r_obj real: 2048/4767 (4.20 pairs/s)
+e1_val_H5_r_obj real: 3072/4767 (4.22 pairs/s)
+e1_val_H5_r_obj real: 4096/4767 (4.22 pairs/s)
+e1_val_H5_r_obj real: 4767/4767 (4.21 pairs/s)
+e1_val_H5_r_obj imag: 1024/4767 (4.17 pairs/s)
+e1_val_H5_r_obj imag: 2048/4767 (4.18 pairs/s)
+e1_val_H5_r_obj imag: 3072/4767 (4.19 pairs/s)
+e1_val_H5_r_obj imag: 4096/4767 (4.21 pairs/s)
+e1_val_H5_r_obj imag: 4767/4767 (4.21 pairs/s)
+E3_VLM_DONE {"model": "Qwen/Qwen2.5-VL-7B-Instruct", "revision": ["cc594898137f460bfe9f0759e9844b3ce807cfb5"], "transformers": "4.57.1", "torch": "2.7.0+cu126", "variant": "dset_robj", "pairs": "goal:real,goal:imag", "npz": "/home/yonghwi/pmx/B/feat/E3/m1/e1dec_val_H5_r_obj.npz", "bs": 64, "gpu_mem": "11GiB", "modules_on_cpu": 14, "n_modules": 33, "load_s": 10.790398359298706, "timing": {"real": {"n": 4767, "s": 1131.8316197395325}, "imag": {"n": 4767, "s": 1133.3766100406647}}, "yes_id": 9454, "no_id": 2753}
+E3_VLM_LANE_DONE 2026-10-22T02:58:14Z

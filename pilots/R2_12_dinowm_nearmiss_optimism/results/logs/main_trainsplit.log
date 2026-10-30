@@ -1,0 +1,6 @@
+Using cache found in /root/.cache/torch/hub/facebookresearch_dinov2_main
+trainsplit: 100/400 episodes, 24s
+trainsplit: 200/400 episodes, 38s
+trainsplit: 300/400 episodes, 52s
+trainsplit: 400/400 episodes, 66s
+MAIN_DONE trainsplit 66s

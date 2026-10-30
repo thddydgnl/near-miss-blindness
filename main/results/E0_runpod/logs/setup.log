@@ -1,0 +1,227 @@
++ export DEBIAN_FRONTEND=noninteractive
++ DEBIAN_FRONTEND=noninteractive
++ source /workspace/code/env.sh
+++ export W=/workspace
+++ W=/workspace
+++ export RB=/root/b
+++ RB=/root/b
+++ export HF_HOME=/root/b/cache/hf
+++ HF_HOME=/root/b/cache/hf
+++ export UV_CACHE_DIR=/root/b/cache/uv
+++ UV_CACHE_DIR=/root/b/cache/uv
+++ export HF_HUB_DISABLE_XET=1
+++ HF_HUB_DISABLE_XET=1
+++ export MUJOCO_GL=egl PYOPENGL_PLATFORM=egl MUJOCO_EGL_DEVICE_ID=0
+++ MUJOCO_GL=egl
+++ PYOPENGL_PLATFORM=egl
+++ MUJOCO_EGL_DEVICE_ID=0
+++ export __EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/10_nvidia.json
+++ __EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/10_nvidia.json
+++ export LIBERO_CONFIG_PATH=/root/b/libero_cfg
+++ LIBERO_CONFIG_PATH=/root/b/libero_cfg
+++ export PATH=/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+++ PATH=/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+++ export CP=/root/b/src/cosmos-policy
+++ CP=/root/b/src/cosmos-policy
+++ export VP=/root/b/src/cosmos-policy/.venv/bin/python
+++ VP=/root/b/src/cosmos-policy/.venv/bin/python
+++ export PYTHONPATH=/root/b/src/CureWM/src:/workspace/code
+++ PYTHONPATH=/root/b/src/CureWM/src:/workspace/code
+++ export TOKENIZERS_PARALLELISM=false
+++ TOKENIZERS_PARALLELISM=false
+++ export PYTHONHASHSEED=0
+++ PYTHONHASHSEED=0
++ mkdir -p /workspace/logs /workspace/results /workspace/data /root/b/src /root/b/cache/hf /root/b/cache/uv /root/b/libero_cfg
++ nvidia-smi
+Wed Oct 21 13:24:41 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 595.91.07              Driver Version: 595.91.07      CUDA Version: 13.2     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A40                     On  |   00000000:D6:00.0 Off |                    0 |
+|  0%   34C    P8             34W /  300W |       0MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
++ nproc
+96
++ cat /sys/fs/cgroup/cpu.max
++ free -g
+               total        used        free      shared  buff/cache   available
+Mem:             503          88          16           0         399         412
+Swap:              0           0           0
++ df -h / /workspace
+Filesystem                   Size  Used Avail Use% Mounted on
+overlay                       50G  102M   50G   1% /
+mfs#eu-se-1.runpod.net:9421  756T  470T  286T  63% /workspace
++ cat /sys/fs/cgroup/cpu/cpu.cfs_quota_us
+765000
++ apt-get update -qq
++ apt-get install -y -qq --no-install-recommends build-essential cmake curl ffmpeg git git-lfs libgl1 libegl1 libegl1-mesa-dev libgl1-mesa-dri libglib2.0-0 libglvnd0 rsync tmux jq bc unzip
+debconf: delaying package configuration, since apt-utils is not installed
++ mkdir -p /usr/share/glvnd/egl_vendor.d
++ '[' -f /usr/share/glvnd/egl_vendor.d/10_nvidia.json ']'
++ sh
++ curl -LsSf https://astral.sh/uv/0.8.12/install.sh
+downloading uv 0.8.12 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
++ uv --version
+uv 0.8.12
++ echo APT_UV_DONE
+APT_UV_DONE
++ cd /root/b/src
++ '[' -d cosmos-policy ']'
++ git clone -q https://github.com/nvlabs/cosmos-policy.git
++ '[' -d CureWM ']'
++ git clone -q https://github.com/jiuyixu25/CureWM.git
++ '[' -d lerobot-libero ']'
++ git clone -q https://github.com/huggingface/lerobot-libero.git
++ tee /workspace/results/repo_commits.txt
++ for d in cosmos-policy CureWM lerobot-libero
++ cd /root/b/src/cosmos-policy
+++ git log -1 '--format=%H %cd'
++ echo 'cosmos-policy 18a2accadf4e7a3531e56754102af5a24d2316da Thu Jan 22 18:42:58 2026 -0800'
+cosmos-policy 18a2accadf4e7a3531e56754102af5a24d2316da Thu Jan 22 18:42:58 2026 -0800
++ for d in cosmos-policy CureWM lerobot-libero
++ cd /root/b/src/CureWM
+++ git log -1 '--format=%H %cd'
++ echo 'CureWM 8a7ee5dfd71eab09020db57754e72a4dc23c825b Tue Oct 6 15:30:05 2026 -0600'
+CureWM 8a7ee5dfd71eab09020db57754e72a4dc23c825b Tue Oct 6 15:30:05 2026 -0600
++ for d in cosmos-policy CureWM lerobot-libero
++ cd /root/b/src/lerobot-libero
+++ git log -1 '--format=%H %cd'
++ echo 'lerobot-libero 14fd6f022ff6647defc24e73563b95aa36670f43 Wed Jun 10 11:34:36 2026 +0200'
+lerobot-libero 14fd6f022ff6647defc24e73563b95aa36670f43 Wed Jun 10 11:34:36 2026 +0200
++ echo CLONE_DONE
+CLONE_DONE
++ cd /root/b/src/cosmos-policy
++ tail -15
++ uv sync --extra cu128 --group libero --python 3.10
+ + tyro==1.0.1
+ + tzdata==2025.3
+ + urllib3==2.6.2
+ + userpath==1.9.2
+ + uv==0.9.17
+ + virtualenv==20.35.4
+ + wandb==0.23.1
+ + wcmatch==10.1
+ + wcwidth==0.2.14
+ + webdataset==1.0.2
+ + werkzeug==3.1.4
+ + xattr==1.3.0
+ + xformers==0.0.30
+ + yacs==0.1.8
+ + zipp==3.23.0
++ /root/b/src/cosmos-policy/.venv/bin/python -c 'import torch; print('\''torch'\'', torch.__version__, '\''cuda'\'', torch.version.cuda, torch.cuda.is_available(), torch.cuda.get_device_name(0)); x=torch.randn(512,512,device='\''cuda'\'',dtype=torch.bfloat16); print('\''matmul ok'\'', float((x@x).float().abs().mean()))'
+torch 2.7.0+cu128 cuda 12.8 True NVIDIA A40
+matmul ok 17.96444320678711
++ /root/b/src/cosmos-policy/.venv/bin/python -c 'import flash_attn, transformer_engine, natten; print('\''flash_attn'\'', flash_attn.__version__, '\''te ok, natten ok'\'')'
+/tmp/tmp4f_1nwb2/main.c:5:10: fatal error: Python.h: No such file or directory
+    5 | #include <Python.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/transformer_engine/__init__.py", line 13, in <module>
+    from . import pytorch
+  File "/root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/transformer_engine/pytorch/__init__.py", line 95, in <module>
+    from transformer_engine.pytorch.permutation import (
+  File "/root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/transformer_engine/pytorch/permutation.py", line 11, in <module>
+    import transformer_engine.pytorch.triton.permutation as triton_permutation
+  File "/root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/transformer_engine/pytorch/triton/permutation.py", line 158, in <module>
+    _permute_kernel = triton.autotune(
+  File "/root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/triton/runtime/autotuner.py", line 378, in decorator
+    return Autotuner(fn, fn.arg_names, configs, key, reset_to_zero, restore_value, pre_hook=pre_hook,
+  File "/root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/triton/runtime/autotuner.py", line 130, in __init__
+    self.do_bench = driver.active.get_benchmarker()
+  File "/root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/triton/runtime/driver.py", line 23, in __getattr__
+    self._initialize_obj()
+  File "/root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/triton/runtime/driver.py", line 20, in _initialize_obj
+    self._obj = self._init_fn()
+  File "/root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/triton/runtime/driver.py", line 9, in _create_driver
+    return actives[0]()
+  File "/root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/triton/backends/nvidia/driver.py", line 535, in __init__
+    self.utils = CudaUtils()  # TODO: make static
+  File "/root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/triton/backends/nvidia/driver.py", line 89, in __init__
+    mod = compile_module_from_src(Path(os.path.join(dirname, "driver.c")).read_text(), "cuda_utils")
+  File "/root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/triton/backends/nvidia/driver.py", line 66, in compile_module_from_src
+    so = _build(name, src_path, tmpdir, library_dirs(), include_dir, libraries)
+  File "/root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/triton/runtime/build.py", line 36, in _build
+    subprocess.check_call(cc_cmd, stdout=subprocess.DEVNULL)
+  File "/usr/lib/python3.10/subprocess.py", line 369, in check_call
+    raise CalledProcessError(retcode, cmd)
+subprocess.CalledProcessError: Command '['/usr/bin/gcc', '/tmp/tmp4f_1nwb2/main.c', '-O3', '-shared', '-fPIC', '-Wno-psabi', '-o', '/tmp/tmp4f_1nwb2/cuda_utils.cpython-310-x86_64-linux-gnu.so', '-lcuda', '-L/root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/triton/backends/nvidia/lib', '-L/lib/x86_64-linux-gnu', '-I/root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/triton/backends/nvidia/include', '-I/tmp/tmp4f_1nwb2', '-I/usr/include/python3.10']' returned non-zero exit status 1.
++ echo UV_SYNC_DONE
+UV_SYNC_DONE
++ L=/root/b/src/lerobot-libero/libero/libero
++ cat
++ /root/b/src/cosmos-policy/.venv/bin/python -c '
+import libero, os
+from libero.libero import benchmark, get_libero_path
+print('\''libero pkg'\'', os.path.dirname(libero.__file__), '\''assets'\'', get_libero_path('\''assets'\''))
+b = benchmark.get_benchmark_dict()['\''libero_goal'\'']()
+print([b.get_task(i).language for i in range(b.get_num_tasks())])
+'
+libero pkg /root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/libero assets /root/b/src/lerobot-libero/libero/libero/assets
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+['open the middle drawer of the cabinet', 'put the bowl on the stove', 'put the wine bottle on top of the cabinet', 'open the top drawer and put the bowl inside', 'put the bowl on top of the cabinet', 'push the plate to the front of the stove', 'put the cream cheese in the bowl', 'turn on the stove', 'put the bowl on the plate', 'put the wine bottle on the rack']
++ echo LIBERO_CFG_DONE
+LIBERO_CFG_DONE
++ /root/b/src/cosmos-policy/.venv/bin/python -
+Fetching 6 files:   0%|          | 0/6 [00:00<?, ?it/s]Fetching 6 files:  17%|█▋        | 1/6 [00:00<00:01,  2.68it/s]Fetching 6 files:  33%|███▎      | 2/6 [00:23<00:54, 13.61s/it]Fetching 6 files: 100%|██████████| 6/6 [00:23<00:00,  3.87s/it]
+policy ckpt /root/b/cache/hf/hub/models--nvidia--Cosmos-Policy-LIBERO-Predict2-2B/snapshots/cb689ec0e3347c13667d70a78a3447388f5c3bb8 ['libero_dataset_statistics.json', '.gitattributes', 'README.md', 'config.json', 'libero_t5_embeddings.pkl', 'Cosmos-Policy-LIBERO-Predict2-2B.pt']
+wan vae /root/b/cache/hf/hub/models--Wan-AI--Wan2.1-T2V-1.3B/snapshots/37ec512624d61f7aa208f7ea8140a131f93afc9a/Wan2.1_VAE.pth sha256 38071ab59bd94681c686fa51d75a1968f64e470262043be31f7a094e442fd981
++ grep -rn Cosmos-Predict2-2B-Video2World /root/b/src/cosmos-policy/cosmos_policy '--include=*.py'
++ grep -v '^.*#'
++ cut -c1-220
+/root/b/src/cosmos-policy/cosmos_policy/config/defaults/tokenizer.py:27:    vae_pth="hf://nvidia/Cosmos-Predict2-2B-Video2World/tokenizer/tokenizer.pth",
+/root/b/src/cosmos-policy/cosmos_policy/config/experiment/cosmos_policy_experiment_configs.py:148:            load_path=get_checkpoint_path("hf://nvidia/Cosmos-Predict2-2B-Video2World/model-480p-16fps.pt"),
+/root/b/src/cosmos-policy/cosmos_policy/tokenizers/wan2pt1.py:92:    mean_std_path: str = "hf://nvidia/Cosmos-Predict2-2B-Video2World/tokenizer/tokenizer.pth",
+/root/b/src/cosmos-policy/cosmos_policy/tokenizers/wan2pt1.py:208:        vae_pth="hf://nvidia/Cosmos-Predict2-2B-Video2World/tokenizer/tokenizer.pth",
+/root/b/src/cosmos-policy/cosmos_policy/tokenizers/wan2pt1.py:211:        mean_std_path: str = "hf://nvidia/Cosmos-Predict2-2B-Video2World/tokenizer/mean_std.pt",
+/root/b/src/cosmos-policy/cosmos_policy/tokenizers/wan2pt1.py:481:                "hf://nvidia/Cosmos-Predict2-2B-Video2World/tokenizer/tokenizer.pth",
+/root/b/src/cosmos-policy/cosmos_policy/utils/checkpoint_utils.py:43:        >>> path = resolve_checkpoint_path("hf://nvidia/Cosmos-Predict2-2B-Video2World/tokenizer/tokenizer.pth")
++ echo CKPT_DONE
+CKPT_DONE
++ /root/b/src/cosmos-policy/.venv/bin/python -
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files:  10%|█         | 1/10 [00:08<01:16,  8.50s/it]Fetching 10 files:  20%|██        | 2/10 [00:10<00:37,  4.74s/it]Fetching 10 files: 100%|██████████| 10/10 [00:11<00:00,  1.45it/s]Fetching 10 files: 100%|██████████| 10/10 [00:11<00:00,  1.13s/it]
+datasets /workspace/data/libero_datasets
++ ls -la /workspace/data/libero_datasets/libero_goal
++ head -20
+total 6229607
+drwxrwxrwx 2 root root    3000593 Oct 21 13:27 .
+drwxrwxrwx 4 root root    3000593 Oct 21 13:27 ..
+-rw-rw-rw- 1 root root  702223367 Oct 21 13:26 open_the_middle_drawer_of_the_cabinet_demo.hdf5
+-rw-rw-rw- 1 root root 1017886342 Oct 21 13:26 open_the_top_drawer_and_put_the_bowl_inside_demo.hdf5
+-rw-rw-rw- 1 root root  762855139 Oct 21 13:26 push_the_plate_to_the_front_of_the_stove_demo.hdf5
+-rw-rw-rw- 1 root root  468246288 Oct 21 13:26 put_the_bowl_on_the_plate_demo.hdf5
+-rw-rw-rw- 1 root root  509123820 Oct 21 13:26 put_the_bowl_on_the_stove_demo.hdf5
+-rw-rw-rw- 1 root root  510414285 Oct 21 13:26 put_the_bowl_on_top_of_the_cabinet_demo.hdf5
+-rw-rw-rw- 1 root root  535715512 Oct 21 13:26 put_the_cream_cheese_in_the_bowl_demo.hdf5
+-rw-rw-rw- 1 root root  878958730 Oct 21 13:26 put_the_wine_bottle_on_the_rack_demo.hdf5
+-rw-rw-rw- 1 root root  540179470 Oct 21 13:26 put_the_wine_bottle_on_top_of_the_cabinet_demo.hdf5
+-rw-rw-rw- 1 root root  447509922 Oct 21 13:27 turn_on_the_stove_demo.hdf5
++ du -sh /root/b/src/cosmos-policy/.venv /root/b/cache/uv /root/b/cache/hf /workspace/data
+13G	/root/b/src/cosmos-policy/.venv
+153M	/root/b/cache/uv
+4.2G	/root/b/cache/hf
+6.0G	/workspace/data
++ df -h /
++ tail -1
+overlay          50G   19G   32G  37% /
++ echo SETUP_ALL_DONE
+SETUP_ALL_DONE

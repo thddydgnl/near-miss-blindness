@@ -1,0 +1,44 @@
+Using cache found in /home/yonghwi/pmx/torch/hub/facebookresearch_dinov2_main
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+H5 chunk 0 done: 200 episodes, 1600 seqs, 22s
+H5 chunk 200 done: 400 episodes, 3200 seqs, 39s
+H5 chunk 400 done: 600 episodes, 4800 seqs, 56s
+H5 chunk 600 done: 800 episodes, 6400 seqs, 74s
+H5 chunk 800 done: 1000 episodes, 8000 seqs, 92s
+H5 chunk 1000 done: 1200 episodes, 9600 seqs, 109s
+H5 chunk 1200 done: 1400 episodes, 11200 seqs, 127s
+H10 chunk 0 done: 1600 episodes, 12800 seqs, 168s
+H10 chunk 200 done: 1800 episodes, 14400 seqs, 204s
+H10 chunk 400 done: 2000 episodes, 16000 seqs, 240s
+CLFSET_DONE {'n_episodes': 2000, 'n_seqs': 16000, 'success_rate': 0.53375, 'bins': {'success': 0.53375, 'near': 0.1726875, 'mid': 0.0880625, 'far': 0.2055}, 'n_val_episodes': 413, 'mags': {5: {'sigma': 7.0588, 'beta': 3.5, 'k': 0.2872549019607843, 'sb': 60}, 10: {'sigma': 4.1852, 'beta': 1.65, 'k': 0.2125, 'sb': 30}}, 'time_s': 244.68569087982178}

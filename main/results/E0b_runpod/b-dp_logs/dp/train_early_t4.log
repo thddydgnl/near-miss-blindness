@@ -1,0 +1,31 @@
+task 4: 50 demos, 5094 samples, stats a_lo [-0.825 -0.938 -0.938 -0.172 -0.278 -0.178 -1.   ] a_hi [0.938 0.857 0.938 0.129 0.265 0.151 1.   ]
+Traceback (most recent call last):
+  File "/workspace/code/dp_train.py", line 103, in <module>
+    pred = net.unet(xt, ts, net.cond(x, prop[t0]))
+  File "/root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/workspace/code/dp_model.py", line 71, in forward
+    x = r2(r1(x, c), c)
+  File "/root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/workspace/code/dp_model.py", line 42, in forward
+    h = self.b1(x)
+  File "/root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/torch/nn/modules/container.py", line 240, in forward
+    input = module(input)
+  File "/root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/torch/nn/modules/normalization.py", line 313, in forward
+    return F.group_norm(input, self.num_groups, self.weight, self.bias, self.eps)
+  File "/root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/torch/nn/functional.py", line 2965, in group_norm
+    return torch.group_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.00 MiB. GPU 0 has a total capacity of 44.42 GiB of which 10.06 MiB is free. Process 6484 has 30.00 MiB memory in use. Process 6473 has 4.20 GiB memory in use. Process 6482 has 4.17 GiB memory in use. Process 6481 has 4.23 GiB memory in use. Process 6477 has 4.23 GiB memory in use. Process 6476 has 4.21 GiB memory in use. Process 6479 has 4.38 GiB memory in use. Process 7757 has 4.17 GiB memory in use. Process 7761 has 4.10 GiB memory in use. Process 7760 has 3.10 GiB memory in use. Process 7756 has 2.74 GiB memory in use. Including non-PyTorch memory, this process has 2.62 GiB memory in use. Process 7759 has 2.24 GiB memory in use. Of the allocated memory 2.29 GiB is allocated by PyTorch, and 10.00 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

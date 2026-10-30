@@ -1,0 +1,21 @@
+[run] smoke 13:24:38
+[done] smoke rc=0 13:24:51
+[run] calib5 13:24:51
+[done] calib5 rc=0 13:24:59
+[run] calib10 13:24:59
+[done] calib10 rc=0 13:25:11
+[run] clfset 13:25:11
+[done] clfset rc=0 13:29:18
+[run] judges 13:29:18
+[done] judges rc=0 13:35:00
+[run] main_main 13:35:00
+[done] main_main rc=0 13:37:51
+[run] main_H10 13:37:51
+[done] main_H10 rc=0 13:42:35
+[run] main_trainsplit 13:42:35
+[done] main_trainsplit rc=0 13:45:44
+[run] analyze 13:45:44
+[done] analyze rc=0 13:46:11
+[run] posthoc 13:46:11
+[done] posthoc rc=0 13:46:22
+M1_REPRO_DONE

@@ -1,0 +1,58 @@
+{
+ "task_success/img224": {
+  "auroc": 0.5784,
+  "mean_p_yes_success": 0.04984814591705799,
+  "mean_p_yes_failure": 0.04253369115293026,
+  "frac_yes_success": 0.0,
+  "frac_yes_failure": 0.0,
+  "per_task_auroc": {
+   "t1": 0.48,
+   "t2": 0.8,
+   "t5": 1.0,
+   "t6": 0.64,
+   "t8": 0.46
+  }
+ },
+ "task_success/img448": {
+  "auroc": 0.5,
+  "mean_p_yes_success": 0.05660510219633579,
+  "mean_p_yes_failure": 0.04517233684659004,
+  "frac_yes_success": 0.0,
+  "frac_yes_failure": 0.0,
+  "per_task_auroc": {
+   "t1": 0.22,
+   "t2": 0.8,
+   "t5": 0.6,
+   "t6": 0.74,
+   "t8": 0.36
+  }
+ },
+ "object_question/img224": {
+  "auroc": 0.5336,
+  "mean_p_yes_success": 0.05968219440896064,
+  "mean_p_yes_failure": 0.05183541924227029,
+  "frac_yes_success": 0.0,
+  "frac_yes_failure": 0.0,
+  "per_task_auroc": {
+   "t1": 0.6,
+   "t2": 0.92,
+   "t5": 0.4,
+   "t6": 0.4,
+   "t8": 0.4
+  }
+ },
+ "object_question/img448": {
+  "auroc": 0.6048,
+  "mean_p_yes_success": 0.09743557739304379,
+  "mean_p_yes_failure": 0.03959710859344341,
+  "frac_yes_success": 0.0,
+  "frac_yes_failure": 0.0,
+  "per_task_auroc": {
+   "t1": 0.42,
+   "t2": 0.92,
+   "t5": 0.84,
+   "t6": 1.0,
+   "t8": 0.58
+  }
+ }
+}

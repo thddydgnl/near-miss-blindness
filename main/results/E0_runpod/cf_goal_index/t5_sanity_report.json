@@ -1,0 +1,62 @@
+{
+  "contact_oscillation": {
+    "failure_rate_by_severity": {
+      "0.2": 0.0,
+      "0.4": 0.0,
+      "0.6": 0.0,
+      "0.8": 0.0,
+      "1.0": 0.0
+    },
+    "monotonic": true
+  },
+  "premature_release": {
+    "failure_rate_by_severity": {
+      "0.2": 0.0,
+      "0.4": 0.33333333333333337,
+      "0.6": 0.33333333333333337,
+      "0.8": 0.0,
+      "1.0": 0.0
+    },
+    "monotonic": false
+  },
+  "carry_slip": {
+    "failure_rate_by_severity": {
+      "0.2": 0.33333333333333337,
+      "0.4": 0.0,
+      "0.6": 0.0,
+      "0.8": 0.0,
+      "1.0": 0.0
+    },
+    "monotonic": false
+  },
+  "insufficient_grip": {
+    "failure_rate_by_severity": {
+      "0.2": 0.0,
+      "0.4": 0.0,
+      "0.6": 0.0,
+      "0.8": 0.0,
+      "1.0": 0.0
+    },
+    "monotonic": true
+  },
+  "wrist_tilt": {
+    "failure_rate_by_severity": {
+      "0.2": 0.0,
+      "0.4": 0.33333333333333337,
+      "0.6": 0.0,
+      "0.8": 0.0,
+      "1.0": 0.0
+    },
+    "monotonic": false
+  },
+  "approach_overshoot": {
+    "failure_rate_by_severity": {
+      "0.2": 0.0,
+      "0.4": 0.0,
+      "0.6": 0.0,
+      "0.8": 0.0,
+      "1.0": 0.0
+    },
+    "monotonic": true
+  }
+}

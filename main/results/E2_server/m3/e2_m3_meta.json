@@ -1,0 +1,20 @@
+{
+ "policies": [
+  "pi1_precise",
+  "pi2_good",
+  "pi3_medium",
+  "pi4_sloppy",
+  "pi5_far_failer",
+  "pi6_near_failer"
+ ],
+ "n_scenes": 1024,
+ "real_acc": 1.0,
+ "check": {
+  "p0.03_std_1x_s0": 0.0,
+  "p0.03_std_1x_s1": 0.0,
+  "p0.03_std_1x_s2": 0.0,
+  "p0.1_std_1x_s0": 0.0,
+  "p0.3_std_1x_s0": 0.0
+ },
+ "time_s": 22.25385880470276
+}

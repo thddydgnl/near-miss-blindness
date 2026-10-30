@@ -1,0 +1,38 @@
+Using cache found in /home/yonghwi/pmx/torch/hub/facebookresearch_dinov2_main
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+  parse = parser.parseString(pattern)
+  parser.resetCache()
+trainsplit: 100/400 episodes, 55s
+trainsplit: 200/400 episodes, 97s
+trainsplit: 300/400 episodes, 142s
+trainsplit: 400/400 episodes, 187s
+MAIN_DONE trainsplit 187s

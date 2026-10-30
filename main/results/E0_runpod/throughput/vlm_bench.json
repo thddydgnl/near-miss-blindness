@@ -1,0 +1,364 @@
+{
+ "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+ "load_s": 98.47898721694946,
+ "n_items": 50,
+ "batch1_s_per_judgment": 0.13247157573699953,
+ "batch8_s_per_judgment": 0.04044152736663818,
+ "vram_peak_gib": 15.803659915924072,
+ "mean_p_yes_success": 0.04984814591705799,
+ "mean_p_yes_failure": 0.04253369115293026,
+ "frac_yes_failure": 0.0,
+ "frac_yes_success": 0.0,
+ "items": [
+  {
+   "key": "t1/d0001_approach_overshoot_s0.6_k0",
+   "task": "put the bowl on the stove",
+   "success": true,
+   "r": 0.16240269258435358,
+   "p_yes": 0.037326883524656296
+  },
+  {
+   "key": "t1/d0000_approach_overshoot_s1.0_k0",
+   "task": "put the bowl on the stove",
+   "success": true,
+   "r": 0.41787461049007585,
+   "p_yes": 0.022977370768785477
+  },
+  {
+   "key": "t1/d0001_contact_oscillation_s0.8_k0",
+   "task": "put the bowl on the stove",
+   "success": true,
+   "r": 0.013643039915514077,
+   "p_yes": 0.02931223064661026
+  },
+  {
+   "key": "t1/d0000_contact_oscillation_s0.2_k0",
+   "task": "put the bowl on the stove",
+   "success": true,
+   "r": 0.37718695970617133,
+   "p_yes": 0.02931223064661026
+  },
+  {
+   "key": "t1/d0002_carry_slip_s0.8_k0",
+   "task": "put the bowl on the stove",
+   "success": true,
+   "r": 0.4598003967448524,
+   "p_yes": 0.07585817575454712
+  },
+  {
+   "key": "t1/d0000_premature_release_s1.0_k0",
+   "task": "put the bowl on the stove",
+   "success": false,
+   "r": 2.6643305457502335,
+   "p_yes": 0.02931223064661026
+  },
+  {
+   "key": "t1/d0000_insufficient_grip_s0.8_k0",
+   "task": "put the bowl on the stove",
+   "success": false,
+   "r": 2.647897544061852,
+   "p_yes": 0.02595735713839531
+  },
+  {
+   "key": "t1/d0001_insufficient_grip_s1.0_k0",
+   "task": "put the bowl on the stove",
+   "success": false,
+   "r": 2.7614793010540413,
+   "p_yes": 0.042087726294994354
+  },
+  {
+   "key": "t1/d0000_premature_release_s0.8_k0",
+   "task": "put the bowl on the stove",
+   "success": false,
+   "r": 2.656053247352201,
+   "p_yes": 0.02931223064661026
+  },
+  {
+   "key": "t1/d0002_wrist_tilt_s1.0_k0",
+   "task": "put the bowl on the stove",
+   "success": false,
+   "r": 1.2370640816352185,
+   "p_yes": 0.04742587357759476
+  },
+  {
+   "key": "t5/d0002_premature_release_s0.6_k0",
+   "task": "push the plate to the front of the stove",
+   "success": true,
+   "r": 0.7768737465240491,
+   "p_yes": 0.04742587357759476
+  },
+  {
+   "key": "t5/d0001_premature_release_s1.0_k0",
+   "task": "push the plate to the front of the stove",
+   "success": true,
+   "r": 0.3581117214838235,
+   "p_yes": 0.04742587357759476
+  },
+  {
+   "key": "t5/d0002_approach_overshoot_s0.6_k0",
+   "task": "push the plate to the front of the stove",
+   "success": true,
+   "r": 0.6459578857045094,
+   "p_yes": 0.0534033328294754
+  },
+  {
+   "key": "t5/d0001_approach_overshoot_s0.4_k0",
+   "task": "push the plate to the front of the stove",
+   "success": true,
+   "r": 0.11329053710601442,
+   "p_yes": 0.06008664518594742
+  },
+  {
+   "key": "t5/d0002_wrist_tilt_s0.8_k0",
+   "task": "push the plate to the front of the stove",
+   "success": true,
+   "r": 0.8976060764547189,
+   "p_yes": 0.06008664518594742
+  },
+  {
+   "key": "t5/d0001_premature_release_s0.4_k0",
+   "task": "push the plate to the front of the stove",
+   "success": false,
+   "r": 2.72560210242882,
+   "p_yes": 0.042087726294994354
+  },
+  {
+   "key": "t5/d0001_insufficient_grip_s0.4_k0",
+   "task": "push the plate to the front of the stove",
+   "success": false,
+   "r": 1.0375066609639498,
+   "p_yes": 0.042087726294994354
+  },
+  {
+   "key": "t5/d0000_approach_overshoot_s0.8_k0",
+   "task": "push the plate to the front of the stove",
+   "success": false,
+   "r": 1.1678492402640477,
+   "p_yes": 0.042087726294994354
+  },
+  {
+   "key": "t5/d0001_carry_slip_s0.6_k0",
+   "task": "push the plate to the front of the stove",
+   "success": false,
+   "r": 1.1735532560453235,
+   "p_yes": 0.037326883524656296
+  },
+  {
+   "key": "t5/d0001_premature_release_s0.2_k0",
+   "task": "push the plate to the front of the stove",
+   "success": false,
+   "r": 1.0750583445136614,
+   "p_yes": 0.042087726294994354
+  },
+  {
+   "key": "t8/d0001_premature_release_s0.2_k0",
+   "task": "put the bowl on the plate",
+   "success": true,
+   "r": 0.21270318945283423,
+   "p_yes": 0.03308597952127457
+  },
+  {
+   "key": "t8/d0002_premature_release_s0.2_k0",
+   "task": "put the bowl on the plate",
+   "success": true,
+   "r": 0.2223282897841592,
+   "p_yes": 0.02595735713839531
+  },
+  {
+   "key": "t8/d0001_nominal",
+   "task": "put the bowl on the plate",
+   "success": true,
+   "r": 0.07164325567899836,
+   "p_yes": 0.022977370768785477
+  },
+  {
+   "key": "t8/d0002_contact_oscillation_s0.6_k0",
+   "task": "put the bowl on the plate",
+   "success": true,
+   "r": 0.32198557280471846,
+   "p_yes": 0.03308597952127457
+  },
+  {
+   "key": "t8/d0002_carry_slip_s0.2_k0",
+   "task": "put the bowl on the plate",
+   "success": true,
+   "r": 0.1493327042589746,
+   "p_yes": 0.037326883524656296
+  },
+  {
+   "key": "t8/d0002_insufficient_grip_s0.8_k0",
+   "task": "put the bowl on the plate",
+   "success": false,
+   "r": 5.068571057907229,
+   "p_yes": 0.03308597952127457
+  },
+  {
+   "key": "t8/d0001_contact_oscillation_s1.0_k0",
+   "task": "put the bowl on the plate",
+   "success": false,
+   "r": 5.564268008465523,
+   "p_yes": 0.04742587357759476
+  },
+  {
+   "key": "t8/d0001_premature_release_s0.8_k0",
+   "task": "put the bowl on the plate",
+   "success": false,
+   "r": 5.288146490675934,
+   "p_yes": 0.020332353189587593
+  },
+  {
+   "key": "t8/d0001_insufficient_grip_s0.8_k0",
+   "task": "put the bowl on the plate",
+   "success": false,
+   "r": 5.166333164238336,
+   "p_yes": 0.022977370768785477
+  },
+  {
+   "key": "t8/d0001_wrist_tilt_s0.4_k0",
+   "task": "put the bowl on the plate",
+   "success": false,
+   "r": 1.807963141155136,
+   "p_yes": 0.04742587357759476
+  },
+  {
+   "key": "t2/d0000_nominal",
+   "task": "put the wine bottle on top of the cabinet",
+   "success": true,
+   "r": 0.3740990144048303,
+   "p_yes": 0.08509904146194458
+  },
+  {
+   "key": "t2/d0000_carry_slip_s0.6_k0",
+   "task": "put the wine bottle on top of the cabinet",
+   "success": true,
+   "r": 0.2123840628051406,
+   "p_yes": 0.09534946084022522
+  },
+  {
+   "key": "t2/d0002_contact_oscillation_s0.6_k0",
+   "task": "put the wine bottle on top of the cabinet",
+   "success": true,
+   "r": 0.7734353363189509,
+   "p_yes": 0.08509904146194458
+  },
+  {
+   "key": "t2/d0001_approach_overshoot_s0.4_k0",
+   "task": "put the wine bottle on top of the cabinet",
+   "success": true,
+   "r": 0.23496485783258803,
+   "p_yes": 0.10669060051441193
+  },
+  {
+   "key": "t2/d0000_insufficient_grip_s0.4_k0",
+   "task": "put the wine bottle on top of the cabinet",
+   "success": true,
+   "r": 0.337837815278625,
+   "p_yes": 0.06008664518594742
+  },
+  {
+   "key": "t2/d0001_premature_release_s1.0_k0",
+   "task": "put the wine bottle on top of the cabinet",
+   "success": false,
+   "r": 2.1484350479219456,
+   "p_yes": 0.042087726294994354
+  },
+  {
+   "key": "t2/d0002_wrist_tilt_s0.2_k0",
+   "task": "put the wine bottle on top of the cabinet",
+   "success": false,
+   "r": 1.0988544722025495,
+   "p_yes": 0.08509904146194458
+  },
+  {
+   "key": "t2/d0002_premature_release_s1.0_k0",
+   "task": "put the wine bottle on top of the cabinet",
+   "success": false,
+   "r": 1.9630718414938897,
+   "p_yes": 0.06754669547080994
+  },
+  {
+   "key": "t2/d0001_insufficient_grip_s1.0_k0",
+   "task": "put the wine bottle on top of the cabinet",
+   "success": false,
+   "r": 2.1359130584753303,
+   "p_yes": 0.0534033328294754
+  },
+  {
+   "key": "t2/d0002_premature_release_s0.6_k0",
+   "task": "put the wine bottle on top of the cabinet",
+   "success": false,
+   "r": 1.5526358782954262,
+   "p_yes": 0.08509904146194458
+  },
+  {
+   "key": "t6/d0002_contact_oscillation_s0.2_k0",
+   "task": "put the cream cheese in the bowl",
+   "success": true,
+   "r": 0.2964775753182165,
+   "p_yes": 0.042087726294994354
+  },
+  {
+   "key": "t6/d0001_carry_slip_s0.4_k0",
+   "task": "put the cream cheese in the bowl",
+   "success": true,
+   "r": 0.6045675155210948,
+   "p_yes": 0.01798621006309986
+  },
+  {
+   "key": "t6/d0000_carry_slip_s0.8_k0",
+   "task": "put the cream cheese in the bowl",
+   "success": true,
+   "r": 0.6072098863731512,
+   "p_yes": 0.04742587357759476
+  },
+  {
+   "key": "t6/d0000_carry_slip_s0.6_k0",
+   "task": "put the cream cheese in the bowl",
+   "success": true,
+   "r": 0.5852125919126265,
+   "p_yes": 0.0534033328294754
+  },
+  {
+   "key": "t6/d0000_approach_overshoot_s0.2_k0",
+   "task": "put the cream cheese in the bowl",
+   "success": true,
+   "r": 0.4504080793542193,
+   "p_yes": 0.037326883524656296
+  },
+  {
+   "key": "t6/d0001_insufficient_grip_s0.8_k0",
+   "task": "put the cream cheese in the bowl",
+   "success": false,
+   "r": 5.3415405589949,
+   "p_yes": 0.03308597952127457
+  },
+  {
+   "key": "t6/d0002_insufficient_grip_s0.8_k0",
+   "task": "put the cream cheese in the bowl",
+   "success": false,
+   "r": 4.838655577267832,
+   "p_yes": 0.02931223064661026
+  },
+  {
+   "key": "t6/d0000_contact_oscillation_s1.0_k0",
+   "task": "put the cream cheese in the bowl",
+   "success": false,
+   "r": 4.876984137376791,
+   "p_yes": 0.02595735713839531
+  },
+  {
+   "key": "t6/d0001_contact_oscillation_s1.0_k0",
+   "task": "put the cream cheese in the bowl",
+   "success": false,
+   "r": 5.0674833977798075,
+   "p_yes": 0.0534033328294754
+  },
+  {
+   "key": "t6/d0002_premature_release_s0.8_k0",
+   "task": "put the cream cheese in the bowl",
+   "success": false,
+   "r": 4.6468598084448,
+   "p_yes": 0.037326883524656296
+  }
+ ]
+}

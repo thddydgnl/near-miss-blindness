@@ -1,0 +1,25 @@
+val H5 r: batch 0 episodes 100 +579 cf, queue 3021, dropped 0, 28s
+val H5 r: batch 5 episodes 600 +587 cf, queue 83, dropped 0, 156s
+EVAL_CELL_DONE {"set": "val", "H": 5, "defk": "r", "n_targets": 3600, "n_dropped": 0, "n_episodes": 615, "n_unreachable_attempts": 88, "reach_rate_per_attempt": 0.9761388286334056, "s_max": {"offset": 13.0, "iid": 50.0}, "tau": {"full": 0.2125, "obj": 0.345}, "mean_sim_calls": 15.0, "time_s": 160.89344835281372}
+val H3 r: batch 0 episodes 100 +583 cf, queue 3017, dropped 0, 28s
+val H3 r: batch 5 episodes 600 +593 cf, queue 74, dropped 0, 105s
+EVAL_CELL_DONE {"set": "val", "H": 3, "defk": "r", "n_targets": 3600, "n_dropped": 0, "n_episodes": 614, "n_unreachable_attempts": 78, "reach_rate_per_attempt": 0.9787928221859706, "s_max": {"offset": 25.0, "iid": 80.0}, "tau": {"full": 0.2125, "obj": 0.345}, "mean_sim_calls": 15.0, "time_s": 107.26907253265381}
+val H7 r: batch 0 episodes 100 +586 cf, queue 3014, dropped 0, 46s
+val H7 r: batch 5 episodes 600 +582 cf, queue 76, dropped 0, 229s
+EVAL_CELL_DONE {"set": "val", "H": 7, "defk": "r", "n_targets": 3600, "n_dropped": 0, "n_episodes": 616, "n_unreachable_attempts": 89, "reach_rate_per_attempt": 0.9758742206560044, "s_max": {"offset": 10.0, "iid": 40.0}, "tau": {"full": 0.2125, "obj": 0.345}, "mean_sim_calls": 15.0, "time_s": 235.05683398246765}
+val H10 r: batch 0 episodes 100 +586 cf, queue 3014, dropped 0, 72s
+val H10 r: batch 5 episodes 600 +583 cf, queue 92, dropped 0, 336s
+EVAL_CELL_DONE {"set": "val", "H": 10, "defk": "r", "n_targets": 3600, "n_dropped": 0, "n_episodes": 620, "n_unreachable_attempts": 107, "reach_rate_per_attempt": 0.9711356892365794, "s_max": {"offset": 6.0, "iid": 30.0}, "tau": {"full": 0.2125, "obj": 0.345}, "mean_sim_calls": 15.0, "time_s": 345.5656201839447}
+val H5 r_obj: batch 0 episodes 100 +326 cf, queue 3274, dropped 0, 25s
+val H5 r_obj: batch 5 episodes 600 +366 cf, queue 1451, dropped 0, 106s
+EVAL_CELL_DONE {"set": "val", "H": 5, "defk": "r_obj", "n_targets": 3600, "n_dropped": 0, "n_episodes": 1167, "n_unreachable_attempts": 3308, "reach_rate_per_attempt": 0.5211349160393747, "s_max": {"offset": 200.0, "iid": 200.0}, "tau": {"full": 0.2125, "obj": 0.345}, "mean_sim_calls": 15.0, "time_s": 188.35028100013733}
+val H3 r_obj: batch 0 episodes 100 +314 cf, queue 3286, dropped 0, 21s
+val H3 r_obj: batch 5 episodes 600 +259 cf, queue 1929, dropped 0, 64s
+EVAL_CELL_DONE {"set": "val", "H": 3, "defk": "r_obj", "n_targets": 3600, "n_dropped": 6, "n_episodes": 1546, "n_unreachable_attempts": 5603, "reach_rate_per_attempt": 0.3907796020441448, "s_max": {"offset": 200.0, "iid": 200.0}, "tau": {"full": 0.2125, "obj": 0.345}, "mean_sim_calls": 15.0, "time_s": 135.22353386878967}
+val H7 r_obj: batch 0 episodes 100 +435 cf, queue 3165, dropped 0, 38s
+val H7 r_obj: batch 5 episodes 600 +413 cf, queue 1025, dropped 0, 176s
+EVAL_CELL_DONE {"set": "val", "H": 7, "defk": "r_obj", "n_targets": 3600, "n_dropped": 0, "n_episodes": 927, "n_unreachable_attempts": 1870, "reach_rate_per_attempt": 0.6581352833638026, "s_max": {"offset": 200.0, "iid": 200.0}, "tau": {"full": 0.2125, "obj": 0.345}, "mean_sim_calls": 15.0, "time_s": 254.50024819374084}
+val H10 r_obj: batch 0 episodes 100 +494 cf, queue 3106, dropped 0, 53s
+val H10 r_obj: batch 5 episodes 600 +502 cf, queue 611, dropped 0, 257s
+EVAL_CELL_DONE {"set": "val", "H": 10, "defk": "r_obj", "n_targets": 3600, "n_dropped": 0, "n_episodes": 755, "n_unreachable_attempts": 910, "reach_rate_per_attempt": 0.7982261640798226, "s_max": {"offset": 200.0, "iid": 200.0}, "tau": {"full": 0.2125, "obj": 0.345}, "mean_sim_calls": 15.0, "time_s": 314.8669276237488}
+LANE2_DONE val 2026-10-21T23:21:18Z

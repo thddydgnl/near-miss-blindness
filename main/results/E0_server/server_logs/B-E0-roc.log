@@ -1,0 +1,4 @@
+jt s42 ep0040 SUMMARY {"n": 100, "success_dp": 0.14, "mean_score": 0.8074359924424122, "success_robj": 0.63, "near_robj": 0.18, "mid_robj": 0.06, "far_robj": 0.13, "r_obj_q": [0.11236984505457297, 0.3832564050954756, 0.8340443970172323, 1.525035278062796
+jt s42 ep0080 SUMMARY {"n": 100, "success_dp": 0.44, "mean_score": 0.8639482593866907, "success_robj": 0.85, "near_robj": 0.02, "mid_robj": 0.01, "far_robj": 0.12, "r_obj_q": [0.05939825921083343, 0.08838097216576818, 0.22313920701186615, 0.6306248868341
+demo s43 ep0025 SUMMARY {"n": 100, "success_dp": 0.01, "mean_score": 0.5634413038916741, "success_robj": 0.2, "near_robj": 0.21, "mid_robj": 0.14, "far_robj": 0.45, "r_obj_q": [0.7568890195265686, 1.2070359030350357, 2.517517506559959, 6.86338029584426, 10
+ROLLOUTS_c_DONE

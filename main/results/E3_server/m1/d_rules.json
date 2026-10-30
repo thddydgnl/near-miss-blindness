@@ -1,0 +1,84 @@
+{
+ "dset_r": {
+  "n_held": 3304,
+  "n_train": 2000,
+  "held_success_frac": 0.5378329297820823,
+  "auroc_held": 0.6139876151612008,
+  "auroc_held_success_vs_near": 0.45092595158089643,
+  "auroc_held_success_vs_far": 0.7775313706325465,
+  "auroc_train": 0.5776718385286307,
+  "threshold": 0.14804719388484955,
+  "train_balanced_acc": 0.6096215113032369,
+  "held_balanced_acc": 0.6190473558114877,
+  "held_acc": 0.6422518159806295,
+  "held_p_judged_success": {
+   "success": 0.9257175014068655,
+   "near": 0.9015280135823429,
+   "mid": 0.8031496062992126,
+   "far": 0.4605263157894737
+  },
+  "held_mean_score": {
+   "success": 0.20337380468845367,
+   "near": 0.2099907547235489,
+   "far": 0.15040390193462372
+  },
+  "auroc_held_without_expert": 0.6290269767834886,
+  "n_held_without_expert": 2891,
+  "passes_0p80": false,
+  "passes_0p80_without_expert": false
+ },
+ "dset_robj": {
+  "n_held": 3304,
+  "n_train": 2000,
+  "held_success_frac": 0.7388014527845036,
+  "auroc_held": 0.6824907919602503,
+  "auroc_held_success_vs_near": 0.5830173922758929,
+  "auroc_held_success_vs_far": 0.8049651009097725,
+  "auroc_train": 0.6430953063858557,
+  "threshold": 0.2018132209777832,
+  "train_balanced_acc": 0.628510991374895,
+  "held_balanced_acc": 0.648768645716784,
+  "held_acc": 0.7433414043583535,
+  "held_p_judged_success": {
+   "success": 0.8467841048750512,
+   "near": 0.7168831168831169,
+   "mid": 0.56875,
+   "far": 0.33647798742138363
+  },
+  "held_mean_score": {
+   "success": 0.25240686535835266,
+   "near": 0.2385830134153366,
+   "far": 0.1951415240764618
+  },
+  "auroc_held_without_expert": 0.6911552288814077,
+  "n_held_without_expert": 2891,
+  "passes_0p80": false,
+  "passes_0p80_without_expert": false
+ },
+ "std": {
+  "n_held": 2398,
+  "n_train": 2000,
+  "held_success_frac": 0.31984987489574646,
+  "auroc_held": 0.9089303800149803,
+  "auroc_held_success_vs_near": 0.8193151315284914,
+  "auroc_held_success_vs_far": 0.9650995039828539,
+  "auroc_train": 0.8886285714285714,
+  "threshold": 0.06754669547080994,
+  "train_balanced_acc": 0.8104761904761905,
+  "held_balanced_acc": 0.8388259736190193,
+  "held_acc": 0.8206839032527106,
+  "held_p_judged_success": {
+   "success": 0.8891786179921773,
+   "near": 0.4470588235294118,
+   "mid": 0.15447154471544716,
+   "far": 0.06518282988871224
+  },
+  "held_mean_score": {
+   "success": 0.1004653200507164,
+   "near": 0.06980548799037933,
+   "far": 0.04964350536465645
+  },
+  "passes_0p80": true
+ },
+ "criterion": "held AUROC(success vs failure) >= 0.80 on real decoded frames (DESIGN_main v2.1 section 6)"
+}

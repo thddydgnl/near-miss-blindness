@@ -1,0 +1,7 @@
+gen v2 finished 18:00:45, 6360 cf
+features rc=0
+logreg rc=0
+cnn rc=0 18:10:04
+judge_d 7b rc=0 18:19:24
+judge_d 32b rc=0 18:33:15
+JUDGES_V2_DONE 18:33:15

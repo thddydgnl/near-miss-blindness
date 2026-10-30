@@ -1,0 +1,364 @@
+[s_n100k_T1] state M=27 N=100000 B=512 T=10000
+data: [{'n_fail': 29867, 'n_miss': 22475, 'n_slip': 7392, 'n_nearmiss': 4509}, {'n_fail': 30005, 'n_miss': 22613, 'n_slip': 7392, 'n_nearmiss': 4517}, {'n_fail': 29936, 'n_miss': 22529, 'n_slip': 7407, 'n_nearmiss': 4452}, {'n_fail': 29867, 'n_miss': 22475, 'n_slip': 7392, 'n_nearmiss': 4509}, {'n_fail': 30005, 'n_miss': 22613, 'n_slip': 7392, 'n_nearmiss': 4517}, {'n_fail': 29936, 'n_miss': 22529, 'n_slip': 7407, 'n_nearmiss': 4452}]
+step 1000 (9s) loss[0]=8.65e-02 opt=[0.187, 0.155, 0.156, 0.068, 0.088, 0.065, 0.032, 0.032, 0.019]
+step 2000 (17s) loss[0]=1.29e-02 opt=[0.082, 0.097, 0.059, 0.046, 0.049, 0.045, 0.014, 0.018, 0.008]
+step 3000 (25s) loss[0]=8.06e-03 opt=[0.059, 0.061, 0.051, 0.034, 0.038, 0.029, 0.011, 0.006, 0.015]
+step 4000 (33s) loss[0]=6.18e-03 opt=[0.046, 0.04, 0.034, 0.022, 0.02, 0.029, 0.009, 0.01, 0.006]
+step 5000 (41s) loss[0]=4.82e-03 opt=[0.043, 0.037, 0.031, 0.017, 0.032, 0.026, 0.007, 0.009, 0.005]
+step 6000 (49s) loss[0]=3.94e-03 opt=[0.032, 0.026, 0.042, 0.017, 0.019, 0.017, 0.01, 0.008, 0.007]
+step 7000 (57s) loss[0]=3.21e-03 opt=[0.021, 0.022, 0.027, 0.014, 0.01, 0.018, 0.007, 0.005, 0.007]
+step 8000 (65s) loss[0]=2.43e-03 opt=[0.026, 0.021, 0.022, 0.014, 0.012, 0.013, 0.007, 0.006, 0.006]
+step 9000 (73s) loss[0]=1.96e-03 opt=[0.021, 0.016, 0.02, 0.01, 0.01, 0.013, 0.008, 0.008, 0.007]
+step 10000 (81s) loss[0]=1.77e-03 opt=[0.018, 0.019, 0.02, 0.01, 0.008, 0.012, 0.006, 0.006, 0.007]
+[s_n100k_T1] done in 82s
+[s_n100k_T4] state M=27 N=100000 B=512 T=40000
+data: [{'n_fail': 29867, 'n_miss': 22475, 'n_slip': 7392, 'n_nearmiss': 4509}, {'n_fail': 30005, 'n_miss': 22613, 'n_slip': 7392, 'n_nearmiss': 4517}, {'n_fail': 29936, 'n_miss': 22529, 'n_slip': 7407, 'n_nearmiss': 4452}, {'n_fail': 29867, 'n_miss': 22475, 'n_slip': 7392, 'n_nearmiss': 4509}, {'n_fail': 30005, 'n_miss': 22613, 'n_slip': 7392, 'n_nearmiss': 4517}, {'n_fail': 29936, 'n_miss': 22529, 'n_slip': 7407, 'n_nearmiss': 4452}]
+step 2500 (20s) loss[0]=4.17e-02 opt=[0.047, 0.052, 0.061, 0.036, 0.037, 0.036, 0.011, 0.01, 0.013]
+step 5000 (41s) loss[0]=6.70e-03 opt=[0.066, 0.052, 0.038, 0.037, 0.021, 0.037, 0.007, 0.006, 0.012]
+step 7500 (61s) loss[0]=5.39e-03 opt=[0.039, 0.035, 0.043, 0.024, 0.025, 0.023, 0.01, 0.01, 0.01]
+step 10000 (81s) loss[0]=4.50e-03 opt=[0.046, 0.04, 0.038, 0.027, 0.022, 0.024, 0.01, 0.008, 0.016]
+step 12500 (101s) loss[0]=3.77e-03 opt=[0.028, 0.028, 0.029, 0.014, 0.026, 0.021, 0.01, 0.01, 0.01]
+step 15000 (120s) loss[0]=3.32e-03 opt=[0.022, 0.029, 0.035, 0.016, 0.021, 0.019, 0.012, 0.018, 0.012]
+step 17500 (141s) loss[0]=2.78e-03 opt=[0.01, 0.02, 0.023, 0.017, 0.025, 0.016, 0.011, 0.016, 0.014]
+step 20000 (161s) loss[0]=2.29e-03 opt=[0.018, 0.021, 0.026, 0.016, 0.016, 0.021, 0.017, 0.021, 0.015]
+step 22500 (181s) loss[0]=1.77e-03 opt=[0.017, 0.028, 0.025, 0.015, 0.01, 0.015, 0.011, 0.021, 0.012]
+step 25000 (201s) loss[0]=1.32e-03 opt=[0.016, 0.016, 0.02, 0.019, 0.016, 0.017, 0.019, 0.015, 0.015]
+step 27500 (221s) loss[0]=8.83e-04 opt=[0.014, 0.013, 0.015, 0.015, 0.013, 0.014, 0.018, 0.023, 0.016]
+step 30000 (239s) loss[0]=5.57e-04 opt=[0.016, 0.016, 0.013, 0.012, 0.012, 0.013, 0.015, 0.024, 0.015]
+step 32500 (257s) loss[0]=3.37e-04 opt=[0.013, 0.013, 0.014, 0.014, 0.015, 0.015, 0.019, 0.027, 0.018]
+step 35000 (277s) loss[0]=2.09e-04 opt=[0.013, 0.015, 0.014, 0.014, 0.016, 0.014, 0.018, 0.026, 0.018]
+step 37500 (295s) loss[0]=1.44e-04 opt=[0.012, 0.015, 0.013, 0.012, 0.015, 0.014, 0.019, 0.026, 0.018]
+step 40000 (313s) loss[0]=1.20e-04 opt=[0.011, 0.015, 0.014, 0.012, 0.017, 0.015, 0.019, 0.025, 0.018]
+[s_n100k_T4] done in 313s
+[s_n20k_T1] state M=9 N=20000 B=512 T=10000
+data: [{'n_fail': 241, 'n_miss': 182, 'n_slip': 59, 'n_nearmiss': 35}, {'n_fail': 187, 'n_miss': 141, 'n_slip': 46, 'n_nearmiss': 15}, {'n_fail': 194, 'n_miss': 148, 'n_slip': 46, 'n_nearmiss': 27}, {'n_fail': 241, 'n_miss': 182, 'n_slip': 59, 'n_nearmiss': 35}, {'n_fail': 187, 'n_miss': 141, 'n_slip': 46, 'n_nearmiss': 15}, {'n_fail': 194, 'n_miss': 148, 'n_slip': 46, 'n_nearmiss': 27}]
+step 1000 (7s) loss[0]=4.97e-02 opt=[0.75, 0.751, 0.75, 0.541, 0.63, 0.534, 0.549, 0.597, 0.533]
+step 2000 (14s) loss[0]=3.14e-03 opt=[0.744, 0.75, 0.75, 0.56, 0.635, 0.575, 0.591, 0.607, 0.558]
+step 3000 (20s) loss[0]=2.31e-03 opt=[0.644, 0.708, 0.749, 0.583, 0.62, 0.578, 0.611, 0.595, 0.565]
+step 4000 (27s) loss[0]=1.50e-03 opt=[0.518, 0.588, 0.616, 0.59, 0.619, 0.576, 0.613, 0.598, 0.573]
+step 5000 (34s) loss[0]=9.51e-04 opt=[0.546, 0.552, 0.523, 0.595, 0.615, 0.577, 0.614, 0.593, 0.574]
+step 6000 (41s) loss[0]=6.82e-04 opt=[0.528, 0.546, 0.521, 0.597, 0.619, 0.58, 0.617, 0.597, 0.576]
+step 7000 (47s) loss[0]=4.91e-04 opt=[0.504, 0.533, 0.469, 0.599, 0.622, 0.585, 0.619, 0.6, 0.579]
+step 8000 (54s) loss[0]=3.19e-04 opt=[0.52, 0.533, 0.473, 0.602, 0.625, 0.585, 0.622, 0.602, 0.581]
+step 9000 (61s) loss[0]=2.55e-04 opt=[0.514, 0.537, 0.468, 0.604, 0.624, 0.586, 0.621, 0.602, 0.582]
+step 10000 (69s) loss[0]=2.15e-04 opt=[0.513, 0.53, 0.468, 0.605, 0.625, 0.587, 0.622, 0.602, 0.582]
+[s_n20k_T1] done in 69s
+[s_n20k_T4] state M=9 N=20000 B=512 T=40000
+data: [{'n_fail': 241, 'n_miss': 182, 'n_slip': 59, 'n_nearmiss': 35}, {'n_fail': 187, 'n_miss': 141, 'n_slip': 46, 'n_nearmiss': 15}, {'n_fail': 194, 'n_miss': 148, 'n_slip': 46, 'n_nearmiss': 27}, {'n_fail': 241, 'n_miss': 182, 'n_slip': 59, 'n_nearmiss': 35}, {'n_fail': 187, 'n_miss': 141, 'n_slip': 46, 'n_nearmiss': 15}, {'n_fail': 194, 'n_miss': 148, 'n_slip': 46, 'n_nearmiss': 27}]
+step 2500 (19s) loss[0]=2.17e-02 opt=[0.702, 0.748, 0.75, 0.577, 0.625, 0.581, 0.604, 0.607, 0.571]
+step 5000 (39s) loss[0]=1.49e-03 opt=[0.511, 0.546, 0.52, 0.569, 0.622, 0.583, 0.602, 0.599, 0.579]
+step 7500 (58s) loss[0]=7.03e-04 opt=[0.469, 0.528, 0.476, 0.573, 0.624, 0.583, 0.614, 0.587, 0.592]
+step 10000 (77s) loss[0]=4.09e-04 opt=[0.469, 0.533, 0.475, 0.576, 0.615, 0.58, 0.612, 0.577, 0.59]
+step 12500 (96s) loss[0]=2.74e-04 opt=[0.467, 0.493, 0.451, 0.55, 0.606, 0.58, 0.612, 0.563, 0.591]
+step 15000 (115s) loss[0]=1.69e-04 opt=[0.464, 0.501, 0.447, 0.549, 0.605, 0.564, 0.599, 0.588, 0.576]
+step 17500 (133s) loss[0]=1.03e-04 opt=[0.456, 0.494, 0.45, 0.533, 0.619, 0.558, 0.592, 0.579, 0.572]
+step 20000 (151s) loss[0]=1.95e-05 opt=[0.457, 0.492, 0.471, 0.537, 0.611, 0.55, 0.586, 0.57, 0.564]
+step 22500 (169s) loss[0]=9.02e-05 opt=[0.453, 0.481, 0.457, 0.561, 0.604, 0.545, 0.587, 0.567, 0.567]
+step 25000 (187s) loss[0]=9.48e-06 opt=[0.452, 0.484, 0.451, 0.547, 0.605, 0.545, 0.586, 0.567, 0.565]
+step 27500 (207s) loss[0]=2.35e-05 opt=[0.458, 0.491, 0.45, 0.54, 0.6, 0.546, 0.586, 0.564, 0.565]
+step 30000 (226s) loss[0]=4.15e-06 opt=[0.462, 0.483, 0.446, 0.537, 0.601, 0.545, 0.587, 0.565, 0.564]
+step 32500 (243s) loss[0]=2.96e-06 opt=[0.46, 0.485, 0.447, 0.539, 0.602, 0.546, 0.586, 0.564, 0.565]
+step 35000 (261s) loss[0]=2.16e-06 opt=[0.46, 0.486, 0.445, 0.541, 0.603, 0.548, 0.588, 0.565, 0.565]
+step 37500 (279s) loss[0]=1.73e-06 opt=[0.459, 0.489, 0.449, 0.541, 0.604, 0.549, 0.588, 0.565, 0.565]
+step 40000 (300s) loss[0]=1.53e-06 opt=[0.46, 0.49, 0.449, 0.542, 0.605, 0.55, 0.589, 0.564, 0.565]
+[s_n20k_T4] done in 301s
+[s_n300k_T1] state M=9 N=300000 B=512 T=10000
+data: [{'n_fail': 3007, 'n_miss': 2277, 'n_slip': 730, 'n_nearmiss': 468}, {'n_fail': 2984, 'n_miss': 2274, 'n_slip': 710, 'n_nearmiss': 457}, {'n_fail': 3053, 'n_miss': 2289, 'n_slip': 764, 'n_nearmiss': 453}, {'n_fail': 3007, 'n_miss': 2277, 'n_slip': 730, 'n_nearmiss': 468}, {'n_fail': 2984, 'n_miss': 2274, 'n_slip': 710, 'n_nearmiss': 457}, {'n_fail': 3053, 'n_miss': 2289, 'n_slip': 764, 'n_nearmiss': 453}]
+step 1000 (7s) loss[0]=4.99e-02 opt=[0.75, 0.75, 0.75, 0.103, 0.1, 0.092, 0.092, 0.129, 0.089]
+step 2000 (15s) loss[0]=3.16e-03 opt=[0.75, 0.75, 0.75, 0.066, 0.073, 0.072, 0.071, 0.084, 0.073]
+step 3000 (22s) loss[0]=2.70e-03 opt=[0.719, 0.747, 0.75, 0.054, 0.069, 0.063, 0.068, 0.099, 0.076]
+step 4000 (29s) loss[0]=2.20e-03 opt=[0.412, 0.573, 0.705, 0.078, 0.071, 0.052, 0.075, 0.1, 0.062]
+step 5000 (36s) loss[0]=1.61e-03 opt=[0.397, 0.481, 0.613, 0.067, 0.076, 0.055, 0.085, 0.091, 0.064]
+step 6000 (43s) loss[0]=1.30e-03 opt=[0.317, 0.406, 0.448, 0.066, 0.081, 0.066, 0.085, 0.113, 0.079]
+step 7000 (50s) loss[0]=1.12e-03 opt=[0.311, 0.316, 0.375, 0.073, 0.093, 0.069, 0.088, 0.105, 0.086]
+step 8000 (57s) loss[0]=9.32e-04 opt=[0.289, 0.299, 0.317, 0.073, 0.093, 0.071, 0.099, 0.12, 0.088]
+step 9000 (65s) loss[0]=8.47e-04 opt=[0.275, 0.283, 0.309, 0.077, 0.093, 0.069, 0.105, 0.122, 0.094]
+step 10000 (72s) loss[0]=7.76e-04 opt=[0.264, 0.277, 0.302, 0.078, 0.097, 0.072, 0.108, 0.124, 0.093]
+[s_n300k_T1] done in 72s
+[s_n300k_T4] state M=9 N=300000 B=512 T=40000
+data: [{'n_fail': 3007, 'n_miss': 2277, 'n_slip': 730, 'n_nearmiss': 468}, {'n_fail': 2984, 'n_miss': 2274, 'n_slip': 710, 'n_nearmiss': 457}, {'n_fail': 3053, 'n_miss': 2289, 'n_slip': 764, 'n_nearmiss': 453}, {'n_fail': 3007, 'n_miss': 2277, 'n_slip': 730, 'n_nearmiss': 468}, {'n_fail': 2984, 'n_miss': 2274, 'n_slip': 710, 'n_nearmiss': 457}, {'n_fail': 3053, 'n_miss': 2289, 'n_slip': 764, 'n_nearmiss': 453}]
+step 2500 (17s) loss[0]=2.16e-02 opt=[0.74, 0.75, 0.75, 0.084, 0.083, 0.062, 0.081, 0.101, 0.063]
+step 5000 (32s) loss[0]=2.23e-03 opt=[0.435, 0.403, 0.517, 0.072, 0.078, 0.083, 0.085, 0.118, 0.068]
+step 7500 (50s) loss[0]=1.41e-03 opt=[0.484, 0.298, 0.307, 0.077, 0.074, 0.074, 0.098, 0.12, 0.103]
+step 10000 (69s) loss[0]=1.17e-03 opt=[0.297, 0.324, 0.319, 0.088, 0.076, 0.089, 0.111, 0.11, 0.086]
+step 12500 (88s) loss[0]=9.67e-04 opt=[0.225, 0.246, 0.236, 0.082, 0.107, 0.076, 0.111, 0.129, 0.098]
+step 15000 (108s) loss[0]=8.13e-04 opt=[0.208, 0.209, 0.167, 0.092, 0.123, 0.094, 0.132, 0.159, 0.114]
+step 17500 (126s) loss[0]=7.05e-04 opt=[0.268, 0.167, 0.125, 0.101, 0.123, 0.095, 0.122, 0.163, 0.109]
+step 20000 (146s) loss[0]=6.02e-04 opt=[0.191, 0.176, 0.159, 0.106, 0.15, 0.107, 0.123, 0.188, 0.114]
+step 22500 (164s) loss[0]=5.18e-04 opt=[0.141, 0.133, 0.14, 0.115, 0.148, 0.114, 0.142, 0.177, 0.115]
+step 25000 (184s) loss[0]=4.30e-04 opt=[0.121, 0.146, 0.112, 0.127, 0.144, 0.117, 0.142, 0.191, 0.121]
+step 27500 (202s) loss[0]=3.28e-04 opt=[0.096, 0.094, 0.102, 0.131, 0.152, 0.113, 0.143, 0.17, 0.143]
+step 30000 (222s) loss[0]=2.73e-04 opt=[0.096, 0.091, 0.101, 0.12, 0.169, 0.112, 0.158, 0.197, 0.137]
+step 32500 (240s) loss[0]=2.08e-04 opt=[0.076, 0.083, 0.075, 0.13, 0.159, 0.133, 0.159, 0.19, 0.14]
+step 35000 (259s) loss[0]=1.59e-04 opt=[0.07, 0.069, 0.07, 0.132, 0.168, 0.134, 0.164, 0.205, 0.154]
+step 37500 (277s) loss[0]=1.22e-04 opt=[0.065, 0.073, 0.061, 0.136, 0.172, 0.135, 0.167, 0.207, 0.153]
+step 40000 (295s) loss[0]=1.18e-04 opt=[0.065, 0.07, 0.059, 0.135, 0.174, 0.136, 0.167, 0.208, 0.156]
+[s_n300k_T4] done in 296s
+[s_p03_n6k_T1] state M=9 N=6667 B=512 T=10000
+data: [{'n_fail': 222, 'n_miss': 148, 'n_slip': 74, 'n_nearmiss': 31}, {'n_fail': 184, 'n_miss': 142, 'n_slip': 42, 'n_nearmiss': 29}, {'n_fail': 183, 'n_miss': 149, 'n_slip': 34, 'n_nearmiss': 27}, {'n_fail': 222, 'n_miss': 148, 'n_slip': 74, 'n_nearmiss': 31}, {'n_fail': 184, 'n_miss': 142, 'n_slip': 42, 'n_nearmiss': 29}, {'n_fail': 183, 'n_miss': 149, 'n_slip': 34, 'n_nearmiss': 27}]
+step 1000 (8s) loss[0]=5.42e-02 opt=[0.747, 0.749, 0.749, 0.593, 0.64, 0.573, 0.627, 0.651, 0.552]
+step 2000 (16s) loss[0]=4.64e-03 opt=[0.571, 0.552, 0.597, 0.605, 0.639, 0.588, 0.632, 0.643, 0.57]
+step 3000 (24s) loss[0]=1.76e-03 opt=[0.49, 0.521, 0.568, 0.603, 0.637, 0.579, 0.626, 0.651, 0.575]
+step 4000 (31s) loss[0]=9.40e-04 opt=[0.518, 0.512, 0.542, 0.604, 0.624, 0.577, 0.624, 0.644, 0.572]
+step 5000 (38s) loss[0]=5.04e-04 opt=[0.518, 0.515, 0.521, 0.603, 0.636, 0.58, 0.629, 0.639, 0.576]
+step 6000 (46s) loss[0]=3.30e-04 opt=[0.5, 0.505, 0.523, 0.608, 0.632, 0.578, 0.631, 0.643, 0.577]
+step 7000 (53s) loss[0]=1.81e-04 opt=[0.518, 0.512, 0.529, 0.608, 0.631, 0.581, 0.633, 0.642, 0.58]
+step 8000 (60s) loss[0]=1.22e-04 opt=[0.522, 0.512, 0.525, 0.61, 0.633, 0.583, 0.633, 0.642, 0.581]
+step 9000 (68s) loss[0]=9.05e-05 opt=[0.522, 0.511, 0.527, 0.611, 0.632, 0.582, 0.634, 0.643, 0.581]
+step 10000 (75s) loss[0]=7.93e-05 opt=[0.523, 0.512, 0.528, 0.61, 0.632, 0.583, 0.635, 0.643, 0.581]
+[s_p03_n6k_T1] done in 76s
+[s_p03_n6k_T4] state M=9 N=6667 B=512 T=40000
+data: [{'n_fail': 222, 'n_miss': 148, 'n_slip': 74, 'n_nearmiss': 31}, {'n_fail': 184, 'n_miss': 142, 'n_slip': 42, 'n_nearmiss': 29}, {'n_fail': 183, 'n_miss': 149, 'n_slip': 34, 'n_nearmiss': 27}, {'n_fail': 222, 'n_miss': 148, 'n_slip': 74, 'n_nearmiss': 31}, {'n_fail': 184, 'n_miss': 142, 'n_slip': 42, 'n_nearmiss': 29}, {'n_fail': 183, 'n_miss': 149, 'n_slip': 34, 'n_nearmiss': 27}]
+step 2500 (19s) loss[0]=2.40e-02 opt=[0.541, 0.519, 0.527, 0.592, 0.64, 0.583, 0.621, 0.649, 0.575]
+step 5000 (37s) loss[0]=9.14e-04 opt=[0.501, 0.517, 0.524, 0.598, 0.638, 0.571, 0.625, 0.634, 0.571]
+step 7500 (56s) loss[0]=3.73e-04 opt=[0.468, 0.534, 0.49, 0.595, 0.625, 0.567, 0.619, 0.63, 0.564]
+step 10000 (75s) loss[0]=2.93e-04 opt=[0.453, 0.514, 0.477, 0.591, 0.622, 0.564, 0.622, 0.632, 0.564]
+step 12500 (94s) loss[0]=2.28e-04 opt=[0.478, 0.497, 0.459, 0.586, 0.609, 0.552, 0.618, 0.627, 0.553]
+step 15000 (113s) loss[0]=9.28e-05 opt=[0.463, 0.484, 0.459, 0.582, 0.604, 0.535, 0.62, 0.626, 0.534]
+step 17500 (133s) loss[0]=1.12e-04 opt=[0.481, 0.496, 0.456, 0.588, 0.601, 0.521, 0.616, 0.619, 0.529]
+step 20000 (151s) loss[0]=8.74e-05 opt=[0.482, 0.472, 0.465, 0.588, 0.6, 0.517, 0.614, 0.616, 0.526]
+step 22500 (170s) loss[0]=4.50e-05 opt=[0.494, 0.488, 0.456, 0.581, 0.596, 0.511, 0.609, 0.614, 0.521]
+step 25000 (187s) loss[0]=8.65e-06 opt=[0.502, 0.48, 0.451, 0.576, 0.594, 0.511, 0.612, 0.611, 0.524]
+step 27500 (206s) loss[0]=2.39e-05 opt=[0.501, 0.468, 0.456, 0.576, 0.594, 0.512, 0.613, 0.611, 0.525]
+step 30000 (224s) loss[0]=3.51e-06 opt=[0.506, 0.467, 0.456, 0.577, 0.593, 0.514, 0.614, 0.61, 0.526]
+step 32500 (242s) loss[0]=2.35e-06 opt=[0.506, 0.466, 0.454, 0.578, 0.594, 0.515, 0.615, 0.611, 0.527]
+step 35000 (260s) loss[0]=1.58e-06 opt=[0.508, 0.468, 0.453, 0.581, 0.595, 0.515, 0.616, 0.61, 0.528]
+step 37500 (279s) loss[0]=1.21e-06 opt=[0.51, 0.468, 0.453, 0.581, 0.596, 0.516, 0.617, 0.611, 0.53]
+step 40000 (298s) loss[0]=1.06e-06 opt=[0.511, 0.468, 0.453, 0.581, 0.596, 0.516, 0.617, 0.61, 0.531]
+[s_p03_n6k_T4] done in 299s
+[s_p03_n33k_T1] state M=9 N=33333 B=512 T=10000
+data: [{'n_fail': 1028, 'n_miss': 754, 'n_slip': 274, 'n_nearmiss': 160}, {'n_fail': 943, 'n_miss': 714, 'n_slip': 229, 'n_nearmiss': 136}, {'n_fail': 981, 'n_miss': 759, 'n_slip': 222, 'n_nearmiss': 152}, {'n_fail': 1028, 'n_miss': 754, 'n_slip': 274, 'n_nearmiss': 160}, {'n_fail': 943, 'n_miss': 714, 'n_slip': 229, 'n_nearmiss': 136}, {'n_fail': 981, 'n_miss': 759, 'n_slip': 222, 'n_nearmiss': 152}]
+step 1000 (6s) loss[0]=5.49e-02 opt=[0.75, 0.75, 0.75, 0.161, 0.218, 0.143, 0.243, 0.226, 0.208]
+step 2000 (13s) loss[0]=6.19e-03 opt=[0.415, 0.53, 0.57, 0.15, 0.254, 0.189, 0.245, 0.265, 0.247]
+step 3000 (20s) loss[0]=3.37e-03 opt=[0.331, 0.374, 0.377, 0.154, 0.261, 0.173, 0.243, 0.315, 0.268]
+step 4000 (27s) loss[0]=2.48e-03 opt=[0.28, 0.339, 0.35, 0.155, 0.282, 0.183, 0.221, 0.329, 0.261]
+step 5000 (34s) loss[0]=1.95e-03 opt=[0.222, 0.299, 0.267, 0.17, 0.286, 0.179, 0.214, 0.327, 0.261]
+step 6000 (40s) loss[0]=1.59e-03 opt=[0.264, 0.303, 0.232, 0.158, 0.298, 0.181, 0.209, 0.332, 0.273]
+step 7000 (47s) loss[0]=1.27e-03 opt=[0.301, 0.275, 0.245, 0.176, 0.306, 0.185, 0.222, 0.356, 0.279]
+step 8000 (54s) loss[0]=1.03e-03 opt=[0.249, 0.269, 0.235, 0.182, 0.316, 0.194, 0.227, 0.364, 0.292]
+step 9000 (60s) loss[0]=8.68e-04 opt=[0.255, 0.258, 0.227, 0.183, 0.323, 0.194, 0.229, 0.368, 0.294]
+step 10000 (67s) loss[0]=7.84e-04 opt=[0.249, 0.257, 0.222, 0.184, 0.325, 0.196, 0.231, 0.37, 0.294]
+[s_p03_n33k_T1] done in 67s
+[s_p03_n33k_T4] state M=9 N=33333 B=512 T=40000
+data: [{'n_fail': 1028, 'n_miss': 754, 'n_slip': 274, 'n_nearmiss': 160}, {'n_fail': 943, 'n_miss': 714, 'n_slip': 229, 'n_nearmiss': 136}, {'n_fail': 981, 'n_miss': 759, 'n_slip': 222, 'n_nearmiss': 152}, {'n_fail': 1028, 'n_miss': 754, 'n_slip': 274, 'n_nearmiss': 160}, {'n_fail': 943, 'n_miss': 714, 'n_slip': 229, 'n_nearmiss': 136}, {'n_fail': 981, 'n_miss': 759, 'n_slip': 222, 'n_nearmiss': 152}]
+step 2500 (16s) loss[0]=2.50e-02 opt=[0.333, 0.417, 0.419, 0.15, 0.266, 0.185, 0.282, 0.288, 0.255]
+step 5000 (32s) loss[0]=2.63e-03 opt=[0.29, 0.309, 0.238, 0.178, 0.257, 0.156, 0.211, 0.321, 0.236]
+step 7500 (48s) loss[0]=1.74e-03 opt=[0.214, 0.29, 0.199, 0.183, 0.251, 0.166, 0.237, 0.336, 0.239]
+step 10000 (64s) loss[0]=1.13e-03 opt=[0.235, 0.266, 0.189, 0.185, 0.206, 0.202, 0.253, 0.316, 0.26]
+step 12500 (81s) loss[0]=7.36e-04 opt=[0.21, 0.257, 0.189, 0.207, 0.263, 0.199, 0.286, 0.253, 0.219]
+step 15000 (97s) loss[0]=5.09e-04 opt=[0.193, 0.263, 0.169, 0.178, 0.288, 0.219, 0.279, 0.325, 0.275]
+step 17500 (113s) loss[0]=3.39e-04 opt=[0.219, 0.22, 0.188, 0.233, 0.175, 0.238, 0.267, 0.326, 0.255]
+step 20000 (130s) loss[0]=1.86e-04 opt=[0.228, 0.225, 0.186, 0.219, 0.287, 0.172, 0.286, 0.319, 0.292]
+step 22500 (146s) loss[0]=1.42e-04 opt=[0.226, 0.271, 0.188, 0.237, 0.286, 0.241, 0.287, 0.326, 0.295]
+step 25000 (163s) loss[0]=7.48e-05 opt=[0.23, 0.227, 0.196, 0.245, 0.26, 0.241, 0.283, 0.318, 0.282]
+step 27500 (179s) loss[0]=4.50e-05 opt=[0.209, 0.212, 0.184, 0.25, 0.284, 0.246, 0.281, 0.328, 0.293]
+step 30000 (197s) loss[0]=1.20e-05 opt=[0.229, 0.219, 0.191, 0.251, 0.283, 0.248, 0.278, 0.311, 0.295]
+step 32500 (214s) loss[0]=7.06e-06 opt=[0.231, 0.217, 0.192, 0.251, 0.28, 0.246, 0.282, 0.321, 0.294]
+step 35000 (230s) loss[0]=6.74e-06 opt=[0.231, 0.218, 0.188, 0.252, 0.284, 0.245, 0.282, 0.324, 0.293]
+step 37500 (246s) loss[0]=4.43e-06 opt=[0.231, 0.219, 0.189, 0.25, 0.287, 0.245, 0.283, 0.326, 0.293]
+step 40000 (262s) loss[0]=3.91e-06 opt=[0.232, 0.218, 0.19, 0.25, 0.288, 0.244, 0.282, 0.327, 0.292]
+[s_p03_n33k_T4] done in 262s
+STATE_TRAIN_OK
+/workspace/code/analyze.py:214: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ck = torch.load(os.path.join(args.ckpt, f'{args.name}.pt'), map_location=dev)
+model 0 0.3 std s0 opt=0.018 near=0.126 far=0.000 r*=1.023 n50=5 (untr 222) L3=0.66 abl det=0.633 rand=0.021 (0.5s)
+model 1 0.3 std s1 opt=0.019 near=0.131 far=0.000 r*=1.026 n50=4 (untr 222) L3=0.69 abl det=0.145 rand=0.019 (0.3s)
+model 2 0.3 std s2 opt=0.020 near=0.138 far=0.000 r*=1.026 n50=7 (untr 223) L3=0.75 abl det=0.227 rand=0.044 (0.3s)
+model 3 0.3 rw s0 opt=0.010 near=0.070 far=0.000 r*=1.007 n50=5 (untr 222) L3=0.61 abl det=0.444 rand=0.010 (0.3s)
+model 4 0.3 rw s1 opt=0.008 near=0.054 far=0.000 r*=1.008 n50=5 (untr 222) L3=0.72 abl det=0.385 rand=0.008 (0.3s)
+model 5 0.3 rw s2 opt=0.012 near=0.085 far=0.000 r*=1.011 n50=7 (untr 223) L3=0.66 abl det=0.374 rand=0.013 (0.3s)
+model 6 0.3 hn s0 opt=0.006 near=0.044 far=0.000 r*=0.996 n50=5 (untr 222) L3=0.72 abl det=1.000 rand=0.007 (0.3s)
+model 7 0.3 hn s1 opt=0.006 near=0.041 far=0.000 r*=0.996 n50=5 (untr 222) L3=0.67 abl det=0.390 rand=0.006 (0.3s)
+model 8 0.3 hn s2 opt=0.007 near=0.046 far=0.000 r*=0.994 n50=6 (untr 223) L3=0.71 abl det=0.319 rand=0.020 (0.3s)
+model 9 0.03 std s0 opt=0.175 near=0.946 far=0.001 r*=1.237 n50=36 (untr 222) L3=0.27 abl det=0.756 rand=0.257 (0.3s)
+model 10 0.03 std s1 opt=0.186 near=0.946 far=0.003 r*=1.246 n50=42 (untr 222) L3=0.26 abl det=0.772 rand=0.297 (0.3s)
+model 11 0.03 std s2 opt=0.098 near=0.615 far=0.000 r*=1.126 n50=7 (untr 223) L3=0.60 abl det=0.632 rand=0.100 (0.3s)
+model 12 0.03 rw s0 opt=0.081 near=0.492 far=0.001 r*=1.100 n50=5 (untr 222) L3=0.68 abl det=0.939 rand=0.075 (0.3s)
+model 13 0.03 rw s1 opt=0.099 near=0.581 far=0.005 r*=1.125 n50=8 (untr 222) L3=0.50 abl det=0.750 rand=0.106 (0.3s)
+model 14 0.03 rw s2 opt=0.076 near=0.479 far=0.000 r*=1.090 n50=6 (untr 223) L3=0.64 abl det=0.753 rand=0.076 (0.3s)
+model 15 0.03 hn s0 opt=0.107 near=0.613 far=0.004 r*=1.126 n50=8 (untr 222) L3=0.67 abl det=0.614 rand=0.115 (0.3s)
+model 16 0.03 hn s1 opt=0.129 near=0.701 far=0.007 r*=1.169 n50=10 (untr 222) L3=0.52 abl det=0.750 rand=0.136 (0.3s)
+model 17 0.03 hn s2 opt=0.099 near=0.598 far=0.003 r*=1.120 n50=5 (untr 223) L3=0.71 abl det=0.302 rand=0.119 (0.3s)
+model 18 0.01 std s0 opt=0.294 near=0.995 far=0.041 r*=1.379 n50=50 (untr 222) L3=0.20 abl det=0.771 rand=0.399 (0.3s)
+model 19 0.01 std s1 opt=0.295 near=0.995 far=0.042 r*=1.383 n50=66 (untr 222) L3=0.19 abl det=0.764 rand=0.421 (0.3s)
+model 20 0.01 std s2 opt=0.334 near=0.998 far=0.078 r*=1.417 n50=64 (untr 223) L3=0.20 abl det=0.756 rand=0.464 (0.3s)
+model 21 0.01 rw s0 opt=0.215 near=0.857 far=0.047 r*=1.246 n50=28 (untr 222) L3=0.42 abl det=0.919 rand=0.262 (0.3s)
+model 22 0.01 rw s1 opt=0.318 near=0.939 far=0.140 r*=1.387 n50=71 (untr 222) L3=0.20 abl det=0.774 rand=0.420 (0.3s)
+model 23 0.01 rw s2 opt=0.211 near=0.862 far=0.040 r*=1.258 n50=31 (untr 223) L3=0.40 abl det=0.766 rand=0.247 (0.3s)
+model 24 0.01 hn s0 opt=0.315 near=0.927 far=0.150 r*=1.384 n50=88 (untr 222) L3=0.23 abl det=0.863 rand=0.416 (0.3s)
+model 25 0.01 hn s1 opt=0.366 near=0.961 far=0.195 r*=1.436 n50=90 (untr 222) L3=0.15 abl det=0.788 rand=0.483 (0.3s)
+model 26 0.01 hn s2 opt=0.315 near=0.941 far=0.132 r*=1.385 n50=86 (untr 223) L3=0.28 abl det=0.848 rand=0.425 (0.3s)
+analysis done
+/workspace/code/analyze.py:214: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ck = torch.load(os.path.join(args.ckpt, f'{args.name}.pt'), map_location=dev)
+model 0 0.3 std s0 opt=0.011 near=0.080 far=0.000 r*=1.017 n50=4 (untr 222) L3=0.86 abl det=0.148 rand=0.040 (0.6s)
+model 1 0.3 std s1 opt=0.015 near=0.105 far=0.000 r*=1.021 n50=3 (untr 222) L3=0.86 abl det=0.246 rand=0.035 (0.3s)
+model 2 0.3 std s2 opt=0.014 near=0.097 far=0.000 r*=1.019 n50=5 (untr 223) L3=0.85 abl det=0.025 rand=0.014 (0.3s)
+model 3 0.3 rw s0 opt=0.012 near=0.085 far=0.000 r*=1.016 n50=4 (untr 222) L3=0.83 abl det=0.516 rand=0.012 (0.3s)
+model 4 0.3 rw s1 opt=0.017 near=0.115 far=0.000 r*=1.022 n50=3 (untr 222) L3=0.88 abl det=0.257 rand=0.052 (0.3s)
+model 5 0.3 rw s2 opt=0.015 near=0.107 far=0.000 r*=1.019 n50=5 (untr 223) L3=0.87 abl det=0.185 rand=0.033 (0.3s)
+model 6 0.3 hn s0 opt=0.019 near=0.132 far=0.000 r*=1.025 n50=4 (untr 222) L3=0.84 abl det=0.455 rand=0.019 (0.3s)
+model 7 0.3 hn s1 opt=0.025 near=0.173 far=0.000 r*=1.027 n50=3 (untr 222) L3=0.82 abl det=0.351 rand=0.034 (0.3s)
+model 8 0.3 hn s2 opt=0.018 near=0.126 far=0.000 r*=1.022 n50=3 (untr 223) L3=0.89 abl det=0.177 rand=0.035 (0.3s)
+model 9 0.03 std s0 opt=0.087 near=0.548 far=0.001 r*=1.113 n50=3 (untr 222) L3=0.67 abl det=0.519 rand=0.087 (0.3s)
+model 10 0.03 std s1 opt=0.095 near=0.598 far=0.002 r*=1.125 n50=4 (untr 222) L3=0.62 abl det=0.513 rand=0.096 (0.3s)
+model 11 0.03 std s2 opt=0.072 near=0.470 far=0.000 r*=1.090 n50=3 (untr 223) L3=0.82 abl det=0.121 rand=0.072 (0.3s)
+model 12 0.03 rw s0 opt=0.141 near=0.771 far=0.005 r*=1.192 n50=5 (untr 222) L3=0.74 abl det=0.291 rand=0.159 (0.3s)
+model 13 0.03 rw s1 opt=0.165 near=0.825 far=0.010 r*=1.225 n50=5 (untr 222) L3=0.63 abl det=0.408 rand=0.167 (0.3s)
+model 14 0.03 rw s2 opt=0.132 near=0.728 far=0.006 r*=1.159 n50=5 (untr 223) L3=0.76 abl det=0.404 rand=0.150 (0.3s)
+model 15 0.03 hn s0 opt=0.182 near=0.866 far=0.013 r*=1.234 n50=4 (untr 222) L3=0.76 abl det=0.819 rand=0.196 (0.3s)
+model 16 0.03 hn s1 opt=0.208 near=0.915 far=0.019 r*=1.258 n50=6 (untr 222) L3=0.62 abl det=0.750 rand=0.210 (0.3s)
+model 17 0.03 hn s2 opt=0.162 near=0.817 far=0.008 r*=1.199 n50=4 (untr 223) L3=0.80 abl det=0.290 rand=0.174 (0.3s)
+model 18 0.01 std s0 opt=0.183 near=0.876 far=0.015 r*=1.231 n50=5 (untr 222) L3=0.53 abl det=0.750 rand=0.184 (0.3s)
+model 19 0.01 std s1 opt=0.192 near=0.890 far=0.019 r*=1.246 n50=13 (untr 222) L3=0.34 abl det=0.763 rand=0.223 (0.3s)
+model 20 0.01 std s2 opt=0.147 near=0.800 far=0.001 r*=1.184 n50=3 (untr 223) L3=0.70 abl det=0.340 rand=0.157 (0.3s)
+model 21 0.01 rw s0 opt=0.278 near=0.947 far=0.079 r*=1.342 n50=9 (untr 222) L3=0.53 abl det=0.765 rand=0.282 (0.3s)
+model 22 0.01 rw s1 opt=0.341 near=0.988 far=0.135 r*=1.417 n50=20 (untr 222) L3=0.36 abl det=0.830 rand=0.387 (0.3s)
+model 23 0.01 rw s2 opt=0.296 near=0.956 far=0.104 r*=1.360 n50=12 (untr 223) L3=0.53 abl det=0.750 rand=0.309 (0.3s)
+model 24 0.01 hn s0 opt=0.324 near=0.968 far=0.121 r*=1.402 n50=23 (untr 222) L3=0.43 abl det=0.850 rand=0.336 (0.3s)
+model 25 0.01 hn s1 opt=0.351 near=0.981 far=0.155 r*=1.421 n50=40 (untr 222) L3=0.27 abl det=0.768 rand=0.424 (0.3s)
+model 26 0.01 hn s2 opt=0.350 near=0.976 far=0.163 r*=1.416 n50=13 (untr 223) L3=0.49 abl det=0.750 rand=0.361 (0.3s)
+analysis done
+/workspace/code/analyze.py:214: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ck = torch.load(os.path.join(args.ckpt, f'{args.name}.pt'), map_location=dev)
+model 0 0.01 std s0 opt=0.513 near=0.983 far=0.461 r*=1.701 n50=74 (untr 222) L3=0.17 abl det=0.909 rand=0.592 (0.5s)
+model 1 0.01 std s1 opt=0.530 near=0.995 far=0.490 r*=1.719 n50=86 (untr 222) L3=0.15 abl det=0.779 rand=0.633 (0.3s)
+model 2 0.01 std s2 opt=0.468 near=0.976 far=0.378 r*=1.623 n50=81 (untr 223) L3=0.16 abl det=0.822 rand=0.565 (0.3s)
+model 3 0.01 rw s0 opt=0.605 near=0.981 far=0.674 r*=1.950 n50=126 (untr 222) L3=0.17 abl det=0.915 rand=0.684 (0.3s)
+model 4 0.01 rw s1 opt=0.625 near=0.995 far=0.706 r*=1.950 n50=133 (untr 222) L3=0.16 abl det=0.933 rand=0.683 (0.3s)
+model 5 0.01 rw s2 opt=0.587 near=0.978 far=0.633 r*=1.927 n50=111 (untr 223) L3=0.17 abl det=0.841 rand=0.661 (0.3s)
+model 6 0.01 hn s0 opt=0.622 near=0.980 far=0.710 r*=1.950 n50=130 (untr 222) L3=0.17 abl det=1.000 rand=0.692 (0.3s)
+model 7 0.01 hn s1 opt=0.602 near=0.993 far=0.652 r*=1.912 n50=124 (untr 222) L3=0.16 abl det=0.948 rand=0.644 (0.3s)
+model 8 0.01 hn s2 opt=0.582 near=0.983 far=0.622 r*=1.915 n50=120 (untr 223) L3=0.16 abl det=0.875 rand=0.611 (0.3s)
+analysis done
+/workspace/code/analyze.py:214: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ck = torch.load(os.path.join(args.ckpt, f'{args.name}.pt'), map_location=dev)
+model 0 0.01 std s0 opt=0.460 near=0.966 far=0.362 r*=1.549 n50=30 (untr 222) L3=0.31 abl det=0.788 rand=0.496 (0.5s)
+model 1 0.01 std s1 opt=0.490 near=0.981 far=0.395 r*=1.664 n50=44 (untr 222) L3=0.18 abl det=0.800 rand=0.549 (0.3s)
+model 2 0.01 std s2 opt=0.449 near=0.976 far=0.346 r*=1.570 n50=39 (untr 223) L3=0.28 abl det=0.802 rand=0.482 (0.3s)
+model 3 0.01 rw s0 opt=0.542 near=0.971 far=0.536 r*=1.787 n50=81 (untr 222) L3=0.22 abl det=0.896 rand=0.579 (0.3s)
+model 4 0.01 rw s1 opt=0.605 near=0.988 far=0.663 r*=1.950 n50=101 (untr 222) L3=0.19 abl det=0.969 rand=0.647 (0.3s)
+model 5 0.01 rw s2 opt=0.550 near=0.968 far=0.559 r*=1.804 n50=76 (untr 223) L3=0.25 abl det=0.825 rand=0.598 (0.3s)
+model 6 0.01 hn s0 opt=0.589 near=0.985 far=0.631 r*=1.937 n50=96 (untr 222) L3=0.22 abl det=0.914 rand=0.601 (0.3s)
+model 7 0.01 hn s1 opt=0.564 near=0.983 far=0.577 r*=1.828 n50=88 (untr 222) L3=0.20 abl det=0.879 rand=0.616 (0.3s)
+model 8 0.01 hn s2 opt=0.565 near=0.978 far=0.586 r*=1.864 n50=90 (untr 223) L3=0.21 abl det=0.856 rand=0.613 (0.3s)
+analysis done
+/workspace/code/analyze.py:214: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ck = torch.load(os.path.join(args.ckpt, f'{args.name}.pt'), map_location=dev)
+model 0 0.01 std s0 opt=0.264 near=1.000 far=0.014 r*=1.337 n50=45 (untr 222) L3=0.21 abl det=0.791 rand=0.361 (0.5s)
+model 1 0.01 std s1 opt=0.277 near=1.000 far=0.025 r*=1.355 n50=65 (untr 222) L3=0.20 abl det=0.778 rand=0.440 (0.3s)
+model 2 0.01 std s2 opt=0.302 near=0.997 far=0.035 r*=1.392 n50=59 (untr 223) L3=0.21 abl det=0.750 rand=0.438 (0.3s)
+model 3 0.01 rw s0 opt=0.078 near=0.487 far=0.001 r*=1.088 n50=9 (untr 222) L3=0.53 abl det=0.842 rand=0.081 (0.3s)
+model 4 0.01 rw s1 opt=0.097 near=0.586 far=0.001 r*=1.114 n50=6 (untr 222) L3=0.59 abl det=0.749 rand=0.097 (0.3s)
+model 5 0.01 rw s2 opt=0.072 near=0.457 far=0.001 r*=1.095 n50=6 (untr 223) L3=0.65 abl det=0.415 rand=0.073 (0.3s)
+model 6 0.01 hn s0 opt=0.108 near=0.632 far=0.002 r*=1.121 n50=5 (untr 222) L3=0.66 abl det=0.970 rand=0.108 (0.3s)
+model 7 0.01 hn s1 opt=0.124 near=0.691 far=0.005 r*=1.156 n50=8 (untr 222) L3=0.51 abl det=0.750 rand=0.139 (0.3s)
+model 8 0.01 hn s2 opt=0.093 near=0.567 far=0.001 r*=1.121 n50=5 (untr 223) L3=0.69 abl det=0.696 rand=0.104 (0.3s)
+analysis done
+/workspace/code/analyze.py:214: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ck = torch.load(os.path.join(args.ckpt, f'{args.name}.pt'), map_location=dev)
+model 0 0.01 std s0 opt=0.065 near=0.445 far=0.000 r*=1.083 n50=3 (untr 222) L3=0.66 abl det=0.498 rand=0.065 (0.5s)
+model 1 0.01 std s1 opt=0.070 near=0.474 far=0.000 r*=1.093 n50=5 (untr 222) L3=0.57 abl det=0.750 rand=0.071 (0.3s)
+model 2 0.01 std s2 opt=0.059 near=0.397 far=0.000 r*=1.081 n50=4 (untr 223) L3=0.78 abl det=0.198 rand=0.059 (0.3s)
+model 3 0.01 rw s0 opt=0.135 near=0.761 far=0.004 r*=1.164 n50=4 (untr 222) L3=0.62 abl det=0.988 rand=0.135 (0.3s)
+model 4 0.01 rw s1 opt=0.174 near=0.878 far=0.010 r*=1.220 n50=5 (untr 222) L3=0.67 abl det=0.504 rand=0.174 (0.3s)
+model 5 0.01 rw s2 opt=0.136 near=0.774 far=0.001 r*=1.172 n50=4 (untr 223) L3=0.82 abl det=0.104 rand=0.155 (0.3s)
+model 6 0.01 hn s0 opt=0.167 near=0.847 far=0.015 r*=1.210 n50=4 (untr 222) L3=0.79 abl det=0.421 rand=0.167 (0.3s)
+model 7 0.01 hn s1 opt=0.208 near=0.915 far=0.019 r*=1.267 n50=5 (untr 222) L3=0.64 abl det=0.517 rand=0.210 (0.3s)
+model 8 0.01 hn s2 opt=0.156 near=0.834 far=0.006 r*=1.204 n50=3 (untr 223) L3=0.81 abl det=0.452 rand=0.156 (0.3s)
+analysis done
+/workspace/code/analyze.py:214: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ck = torch.load(os.path.join(args.ckpt, f'{args.name}.pt'), map_location=dev)
+model 0 0.03 std s0 opt=0.523 near=0.968 far=0.506 r*=1.737 n50=80 (untr 222) L3=0.17 abl det=0.882 rand=0.609 (0.5s)
+model 1 0.03 std s1 opt=0.512 near=0.976 far=0.467 r*=1.710 n50=90 (untr 222) L3=0.15 abl det=0.809 rand=0.601 (0.3s)
+model 2 0.03 std s2 opt=0.528 near=0.978 far=0.511 r*=1.758 n50=88 (untr 223) L3=0.16 abl det=0.775 rand=0.633 (0.3s)
+model 3 0.03 rw s0 opt=0.610 near=0.976 far=0.696 r*=1.950 n50=132 (untr 222) L3=0.17 abl det=0.907 rand=0.649 (0.3s)
+model 4 0.03 rw s1 opt=0.632 near=0.983 far=0.737 r*=1.950 n50=153 (untr 222) L3=0.18 abl det=0.899 rand=0.658 (0.3s)
+model 5 0.03 rw s2 opt=0.583 near=0.978 far=0.631 r*=1.926 n50=121 (untr 223) L3=0.19 abl det=0.824 rand=0.525 (0.3s)
+model 6 0.03 hn s0 opt=0.635 near=0.986 far=0.747 r*=1.950 n50=146 (untr 222) L3=0.17 abl det=0.913 rand=0.633 (0.2s)
+model 7 0.03 hn s1 opt=0.643 near=0.988 far=0.759 r*=1.950 n50=160 (untr 222) L3=0.18 abl det=0.950 rand=0.693 (0.3s)
+model 8 0.03 hn s2 opt=0.581 near=0.976 far=0.626 r*=1.889 n50=119 (untr 223) L3=0.18 abl det=0.889 rand=0.572 (0.2s)
+analysis done
+/workspace/code/analyze.py:214: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ck = torch.load(os.path.join(args.ckpt, f'{args.name}.pt'), map_location=dev)
+model 0 0.03 std s0 opt=0.511 near=0.966 far=0.481 r*=1.723 n50=44 (untr 222) L3=0.26 abl det=0.807 rand=0.541 (0.5s)
+model 1 0.03 std s1 opt=0.468 near=0.961 far=0.395 r*=1.635 n50=52 (untr 222) L3=0.20 abl det=0.795 rand=0.530 (0.3s)
+model 2 0.03 std s2 opt=0.453 near=0.952 far=0.368 r*=1.577 n50=41 (untr 223) L3=0.25 abl det=0.755 rand=0.525 (0.3s)
+model 3 0.03 rw s0 opt=0.581 near=0.961 far=0.651 r*=1.950 n50=88 (untr 222) L3=0.25 abl det=0.932 rand=0.605 (0.3s)
+model 4 0.03 rw s1 opt=0.596 near=0.978 far=0.673 r*=1.950 n50=120 (untr 222) L3=0.22 abl det=0.929 rand=0.655 (0.3s)
+model 5 0.03 rw s2 opt=0.516 near=0.956 far=0.511 r*=1.772 n50=75 (untr 223) L3=0.27 abl det=0.857 rand=0.561 (0.2s)
+model 6 0.03 hn s0 opt=0.617 near=0.969 far=0.718 r*=1.950 n50=111 (untr 222) L3=0.21 abl det=0.915 rand=0.671 (0.2s)
+model 7 0.03 hn s1 opt=0.610 near=0.976 far=0.709 r*=1.950 n50=126 (untr 222) L3=0.23 abl det=0.939 rand=0.722 (0.2s)
+model 8 0.03 hn s2 opt=0.531 near=0.961 far=0.535 r*=1.788 n50=94 (untr 223) L3=0.22 abl det=0.884 rand=0.580 (0.2s)
+analysis done
+/workspace/code/analyze.py:214: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ck = torch.load(os.path.join(args.ckpt, f'{args.name}.pt'), map_location=dev)
+model 0 0.03 std s0 opt=0.249 near=0.917 far=0.039 r*=1.329 n50=44 (untr 222) L3=0.22 abl det=0.750 rand=0.356 (0.5s)
+model 1 0.03 std s1 opt=0.257 near=0.932 far=0.043 r*=1.331 n50=55 (untr 222) L3=0.19 abl det=0.753 rand=0.400 (0.3s)
+model 2 0.03 std s2 opt=0.222 near=0.922 far=0.023 r*=1.290 n50=43 (untr 223) L3=0.31 abl det=0.750 rand=0.320 (0.3s)
+model 3 0.03 rw s0 opt=0.184 near=0.795 far=0.026 r*=1.231 n50=38 (untr 222) L3=0.28 abl det=0.989 rand=0.231 (0.3s)
+model 4 0.03 rw s1 opt=0.325 near=0.922 far=0.150 r*=1.397 n50=82 (untr 222) L3=0.19 abl det=0.798 rand=0.448 (0.3s)
+model 5 0.03 rw s2 opt=0.196 near=0.839 far=0.026 r*=1.253 n50=24 (untr 223) L3=0.42 abl det=0.805 rand=0.225 (0.3s)
+model 6 0.03 hn s0 opt=0.231 near=0.868 far=0.055 r*=1.295 n50=33 (untr 222) L3=0.43 abl det=0.868 rand=0.284 (0.3s)
+model 7 0.03 hn s1 opt=0.370 near=0.944 far=0.210 r*=1.455 n50=98 (untr 222) L3=0.15 abl det=0.872 rand=0.454 (0.3s)
+model 8 0.03 hn s2 opt=0.294 near=0.915 far=0.111 r*=1.348 n50=76 (untr 223) L3=0.25 abl det=0.798 rand=0.387 (0.3s)
+analysis done
+/workspace/code/analyze.py:214: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ck = torch.load(os.path.join(args.ckpt, f'{args.name}.pt'), map_location=dev)
+model 0 0.03 std s0 opt=0.232 near=0.900 far=0.033 r*=1.301 n50=7 (untr 222) L3=0.49 abl det=0.750 rand=0.245 (0.5s)
+model 1 0.03 std s1 opt=0.218 near=0.893 far=0.044 r*=1.266 n50=18 (untr 222) L3=0.21 abl det=0.762 rand=0.274 (0.3s)
+model 2 0.03 std s2 opt=0.190 near=0.869 far=0.017 r*=1.251 n50=4 (untr 223) L3=0.65 abl det=0.525 rand=0.198 (0.3s)
+model 3 0.03 rw s0 opt=0.250 near=0.886 far=0.071 r*=1.318 n50=9 (untr 222) L3=0.44 abl det=0.955 rand=0.251 (0.3s)
+model 4 0.03 rw s1 opt=0.288 near=0.924 far=0.084 r*=1.376 n50=27 (untr 222) L3=0.32 abl det=0.752 rand=0.350 (0.3s)
+model 5 0.03 rw s2 opt=0.244 near=0.905 far=0.052 r*=1.306 n50=7 (untr 223) L3=0.57 abl det=0.756 rand=0.246 (0.3s)
+model 6 0.03 hn s0 opt=0.282 near=0.924 far=0.077 r*=1.367 n50=4 (untr 222) L3=0.63 abl det=0.595 rand=0.285 (0.3s)
+model 7 0.03 hn s1 opt=0.327 near=0.942 far=0.130 r*=1.414 n50=51 (untr 222) L3=0.26 abl det=0.753 rand=0.384 (0.3s)
+model 8 0.03 hn s2 opt=0.292 near=0.939 far=0.090 r*=1.362 n50=16 (untr 223) L3=0.46 abl det=0.750 rand=0.309 (0.3s)
+analysis done
+/workspace/code/analyze.py:214: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ck = torch.load(os.path.join(args.ckpt, f'{args.name}.pt'), map_location=dev)
+/workspace/code/analyze.py:227: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  snaps = torch.load(os.path.join(args.ckpt, f'{args.name}_snaps.pt'))
+timeseries model 0 {'p': 0.3, 'mode': 'std', 'seed': 0, 'T': 40000, 'N': 100000, 'version': 'state'} done
+timeseries model 1 {'p': 0.3, 'mode': 'std', 'seed': 1, 'T': 40000, 'N': 100000, 'version': 'state'} done
+timeseries model 2 {'p': 0.3, 'mode': 'std', 'seed': 2, 'T': 40000, 'N': 100000, 'version': 'state'} done
+timeseries model 9 {'p': 0.03, 'mode': 'std', 'seed': 0, 'T': 40000, 'N': 100000, 'version': 'state'} done
+timeseries model 10 {'p': 0.03, 'mode': 'std', 'seed': 1, 'T': 40000, 'N': 100000, 'version': 'state'} done
+timeseries model 11 {'p': 0.03, 'mode': 'std', 'seed': 2, 'T': 40000, 'N': 100000, 'version': 'state'} done
+timeseries model 18 {'p': 0.01, 'mode': 'std', 'seed': 0, 'T': 40000, 'N': 100000, 'version': 'state'} done
+timeseries model 19 {'p': 0.01, 'mode': 'std', 'seed': 1, 'T': 40000, 'N': 100000, 'version': 'state'} done
+timeseries model 20 {'p': 0.01, 'mode': 'std', 'seed': 2, 'T': 40000, 'N': 100000, 'version': 'state'} done
+analysis done
+/workspace/code/analyze.py:214: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ck = torch.load(os.path.join(args.ckpt, f'{args.name}.pt'), map_location=dev)
+/workspace/code/analyze.py:227: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  snaps = torch.load(os.path.join(args.ckpt, f'{args.name}_snaps.pt'))
+timeseries model 0 {'p': 0.01, 'mode': 'std', 'seed': 0, 'T': 40000, 'N': 20000, 'version': 'state'} done
+timeseries model 1 {'p': 0.01, 'mode': 'std', 'seed': 1, 'T': 40000, 'N': 20000, 'version': 'state'} done
+timeseries model 2 {'p': 0.01, 'mode': 'std', 'seed': 2, 'T': 40000, 'N': 20000, 'version': 'state'} done
+analysis done
+/workspace/code/analyze.py:214: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ck = torch.load(os.path.join(args.ckpt, f'{args.name}.pt'), map_location=dev)
+/workspace/code/analyze.py:227: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  snaps = torch.load(os.path.join(args.ckpt, f'{args.name}_snaps.pt'))
+timeseries model 0 {'p': 0.01, 'mode': 'std', 'seed': 0, 'T': 40000, 'N': 300000, 'version': 'state'} done
+timeseries model 1 {'p': 0.01, 'mode': 'std', 'seed': 1, 'T': 40000, 'N': 300000, 'version': 'state'} done
+timeseries model 2 {'p': 0.01, 'mode': 'std', 'seed': 2, 'T': 40000, 'N': 300000, 'version': 'state'} done
+analysis done
+/workspace/code/analyze.py:214: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ck = torch.load(os.path.join(args.ckpt, f'{args.name}.pt'), map_location=dev)
+/workspace/code/analyze.py:227: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  snaps = torch.load(os.path.join(args.ckpt, f'{args.name}_snaps.pt'))
+timeseries model 0 {'p': 0.03, 'mode': 'std', 'seed': 0, 'T': 40000, 'N': 6667, 'version': 'state'} done
+timeseries model 1 {'p': 0.03, 'mode': 'std', 'seed': 1, 'T': 40000, 'N': 6667, 'version': 'state'} done
+timeseries model 2 {'p': 0.03, 'mode': 'std', 'seed': 2, 'T': 40000, 'N': 6667, 'version': 'state'} done
+analysis done
+/workspace/code/analyze.py:214: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ck = torch.load(os.path.join(args.ckpt, f'{args.name}.pt'), map_location=dev)
+/workspace/code/analyze.py:227: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  snaps = torch.load(os.path.join(args.ckpt, f'{args.name}_snaps.pt'))
+timeseries model 0 {'p': 0.03, 'mode': 'std', 'seed': 0, 'T': 40000, 'N': 33333, 'version': 'state'} done
+timeseries model 1 {'p': 0.03, 'mode': 'std', 'seed': 1, 'T': 40000, 'N': 33333, 'version': 'state'} done
+timeseries model 2 {'p': 0.03, 'mode': 'std', 'seed': 2, 'T': 40000, 'N': 33333, 'version': 'state'} done
+analysis done
+STATE_OK

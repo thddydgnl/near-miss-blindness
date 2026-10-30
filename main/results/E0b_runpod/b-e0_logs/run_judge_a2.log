@@ -1,0 +1,4 @@
+features2 rc=0
+logreg2 rc=0
+cnn2 rc=0
+JUDGE_A2_DONE 16:42:28

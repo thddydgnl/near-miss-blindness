@@ -1,0 +1,14 @@
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+0 52.47113327306526
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+224 41.87083235391127
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+256 41.83148797102766
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+4 0 203.29925978376167

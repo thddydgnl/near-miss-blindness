@@ -1,0 +1,69 @@
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[loader] libero_goal: 3 demos from 1 tasks
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[curewm] wrote 90 perturbed trajectories -> /workspace/data/cf_goal/t5
+{
+  "contact_oscillation": {
+    "failure_rate_by_severity": {
+      "0.2": 0.0,
+      "0.4": 0.0,
+      "0.6": 0.0,
+      "0.8": 0.0,
+      "1.0": 0.0
+    },
+    "monotonic": true
+  },
+  "premature_release": {
+    "failure_rate_by_severity": {
+      "0.2": 0.0,
+      "0.4": 0.33333333333333337,
+      "0.6": 0.33333333333333337,
+      "0.8": 0.0,
+      "1.0": 0.0
+    },
+    "monotonic": false
+  },
+  "carry_slip": {
+    "failure_rate_by_severity": {
+      "0.2": 0.33333333333333337,
+      "0.4": 0.0,
+      "0.6": 0.0,
+      "0.8": 0.0,
+      "1.0": 0.0
+    },
+    "monotonic": false
+  },
+  "insufficient_grip": {
+    "failure_rate_by_severity": {
+      "0.2": 0.0,
+      "0.4": 0.0,
+      "0.6": 0.0,
+      "0.8": 0.0,
+      "1.0": 0.0
+    },
+    "monotonic": true
+  },
+  "wrist_tilt": {
+    "failure_rate_by_severity": {
+      "0.2": 0.0,
+      "0.4": 0.33333333333333337,
+      "0.6": 0.0,
+      "0.8": 0.0,
+      "1.0": 0.0
+    },
+    "monotonic": false
+  },
+  "approach_overshoot": {
+    "failure_rate_by_severity": {
+      "0.2": 0.0,
+      "0.4": 0.0,
+      "0.6": 0.0,
+      "0.8": 0.0,
+      "1.0": 0.0
+    },
+    "monotonic": true
+  }
+}

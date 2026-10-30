@@ -1,0 +1,77 @@
+/workspace/code/analyze.py:451: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  st = torch.load(f'{args.data}/stats.pt')
+/workspace/code/analyze.py:453: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  d = torch.load(f'{args.data}/ana.pt')
+data 2s  samples 15200 train 9120 test 6080
+copy/oracle probes {'A': 0.581, 'B': 0.119, 'R': 0.225, 'C': 0.195, 'W': 0.104, 'S': 0.028} 11s
+shares {'A': 0.0974, 'B': 0.0025, 'R': -0.0005, 'C': 0.0002, 'W': -0.0004, 'S': 0.0002, 'all': 0.0973} 13s
+/workspace/code/analyze.py:579: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(fn, map_location=DEV))
+[w256 s0] r2_delta {'A': 0.633, 'B': 0.129, 'R': 0.076, 'C': 0.17, 'W': 0.082, 'S': 0.092} CI -0.0605 113s
+[w256 s0 trained] Lw 0.7653599834638788 rotLw 0.680 pack 0.01958136394328157 n_incl 1481/1536 132s
+[w256 s0 untrained] Lw 0.3182849312146989 rotLw 0.308 pack 0.31705729166666663 n_incl 1536/1536 21s
+[mlp64 s0] r2_delta {'A': 0.602, 'B': 0.153, 'R': 0.03, 'C': 0.181, 'W': 0.077, 'S': 0.109} CI -0.0626 63s
+[mlp64 s0 trained] Lw 0.7442882488774545 rotLw 0.596 pack 0.005249343832020997 n_incl 381/384 64s
+[mlp64 s0 trained] merged {'R2_1': 0.264, 'R2_5': 0.433, 'R2_all': 0.62, 'rot_R2_1': 0.138, 'rot_R2_5': 0.312, 'frac_merged': 0.865, 'rand_D': 0.156, 'coh_D': 0.152}
+[mlp64 s0 untrained] Lw 0.33003092807470125 rotLw 0.325 pack 0.30729166666666663 n_incl 384/384 2s
+[mlp64 s0 untrained] merged {'R2_1': 0.184, 'R2_5': 0.381, 'R2_all': 0.668, 'rot_R2_1': 0.138, 'rot_R2_5': 0.325, 'frac_merged': 0.987, 'rand_D': 0.156, 'coh_D': 0.22}
+[mlp16 s0] r2_delta {'A': 0.577, 'B': 0.125, 'R': 0.081, 'C': 0.181, 'W': 0.075, 'S': 0.121} CI -0.0543 9s
+[mlp16 s0 trained] Lw 0.7968375290909627 rotLw 0.636 pack 0.0 n_incl 94/96 10s
+[mlp16 s0 trained] merged {'R2_1': 0.256, 'R2_5': 0.441, 'R2_all': 0.627, 'rot_R2_1': 0.141, 'rot_R2_5': 0.317, 'frac_merged': 0.906, 'rand_D': 0.158, 'coh_D': 0.13}
+[mlp16 s0 untrained] Lw 0.3339809444081716 rotLw 0.344 pack 0.21875 n_incl 96/96 1s
+[mlp16 s0 untrained] merged {'R2_1': 0.178, 'R2_5': 0.374, 'R2_all': 0.672, 'rot_R2_1': 0.138, 'rot_R2_5': 0.325, 'frac_merged': 1.0, 'rand_D': 0.158, 'coh_D': 0.237}
+[mlp8 s0] r2_delta {'A': 0.602, 'B': 0.139, 'R': 0.025, 'C': 0.178, 'W': 0.081, 'S': 0.114} CI -0.0596 9s
+[mlp8 s0 trained] Lw 0.8621036860275042 rotLw 0.817 pack 0.0 n_incl 48/48 10s
+[mlp8 s0 trained] merged {'R2_1': 0.33, 'R2_5': 0.509, 'R2_all': 0.68, 'rot_R2_1': 0.163, 'rot_R2_5': 0.358, 'frac_merged': 0.854, 'rand_D': 0.161, 'coh_D': 0.102}
+[mlp8 s0 untrained] Lw 0.3440868680281813 rotLw 0.319 pack 0.20833333333333331 n_incl 48/48 1s
+[mlp8 s0 untrained] merged {'R2_1': 0.191, 'R2_5': 0.397, 'R2_all': 0.682, 'rot_R2_1': 0.139, 'rot_R2_5': 0.335, 'frac_merged': 0.958, 'rand_D': 0.161, 'coh_D': 0.225}
+[res64 s0] r2_delta {'A': 0.396, 'B': 0.058, 'R': 0.054, 'C': 0.068, 'W': 0.051, 'S': 0.053} CI -0.0511 9s
+[res64 s0 trained] Lw 0.774719319614547 rotLw 0.692 pack 0.002652519893899204 n_incl 377/384 10s
+[res64 s0 trained] merged {'R2_1': 0.212, 'R2_5': 0.372, 'R2_all': 0.569, 'rot_R2_1': 0.128, 'rot_R2_5': 0.289, 'frac_merged': 0.828, 'rand_D': 0.156, 'coh_D': 0.167}
+[res64 s0 untrained] Lw 0.335639664901483 rotLw 0.330 pack 0.22395833333333331 n_incl 384/384 1s
+[res64 s0 untrained] merged {'R2_1': 0.192, 'R2_5': 0.401, 'R2_all': 0.703, 'rot_R2_1': 0.146, 'rot_R2_5': 0.346, 'frac_merged': 0.997, 'rand_D': 0.156, 'coh_D': 0.226}
+[res16 s0] r2_delta {'A': 0.183, 'B': 0.024, 'R': 0.058, 'C': 0.01, 'W': 0.019, 'S': 0.015} CI -0.0488 8s
+[res16 s0 trained] Lw 0.7248658494812732 rotLw 0.717 pack 0.0 n_incl 80/96 9s
+[res16 s0 trained] merged {'R2_1': 0.124, 'R2_5': 0.259, 'R2_all': 0.476, 'rot_R2_1': 0.087, 'rot_R2_5': 0.211, 'frac_merged': 0.698, 'rand_D': 0.158, 'coh_D': 0.167}
+[res16 s0 untrained] Lw 0.3064466994758688 rotLw 0.315 pack 0.3333333333333333 n_incl 96/96 0s
+[res16 s0 untrained] merged {'R2_1': 0.191, 'R2_5': 0.401, 'R2_all': 0.702, 'rot_R2_1': 0.146, 'rot_R2_5': 0.347, 'frac_merged': 0.99, 'rand_D': 0.158, 'coh_D': 0.221}
+[res8 s0] r2_delta {'A': 0.101, 'B': 0.008, 'R': 0.008, 'C': 0.006, 'W': 0.016, 'S': 0.007} CI -0.047 9s
+[res8 s0 trained] Lw 0.8303536865167752 rotLw 0.799 pack 0.0 n_incl 39/48 9s
+[res8 s0 trained] merged {'R2_1': 0.111, 'R2_5': 0.254, 'R2_all': 0.501, 'rot_R2_1': 0.078, 'rot_R2_5': 0.205, 'frac_merged': 0.792, 'rand_D': 0.161, 'coh_D': 0.14}
+[res8 s0 untrained] Lw 0.2869309042867923 rotLw 0.274 pack 0.3958333333333333 n_incl 48/48 0s
+[res8 s0 untrained] merged {'R2_1': 0.198, 'R2_5': 0.417, 'R2_all': 0.721, 'rot_R2_1': 0.167, 'rot_R2_5': 0.373, 'frac_merged': 1.0, 'rand_D': 0.161, 'coh_D': 0.252}
+[w256 s1] r2_delta {'A': 0.616, 'B': 0.106, 'R': 0.052, 'C': 0.176, 'W': 0.084, 'S': 0.105} CI -0.0668 9s
+[w256 s1 trained] Lw 0.7632993151331533 rotLw 0.659 pack 0.018342391304347824 n_incl 1472/1536 17s
+[w256 s1 untrained] Lw 0.3270507425849417 rotLw 0.314 pack 0.29166666666666663 n_incl 1536/1536 8s
+[mlp64 s1] r2_delta {'A': 0.58, 'B': 0.132, 'R': 0.033, 'C': 0.186, 'W': 0.081, 'S': 0.121} CI -0.0536 9s
+[mlp64 s1 trained] Lw 0.7603428047078586 rotLw 0.638 pack 0.013123359580052493 n_incl 381/384 11s
+[mlp64 s1 trained] merged {'R2_1': 0.261, 'R2_5': 0.428, 'R2_all': 0.614, 'rot_R2_1': 0.131, 'rot_R2_5': 0.304, 'frac_merged': 0.867, 'rand_D': 0.158, 'coh_D': 0.153}
+[mlp64 s1 untrained] Lw 0.3170691729957178 rotLw 0.323 pack 0.3098958333333333 n_incl 384/384 2s
+[mlp64 s1 untrained] merged {'R2_1': 0.18, 'R2_5': 0.378, 'R2_all': 0.662, 'rot_R2_1': 0.134, 'rot_R2_5': 0.319, 'frac_merged': 0.984, 'rand_D': 0.158, 'coh_D': 0.227}
+[mlp16 s1] r2_delta {'A': 0.594, 'B': 0.128, 'R': 0.043, 'C': 0.175, 'W': 0.077, 'S': 0.116} CI -0.0557 9s
+[mlp16 s1 trained] Lw 0.8287815471785486 rotLw 0.682 pack 0.0 n_incl 95/96 10s
+[mlp16 s1 trained] merged {'R2_1': 0.296, 'R2_5': 0.472, 'R2_all': 0.643, 'rot_R2_1': 0.143, 'rot_R2_5': 0.322, 'frac_merged': 0.885, 'rand_D': 0.162, 'coh_D': 0.112}
+[mlp16 s1 untrained] Lw 0.321158675175592 rotLw 0.325 pack 0.35416666666666663 n_incl 96/96 1s
+[mlp16 s1 untrained] merged {'R2_1': 0.181, 'R2_5': 0.382, 'R2_all': 0.671, 'rot_R2_1': 0.134, 'rot_R2_5': 0.322, 'frac_merged': 1.0, 'rand_D': 0.162, 'coh_D': 0.215}
+[mlp8 s1] r2_delta {'A': 0.588, 'B': 0.154, 'R': 0.067, 'C': 0.171, 'W': 0.086, 'S': 0.11} CI -0.0621 9s
+[mlp8 s1 trained] Lw 0.8579052144825079 rotLw 0.762 pack 0.0 n_incl 48/48 10s
+[mlp8 s1 trained] merged {'R2_1': 0.261, 'R2_5': 0.465, 'R2_all': 0.651, 'rot_R2_1': 0.147, 'rot_R2_5': 0.329, 'frac_merged': 0.958, 'rand_D': 0.162, 'coh_D': 0.102}
+[mlp8 s1 untrained] Lw 0.24117747464830247 rotLw 0.245 pack 0.35416666666666663 n_incl 48/48 1s
+[mlp8 s1 untrained] merged {'R2_1': 0.183, 'R2_5': 0.389, 'R2_all': 0.685, 'rot_R2_1': 0.14, 'rot_R2_5': 0.333, 'frac_merged': 1.0, 'rand_D': 0.162, 'coh_D': 0.21}
+[res64 s1] r2_delta {'A': 0.386, 'B': 0.044, 'R': 0.053, 'C': 0.077, 'W': 0.051, 'S': 0.054} CI -0.0449 9s
+[res64 s1 trained] Lw 0.7382386319276973 rotLw 0.648 pack 0.0 n_incl 380/384 10s
+[res64 s1 trained] merged {'R2_1': 0.224, 'R2_5': 0.399, 'R2_all': 0.602, 'rot_R2_1': 0.14, 'rot_R2_5': 0.311, 'frac_merged': 0.914, 'rand_D': 0.158, 'coh_D': 0.167}
+[res64 s1 untrained] Lw 0.2991924636137635 rotLw 0.294 pack 0.38541666666666663 n_incl 384/384 1s
+[res64 s1 untrained] merged {'R2_1': 0.194, 'R2_5': 0.409, 'R2_all': 0.706, 'rot_R2_1': 0.144, 'rot_R2_5': 0.347, 'frac_merged': 0.995, 'rand_D': 0.158, 'coh_D': 0.227}
+[res16 s1] r2_delta {'A': 0.195, 'B': 0.007, 'R': 0.005, 'C': 0.011, 'W': 0.018, 'S': 0.01} CI -0.049 9s
+[res16 s1 trained] Lw 0.7852194186815776 rotLw 0.724 pack 0.0 n_incl 83/96 9s
+[res16 s1 trained] merged {'R2_1': 0.123, 'R2_5': 0.258, 'R2_all': 0.489, 'rot_R2_1': 0.083, 'rot_R2_5': 0.203, 'frac_merged': 0.688, 'rand_D': 0.162, 'coh_D': 0.155}
+[res16 s1 untrained] Lw 0.36080675144426816 rotLw 0.360 pack 0.20833333333333331 n_incl 96/96 0s
+[res16 s1 untrained] merged {'R2_1': 0.162, 'R2_5': 0.367, 'R2_all': 0.683, 'rot_R2_1': 0.128, 'rot_R2_5': 0.314, 'frac_merged': 1.0, 'rand_D': 0.162, 'coh_D': 0.231}
+[res8 s1] r2_delta {'A': 0.065, 'B': 0.003, 'R': 0.003, 'C': 0.001, 'W': 0.016, 'S': 0.003} CI -0.0479 13s
+[res8 s1 trained] Lw 0.761273306852546 rotLw 0.777 pack 0.0 n_incl 39/48 14s
+[res8 s1 trained] merged {'R2_1': 0.126, 'R2_5': 0.261, 'R2_all': 0.5, 'rot_R2_1': 0.086, 'rot_R2_5': 0.212, 'frac_merged': 0.75, 'rand_D': 0.162, 'coh_D': 0.158}
+[res8 s1 untrained] Lw 0.31646987626416745 rotLw 0.316 pack 0.29166666666666663 n_incl 48/48 0s
+[res8 s1 untrained] merged {'R2_1': 0.203, 'R2_5': 0.402, 'R2_all': 0.697, 'rot_R2_1': 0.147, 'rot_R2_5': 0.347, 'frac_merged': 1.0, 'rand_D': 0.162, 'coh_D': 0.231}
+cross-seed wide {'R2_1': 0.19, 'R2_5': 0.324, 'R2_all': 0.5, 'rot_R2_1': 0.094, 'rot_R2_5': 0.224, 'frac_merged': 0.648, 'rand_D': 0.158, 'coh_D': 0.156}
+analysis done 7.3 min

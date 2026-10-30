@@ -1,0 +1,6 @@
+Using cache found in /root/.cache/torch/hub/facebookresearch_dinov2_main
+main: 100/400 episodes, 23s
+main: 200/400 episodes, 36s
+main: 300/400 episodes, 49s
+main: 400/400 episodes, 63s
+MAIN_DONE main 63s

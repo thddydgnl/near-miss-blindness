@@ -1,0 +1,23 @@
+/workspace/code/posthoc_probe.py:37: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  st = torch.load(f'{args.data}/stats.pt')
+/workspace/code/posthoc_probe.py:39: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  d = torch.load(f'{args.data}/ana.pt')
+copy {'A': -0.004, 'B': 0.179, 'R': -0.041, 'C': 0.013, 'W': 0.13, 'S': 0.431}
+oracle {'A': 0.516, 'B': 0.241, 'R': -0.041, 'C': 0.073, 'W': 0.225, 'S': 0.447} 4s
+/workspace/code/posthoc_probe.py:100: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(fn, map_location=DEV))
+w256 0 {'A': 0.694, 'B': 0.238, 'R': -0.041, 'C': 0.054, 'W': 0.22, 'S': 0.484} 7s
+mlp64 0 {'A': 0.688, 'B': 0.221, 'R': -0.039, 'C': 0.057, 'W': 0.217, 'S': 0.493} 9s
+mlp16 0 {'A': 0.661, 'B': 0.255, 'R': -0.039, 'C': 0.049, 'W': 0.207, 'S': 0.5} 12s
+mlp8 0 {'A': 0.664, 'B': 0.23, 'R': -0.04, 'C': 0.049, 'W': 0.201, 'S': 0.496} 14s
+res64 0 {'A': 0.414, 'B': 0.209, 'R': -0.039, 'C': 0.012, 'W': 0.176, 'S': 0.461} 16s
+res16 0 {'A': 0.157, 'B': 0.19, 'R': -0.039, 'C': 0.013, 'W': 0.129, 'S': 0.44} 18s
+res8 0 {'A': 0.002, 'B': 0.185, 'R': -0.04, 'C': 0.013, 'W': 0.13, 'S': 0.435} 19s
+w256 1 {'A': 0.695, 'B': 0.221, 'R': -0.041, 'C': 0.058, 'W': 0.204, 'S': 0.491} 22s
+mlp64 1 {'A': 0.688, 'B': 0.228, 'R': -0.041, 'C': 0.057, 'W': 0.202, 'S': 0.5} 24s
+mlp16 1 {'A': 0.683, 'B': 0.248, 'R': -0.04, 'C': 0.055, 'W': 0.202, 'S': 0.497} 27s
+mlp8 1 {'A': 0.654, 'B': 0.224, 'R': -0.04, 'C': 0.054, 'W': 0.21, 'S': 0.494} 29s
+res64 1 {'A': 0.409, 'B': 0.205, 'R': -0.038, 'C': 0.012, 'W': 0.173, 'S': 0.462} 31s
+res16 1 {'A': 0.212, 'B': 0.195, 'R': -0.04, 'C': 0.013, 'W': 0.13, 'S': 0.437} 33s
+res8 1 {'A': 0.001, 'B': 0.181, 'R': -0.04, 'C': 0.013, 'W': 0.131, 'S': 0.433} 34s
+done

@@ -1,0 +1,32 @@
+s42 ep20: success_robj 0.04 near 0.00 (73s)
+s42 ep25: success_robj 0.20 near 0.28 (147s)
+s42 ep30: success_robj 0.36 near 0.20 (219s)
+s42 ep40: success_robj 0.56 near 0.24 (290s)
+s42 ep50: success_robj 0.76 near 0.08 (361s)
+s42 ep80: success_robj 0.80 near 0.08 (433s)
+s42 ep220: success_robj 0.88 near 0.04 (502s)
+s42 ep1000: success_robj 0.88 near 0.00 (571s)
+s43 ep20: success_robj 0.04 near 0.08 (641s)
+s43 ep25: success_robj 0.12 near 0.24 (720s)
+s43 ep30: success_robj 0.28 near 0.20 (796s)
+s43 ep40: success_robj 0.68 near 0.20 (874s)
+s43 ep50: success_robj 0.72 near 0.00 (951s)
+s43 ep80: success_robj 0.88 near 0.08 (1028s)
+s43 ep220: success_robj 0.80 near 0.04 (1105s)
+s43 ep1000: success_robj 0.88 near 0.04 (1182s)
+s44 ep20: success_robj 0.04 near 0.04 (1260s)
+s44 ep25: success_robj 0.28 near 0.20 (1338s)
+s44 ep30: success_robj 0.40 near 0.24 (1416s)
+s44 ep40: success_robj 0.64 near 0.16 (1493s)
+s44 ep50: success_robj 0.80 near 0.08 (1570s)
+s44 ep80: success_robj 0.80 near 0.00 (1647s)
+s44 ep220: success_robj 0.88 near 0.04 (1724s)
+s44 ep1000: success_robj 0.76 near 0.04 (1801s)
+a_std seed 0: held-out acc 0.9896
+a_std seed 1: held-out acc 0.9921
+a_std seed 2: held-out acc 0.9912
+a_std seed 3: held-out acc 0.9896
+a_std seed 4: held-out acc 0.9900
+A_STD ENSEMBLE {"acc": 0.9912427022518766, "bacc": 0.9904542609496418, "per_bin": {"success": 0.9882659713168188, "near": 0.023529411764705882, "mid": 0.0, "far": 0.0}, "auc_sn": 0.998737121967431, "auc_sf": 0.9999854905139053, "member_prob_sd_mean": 0.006751797161996365, "passes_0p95": true}
+ASTD_E1_DONE 2686s
+ASTD_LANE_DONE 2026-10-21T22:41:54Z

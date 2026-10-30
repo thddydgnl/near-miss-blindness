@@ -1,0 +1,14 @@
+Using cache found in /home/yonghwi/pmx/torch/hub/facebookresearch_dinov2_main
+grid 49 x 128 (r=3.00 uses 100 scenes), ceil 22000 (66s)
+WORLD_E1_DONE
+p0.03_std_1x_s0: ceiling classifier val acc (imagined) 0.9730 (14s)
+p0.03_std_1x_s1: ceiling classifier val acc (imagined) 0.9735 (14s)
+p0.03_std_1x_s2: ceiling classifier val acc (imagined) 0.9710 (14s)
+p0.1_std_1x_s0: ceiling classifier val acc (imagined) 0.9750 (13s)
+p0.1_std_1x_s1: ceiling classifier val acc (imagined) 0.9755 (14s)
+p0.1_std_1x_s2: ceiling classifier val acc (imagined) 0.9760 (14s)
+p0.3_std_1x_s0: ceiling classifier val acc (imagined) 0.9800 (13s)
+p0.3_std_1x_s1: ceiling classifier val acc (imagined) 0.9780 (13s)
+p0.3_std_1x_s2: ceiling classifier val acc (imagined) 0.9795 (13s)
+M3_E1_EVAL_DONE
+LANE1_DONE 2026-10-21T21:56:55Z

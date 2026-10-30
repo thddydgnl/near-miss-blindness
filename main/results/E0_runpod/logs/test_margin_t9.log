@@ -1,0 +1,32 @@
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+{
+ "9": {
+  "pred": "on_site:wine_rack_1_top_region",
+  "n": 93,
+  "n_perturbed": 90,
+  "agree_geom_vs_libero_final": 1.0,
+  "agree_final_vs_ever": 0.7526881720430108,
+  "n_fail_final": 59,
+  "fail_r_bands": {
+   "lt1": 5,
+   "near_1_2": 24,
+   "mid_2_3": 0,
+   "far_ge3": 30
+  },
+  "fail_r_quantiles": [
+   1.02,
+   1.14,
+   3.65,
+   7.05,
+   7.24
+  ],
+  "success_r_quantiles": [
+   0.762,
+   0.822,
+   0.932
+  ]
+ }
+}

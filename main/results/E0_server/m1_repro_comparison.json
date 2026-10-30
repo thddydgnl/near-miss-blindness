@@ -1,0 +1,1571 @@
+{
+ "summary": {
+  "n_metrics": 260,
+  "n_exact": 171,
+  "max_abs_diff": 0.5828328283327388,
+  "n_absdiff_gt_0p01": 56,
+  "n_absdiff_gt_0p02": 47
+ },
+ "rows": [
+  {
+   "metric": "judge a held-out acc",
+   "pilot": 0.9549031476997578,
+   "server": 0.9552058111380145,
+   "diff": 0.0003026634382566895
+  },
+  {
+   "metric": "judge a_imag held-out acc",
+   "pilot": 0.8701573849878934,
+   "server": 0.8707627118644068,
+   "diff": 0.000605326876513379
+  },
+  {
+   "metric": "judge b held-out acc",
+   "pilot": 0.8964891041162227,
+   "server": 0.8964891041162227,
+   "diff": 0.0
+  },
+  {
+   "metric": "judge b2 held-out acc",
+   "pilot": 0.9134382566585957,
+   "server": 0.9134382566585957,
+   "diff": 0.0
+  },
+  {
+   "metric": "judge b tau",
+   "pilot": 0.2124802753329277,
+   "server": 0.2124802753329277,
+   "diff": 0.0
+  },
+  {
+   "metric": "main [a] p_success",
+   "pilot": 0.8012618296529969,
+   "server": 0.8317560462670873,
+   "diff": 0.030494216614090464
+  },
+  {
+   "metric": "main [a] p_near",
+   "pilot": 0.2051983584131327,
+   "server": 0.25991792065663477,
+   "diff": 0.05471956224350208
+  },
+  {
+   "metric": "main [a] p_mid",
+   "pilot": 0.02912621359223301,
+   "server": 0.038834951456310676,
+   "diff": 0.009708737864077666
+  },
+  {
+   "metric": "main [a] p_far",
+   "pilot": 0.0,
+   "server": 0.0,
+   "diff": 0.0
+  },
+  {
+   "metric": "main [a] p_expert",
+   "pilot": 0.9,
+   "server": 0.9225,
+   "diff": 0.022499999999999964
+  },
+  {
+   "metric": "main [a] spearman_near_over",
+   "pilot": 0.5714285714285715,
+   "server": 0.6904761904761906,
+   "diff": 0.11904761904761907
+  },
+  {
+   "metric": "main [a] kendall_tau",
+   "pilot": 0.4999999999999999,
+   "server": 0.6182840223353117,
+   "diff": 0.11828402233531177
+  },
+  {
+   "metric": "main [a] max_imag_gap_matched",
+   "pilot": 0.09000000000000008,
+   "server": 0.0625,
+   "diff": -0.02750000000000008
+  },
+  {
+   "metric": "main [a] mean_over",
+   "pilot": -0.07031249999999999,
+   "server": -0.039375,
+   "diff": 0.030937499999999986
+  },
+  {
+   "metric": "main [b] p_success",
+   "pilot": 0.7933753943217665,
+   "server": 0.7933753943217665,
+   "diff": 0.0
+  },
+  {
+   "metric": "main [b] p_near",
+   "pilot": 0.38303693570451436,
+   "server": 0.38303693570451436,
+   "diff": 0.0
+  },
+  {
+   "metric": "main [b] p_mid",
+   "pilot": 0.05825242718446602,
+   "server": 0.05825242718446602,
+   "diff": 0.0
+  },
+  {
+   "metric": "main [b] p_far",
+   "pilot": 0.0021551724137931034,
+   "server": 0.0021551724137931034,
+   "diff": 0.0
+  },
+  {
+   "metric": "main [b] p_expert",
+   "pilot": 0.8725,
+   "server": 0.8725,
+   "diff": 0.0
+  },
+  {
+   "metric": "main [b] spearman_near_over",
+   "pilot": 0.7142857142857144,
+   "server": 0.7142857142857144,
+   "diff": 0.0
+  },
+  {
+   "metric": "main [b] kendall_tau",
+   "pilot": 0.14285714285714285,
+   "server": 0.14285714285714285,
+   "diff": 0.0
+  },
+  {
+   "metric": "main [b] max_imag_gap_matched",
+   "pilot": 0.07250000000000006,
+   "server": 0.07250000000000006,
+   "diff": 0.0
+  },
+  {
+   "metric": "main [b] mean_over",
+   "pilot": -0.033125,
+   "server": -0.033125,
+   "diff": 0.0
+  },
+  {
+   "metric": "main [b2] p_success",
+   "pilot": 0.7781282860147214,
+   "server": 0.7781282860147214,
+   "diff": 0.0
+  },
+  {
+   "metric": "main [b2] p_near",
+   "pilot": 0.29411764705882354,
+   "server": 0.29411764705882354,
+   "diff": 0.0
+  },
+  {
+   "metric": "main [b2] p_mid",
+   "pilot": 0.04854368932038835,
+   "server": 0.04854368932038835,
+   "diff": 0.0
+  },
+  {
+   "metric": "main [b2] p_far",
+   "pilot": 0.0,
+   "server": 0.0,
+   "diff": 0.0
+  },
+  {
+   "metric": "main [b2] p_expert",
+   "pilot": 0.865,
+   "server": 0.865,
+   "diff": 0.0
+  },
+  {
+   "metric": "main [b2] spearman_near_over",
+   "pilot": 0.7142857142857144,
+   "server": 0.7142857142857144,
+   "diff": 0.0
+  },
+  {
+   "metric": "main [b2] kendall_tau",
+   "pilot": 0.3571428571428571,
+   "server": 0.3571428571428571,
+   "diff": 0.0
+  },
+  {
+   "metric": "main [b2] max_imag_gap_matched",
+   "pilot": 0.06,
+   "server": 0.06,
+   "diff": 0.0
+  },
+  {
+   "metric": "main [b2] mean_over",
+   "pilot": -0.06312499999999999,
+   "server": -0.06312499999999999,
+   "diff": 0.0
+  },
+  {
+   "metric": "main view a_real p_near",
+   "pilot": 0.146374829001368,
+   "server": 0.19699042407660738,
+   "diff": 0.050615595075239384
+  },
+  {
+   "metric": "main view a_real p_success",
+   "pilot": 0.9258675078864353,
+   "server": 0.9511041009463722,
+   "diff": 0.025236593059936863
+  },
+  {
+   "metric": "main view b_real p_near",
+   "pilot": 0.28317373461012313,
+   "server": 0.28317373461012313,
+   "diff": 0.0
+  },
+  {
+   "metric": "main view b_real p_success",
+   "pilot": 0.886435331230284,
+   "server": 0.886435331230284,
+   "diff": 0.0
+  },
+  {
+   "metric": "main AUROC succ-vs-near a_real",
+   "pilot": 0.9666158885239959,
+   "server": 0.9710679664720411,
+   "diff": 0.004452077948045141
+  },
+  {
+   "metric": "main AUROC succ-vs-far a_real",
+   "pilot": 0.9998447641321295,
+   "server": 0.999954675659016,
+   "diff": 0.00010991152688644146
+  },
+  {
+   "metric": "main AUROC succ-vs-near a_imag",
+   "pilot": 0.879543960493742,
+   "server": 0.8753572810534235,
+   "diff": -0.004186679440318475
+  },
+  {
+   "metric": "main AUROC succ-vs-far a_imag",
+   "pilot": 0.9961859567061895,
+   "server": 0.9984601055150658,
+   "diff": 0.0022741488088763306
+  },
+  {
+   "metric": "main AUROC succ-vs-near ai_imag",
+   "pilot": 0.8990888703805197,
+   "server": 0.9001885839802871,
+   "diff": 0.00109971359976746
+  },
+  {
+   "metric": "main AUROC succ-vs-far ai_imag",
+   "pilot": 0.9980385891439139,
+   "server": 0.9976250045324341,
+   "diff": -0.0004135846114797781
+  },
+  {
+   "metric": "main AUROC succ-vs-near b_real",
+   "pilot": 0.9058158954286726,
+   "server": 0.9058158954286726,
+   "diff": 0.0
+  },
+  {
+   "metric": "main AUROC succ-vs-far b_real",
+   "pilot": 0.9917600348090939,
+   "server": 0.9917600348090939,
+   "diff": 0.0
+  },
+  {
+   "metric": "main AUROC succ-vs-near b_imag",
+   "pilot": 0.8019911361213842,
+   "server": 0.8019896976470876,
+   "diff": -1.4384742965667385e-06
+  },
+  {
+   "metric": "main AUROC succ-vs-far b_imag",
+   "pilot": 0.982517268573915,
+   "server": 0.9825161354653903,
+   "diff": -1.133108524675741e-06
+  },
+  {
+   "metric": "main policy far_L true_success",
+   "pilot": 0.525,
+   "server": 0.525,
+   "diff": 0.0
+  },
+  {
+   "metric": "main policy far_L near_share",
+   "pilot": 0.0075,
+   "server": 0.0075,
+   "diff": 0.0
+  },
+  {
+   "metric": "main policy far_L imag_a",
+   "pilot": 0.4775,
+   "server": 0.4975,
+   "diff": 0.020000000000000018
+  },
+  {
+   "metric": "main policy far_L imag_b",
+   "pilot": 0.47,
+   "server": 0.47,
+   "diff": 0.0
+  },
+  {
+   "metric": "main policy mixA_L true_success",
+   "pilot": 0.5075,
+   "server": 0.5075,
+   "diff": 0.0
+  },
+  {
+   "metric": "main policy mixA_L near_share",
+   "pilot": 0.17,
+   "server": 0.17,
+   "diff": 0.0
+  },
+  {
+   "metric": "main policy mixA_L imag_a",
+   "pilot": 0.425,
+   "server": 0.47,
+   "diff": 0.044999999999999984
+  },
+  {
+   "metric": "main policy mixA_L imag_b",
+   "pilot": 0.4775,
+   "server": 0.4775,
+   "diff": 0.0
+  },
+  {
+   "metric": "main policy mixB_L true_success",
+   "pilot": 0.475,
+   "server": 0.475,
+   "diff": 0.0
+  },
+  {
+   "metric": "main policy mixB_L near_share",
+   "pilot": 0.345,
+   "server": 0.345,
+   "diff": 0.0
+  },
+  {
+   "metric": "main policy mixB_L imag_a",
+   "pilot": 0.45,
+   "server": 0.48,
+   "diff": 0.02999999999999997
+  },
+  {
+   "metric": "main policy mixB_L imag_b",
+   "pilot": 0.5375,
+   "server": 0.5375,
+   "diff": 0.0
+  },
+  {
+   "metric": "main policy near_L true_success",
+   "pilot": 0.4725,
+   "server": 0.4725,
+   "diff": 0.0
+  },
+  {
+   "metric": "main policy near_L near_share",
+   "pilot": 0.475,
+   "server": 0.475,
+   "diff": 0.0
+  },
+  {
+   "metric": "main policy near_L imag_a",
+   "pilot": 0.4575,
+   "server": 0.48,
+   "diff": 0.022499999999999964
+  },
+  {
+   "metric": "main policy near_L imag_b",
+   "pilot": 0.55,
+   "server": 0.55,
+   "diff": 0.0
+  },
+  {
+   "metric": "main policy iid_L true_success",
+   "pilot": 0.5025,
+   "server": 0.5025,
+   "diff": 0.0
+  },
+  {
+   "metric": "main policy iid_L near_share",
+   "pilot": 0.38,
+   "server": 0.38,
+   "diff": 0.0
+  },
+  {
+   "metric": "main policy iid_L imag_a",
+   "pilot": 0.4475,
+   "server": 0.4875,
+   "diff": 0.03999999999999998
+  },
+  {
+   "metric": "main policy iid_L imag_b",
+   "pilot": 0.51,
+   "server": 0.51,
+   "diff": 0.0
+  },
+  {
+   "metric": "main policy far_H true_success",
+   "pilot": 0.77,
+   "server": 0.77,
+   "diff": 0.0
+  },
+  {
+   "metric": "main policy far_H near_share",
+   "pilot": 0.0,
+   "server": 0.0,
+   "diff": 0.0
+  },
+  {
+   "metric": "main policy far_H imag_a",
+   "pilot": 0.685,
+   "server": 0.6925,
+   "diff": 0.007499999999999951
+  },
+  {
+   "metric": "main policy far_H imag_b",
+   "pilot": 0.6475,
+   "server": 0.6475,
+   "diff": 0.0
+  },
+  {
+   "metric": "main policy near_H true_success",
+   "pilot": 0.7375,
+   "server": 0.7375,
+   "diff": 0.0
+  },
+  {
+   "metric": "main policy near_H near_share",
+   "pilot": 0.24,
+   "server": 0.24,
+   "diff": 0.0
+  },
+  {
+   "metric": "main policy near_H imag_a",
+   "pilot": 0.655,
+   "server": 0.6975,
+   "diff": 0.04249999999999998
+  },
+  {
+   "metric": "main policy near_H imag_b",
+   "pilot": 0.6675,
+   "server": 0.6675,
+   "diff": 0.0
+  },
+  {
+   "metric": "main policy iid_H true_success",
+   "pilot": 0.765,
+   "server": 0.765,
+   "diff": 0.0
+  },
+  {
+   "metric": "main policy iid_H near_share",
+   "pilot": 0.21,
+   "server": 0.21,
+   "diff": 0.0
+  },
+  {
+   "metric": "main policy iid_H imag_a",
+   "pilot": 0.595,
+   "server": 0.635,
+   "diff": 0.040000000000000036
+  },
+  {
+   "metric": "main policy iid_H imag_b",
+   "pilot": 0.63,
+   "server": 0.63,
+   "diff": 0.0
+  },
+  {
+   "metric": "main policy expert true_success",
+   "pilot": 1.0,
+   "server": 1.0,
+   "diff": 0.0
+  },
+  {
+   "metric": "main policy expert near_share",
+   "pilot": 0.0,
+   "server": 0.0,
+   "diff": 0.0
+  },
+  {
+   "metric": "main policy expert imag_a",
+   "pilot": 0.9,
+   "server": 0.9225,
+   "diff": 0.022499999999999964
+  },
+  {
+   "metric": "main policy expert imag_b",
+   "pilot": 0.8725,
+   "server": 0.8725,
+   "diff": 0.0
+  },
+  {
+   "metric": "main verdict(pilot=1 if same)",
+   "pilot": 1.0,
+   "server": 1.0,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 [a] p_success",
+   "pilot": 0.4909470752089137,
+   "server": 0.5194986072423399,
+   "diff": 0.028551532033426197
+  },
+  {
+   "metric": "H10 [a] p_near",
+   "pilot": 0.23931623931623933,
+   "server": 0.25854700854700857,
+   "diff": 0.019230769230769246
+  },
+  {
+   "metric": "H10 [a] p_mid",
+   "pilot": 0.09821428571428571,
+   "server": 0.10714285714285714,
+   "diff": 0.008928571428571425
+  },
+  {
+   "metric": "H10 [a] p_far",
+   "pilot": 0.013020833333333334,
+   "server": 0.013020833333333334,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 [a] p_expert",
+   "pilot": 0.5566666666666666,
+   "server": 0.55,
+   "diff": -0.006666666666666599
+  },
+  {
+   "metric": "H10 [a] spearman_near_over",
+   "pilot": 0.7142857142857144,
+   "server": 0.7142857142857144,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 [a] kendall_tau",
+   "pilot": 0.5455447255899809,
+   "server": 0.4999999999999999,
+   "diff": -0.04554472558998102
+  },
+  {
+   "metric": "H10 [a] max_imag_gap_matched",
+   "pilot": 0.05666666666666664,
+   "server": 0.09000000000000002,
+   "diff": 0.03333333333333338
+  },
+  {
+   "metric": "H10 [a] mean_over",
+   "pilot": -0.25125,
+   "server": -0.22999999999999998,
+   "diff": 0.02124999999999999
+  },
+  {
+   "metric": "H10 [b] p_success",
+   "pilot": 0.5041782729805014,
+   "server": 0.5041782729805014,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 [b] p_near",
+   "pilot": 0.2670940170940171,
+   "server": 0.2670940170940171,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 [b] p_mid",
+   "pilot": 0.125,
+   "server": 0.125,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 [b] p_far",
+   "pilot": 0.013020833333333334,
+   "server": 0.013020833333333334,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 [b] p_expert",
+   "pilot": 0.5633333333333334,
+   "server": 0.5633333333333334,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 [b] spearman_near_over",
+   "pilot": 0.8571428571428572,
+   "server": 0.8571428571428572,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 [b] kendall_tau",
+   "pilot": 0.42857142857142855,
+   "server": 0.42857142857142855,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 [b] max_imag_gap_matched",
+   "pilot": 0.046666666666666634,
+   "server": 0.046666666666666634,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 [b] mean_over",
+   "pilot": -0.23666666666666666,
+   "server": -0.23666666666666666,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 [b2] p_success",
+   "pilot": 0.4742339832869081,
+   "server": 0.4742339832869081,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 [b2] p_near",
+   "pilot": 0.2564102564102564,
+   "server": 0.2564102564102564,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 [b2] p_mid",
+   "pilot": 0.10714285714285714,
+   "server": 0.10714285714285714,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 [b2] p_far",
+   "pilot": 0.013020833333333334,
+   "server": 0.013020833333333334,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 [b2] p_expert",
+   "pilot": 0.5533333333333333,
+   "server": 0.5533333333333333,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 [b2] spearman_near_over",
+   "pilot": 0.7142857142857144,
+   "server": 0.7142857142857144,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 [b2] kendall_tau",
+   "pilot": 0.4999999999999999,
+   "server": 0.4999999999999999,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 [b2] max_imag_gap_matched",
+   "pilot": 0.04999999999999999,
+   "server": 0.04999999999999999,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 [b2] mean_over",
+   "pilot": -0.25749999999999995,
+   "server": -0.25749999999999995,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 view a_real p_near",
+   "pilot": 0.1517094017094017,
+   "server": 0.1987179487179487,
+   "diff": 0.04700854700854701
+  },
+  {
+   "metric": "H10 view a_real p_success",
+   "pilot": 0.9303621169916435,
+   "server": 0.9463788300835655,
+   "diff": 0.016016713091921986
+  },
+  {
+   "metric": "H10 view b_real p_near",
+   "pilot": 0.1858974358974359,
+   "server": 0.1858974358974359,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 view b_real p_success",
+   "pilot": 0.8495821727019499,
+   "server": 0.8495821727019499,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 AUROC succ-vs-near a_real",
+   "pilot": 0.9690989334095184,
+   "server": 0.9690051901054687,
+   "diff": -9.374330404965381e-05
+  },
+  {
+   "metric": "H10 AUROC succ-vs-far a_real",
+   "pilot": 0.9999818651346333,
+   "server": 0.9999582898096564,
+   "diff": -2.3575324976876644e-05
+  },
+  {
+   "metric": "H10 AUROC succ-vs-near a_imag",
+   "pilot": 0.6760328131323953,
+   "server": 0.6728864604909173,
+   "diff": -0.0031463526414780008
+  },
+  {
+   "metric": "H10 AUROC succ-vs-far a_imag",
+   "pilot": 0.9438580837975858,
+   "server": 0.9652808002553389,
+   "diff": 0.021422716457753066
+  },
+  {
+   "metric": "H10 AUROC succ-vs-near ai_imag",
+   "pilot": 0.728058114896555,
+   "server": 0.7296844868223699,
+   "diff": 0.001626371925814829
+  },
+  {
+   "metric": "H10 AUROC succ-vs-far ai_imag",
+   "pilot": 0.9694989699396471,
+   "server": 0.9677217531337048,
+   "diff": -0.0017772168059423388
+  },
+  {
+   "metric": "H10 AUROC succ-vs-near b_real",
+   "pilot": 0.9163705568649858,
+   "server": 0.9163705568649858,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 AUROC succ-vs-far b_real",
+   "pilot": 0.9980958391364902,
+   "server": 0.9980958391364902,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 AUROC succ-vs-near b_imag",
+   "pilot": 0.6388353212865747,
+   "server": 0.6388442492202938,
+   "diff": 8.92793371909395e-06
+  },
+  {
+   "metric": "H10 AUROC succ-vs-far b_imag",
+   "pilot": 0.9305634139972145,
+   "server": 0.9305634139972145,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 policy far_L true_success",
+   "pilot": 0.5466666666666666,
+   "server": 0.5466666666666666,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 policy far_L near_share",
+   "pilot": 0.01,
+   "server": 0.01,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 policy far_L imag_a",
+   "pilot": 0.27,
+   "server": 0.2833333333333333,
+   "diff": 0.013333333333333308
+  },
+  {
+   "metric": "H10 policy far_L imag_b",
+   "pilot": 0.30333333333333334,
+   "server": 0.30333333333333334,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 policy mixA_L true_success",
+   "pilot": 0.51,
+   "server": 0.51,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 policy mixA_L near_share",
+   "pilot": 0.14666666666666667,
+   "server": 0.14666666666666667,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 policy mixA_L imag_a",
+   "pilot": 0.31,
+   "server": 0.31666666666666665,
+   "diff": 0.006666666666666654
+  },
+  {
+   "metric": "H10 policy mixA_L imag_b",
+   "pilot": 0.31333333333333335,
+   "server": 0.31333333333333335,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 policy mixB_L true_success",
+   "pilot": 0.48,
+   "server": 0.48,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 policy mixB_L near_share",
+   "pilot": 0.2866666666666667,
+   "server": 0.2866666666666667,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 policy mixB_L imag_a",
+   "pilot": 0.3233333333333333,
+   "server": 0.33666666666666667,
+   "diff": 0.013333333333333364
+  },
+  {
+   "metric": "H10 policy mixB_L imag_b",
+   "pilot": 0.31666666666666665,
+   "server": 0.31666666666666665,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 policy near_L true_success",
+   "pilot": 0.46,
+   "server": 0.46,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 policy near_L near_share",
+   "pilot": 0.4266666666666667,
+   "server": 0.4266666666666667,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 policy near_L imag_a",
+   "pilot": 0.3233333333333333,
+   "server": 0.3466666666666667,
+   "diff": 0.023333333333333373
+  },
+  {
+   "metric": "H10 policy near_L imag_b",
+   "pilot": 0.36,
+   "server": 0.36,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 policy iid_L true_success",
+   "pilot": 0.5233333333333333,
+   "server": 0.5233333333333333,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 policy iid_L near_share",
+   "pilot": 0.32666666666666666,
+   "server": 0.32666666666666666,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 policy iid_L imag_a",
+   "pilot": 0.32666666666666666,
+   "server": 0.37333333333333335,
+   "diff": 0.04666666666666669
+  },
+  {
+   "metric": "H10 policy iid_L imag_b",
+   "pilot": 0.35,
+   "server": 0.35,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 policy far_H true_success",
+   "pilot": 0.75,
+   "server": 0.75,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 policy far_H near_share",
+   "pilot": 0.0033333333333333335,
+   "server": 0.0033333333333333335,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 policy far_H imag_a",
+   "pilot": 0.4033333333333333,
+   "server": 0.4266666666666667,
+   "diff": 0.023333333333333373
+  },
+  {
+   "metric": "H10 policy far_H imag_b",
+   "pilot": 0.41,
+   "server": 0.41,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 policy near_H true_success",
+   "pilot": 0.74,
+   "server": 0.74,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 policy near_H near_share",
+   "pilot": 0.22,
+   "server": 0.22,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 policy near_H imag_a",
+   "pilot": 0.38666666666666666,
+   "server": 0.4033333333333333,
+   "diff": 0.016666666666666663
+  },
+  {
+   "metric": "H10 policy near_H imag_b",
+   "pilot": 0.4033333333333333,
+   "server": 0.4033333333333333,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 policy iid_H true_success",
+   "pilot": 0.7766666666666666,
+   "server": 0.7766666666666666,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 policy iid_H near_share",
+   "pilot": 0.14,
+   "server": 0.14,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 policy iid_H imag_a",
+   "pilot": 0.43333333333333335,
+   "server": 0.46,
+   "diff": 0.026666666666666672
+  },
+  {
+   "metric": "H10 policy iid_H imag_b",
+   "pilot": 0.43666666666666665,
+   "server": 0.43666666666666665,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 policy expert true_success",
+   "pilot": 1.0,
+   "server": 1.0,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 policy expert near_share",
+   "pilot": 0.0,
+   "server": 0.0,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 policy expert imag_a",
+   "pilot": 0.5566666666666666,
+   "server": 0.55,
+   "diff": -0.006666666666666599
+  },
+  {
+   "metric": "H10 policy expert imag_b",
+   "pilot": 0.5633333333333334,
+   "server": 0.5633333333333334,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 verdict(pilot=1 if same)",
+   "pilot": 1.0,
+   "server": 1.0,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit [a] p_success",
+   "pilot": 0.7997870074547391,
+   "server": 0.8370607028753994,
+   "diff": 0.03727369542066028
+  },
+  {
+   "metric": "trainsplit [a] p_near",
+   "pilot": 0.2184065934065934,
+   "server": 0.26785714285714285,
+   "diff": 0.04945054945054944
+  },
+  {
+   "metric": "trainsplit [a] p_mid",
+   "pilot": 0.0449438202247191,
+   "server": 0.0449438202247191,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit [a] p_far",
+   "pilot": 0.0039603960396039604,
+   "server": 0.0039603960396039604,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit [a] p_expert",
+   "pilot": 0.905,
+   "server": 0.93,
+   "diff": 0.025000000000000022
+  },
+  {
+   "metric": "trainsplit [a] spearman_near_over",
+   "pilot": 0.08383383833392813,
+   "server": 0.6666666666666669,
+   "diff": 0.5828328283327388
+  },
+  {
+   "metric": "trainsplit [a] kendall_tau",
+   "pilot": 0.7857142857142856,
+   "server": 0.7857142857142856,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit [a] max_imag_gap_matched",
+   "pilot": 0.07499999999999996,
+   "server": 0.04249999999999998,
+   "diff": -0.03249999999999997
+  },
+  {
+   "metric": "trainsplit [a] mean_over",
+   "pilot": -0.0659375,
+   "server": -0.032812499999999974,
+   "diff": 0.03312500000000002
+  },
+  {
+   "metric": "trainsplit [b] p_success",
+   "pilot": 0.8221512247071352,
+   "server": 0.8221512247071352,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit [b] p_near",
+   "pilot": 0.4340659340659341,
+   "server": 0.4340659340659341,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit [b] p_mid",
+   "pilot": 0.06741573033707865,
+   "server": 0.06741573033707865,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit [b] p_far",
+   "pilot": 0.005940594059405941,
+   "server": 0.005940594059405941,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit [b] p_expert",
+   "pilot": 0.8875,
+   "server": 0.8875,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit [b] spearman_near_over",
+   "pilot": 0.8383383833392813,
+   "server": 0.8383383833392813,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit [b] kendall_tau",
+   "pilot": 0.5714285714285714,
+   "server": 0.5714285714285714,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit [b] max_imag_gap_matched",
+   "pilot": 0.1275,
+   "server": 0.1275,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit [b] mean_over",
+   "pilot": -0.0028124999999999886,
+   "server": -0.0028124999999999886,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit [b2] p_success",
+   "pilot": 0.8067092651757188,
+   "server": 0.8067092651757188,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit [b2] p_near",
+   "pilot": 0.3598901098901099,
+   "server": 0.3598901098901099,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit [b2] p_mid",
+   "pilot": 0.033707865168539325,
+   "server": 0.033707865168539325,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit [b2] p_far",
+   "pilot": 0.0039603960396039604,
+   "server": 0.0039603960396039604,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit [b2] p_expert",
+   "pilot": 0.8875,
+   "server": 0.8875,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit [b2] spearman_near_over",
+   "pilot": 0.7142857142857144,
+   "server": 0.7142857142857144,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit [b2] kendall_tau",
+   "pilot": 0.5714285714285714,
+   "server": 0.5714285714285714,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit [b2] max_imag_gap_matched",
+   "pilot": 0.09499999999999997,
+   "server": 0.09499999999999997,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit [b2] mean_over",
+   "pilot": -0.030000000000000006,
+   "server": -0.030000000000000006,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit view a_real p_near",
+   "pilot": 0.17445054945054944,
+   "server": 0.23076923076923078,
+   "diff": 0.05631868131868134
+  },
+  {
+   "metric": "trainsplit view a_real p_success",
+   "pilot": 0.9201277955271565,
+   "server": 0.950479233226837,
+   "diff": 0.030351437699680517
+  },
+  {
+   "metric": "trainsplit view b_real p_near",
+   "pilot": 0.3324175824175824,
+   "server": 0.3324175824175824,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit view b_real p_success",
+   "pilot": 0.906283280085197,
+   "server": 0.906283280085197,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit AUROC succ-vs-near a_real",
+   "pilot": 0.9615355358166859,
+   "server": 0.962383995131599,
+   "diff": 0.0008484593149130637
+  },
+  {
+   "metric": "trainsplit AUROC succ-vs-far a_real",
+   "pilot": 0.9998017693143116,
+   "server": 0.9998692521009289,
+   "diff": 6.748278661727891e-05
+  },
+  {
+   "metric": "trainsplit AUROC succ-vs-near a_imag",
+   "pilot": 0.8618971550281455,
+   "server": 0.8625042422965745,
+   "diff": 0.0006070872684290629
+  },
+  {
+   "metric": "trainsplit AUROC succ-vs-far a_imag",
+   "pilot": 0.9924735604550871,
+   "server": 0.9955271565495207,
+   "diff": 0.003053596094433675
+  },
+  {
+   "metric": "trainsplit AUROC succ-vs-near ai_imag",
+   "pilot": 0.8928015541434072,
+   "server": 0.8935995447576918,
+   "diff": 0.0007979906142845383
+  },
+  {
+   "metric": "trainsplit AUROC succ-vs-far ai_imag",
+   "pilot": 0.9955007960859984,
+   "server": 0.9951412393635529,
+   "diff": -0.00035955672244547543
+  },
+  {
+   "metric": "trainsplit AUROC succ-vs-near b_real",
+   "pilot": 0.8989236269587707,
+   "server": 0.8989236269587707,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit AUROC succ-vs-far b_real",
+   "pilot": 0.9934204283048114,
+   "server": 0.9934204283048114,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit AUROC succ-vs-near b_imag",
+   "pilot": 0.7938192664630365,
+   "server": 0.7938192664630365,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit AUROC succ-vs-far b_imag",
+   "pilot": 0.9823743396703888,
+   "server": 0.9823743396703888,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit policy far_L true_success",
+   "pilot": 0.5075,
+   "server": 0.5075,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit policy far_L near_share",
+   "pilot": 0.0075,
+   "server": 0.0075,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit policy far_L imag_a",
+   "pilot": 0.45,
+   "server": 0.4675,
+   "diff": 0.017500000000000016
+  },
+  {
+   "metric": "trainsplit policy far_L imag_b",
+   "pilot": 0.445,
+   "server": 0.445,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit policy mixA_L true_success",
+   "pilot": 0.465,
+   "server": 0.465,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit policy mixA_L near_share",
+   "pilot": 0.1875,
+   "server": 0.1875,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit policy mixA_L imag_a",
+   "pilot": 0.4475,
+   "server": 0.46,
+   "diff": 0.012500000000000011
+  },
+  {
+   "metric": "trainsplit policy mixA_L imag_b",
+   "pilot": 0.475,
+   "server": 0.475,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit policy mixB_L true_success",
+   "pilot": 0.445,
+   "server": 0.445,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit policy mixB_L near_share",
+   "pilot": 0.3625,
+   "server": 0.3625,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit policy mixB_L imag_a",
+   "pilot": 0.42,
+   "server": 0.465,
+   "diff": 0.04500000000000004
+  },
+  {
+   "metric": "trainsplit policy mixB_L imag_b",
+   "pilot": 0.5375,
+   "server": 0.5375,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit policy near_L true_success",
+   "pilot": 0.51,
+   "server": 0.51,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit policy near_L near_share",
+   "pilot": 0.3975,
+   "server": 0.3975,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit policy near_L imag_a",
+   "pilot": 0.4425,
+   "server": 0.495,
+   "diff": 0.05249999999999999
+  },
+  {
+   "metric": "trainsplit policy near_L imag_b",
+   "pilot": 0.5725,
+   "server": 0.5725,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit policy iid_L true_success",
+   "pilot": 0.515,
+   "server": 0.515,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit policy iid_L near_share",
+   "pilot": 0.3725,
+   "server": 0.3725,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit policy iid_L imag_a",
+   "pilot": 0.4575,
+   "server": 0.4925,
+   "diff": 0.034999999999999976
+  },
+  {
+   "metric": "trainsplit policy iid_L imag_b",
+   "pilot": 0.54,
+   "server": 0.54,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit policy far_H true_success",
+   "pilot": 0.7775,
+   "server": 0.7775,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit policy far_H near_share",
+   "pilot": 0.0025,
+   "server": 0.0025,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit policy far_H imag_a",
+   "pilot": 0.71,
+   "server": 0.7225,
+   "diff": 0.012500000000000067
+  },
+  {
+   "metric": "trainsplit policy far_H imag_b",
+   "pilot": 0.6875,
+   "server": 0.6875,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit policy near_H true_success",
+   "pilot": 0.6825,
+   "server": 0.6825,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit policy near_H near_share",
+   "pilot": 0.31,
+   "server": 0.31,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit policy near_H imag_a",
+   "pilot": 0.605,
+   "server": 0.65,
+   "diff": 0.04500000000000004
+  },
+  {
+   "metric": "trainsplit policy near_H imag_b",
+   "pilot": 0.7125,
+   "server": 0.7125,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit policy iid_H true_success",
+   "pilot": 0.7925,
+   "server": 0.7925,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit policy iid_H near_share",
+   "pilot": 0.18,
+   "server": 0.18,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit policy iid_H imag_a",
+   "pilot": 0.635,
+   "server": 0.68,
+   "diff": 0.04500000000000004
+  },
+  {
+   "metric": "trainsplit policy iid_H imag_b",
+   "pilot": 0.7025,
+   "server": 0.7025,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit policy expert true_success",
+   "pilot": 1.0,
+   "server": 1.0,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit policy expert near_share",
+   "pilot": 0.0,
+   "server": 0.0,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit policy expert imag_a",
+   "pilot": 0.905,
+   "server": 0.93,
+   "diff": 0.025000000000000022
+  },
+  {
+   "metric": "trainsplit policy expert imag_b",
+   "pilot": 0.8875,
+   "server": 0.8875,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit verdict(pilot=1 if same)",
+   "pilot": 1.0,
+   "server": 1.0,
+   "diff": 0.0
+  },
+  {
+   "metric": "main P1[a] near_shift",
+   "pilot": 0.05882352941176469,
+   "server": 0.06292749658002739,
+   "diff": 0.0041039671682626955
+  },
+  {
+   "metric": "main P1[a] succ_shift",
+   "pilot": -0.12460567823343849,
+   "server": -0.11934805467928489,
+   "diff": 0.005257623554153601
+  },
+  {
+   "metric": "main P3[a] spearman(near, imagination)",
+   "pilot": 0.7619047619047621,
+   "server": 0.2155727271443866,
+   "diff": -0.5463320347603755
+  },
+  {
+   "metric": "main P1[b] near_shift",
+   "pilot": 0.09986320109439123,
+   "server": 0.09986320109439123,
+   "diff": 0.0
+  },
+  {
+   "metric": "main P1[b] succ_shift",
+   "pilot": -0.09305993690851744,
+   "server": -0.09305993690851744,
+   "diff": 0.0
+  },
+  {
+   "metric": "main P3[b] spearman(near, imagination)",
+   "pilot": 0.9101959590540767,
+   "server": 0.9101959590540767,
+   "diff": 0.0
+  },
+  {
+   "metric": "main P4 ai spearman",
+   "pilot": 0.9700772721497397,
+   "server": 0.8024095954818835,
+   "diff": -0.1676676766678562
+  },
+  {
+   "metric": "H10 P1[a] near_shift",
+   "pilot": 0.08760683760683763,
+   "server": 0.059829059829059866,
+   "diff": -0.027777777777777762
+  },
+  {
+   "metric": "H10 P1[a] succ_shift",
+   "pilot": -0.43941504178272983,
+   "server": -0.4268802228412256,
+   "diff": 0.012534818941504211
+  },
+  {
+   "metric": "H10 P3[a] spearman(near, imagination)",
+   "pilot": 0.6904761904761906,
+   "server": 0.6666666666666669,
+   "diff": -0.023809523809523725
+  },
+  {
+   "metric": "H10 P1[b] near_shift",
+   "pilot": 0.08119658119658119,
+   "server": 0.08119658119658119,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 P1[b] succ_shift",
+   "pilot": -0.34540389972144847,
+   "server": -0.34540389972144847,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 P3[b] spearman(near, imagination)",
+   "pilot": 0.8333333333333335,
+   "server": 0.8333333333333335,
+   "diff": 0.0
+  },
+  {
+   "metric": "H10 P4 ai spearman",
+   "pilot": 0.9221722216732094,
+   "server": 0.9285714285714287,
+   "diff": 0.006399206898219267
+  },
+  {
+   "metric": "trainsplit P1[a] near_shift",
+   "pilot": 0.043956043956043966,
+   "server": 0.03708791208791207,
+   "diff": -0.006868131868131899
+  },
+  {
+   "metric": "trainsplit P1[a] succ_shift",
+   "pilot": -0.12034078807241744,
+   "server": -0.11341853035143767,
+   "diff": 0.006922257720979763
+  },
+  {
+   "metric": "trainsplit P3[a] spearman(near, imagination)",
+   "pilot": 0.4285714285714286,
+   "server": 0.023809523809523815,
+   "diff": -0.40476190476190477
+  },
+  {
+   "metric": "trainsplit P1[b] near_shift",
+   "pilot": 0.10164835164835168,
+   "server": 0.10164835164835168,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit P1[b] succ_shift",
+   "pilot": -0.08413205537806179,
+   "server": -0.08413205537806179,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit P3[b] spearman(near, imagination)",
+   "pilot": 0.8571428571428572,
+   "server": 0.8571428571428572,
+   "diff": 0.0
+  },
+  {
+   "metric": "trainsplit P4 ai spearman",
+   "pilot": 0.9047619047619048,
+   "server": 0.9285714285714287,
+   "diff": 0.023809523809523947
+  }
+ ]
+}

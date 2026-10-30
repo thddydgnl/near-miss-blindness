@@ -1,0 +1,15 @@
+windows simulated: 9600 (30s)
+Traceback (most recent call last):
+  File "/home/yonghwi/pmx/B/code/e2_dp_windows.py", line 121, in <module>
+    main()
+  File "/home/yonghwi/pmx/B/code/e2_dp_windows.py", line 98, in main
+    assert abs(fp['r_obj'] - e['r_obj']) < 1e-6, (name, epi, fp['r_obj'], e['r_obj'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('s44_ep0220', 78, 15.607279659357573, 15.607401655313044)
+val_H5_r: batch 0 episodes 100 records 679/4215 max diffs {"p_full_real": 5e-07, "p_full_imag": 5e-07, "p_obj_real": 5e-07, "p_obj_imag": 5e-07, "r": 0.0} (36s)
+val_H5_r: batch 5 episodes 600 records 4117/4215 max diffs {"p_full_real": 5e-07, "p_full_imag": 5e-07, "p_obj_real": 5e-07, "p_obj_imag": 5e-07, "r": 0.0} (187s)
+E3_REGEN_DONE {"tag": "val_H5_r", "n_records": 4215, "n_episodes": 615, "n_dropped": 0, "max_abs_diff_vs_e1": {"p_full_real": 4.999503418802193e-07, "p_full_imag": 4.998416453599018e-07, "p_obj_real": 4.997978210186105e-07, "p_obj_imag": 4.996528625289542e-07, "r": 0.0}, "time_s": 198.74219298362732}
+val_H5_r_obj: batch 0 episodes 100 records 426/4767 max diffs {"p_full_real": 5e-07, "p_full_imag": 5e-07, "p_obj_real": 5e-07, "p_obj_imag": 5e-07, "r": 0.0} (22s)
+val_H5_r_obj: batch 5 episodes 600 records 2749/4767 max diffs {"p_full_real": 5e-07, "p_full_imag": 5e-07, "p_obj_real": 5e-07, "p_obj_imag": 5e-07, "r": 0.0} (115s)
+E3_REGEN_DONE {"tag": "val_H5_r_obj", "n_records": 4767, "n_episodes": 1167, "n_dropped": 0, "max_abs_diff_vs_e1": {"p_full_real": 4.997978210186105e-07, "p_full_imag": 4.999812431633792e-07, "p_obj_real": 4.996643065968698e-07, "p_obj_imag": 4.999506212771134e-07, "r": 0.0}, "time_s": 208.25006079673767}
+E2E3_LANE1_DONE 2026-10-22T00:19:05Z

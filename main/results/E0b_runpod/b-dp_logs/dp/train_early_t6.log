@@ -1,0 +1,19 @@
+task 6: 50 demos, 5349 samples, stats a_lo [-0.919 -0.938 -0.938 -0.152 -0.344 -0.162 -1.   ] a_hi [0.938 0.798 0.938 0.172 0.189 0.14  1.   ]
+Traceback (most recent call last):
+  File "/workspace/code/dp_train.py", line 108, in <module>
+    opt.step()
+  File "/root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/torch/optim/lr_scheduler.py", line 124, in wrapper
+    return func.__get__(opt, opt.__class__)(*args, **kwargs)
+  File "/root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/torch/optim/optimizer.py", line 485, in wrapper
+    out = func(*args, **kwargs)
+  File "/root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/torch/optim/optimizer.py", line 79, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "/root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/torch/optim/adam.py", line 246, in step
+    adam(
+  File "/root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/torch/optim/optimizer.py", line 147, in maybe_fallback
+    return func(*args, **kwargs)
+  File "/root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/torch/optim/adam.py", line 933, in adam
+    func(
+  File "/root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/torch/optim/adam.py", line 757, in _multi_tensor_adam
+    exp_avg_sq_sqrt = torch._foreach_sqrt(device_exp_avg_sqs)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 44.42 GiB of which 26.06 MiB is free. Process 6484 has 30.00 MiB memory in use. Process 6473 has 4.20 GiB memory in use. Process 6482 has 4.17 GiB memory in use. Process 6481 has 4.23 GiB memory in use. Process 6477 has 4.23 GiB memory in use. Process 6476 has 4.21 GiB memory in use. Process 6479 has 4.38 GiB memory in use. Process 7757 has 4.17 GiB memory in use. Process 7761 has 4.10 GiB memory in use. Including non-PyTorch memory, this process has 3.08 GiB memory in use. Process 7756 has 2.74 GiB memory in use. Process 7758 has 2.62 GiB memory in use. Process 7759 has 2.24 GiB memory in use. Of the allocated memory 2.74 GiB is allocated by PyTorch, and 10.30 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

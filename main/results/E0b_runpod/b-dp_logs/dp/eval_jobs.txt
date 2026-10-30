@@ -1,0 +1,6 @@
+/root/b/src/cosmos-policy/.venv/bin/python /workspace/code/dp_eval.py --task 1 --episodes 20 > /workspace/logs/dp/eval_t1.log 2>&1
+/root/b/src/cosmos-policy/.venv/bin/python /workspace/code/dp_eval.py --task 2 --episodes 20 > /workspace/logs/dp/eval_t2.log 2>&1
+/root/b/src/cosmos-policy/.venv/bin/python /workspace/code/dp_eval.py --task 4 --episodes 20 > /workspace/logs/dp/eval_t4.log 2>&1
+/root/b/src/cosmos-policy/.venv/bin/python /workspace/code/dp_eval.py --task 5 --episodes 20 > /workspace/logs/dp/eval_t5.log 2>&1
+/root/b/src/cosmos-policy/.venv/bin/python /workspace/code/dp_eval.py --task 6 --episodes 20 > /workspace/logs/dp/eval_t6.log 2>&1
+/root/b/src/cosmos-policy/.venv/bin/python /workspace/code/dp_eval.py --task 8 --episodes 20 > /workspace/logs/dp/eval_t8.log 2>&1

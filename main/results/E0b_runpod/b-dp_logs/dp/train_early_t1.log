@@ -1,0 +1,17 @@
+task 1: 50 demos, 5081 samples, stats a_lo [-0.932 -0.522 -0.938 -0.121 -0.128 -0.163 -1.   ] a_hi [0.938 0.892 0.938 0.147 0.198 0.125 1.   ]
+Traceback (most recent call last):
+  File "/workspace/code/dp_train.py", line 103, in <module>
+    pred = net.unet(xt, ts, net.cond(x, prop[t0]))
+  File "/root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/workspace/code/dp_model.py", line 75, in forward
+    x = m(x, c)
+  File "/root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/b/src/cosmos-policy/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/workspace/code/dp_model.py", line 44, in forward
+    return self.b2(h * s + b) + self.res(x)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.00 MiB. GPU 0 has a total capacity of 44.42 GiB of which 10.06 MiB is free. Process 6484 has 30.00 MiB memory in use. Process 6473 has 4.20 GiB memory in use. Process 6482 has 4.17 GiB memory in use. Process 6481 has 4.23 GiB memory in use. Process 6477 has 4.23 GiB memory in use. Process 6476 has 4.21 GiB memory in use. Process 6479 has 4.38 GiB memory in use. Process 7757 has 4.17 GiB memory in use. Process 7761 has 4.10 GiB memory in use. Process 7760 has 3.10 GiB memory in use. Including non-PyTorch memory, this process has 2.74 GiB memory in use. Process 7758 has 2.62 GiB memory in use. Process 7759 has 2.24 GiB memory in use. Of the allocated memory 2.40 GiB is allocated by PyTorch, and 15.66 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

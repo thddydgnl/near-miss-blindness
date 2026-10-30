@@ -1,0 +1,14 @@
+{
+ "tag": "val_H5_r_obj",
+ "n_records": 4767,
+ "n_episodes": 1167,
+ "n_dropped": 0,
+ "max_abs_diff_vs_e1": {
+  "p_full_real": 4.997978210186105e-07,
+  "p_full_imag": 4.999812431633792e-07,
+  "p_obj_real": 4.996643065968698e-07,
+  "p_obj_imag": 4.999506212771134e-07,
+  "r": 0.0
+ },
+ "time_s": 208.25006079673767
+}

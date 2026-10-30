@@ -1,0 +1,9 @@
+setup ok 21:26:43
+gen start 21:26:43
+gen rc=0 22:12:13 6160 cf
+cnn rc=0 22:15:09
+a8c5f3a590e2867975de6f182a1eb5d22124f4b18141b215ff96797ee33eca11  /workspace/e0b/judge_a_cnn_e1.pt
+a8c5f3a590e2867975de6f182a1eb5d22124f4b18141b215ff96797ee33eca11  /workspace/judges/judge_a_cnn.pt
+JUDGE_A_E1_DONE 22:15:10
+vlm ok 22:15:10
+E1_POD_CHAIN_END 22:15:10

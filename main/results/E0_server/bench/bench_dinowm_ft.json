@@ -1,0 +1,8 @@
+{
+ "n_slices": 1981721,
+ "batch": 32,
+ "gpu_step_s_median": 0.34453678131103516,
+ "data_s_median": 0.0008754730224609375,
+ "peak_mem_gb": 5.6310912,
+ "slices_per_epoch": 1981721
+}

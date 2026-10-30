@@ -1,0 +1,10 @@
+killed 7817
+after kill: 2 cf, 1 imagine
+[runner] stage s1: 2 cpu jobs (0 regenerations), 3 gpu jobs
+[runner] RUN_END 8/8 jobs have results; errors 0; 91s
+[runner] stage s1: 2 cpu jobs (2 regenerations), 2 gpu jobs
+[runner] RUN_END 4/8 jobs have results; errors 0; 78s
+im_t1_d19_premature_release_s0.6000_k0 cf identical: True max |dV| imagine: 0.000575 v_real 0.9973610043525696 0.997373104095459
+im_t5_d17_under_actuation_s0.4000_k0 cf identical: True max |dV| imagine: 0.001077 v_real 0.4168800115585327 0.41652703285217285
+imagine jobs redone on the new pod: 2 (expected 2 )
+SMOKE_RESTART_DONE

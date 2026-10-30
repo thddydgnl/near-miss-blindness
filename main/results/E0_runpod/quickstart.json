@@ -1,0 +1,57 @@
+{
+ "model_load_s": 33.6090133190155,
+ "get_action_parallel_s": [
+  2.348808765411377,
+  1.0669033527374268,
+  1.091808795928955,
+  1.1013333797454834
+ ],
+ "value": 0.06377848982810974,
+ "action_chunk_shape": [
+  16,
+  7
+ ],
+ "first_action": [
+  -0.00833781436085701,
+  -0.06830016151070595,
+  0.001251809298992157,
+  -0.0006025354340692957,
+  -1.6450881958007812e-05,
+  -0.014167575464689719,
+  -0.9974010586738586
+ ],
+ "cf_query_act5": {
+  "value": 0.06601127982139587,
+  "times_first": {
+   "encode+action_pass": 0.7763862609863281,
+   "future+value": 0.5684208869934082
+  },
+  "times_second": {
+   "encode+action_pass": 0.7314836978912354,
+   "future+value": 0.5688185691833496
+  }
+ },
+ "cf_query_act1": {
+  "value": 0.06601127982139587,
+  "times_first": {
+   "encode+action_pass": 0.3463401794433594,
+   "future+value": 0.569770097732544
+  },
+  "times_second": {
+   "encode+action_pass": 0.3323519229888916,
+   "future+value": 0.5695271492004395
+  }
+ },
+ "curewm_path_value": 0.06601127982139587,
+ "act5_vs_curewm_path": {
+  "value_diff": 0.0,
+  "mean_abs_img_diff": 0.0
+ },
+ "act1_vs_curewm_path": {
+  "value_diff": 0.0,
+  "mean_abs_img_diff": 0.0
+ },
+ "value_real_future_same_obs": 0.06304803490638733,
+ "vram_max_allocated_gib": 7.585222244262695,
+ "vram_max_reserved_gib": 7.70703125
+}

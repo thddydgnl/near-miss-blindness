@@ -1,0 +1,24 @@
+{
+ "S1": {
+  "mean_over": 0.16878255208333334,
+  "hi_policy": "pi6_near_failer",
+  "lo_policy": "pi5_far_failer",
+  "over_hi": 0.458984375,
+  "over_lo": 0.09798177083333333,
+  "ratio_floor1pp": 4.6843853820598005,
+  "near_share_over_corr": 0.9543314433010863,
+  "PASS": true
+ },
+ "S2": {
+  "PASS": false,
+  "note": "missing"
+ },
+ "S3": {
+  "PASS": false,
+  "note": "missing"
+ },
+ "verdict": "\uc5c6\uc74c(\ud604\uc0c1\ub9cc \uc7ac\ud604)"
+}
+p0.03_std_1x {'n': 3, 'mean_over': 0.1688, 'mean_abs_err': 0.1688, 'r_star': 1.4955, 'n50': 539.0, 'n50_untrained': 886.6667, 'last_layer_share': 0.2464, 'err_succ': 0.2178, 'err_fail': 0.5617, 'kendall_posthoc': 0.7778}
+p0.1_std_1x {'n': 1, 'mean_over': 0.0843, 'mean_abs_err': 0.0843, 'r_star': 1.1671, 'n50': 524.0, 'n50_untrained': 935.0, 'last_layer_share': 0.2917, 'err_succ': 0.2175, 'err_fail': 0.3715, 'kendall_posthoc': 0.8667}
+p0.3_std_1x {'n': 1, 'mean_over': 0.0316, 'mean_abs_err': 0.0316, 'r_star': 1.0385, 'n50': 502.0, 'n50_untrained': 935.0, 'last_layer_share': 0.2903, 'err_succ': 0.2213, 'err_fail': 0.281, 'kendall_posthoc': 1.0}

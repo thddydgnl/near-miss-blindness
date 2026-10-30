@@ -1,0 +1,4 @@
+{"job_id": "ep_dp_t8_s0_5k_t8_held00", "kind": "policy_ep", "task": 8, "policy": {"type": "dp", "name": "dp_t8_s0_5k", "ckpt": "/workspace/dp/ckpt/t8_s0/ckpt_5000.pt"}, "start": {"type": "held_file", "path": "/workspace/dp/held_init/t8.npy", "index": 0}}
+{"job_id": "ie_dp_t8_s0_5k_t8_held00", "kind": "imagine_ep", "dep": "ep_dp_t8_s0_5k_t8_held00", "modes": ["O", "C"], "H_C": 3}
+{"job_id": "ep_dp_t8_s0_5k_t8_held01", "kind": "policy_ep", "task": 8, "policy": {"type": "dp", "name": "dp_t8_s0_5k", "ckpt": "/workspace/dp/ckpt/t8_s0/ckpt_5000.pt"}, "start": {"type": "held_file", "path": "/workspace/dp/held_init/t8.npy", "index": 1}}
+{"job_id": "ie_dp_t8_s0_5k_t8_held01", "kind": "imagine_ep", "dep": "ep_dp_t8_s0_5k_t8_held01", "modes": ["O", "C"], "H_C": 3}

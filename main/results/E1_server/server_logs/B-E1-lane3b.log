@@ -1,0 +1,7 @@
+trainsplit H5 r: batch 0 episodes 100 +586 cf, queue 3014, dropped 0, 37s
+trainsplit H5 r: batch 5 episodes 600 +584 cf, queue 86, dropped 0, 167s
+EVAL_CELL_DONE {"set": "trainsplit", "H": 5, "defk": "r", "n_targets": 3600, "n_dropped": 0, "n_episodes": 620, "n_unreachable_attempts": 106, "reach_rate_per_attempt": 0.9713977334052887, "s_max": {"offset": 13.0, "iid": 50.0}, "tau": {"full": 0.2125, "obj": 0.345}, "mean_sim_calls": 15.0, "time_s": 173.19039368629456}
+trainsplit H3 r: batch 0 episodes 100 +595 cf, queue 3005, dropped 0, 28s
+trainsplit H3 r: batch 5 episodes 600 +592 cf, queue 55, dropped 0, 100s
+EVAL_CELL_DONE {"set": "trainsplit", "H": 3, "defk": "r", "n_targets": 3600, "n_dropped": 0, "n_episodes": 612, "n_unreachable_attempts": 61, "reach_rate_per_attempt": 0.9833378858235455, "s_max": {"offset": 25.0, "iid": 80.0}, "tau": {"full": 0.2125, "obj": 0.345}, "mean_sim_calls": 15.0, "time_s": 101.72285676002502}
+LANE2_DONE trainsplit 2026-10-21T23:21:51Z

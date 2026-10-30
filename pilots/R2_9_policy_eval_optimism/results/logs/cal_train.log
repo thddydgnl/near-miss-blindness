@@ -1,0 +1,17 @@
+/workspace/code9/wm.py:107: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  B = torch.load(os.path.join(FEAT_DIR, f'bank_s{args.seed}_N{args.N}.pt'))
+/workspace/code9/wm.py:73: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  nm = torch.load(os.path.join(FEAT_DIR, 'norm.pt'))
+p0.3_std_1x_s0 step 500 loss 0.3186 (18s)
+p0.3_std_1x_s0 step 1000 loss 0.2178 (33s)
+p0.3_std_1x_s0 step 1500 loss 0.1947 (46s)
+p0.3_std_1x_s0 step 2000 loss 0.1811 (61s)
+p0.3_std_1x_s0 step 2500 loss 0.1676 (76s)
+p0.3_std_1x_s0 step 3000 loss 0.1732 (89s)
+p0.3_std_1x_s0 step 3500 loss 0.1668 (103s)
+p0.3_std_1x_s0 step 4000 loss 0.1624 (118s)
+p0.3_std_1x_s0 step 4500 loss 0.1583 (133s)
+p0.3_std_1x_s0 step 5000 loss 0.1535 (148s)
+p0.3_std_1x_s0 step 5500 loss 0.1561 (162s)
+p0.3_std_1x_s0 step 6000 loss 0.1557 (176s)
+p0.3_std_1x_s0 done (176s)

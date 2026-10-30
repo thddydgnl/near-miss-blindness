@@ -1,0 +1,24 @@
+{
+ "n_windows": 10000,
+ "innovation_energy_share": {
+  "block": 0.18860402852669872,
+  "agent": 0.08427717910610523,
+  "background": 0.727118792367196
+ },
+ "prediction_error_share": {
+  "block": 0.21920852160698906,
+  "agent": 0.026958618935396955,
+  "background": 0.753832859457614
+ },
+ "lambda_block": 4.302113681301566,
+ "lambda_rule": "block patches hold 50% of the weighted innovation energy (lambda = E_rest / E_block, >= 1)",
+ "pca": {
+  "n_rows": 2000,
+  "k": 50,
+  "explained": 0.5302873253822327,
+  "r2_all": 0.05952545892326395,
+  "unique_r2_block": 0.0211270756366247,
+  "unique_r2_agent": 0.02630993815290033
+ },
+ "time_s": 103.83661317825317
+}

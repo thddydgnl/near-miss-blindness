@@ -1,0 +1,20 @@
+identity vs E1 judge set: {"bins_equal": true, "bins_obj_equal": true, "n_val_episodes_equal": true, "bins": {"success": 0.5329375, "near": 0.1709375, "mid": 0.0925, "far": 0.203625}, "bins_ref": {"success": 0.5329375, "near": 0.1709375, "mid": 0.0925, "far": 0.203625}}
+E3_RULES_DSET_DONE {"identity": {"bins_equal": true, "bins_obj_equal": true, "n_val_episodes_equal": true, "bins": {"success": 0.5329375, "near": 0.1709375, "mid": 0.0925, "far": 0.203625}, "bins_ref": {"success": 0.5329375, "near": 0.1709375, "mid": 0.0925, "far": 0.203625}}, "n_rows": 5304, "n_held": 3304, "n_train": 2000, "n_held_expert": 413, "held_success_frac_r": 0.5378329297820823, "held_success_frac_robj": 0.7388014527845036, "time_s": 89.54481792449951}
+identity vs E1 a_std frames: {"n_frames": true, "n_val": true, "n_train": true, "bins_equal": true}
+E3_RULES_STD_DONE {"identity": {"n_frames": true, "n_val": true, "n_train": true, "bins_equal": true}, "n_rows": 4398, "n_held": 2398, "n_train": 2000, "held_success_frac": 0.31984987489574646, "time_s": 41.047038316726685}
+p0.03_std_1x_s0: pi1 0.999 pi2 0.975 pi3 0.855 pi4 0.689 pi5 0.523 pi6 0.968 (2s)
+p0.03_std_1x_s1: pi1 1.000 pi2 0.987 pi3 0.902 pi4 0.733 pi5 0.599 pi6 0.998 (4s)
+p0.03_std_1x_s2: pi1 1.000 pi2 0.984 pi3 0.901 pi4 0.744 pi5 0.619 pi6 0.990 (7s)
+p0.1_std_1x_s0: pi1 0.998 pi2 0.940 pi3 0.789 pi4 0.600 pi5 0.483 pi6 0.839 (9s)
+p0.1_std_1x_s1: pi1 0.999 pi2 0.948 pi3 0.787 pi4 0.604 pi5 0.487 pi6 0.870 (12s)
+p0.1_std_1x_s2: pi1 1.000 pi2 0.948 pi3 0.812 pi4 0.637 pi5 0.495 pi6 0.911 (15s)
+p0.3_std_1x_s0: pi1 0.997 pi2 0.908 pi3 0.737 pi4 0.546 pi5 0.482 pi6 0.662 (17s)
+p0.3_std_1x_s1: pi1 0.997 pi2 0.913 pi3 0.750 pi4 0.548 pi5 0.482 pi6 0.681 (20s)
+p0.3_std_1x_s2: pi1 0.997 pi2 0.922 pi3 0.744 pi4 0.562 pi5 0.484 pi6 0.725 (22s)
+M3_E2_EVAL_DONE {"p0.03_std_1x_s0": 0.0, "p0.03_std_1x_s1": 0.0, "p0.03_std_1x_s2": 0.0, "p0.1_std_1x_s0": 0.0, "p0.3_std_1x_s0": 0.0}
+ctrl main: 100/400 episodes (41s)
+ctrl main: 200/400 episodes (72s)
+ctrl main: 300/400 episodes (103s)
+ctrl main: 400/400 episodes (134s)
+E2_CTRL_DONE {"n_records": 3600, "tau": {"full": 0.2125, "obj": 0.345}, "e0_identity": {"n_common": 3600, "max_abs_diff_r": 0.0}, "time_s": 134.45968079566956}
+E2E3_LANE2_DONE 2026-10-22T00:15:31Z

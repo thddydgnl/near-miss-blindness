@@ -1,0 +1,66 @@
+judge set: 16000 seqs, train 12696, held-out 3304, success rate 0.534
+  judge epoch 0 loss 0.8461 val acc 0.7815 bacc 0.7731
+  judge epoch 1 loss 0.2730 val acc 0.9265 bacc 0.9290
+  judge epoch 2 loss 0.1571 val acc 0.9470 bacc 0.9482
+  judge epoch 3 loss 0.1368 val acc 0.9443 bacc 0.9431
+  judge epoch 4 loss 0.1248 val acc 0.9488 bacc 0.9494
+  judge epoch 5 loss 0.1104 val acc 0.9488 bacc 0.9476
+  judge epoch 6 loss 0.1029 val acc 0.9482 bacc 0.9493
+  judge epoch 7 loss 0.1003 val acc 0.9522 bacc 0.9534
+  judge epoch 8 loss 0.0890 val acc 0.9507 bacc 0.9510
+  judge epoch 9 loss 0.0828 val acc 0.9482 bacc 0.9477
+  judge epoch 10 loss 0.0765 val acc 0.9498 bacc 0.9498
+  judge epoch 11 loss 0.0770 val acc 0.9522 bacc 0.9516
+  judge epoch 12 loss 0.0679 val acc 0.9492 bacc 0.9497
+  judge epoch 13 loss 0.0608 val acc 0.9488 bacc 0.9496
+  judge epoch 14 loss 0.0565 val acc 0.9549 bacc 0.9552
+  judge epoch 15 loss 0.0537 val acc 0.9507 bacc 0.9500
+  judge epoch 16 loss 0.0474 val acc 0.9528 bacc 0.9520
+  judge epoch 17 loss 0.0416 val acc 0.9498 bacc 0.9496
+  judge epoch 18 loss 0.0415 val acc 0.9516 bacc 0.9510
+  judge epoch 19 loss 0.0321 val acc 0.9540 bacc 0.9541
+  judge epoch 20 loss 0.0275 val acc 0.9510 bacc 0.9513
+  judge epoch 21 loss 0.0296 val acc 0.9513 bacc 0.9507
+  judge epoch 22 loss 0.0239 val acc 0.9519 bacc 0.9521
+  judge epoch 23 loss 0.0237 val acc 0.9528 bacc 0.9523
+  judge epoch 24 loss 0.0214 val acc 0.9501 bacc 0.9501
+  judge epoch 25 loss 0.0205 val acc 0.9519 bacc 0.9516
+  judge epoch 26 loss 0.0195 val acc 0.9513 bacc 0.9513
+  judge epoch 27 loss 0.0186 val acc 0.9528 bacc 0.9526
+  judge epoch 28 loss 0.0182 val acc 0.9522 bacc 0.9519
+  judge epoch 29 loss 0.0197 val acc 0.9525 bacc 0.9522
+a d128_l2 held-out acc 0.9549 bacc 0.9552
+  judge epoch 0 loss 0.8664 val acc 0.6855 bacc 0.6746
+  judge epoch 1 loss 0.4836 val acc 0.8435 bacc 0.8408
+  judge epoch 2 loss 0.3948 val acc 0.8505 bacc 0.8485
+  judge epoch 3 loss 0.3672 val acc 0.8581 bacc 0.8589
+  judge epoch 4 loss 0.3499 val acc 0.8702 bacc 0.8688
+  judge epoch 5 loss 0.3358 val acc 0.8653 bacc 0.8629
+  judge epoch 6 loss 0.3270 val acc 0.8544 bacc 0.8555
+  judge epoch 7 loss 0.3135 val acc 0.8384 bacc 0.8416
+  judge epoch 8 loss 0.3083 val acc 0.8478 bacc 0.8494
+  judge epoch 9 loss 0.2984 val acc 0.8590 bacc 0.8589
+  judge epoch 10 loss 0.2794 val acc 0.8656 bacc 0.8647
+  judge epoch 11 loss 0.2762 val acc 0.8505 bacc 0.8519
+  judge epoch 12 loss 0.2643 val acc 0.8478 bacc 0.8493
+  judge epoch 13 loss 0.2590 val acc 0.8511 bacc 0.8529
+  judge epoch 14 loss 0.2450 val acc 0.8677 bacc 0.8673
+  judge epoch 15 loss 0.2364 val acc 0.8629 bacc 0.8615
+  judge epoch 16 loss 0.2245 val acc 0.8571 bacc 0.8574
+  judge epoch 17 loss 0.2144 val acc 0.8647 bacc 0.8630
+  judge epoch 18 loss 0.2038 val acc 0.8514 bacc 0.8527
+  judge epoch 19 loss 0.1918 val acc 0.8599 bacc 0.8599
+  judge epoch 20 loss 0.1809 val acc 0.8593 bacc 0.8599
+  judge epoch 21 loss 0.1735 val acc 0.8584 bacc 0.8585
+  judge epoch 22 loss 0.1630 val acc 0.8538 bacc 0.8550
+  judge epoch 23 loss 0.1574 val acc 0.8559 bacc 0.8563
+  judge epoch 24 loss 0.1527 val acc 0.8577 bacc 0.8580
+  judge epoch 25 loss 0.1428 val acc 0.8556 bacc 0.8560
+  judge epoch 26 loss 0.1414 val acc 0.8550 bacc 0.8558
+  judge epoch 27 loss 0.1366 val acc 0.8541 bacc 0.8546
+  judge epoch 28 loss 0.1362 val acc 0.8553 bacc 0.8559
+  judge epoch 29 loss 0.1349 val acc 0.8556 bacc 0.8563
+a_imag d128_l2 held-out acc 0.8702 bacc 0.8688
+b tau 0.2125 held-out acc 0.8965 bacc 0.8958
+b2 tau 0.2150 held-out acc 0.9134 bacc 0.9137
+JUDGES_DONE 411s
