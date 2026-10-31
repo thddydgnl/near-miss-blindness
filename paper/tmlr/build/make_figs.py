@@ -138,7 +138,7 @@ def line(ax, pts, color=MUTED, lw=1.0):
 
 # ---------------------------------------------------------------- Figure 1: protocol and the two error shapes
 def fig1_protocol():
-    fig = plt.figure(figsize=(W, 1.95))
+    fig = plt.figure(figsize=(W, 1.85))
     ax = fig.add_axes([0, 0, 1, 1])
     ax.set_xlim(0, W)
     ax.set_ylim(0, 1.95)
@@ -179,7 +179,7 @@ def fig1_protocol():
     bx.plot(r, 1 / (1 + np.exp(9.0 * (np.log(r) - math.log(1.45)))), color=BLUE, lw=1.8, label="optimism",
             zorder=4)
     bx.plot(r, 1 / (1 + np.exp(3.0 * (np.log(r) - math.log(0.97)))), color=ORANGE, lw=1.8, ls="--",
-            label="two-sided blur", zorder=4)
+            label="blur in both directions", zorder=4)
     log_r_axis(bx, [0.5, 1, 2, 4], 0.5, 4.0)
     bx.set_ylim(-0.03, 1.62)
     bx.set_yticks([0, 0.5, 1])
@@ -199,7 +199,7 @@ def fig2_curves():
     edges = m2["bins"]
     m3 = load("E1_server/m3/e1_m3_analysis.json")["pooled"]
 
-    fig, axes = plt.subplots(1, 3, figsize=(W, 1.78), sharey=True, gridspec_kw={"wspace": 0.1})
+    fig, axes = plt.subplots(1, 3, figsize=(W, 1.66), sharey=True, gridspec_kw={"wspace": 0.1})
     real_kw = dict(color=GRAY_DARK, ls="--", lw=1.2, marker="o", ms=3.2, mfc="white", mec=GRAY_DARK, mew=0.9,
                    zorder=4)
     # (a) M1
@@ -264,7 +264,7 @@ def fig3_m1_horizon():
     hs = [3, 5, 7, 10]
     c = {h: e1[f"val/H{h}/r"]["a"] for h in hs}
     pm = {h: e7[f"val/H{h}/r"]["a"] for h in hs}
-    fig, (ax, px, bx) = plt.subplots(1, 3, figsize=(W, 1.72), gridspec_kw={"wspace": 0.32})
+    fig, (ax, px, bx) = plt.subplots(1, 3, figsize=(W, 1.60), gridspec_kw={"wspace": 0.32})
 
     def resolution(a, cells, probe, title, legend):
         style_axes(a)
@@ -281,7 +281,7 @@ def fig3_m1_horizon():
         a.set_xticks(hs)
         a.set_xlim(2.5, 10.5)
         a.set_ylim(0.55, 1.01)
-        a.set_xlabel("horizon H (planning steps)", color=INK)
+        a.set_xlabel("horizon H (imagination steps)", color=INK)
         panel_title(a, title)
         if legend:
             leg = a.legend(loc="lower left", frameon=False, fontsize=6.0, handlelength=1.8, labelspacing=0.2,
@@ -301,9 +301,9 @@ def fig3_m1_horizon():
     bx.set_xticks(hs)
     bx.set_xlim(2.5, 10.5)
     bx.set_ylim(0, 1.0)
-    bx.set_xlabel("horizon H (planning steps)", color=INK)
+    bx.set_xlabel("horizon H (imagination steps)", color=INK)
     bx.set_ylabel("P(judged success)", color=INK)
-    panel_title(bx, "(c) PushT, both ways")
+    panel_title(bx, "(c) PushT, both directions")
     bx.legend(loc="lower left", frameon=False, fontsize=6.0, labelspacing=0.2, handlelength=1.8,
               bbox_to_anchor=(0.0, 0.2))
     fig.subplots_adjust(left=0.075, right=0.995, bottom=0.2, top=0.89)
@@ -349,7 +349,7 @@ def fig4_decomp():
             labels.append(lab)
             y -= 0.62
         y -= 0.2
-    fig, ax = plt.subplots(figsize=(W, 1.95))
+    fig, ax = plt.subplots(figsize=(W, 1.85))
     style_axes(ax, grid_axis="x")
     gap = 0.004
     below_shown = False
@@ -438,7 +438,7 @@ def fig6_policy():
              "pi4_sloppy": "π4 sloppy", "pi5_far_failer": "π5 far-failer",
              "pi6_near_failer": "π6 near-failer"}
     colors = {"pi5_far_failer": ORANGE, "pi6_near_failer": BLUE}
-    fig, (ax, bx) = plt.subplots(1, 2, figsize=(W, 1.78), gridspec_kw={"wspace": 0.42, "width_ratios": [1.3, 1]})
+    fig, (ax, bx) = plt.subplots(1, 2, figsize=(W, 1.62), gridspec_kw={"wspace": 0.42, "width_ratios": [1.3, 1]})
     style_axes(ax, grid_axis="x")
     for i, row in enumerate(m3):
         y = len(m3) - 1 - i
@@ -469,7 +469,7 @@ def fig6_policy():
     bx.set_xlim(-0.01, 0.31)
     bx.set_ylim(-0.03, 0.09)
     bx.set_xlabel("near-miss share $n_\\pi$", color=INK)
-    bx.set_ylabel("over-estimation $o_\\pi^{\\rm imag}$", color=INK)
+    bx.set_ylabel("overestimation $o_\\pi^{\\rm imag}$", color=INK)
     panel_title(bx, "(b) M1: 24 policy checkpoints", pad=8)
     fig.subplots_adjust(left=0.12, right=0.99, bottom=0.2, top=0.9)
     return save(fig, "fig6_policy")

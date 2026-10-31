@@ -120,7 +120,7 @@ def main():
     chk("M1 success imag", a5["p_success_imag"], "0.710")
     _check("M1 real-frame rates", f"labels {fmt(a5['p_success_real'])} of successes and {fmt(a5['p_near_real'])} of near misses", "labels 0.862 of successes and 0.112 of near misses")
     _check("M1 imagined rates", f"become {fmt(a5['p_success_imag'])} and {fmt(a5['p_near_imag'])}", "become 0.710 and 0.147")
-    _check("M1 floor (intro, 2 dp)", f"accepts {fmt(a5['p_near_real'], 2)} of near misses", "accepts 0.11 of near misses")
+    _check("M1 floor (intro, 2 dp)", f"labels {fmt(a5['p_near_real'], 2)} of near misses as successful", "labels 0.11 of near misses as successful")
     chk("M1 far imag", a5["p_far_imag"], "0.000")
     ci("M1 failure slope", a5["slope_fail_imag"], *a5["ci"]["slope_fail_imag"], "-5.50 [-6.46, -4.86]")
     _check("M1 r50", f"from {fmt(a5['r50_real'], 2)} to {fmt(a5['r50_imag'], 2)}", "from 1.03 to 0.90")
@@ -216,7 +216,7 @@ def main():
     chk("H3 M1 r_obj share", e3["e1_cells"]["val_H5_r_obj"]["a"]["share"], "0.765")
     chk("H3 M1 DP share", e3["dp"]["H5"]["a_std"]["share"], "0.698")
     _check("H3 shares (intro)", f"(shares {fmt(h3['share'], 2)} on M2 and {fmt(e3['m3']['0.03']['share'], 2)} on M3)", "(shares 0.83 on M2 and 1.00 on M3)")
-    _check("M1 judge accepts", f"accepts {fmt(a5['p_near_real'])} of near misses", "accepts 0.112 of near misses")
+    _check("M1 judge accepts", f"labels {fmt(a5['p_near_real'])} of near misses as successful", "labels 0.112 of near misses as successful")
     vd = e3["e1_cells"]["val_H5_r"]["d"]
     chk("VLM floor r", vd["p_near_real"], "0.893")
     chk("VLM floor r_obj", e3["e1_cells"]["val_H5_r_obj"]["d"]["p_near_real"], "0.671")
@@ -277,12 +277,12 @@ def main():
     _check("pi4", f"{fmt(tab['pi4_sloppy']['s'])}) at {fmt(tab['pi4_sloppy']['sh'])}", "0.521) at 0.722")
     _check("pi6 (intro, 2 dp)", f"real success {fmt(tab['pi6_near_failer']['s'], 2)} is imagined at {fmt(tab['pi6_near_failer']['sh'], 2)}", "real success 0.53 is imagined at 0.99")
     _check("pi5 (intro, 2 dp)", f"with {fmt(tab['pi5_far_failer']['s'], 2)} is imagined at {fmt(tab['pi5_far_failer']['sh'], 2)}", "with 0.48 is imagined at 0.58")
-    _check("H2a M3 (intro, 2 dp)", f"(Spearman {fmt(pt['spearman_n_oimag'], 2)})", "(Spearman 0.83)")
+    _check("H2a M3 (intro, 2 dp)", f"(Spearman correlation {fmt(pt['spearman_n_oimag'], 2)})", "(Spearman correlation 0.83)")
     _check("pi6 discussion", f"real success {fmt(tab['pi6_near_failer']['s'])} was imagined at {fmt(tab['pi6_near_failer']['sh'])}", "real success 0.526 was imagined at 0.985")
     chk("H2b M3 tau", pt["tau_similar"], "1.0", nd=1)
-    _check("H2c M3", f"Pearson {fmt(pt['pearson_sh_s'])}, MMRV {fmt(pt['mmrv'])}", "Pearson 0.694, MMRV 0.157")
-    _check("H2c M3 CIs", f"Pearson {fmt(pt['pearson_sh_s'])} [{fmt(r29['ci']['pearson_sh_s'][0])}, {fmt(r29['ci']['pearson_sh_s'][1])}]; MMRV {fmt(pt['mmrv'])} [{fmt(r29['ci']['mmrv'][0])}, {fmt(r29['ci']['mmrv'][1])}]",
-           "Pearson 0.694 [0.649, 0.734]; MMRV 0.157 [0.056, 0.176]")
+    _check("H2c M3", f"Pearson correlation {fmt(pt['pearson_sh_s'])}, MMRV {fmt(pt['mmrv'])}", "Pearson correlation 0.694, MMRV 0.157")
+    _check("H2c M3 CIs", f"Pearson correlation {fmt(pt['pearson_sh_s'])} [{fmt(r29['ci']['pearson_sh_s'][0])}, {fmt(r29['ci']['pearson_sh_s'][1])}]; MMRV {fmt(pt['mmrv'])} [{fmt(r29['ci']['mmrv'][0])}, {fmt(r29['ci']['mmrv'][1])}]",
+           "Pearson correlation 0.694 [0.649, 0.734]; MMRV 0.157 [0.056, 0.176]")
     chk("M3 FGRE", pt["fgre"], "0.000")
     p1 = dp["point"]
     ci("H2a M1", p1["spearman_n_oimag"], *dp["ci"]["spearman_n_oimag"], "0.357 [0.023, 0.598]")
@@ -294,9 +294,9 @@ def main():
     oi = [r["o_imag"] for r in dp["table"]]
     _check("DP o_imag range", f"between {fmt(min(oi), 2)} and +{fmt(max(oi), 2)}", "between -0.01 and +0.06")
     _check("DP pairs", f"among the {int(p1['n_similar_pairs'])} such pairs is {fmt(p1['h2b_max_gap_similar'])}", "among the 43 such pairs is 0.060")
-    _check("H2c M1", f"Pearson {fmt(p1['pearson_sh_s'])}, MMRV {fmt(p1['mmrv'])}", "Pearson 0.998, MMRV 0.010")
-    _check("H2c M1 CIs", f"Pearson {fmt(p1['pearson_sh_s'])} [{fmt(dp['ci']['pearson_sh_s'][0])}, {fmt(dp['ci']['pearson_sh_s'][1])}]; MMRV {fmt(p1['mmrv'])} [{fmt(dp['ci']['mmrv'][0])}, {fmt(dp['ci']['mmrv'][1])}]; FGRE {fmt(p1['fgre'])} [{fmt(dp['ci']['fgre'][0])}, {fmt(dp['ci']['fgre'][1])}]",
-           "Pearson 0.998 [0.992, 0.998]; MMRV 0.010 [0.005, 0.028]; FGRE 0.023 [0.014, 0.066]")
+    _check("H2c M1", f"Pearson correlation {fmt(p1['pearson_sh_s'])}, MMRV {fmt(p1['mmrv'])}", "Pearson correlation 0.998, MMRV 0.010")
+    _check("H2c M1 CIs", f"Pearson correlation {fmt(p1['pearson_sh_s'])} [{fmt(dp['ci']['pearson_sh_s'][0])}, {fmt(dp['ci']['pearson_sh_s'][1])}]; MMRV {fmt(p1['mmrv'])} [{fmt(dp['ci']['mmrv'][0])}, {fmt(dp['ci']['mmrv'][1])}]; FGRE {fmt(p1['fgre'])} [{fmt(dp['ci']['fgre'][0])}, {fmt(dp['ci']['fgre'][1])}]",
+           "Pearson correlation 0.998 [0.992, 0.998]; MMRV 0.010 [0.005, 0.028]; FGRE 0.023 [0.014, 0.066]")
     ci("H2b M1 tau", p1["tau_similar"], *dp["ci"]["tau_similar"], "0.709 [0.286, 0.822]")
     cta = e2m1["ctrl"]["a"]["point"]
     _check("control set", f"FGRE is {fmt(cta['fgre'])} while MMRV is {fmt(cta['mmrv'])}", "FGRE is 0.117 while MMRV is 0.023")
@@ -326,7 +326,7 @@ def main():
     _check("H5b |o|", f"from {fmt(res['deterministic']['point']['mean_abs_o'], 4)} to {fmt(res['mc_discount']['point']['mean_abs_o'], 4)}", "from 0.0233 to 0.0187")
     ci("H5b diff", ev["diff_mean_abs_o"], *ev["ci_diff_mean_abs_o"], "-0.0046 [-0.0088, -0.0004]")
     _check("H5b FGRE", f"FGRE from {fmt(res['deterministic']['point']['fgre'], 4)} to {fmt(res['mc_discount']['point']['fgre'], 4)}", "FGRE from 0.0225 to 0.0171")
-    _check("H5b Spearman", f"Spearman {fmt(res['deterministic']['point']['spearman_n_oimag'])} to {fmt(res['mc_discount']['point']['spearman_n_oimag'])}", "Spearman 0.357 to 0.020")
+    _check("H5b Spearman", f"Spearman correlation {fmt(res['deterministic']['point']['spearman_n_oimag'])} to {fmt(res['mc_discount']['point']['spearman_n_oimag'])}", "Spearman correlation 0.357 to 0.020")
     chk("H5b majority", res["mc_majority"]["point"]["mean_abs_o"], "0.0283")
     _check("H5b q*", h5b["dev"]["q_star"], "13/16")
     _check("H5b dev", f"({fmt(h5b['dev']['mean_abs_o_deterministic'], 4)} with deterministic verdicts, {fmt(h5b['dev']['mean_abs_o_by_q']['13/16'], 4)} at q^*=13/16)",
