@@ -1,0 +1,14 @@
+{
+  "id": "r9wyi7bs4icy4h",
+  "ip": "194.68.245.113",
+  "name": "bx7-e7",
+  "port": 22148,
+  "ssh_command": "ssh -i /Users/song-yonghwi/.runpod/ssh/runpodctl-ssh-key root@194.68.245.113 -p 22148",
+  "ssh_key": {
+    "path": "/Users/song-yonghwi/.runpod/ssh/runpodctl-ssh-key",
+    "exists": true,
+    "source": "runpodctl doctor",
+    "fingerprint": "SHA256:5/fXxzverdo9tWA6g/WN2esgQUO6FoGUrmnMJVzccfE",
+    "in_account": true
+  }
+}

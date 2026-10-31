@@ -1,0 +1,10 @@
+val H3 r: a near imag 0.138 real 0.051 far imag 0.008 | AUROC sn real 0.981 imag 0.860 ceil 0.845 | sf real 1.000 imag 0.963 | r50 0.89 dr10 0.50 (95s)
+val H5 r: a near imag 0.201 real 0.047 far imag 0.038 | AUROC sn real 0.980 imag 0.784 ceil 0.778 | sf real 1.000 imag 0.924 | r50 0.85 dr10 0.92 (139s)
+val H7 r: a near imag 0.223 real 0.046 far imag 0.049 | AUROC sn real 0.982 imag 0.696 ceil 0.699 | sf real 1.000 imag 0.846 | r50 0.64 dr10 1.62 (173s)
+val H10 r: a near imag 0.234 real 0.035 far imag 0.077 | AUROC sn real 0.983 imag 0.635 ceil 0.633 | sf real 1.000 imag 0.759 | r50 0.51 dr10 2.19 (210s)
+trainsplit H3 r: a near imag 0.154 real 0.051 far imag 0.018 | AUROC sn real 0.982 imag 0.853 ceil 0.841 | sf real 1.000 imag 0.959 | r50 0.89 dr10 0.61 (290s)
+trainsplit H5 r: a near imag 0.206 real 0.040 far imag 0.049 | AUROC sn real 0.982 imag 0.768 ceil 0.770 | sf real 1.000 imag 0.911 | r50 0.78 dr10 1.05 (336s)
+trainsplit H7 r: a near imag 0.235 real 0.047 far imag 0.067 | AUROC sn real 0.980 imag 0.697 ceil 0.703 | sf real 1.000 imag 0.851 | r50 0.67 dr10 1.56 (374s)
+trainsplit H10 r: a near imag 0.272 real 0.050 far imag 0.074 | AUROC sn real 0.983 imag 0.606 ceil 0.610 | sf real 1.000 imag 0.766 | r50 0.47 dr10 3.06 (410s)
+VERDICT E7 {"H1b": {"delta_auc_sn": 0.1967789691299625, "delta_auc_sn_ci": [0.1715439451508892, 0.22487638893165476], "delta_auc_sf": 0.07566149488186447, "delta_auc_sf_ci": [0.0565911507314989, 0.09685342666915424], "horizon_slope": -0.03292472519105943, "horizon_slope_ci": [-0.03749554119687659, -0.02780129350029519], "sn_ge_0p05": true, "sf_le_0p02": false, "slope_neg": true, "p_boot_slope": 0.0, "H1b_E7": false}, "H4b": {"auc_sn_real": 0.9803433146621415, "auc_sn_ceiling": 0.7776976868746027, "gap": 0.2026456277875388, "real_ge_0p95": true, "gap_ge_0p05": true, "H4b_E7": true}}
+M1_ANALYZE_DONE 411s

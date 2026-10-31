@@ -1,0 +1,1 @@
+{"set": "trainsplit", "H": 3, "defk": "r", "n_targets": 3600, "n_dropped": 33, "n_episodes": 1382, "n_unreachable_attempts": 4660, "reach_rate_per_attempt": 0.43357238361492645, "s_max": {"offset": 3.0, "iid": 3.0}, "tau": {"full": 0.10704169917851686}, "mean_sim_calls": 15.0, "time_s": 174.25158596038818}

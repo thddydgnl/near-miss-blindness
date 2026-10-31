@@ -1,0 +1,49 @@
+{
+  "containerDiskInGb": 40,
+  "costPerHr": 0.59,
+  "createdAt": "2026-10-31 11:25:06.46 +0000 UTC",
+  "desiredStatus": "RUNNING",
+  "env": {
+    "PUBLIC_KEY": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDN2+lBok8tZt3g7Z6i3yzxOWuRcsN1jB1S2AUQ7BrM49gUmRLe2LwmfFiXhsKajc3iwyR5B8HzsSvbow2AI/beblc4dav/kxOo4QIMQBhTGiR8X8gTxfe+VUlwOnrgyOa/VbOcU/Zu1TotZOFp6xiR77Kgc8e8UsqwooNmFROvqPqAY8kteFWZJ/hpbQGuWwLpVAGk/T8UchY2nFVpShjLqcsKj3hobJnDY5e+FLuF+4H84NX07hCyaxE5p2+H+O7zwirnFJ9DebtCM/1+ySn1OkVAYQ8JZtqhXc+Qd9zrr1sref8dHzD9SW9LOmZhZTDpWOVF5wRdBQreZnPNUCPv runpodctl-ssh-key"
+  },
+  "gpuCount": 1,
+  "id": "r9wyi7bs4icy4h",
+  "imageName": "runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04",
+  "lastStatusChange": "Rented by User: Sat Oct 31 2026 11:25:06 GMT+0000 (Coordinated Universal Time)",
+  "machine": {
+    "dataCenterId": "EU-SE-1",
+    "diskThroughputMBps": 11601,
+    "gpuId": "NVIDIA A40",
+    "location": "SE",
+    "maxDownloadSpeedMbps": 14886,
+    "maxUploadSpeedMbps": 14841,
+    "reservedCountVersion": 3235796,
+    "secureCloud": true,
+    "supportPublicIp": true
+  },
+  "memoryInGb": 50,
+  "name": "bx7-e7",
+  "ports": [
+    "8888/http",
+    "22/tcp"
+  ],
+  "runtimeStatus": "running",
+  "ssh": {
+    "id": "r9wyi7bs4icy4h",
+    "ip": "194.68.245.113",
+    "name": "bx7-e7",
+    "port": 22148,
+    "ssh_command": "ssh -i /Users/song-yonghwi/.runpod/ssh/runpodctl-ssh-key root@194.68.245.113 -p 22148",
+    "ssh_key": {
+      "exists": true,
+      "fingerprint": "SHA256:5/fXxzverdo9tWA6g/WN2esgQUO6FoGUrmnMJVzccfE",
+      "in_account": true,
+      "path": "/Users/song-yonghwi/.runpod/ssh/runpodctl-ssh-key",
+      "source": "runpodctl doctor"
+    }
+  },
+  "uptimeSeconds": 22,
+  "vcpuCount": 9,
+  "volumeInGb": 60,
+  "volumeMountPath": "/workspace"
+}

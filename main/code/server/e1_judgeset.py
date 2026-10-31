@@ -29,7 +29,7 @@ def make_seqs(ep, M, rng):
         elif fam == 'scale':
             p = {'k_max': M['k'] * mult}
         else:
-            p = {'q': 1.0, 'sig_big': M['sb'] * rng.uniform(0.5, 1.5), 'sig_small': 1.0}
+            p = {'q': 1.0, 'sig_big': M['sb'] * rng.uniform(0.5, 1.5), 'sig_small': R.SIG_SMALL}
         a, _ = R.make_actions(ep['expert'], fam, p, rng)
         seqs.append((fam, a))
         fams.append(fam)
@@ -38,8 +38,8 @@ def make_seqs(ep, M, rng):
 
 def main():
     t0 = time.time()
-    split = json.load(open(f'{BP.RES}/split_e1.json'))
-    cal = json.load(open(f'{BP.RES}/calib_e1.json'))
+    split = json.load(open(f'{BP.RES}/split_{E.SUF}.json'))
+    cal = json.load(open(f'{BP.RES}/calib_{E.SUF}.json'))
     T_ = R.load_model()
     m, pre = T_['model'], T_['pre']
     dt = T_['dset_train']
@@ -49,8 +49,8 @@ def main():
     ep_info, e_off = [], 0
     for H in E.HS:
         M = cal['mags'][str(H)]
-        eps = E.sample_episodes_from(dt, split['J'], N_EP, H, seed=8000 + H)
-        rng = np.random.RandomState(8100 + H)
+        eps = E.sample_episodes_from(dt, split['J'], N_EP, H, seed=E.SEED_BASE + 8000 + H)
+        rng = np.random.RandomState(E.SEED_BASE + 8100 + H)
         for c0 in range(0, len(eps), CHUNK):
             ch = eps[c0:c0 + CHUNK]
             jobs, famss = [], []
@@ -86,13 +86,13 @@ def main():
     is_val = np.random.RandomState(0).uniform(size=e_off) < 0.2
     out['ep_is_val'] = torch.as_tensor(is_val)
     out['ep_info'] = ep_info
-    torch.save(out, f'{BP.FEAT}/judgeset_e1.pt')
+    torch.save(out, f'{BP.FEAT}/judgeset_{E.SUF}.pt')
     r, ro = np.array(meta['r']), np.array(meta['r_obj'])
     summ = dict(n_episodes=e_off, n_seqs=len(r), n_val_episodes=int(is_val.sum()),
                 bins={b: float(np.mean([R.r_bin(x) == b for x in r])) for b in ('success', 'near', 'mid', 'far')},
                 bins_obj={b: float(np.mean([R.r_bin(x) == b for x in ro])) for b in ('success', 'near', 'mid', 'far')},
                 trajs_used=sorted(set(int(e['traj']) for e in ep_info)), time_s=time.time() - t0)
-    R.jdump(summ, f'{BP.RES}/judgeset_e1_meta.json')
+    R.jdump(summ, f'{BP.RES}/judgeset_{E.SUF}_meta.json')
     print('JUDGESET_E1_DONE', {k: v for k, v in summ.items() if k != 'trajs_used'})
 
 

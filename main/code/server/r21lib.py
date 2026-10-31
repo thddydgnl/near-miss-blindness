@@ -15,6 +15,7 @@ TASKS = {
     # model dir, planning-config values copied from conf/plan_<task>.yaml
     'pusht': dict(model='pusht', goal_source='dset', alpha=1.0, opt_steps=30, plan_seed=99),
     'wall': dict(model='wall_single', goal_source='random_state', alpha=1.0, opt_steps=10, plan_seed=99),
+    'pointmaze': dict(model='point_maze', goal_source='dset', alpha=0.0, opt_steps=10, plan_seed=99),   # B E7 (dset-goal protocol)
 }
 GOAL_H = 5
 N_SAMPLES, TOPK, VAR_SCALE = 300, 30, 1.0
@@ -24,8 +25,8 @@ def setup_paths():
     if DINO_WM not in sys.path:
         sys.path.insert(0, DINO_WM)
     os.environ['DATASET_DIR'] = DS_DIR
-    # env/__init__.py imports env.pointmaze (needs mujoco_py + d4rl, not installed): stub it
-    if 'env.pointmaze' not in sys.modules:
+    # env/__init__.py imports env.pointmaze (needs mujoco_py + d4rl): stub it unless the task is PointMaze (B E7)
+    if BP.TASK != 'pointmaze' and 'env.pointmaze' not in sys.modules:
         pm = types.ModuleType('env.pointmaze')
         pm.U_MAZE = None
         pm.PointMazeWrapper = None

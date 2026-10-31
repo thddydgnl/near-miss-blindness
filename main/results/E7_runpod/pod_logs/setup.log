@@ -1,0 +1,85 @@
+APT_OK
+TORCH_OK
+PKGS_OK
+tar: mujoco210/THIRD_PARTY_NOTICES: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/bin/libglfw.so.3: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/bin/derivative: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/bin/libglew.so: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/bin/record: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/bin/simulate: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/bin/libglewegl.so: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/bin/testxml: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/bin/basic: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/bin/libglewosmesa.so: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/bin/libglfw3.a: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/bin/libmujoco210.so: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/bin/compile: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/bin/libmujoco210nogl.so: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/bin/testspeed: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/bin: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/include/glfw3.h: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/include/uitools.c: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/include/mjxmacro.h: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/include/mjui.h: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/include/mjrender.h: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/include/mjmodel.h: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/include/mjdata.h: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/include/mujoco.h: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/include/mjvisualize.h: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/include/uitools.h: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/include: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/model/humanoid100.xml: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/model/arm26.xml: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/model/carpet.png: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/model/softbox.xml: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/model/grid2pin.xml: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/model/sponge.png: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/model/hammock.xml: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/model/cloth.xml: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/model/grid2.xml: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/model/grid1.xml: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/model/grid1pin.xml: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/model/softellipsoid.xml: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/model/softcylinder.xml: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/model/marble.png: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/model/rope.xml: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/model/particle.xml: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/model/loop.xml: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/model/humanoid.xml: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/model/scene.xml: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/model: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/sample/derivative.cc: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/sample/testspeed.cc: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/sample/Makefile: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/sample/basic.cc: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/sample/record.cc: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/sample/compile.cc: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/sample/simulate.cc: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/sample/testxml.cc: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210/sample: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: mujoco210: Cannot change ownership to uid 421709, gid 89939: Invalid argument
+tar: Exiting with failure status due to previous errors
+MUJOCO210_OK
+MJPY_PIP_OK
+D4RL_PIP_OK
+MUJOCO_PY_OK
+D4RL_OK
+DINO_WM 0a9492f add checkpoints
+78c654baede0e9289b751e9ad251839b8045a6074cc1ec23ab54caaf11a25700  outputs/point_maze/checkpoints/model_latest.pth
+25acae83bc681f97f53361f37661be375687797620f58e87319e4e1e2128bcda  outputs/point_maze/hydra.yaml
+total 13339
+drwxrwxrwx 2 root root 2000917 Oct 31 11:23 .
+drwxrwxrwx 4 root root 2036959 Oct 31 11:33 ..
+-rw-rw-rw- 1 root root 3201180 Oct 31 11:23 actions.pth
+-rw-rw-rw- 1 root root   17200 Oct 31 11:23 seq_lengths.pth
+-rw-rw-rw- 1 root root 6401111 Oct 31 11:23 states.pth
+38a0b614230aefab09365ff288e348e8c1fc730add5b25ec75bda087d6358e56  /workspace/pmx/data/dinowm/point_maze/actions.pth
+66333840ffe5223486fcf8e1fdc7317c236fe1d89a17f7ce9ad8942fe6345e20  /workspace/pmx/data/dinowm/point_maze/seq_lengths.pth
+e0c4e4586471506180a4412693d788d9277bf548fd98431438f57ba2a6990077  /workspace/pmx/data/dinowm/point_maze/states.pth
+DINOV2_OK
+NVIDIA A40, 46068 MiB
+96
+               total        used        free      shared  buff/cache   available
+Mem:             503          35         170           0         297         465
+mfs#eu-se-1.runpod.net:9421  756T  468T  288T  62% /workspace
+SETUP_E7_DONE

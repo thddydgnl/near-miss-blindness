@@ -16,10 +16,15 @@ import numpy as np
 from scipy.special import expit, logit
 
 RES = os.path.expanduser(os.environ.get('B_RES', '~/pmx/B/results/E1/m1'))
+TASK = os.environ.get('B_TASK', 'pusht')                 # 'pusht' (E1 M1) or 'pointmaze' (E7, DESIGN_main section 12)
 HS = (3, 5, 7, 10)
-DEFS = ('r', 'r_obj')
+DEFS = ('r', 'r_obj') if TASK == 'pusht' else ('r',)
 SETS = ('val', 'trainsplit')
-TAU = {'r': 0.2125, 'r_obj': 0.345}
+OUT = 'e1_m1_analysis.json' if TASK == 'pusht' else 'e7_analysis.json'
+if TASK == 'pusht':
+    TAU = {'r': 0.2125, 'r_obj': 0.345}                  # frozen (DESIGN_main 0.2)
+else:
+    TAU = {'r': json.load(open(f'{RES}/judges_e7.json'))['b_full']['tau_used']}   # fixed before evaluation (12.7)
 AKEY = {'r': 'p_full', 'r_obj': 'p_obj'}
 AIKEY = {'r': 'pi_full_imag', 'r_obj': 'pi_obj_imag'}
 BINS = ('success', 'near', 'mid', 'far')
@@ -288,10 +293,28 @@ def main():
                    sn_ge_0p05=bool(P['delta_auc_sn'] >= 0.05), sf_le_0p02=bool(P['delta_auc_sf'] <= 0.02),
                    slope_neg=bool(sl.get('ci') is not None and sl['ci'][1] < 0), p_boot_slope=sl.get('p_boot_ge0'))
         h1b['H1b_M1'] = bool(h1b['sn_ge_0p05'] and h1b['sf_le_0p02'] and h1b['slope_neg'])
-        out['verdict_M1'] = dict(cell='val/H5/r/a', H1a=h1a, H1b=h1b)
-        print('VERDICT M1', json.dumps(out['verdict_M1']))
+        if TASK == 'pusht':
+            out['verdict_M1'] = dict(cell='val/H5/r/a', H1a=h1a, H1b=h1b)
+            print('VERDICT M1', json.dumps(out['verdict_M1']))
+        else:   # E7 (DESIGN_main 12.8): H1b clauses + H4b at the primary cell; H1a-type quantities are descriptive only
+            h1b['H1b_E7'] = h1b.pop('H1b_M1')
+            ceil = P.get('auc_sn_ceiling')
+            h4b = dict(auc_sn_real=P['auc_sn_real'], auc_sn_ceiling=ceil,
+                       gap=(P['auc_sn_real'] - ceil) if ceil is not None else None,
+                       real_ge_0p95=bool(P['auc_sn_real'] >= 0.95),
+                       gap_ge_0p05=bool(ceil is not None and P['auc_sn_real'] - ceil >= 0.05))
+            h4b['H4b_E7'] = bool(h4b['real_ge_0p95'] and h4b['gap_ge_0p05'])
+            desc = {k: P.get(k) for k in ('p_near_real', 'p_near_imag', 'p_far_imag', 'ratio_near_far_imag', 'slope_fail_imag',
+                                           'p_success_real', 'p_success_imag', 'succ_shift', 'near_shift', 'r50_real', 'r50_imag',
+                                           'r10_real', 'r10_imag', 'delta_r10', 'auc_sf_real', 'auc_sf_imag', 'n')}
+            desc['ci'] = {k: P['ci'].get(k) for k in ('p_near_imag', 'succ_shift', 'near_shift', 'slope_fail_imag', 'delta_r10')}
+            desc['h1a_type_reference'] = {k: h1a[k] for k in ('near_ge_0p3', 'ratio_ge_3', 'monotone')}
+            cc = f'{RES}/convcheck_e7.json'
+            out['verdict_E7'] = dict(cell='val/H5/r/a', H1b=h1b, H4b=h4b, descriptive=desc,
+                                     convention_check=(json.load(open(cc)) if os.path.exists(cc) else None))
+            print('VERDICT E7', json.dumps({k: out['verdict_E7'][k] for k in ('H1b', 'H4b')}))
     out['time_s'] = time.time() - t0
-    json.dump(out, open(f'{RES}/e1_m1_analysis.json', 'w'), indent=1, default=lambda o: None if (isinstance(o, float) and not np.isfinite(o)) else str(o))
+    json.dump(out, open(f'{RES}/{OUT}', 'w'), indent=1, default=lambda o: None if (isinstance(o, float) and not np.isfinite(o)) else str(o))
     print('M1_ANALYZE_DONE', f'{time.time() - t0:.0f}s')
 
 

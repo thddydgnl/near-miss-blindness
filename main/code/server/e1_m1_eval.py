@@ -32,13 +32,13 @@ def main():
     if os.path.exists(out_path):
         os.remove(out_path)
     t0 = time.time()
-    cell_seed = zlib.crc32(f'{st}_{H}_{key}'.encode()) % 100000
-    split = json.load(open(f'{BP.RES}/split_e1.json'))
-    cal = json.load(open(f'{BP.RES}/calib_e1.json'))
+    cell_seed = zlib.crc32(f'{E.CELL_PREFIX}{st}_{H}_{key}'.encode()) % 100000   # E7: 'pm_' prefix (12.8)
+    split = json.load(open(f'{BP.RES}/split_{E.SUF}.json'))
+    cal = json.load(open(f'{BP.RES}/calib_{E.SUF}.json'))
     s_max = cal['s_max'][str(H)][key]
-    J = torch.load(f'{BP.FEAT}/judges_e1.pt', weights_only=False)
+    J = torch.load(f'{BP.FEAT}/judges_{E.SUF}.pt', weights_only=False)
     tau = J['tau']
-    nets = {name: E.load_ensemble(J['sds'][name]) for name in ('a_full', 'a_obj', 'ai_full', 'ai_obj')}
+    nets = {name: E.load_ensemble(J['sds'][name]) for name in J['sds']}
     T_ = R.load_model()
     m, pre = T_['model'], T_['pre']
     if st == 'val':
@@ -82,7 +82,7 @@ def main():
                 for kind, tid, rstar, fam, s, calls, d in items:
                     mp = d['margins']
                     recs.append(dict(set=st, H=H, defk=key, kind=kind, tid=tid, rstar=rstar, fam=fam, s=s, calls=calls,
-                                     ep_uid=n_ep + j, traj=int(ep['traj']), offset=int(ep['offset']),
+                                     ep_uid=n_ep + j, traj=int(ep['traj']), traj_local=int(ep.get('traj_local', ep['traj'])), offset=int(ep['offset']),
                                      start_id=f"{int(ep['traj'])}_{int(ep['offset'])}",
                                      bin=R.r_bin(mp['r']), bin_obj=R.r_bin(mp['r_obj']), success=bool(mp['r'] < 1),
                                      success_obj=bool(mp['r_obj'] < 1), **mp))
@@ -99,12 +99,12 @@ def main():
             zr, _ = R.encode_frames(m, pre, np.stack(fimg), np.stack(fpro))
             zi, _ = R.imagine(m, pre, np.stack(simg), np.stack(spro), np.stack(acts))
             f = {}
-            for name in ('a_full', 'a_obj'):
+            for name in [n for n in ('a_full', 'a_obj') if n in nets]:
                 Pr, er = E.ens_prob(nets[name], zr, zg_r)
                 Pi, ei = E.ens_prob(nets[name], zi, zg_r)
                 f[f'p{name[1:]}_real'], f[f'p{name[1:]}_imag'] = er, ei
                 f[f'p{name[1:]}_real_m'], f[f'p{name[1:]}_imag_m'] = Pr.T, Pi.T
-            for name in ('ai_full', 'ai_obj'):
+            for name in [n for n in ('ai_full', 'ai_obj') if n in nets]:
                 _, ei = E.ens_prob(nets[name], zi, zg_r)
                 f[f'p{name[1:]}_imag'] = ei
             f['dv_real'] = R.d_vis(zr, zg_r).numpy()

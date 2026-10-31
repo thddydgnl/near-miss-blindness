@@ -11,16 +11,22 @@ import bpaths as BP
 import r12lib as R
 
 HS = (3, 5, 7, 10)
-DEFS = ('r', 'r_obj')
+DEFS = R.DEFS                              # ('r', 'r_obj') for PushT; ('r',) for E7 PointMaze
 FAMS = ('offset', 'iid')
 N_BISECT = 14
-SPLIT_SEED = 20261021
-N_J, N_C, N_T = 2000, 1000, 3000          # judge / calibration / trainsplit-auxiliary trajectories (disjoint)
+if BP.TASK == 'pusht':
+    SPLIT_SEED, N_J, N_C, N_T, MIN_LEN = 20261021, 2000, 1000, 3000, 52   # judge / calibration / auxiliary trajectories (disjoint)
+    SEED_BASE, SUF, CELL_PREFIX = 0, 'e1', ''
+else:   # E7 PointMaze (DESIGN_main 12.6 / 12.8): loader-train 1,800 -> J 800 / C 400 / T 600; seeds = E1 constants + 700,000
+    SPLIT_SEED, N_J, N_C, N_T, MIN_LEN = 20261101, 800, 400, 600, 51
+    SEED_BASE, SUF, CELL_PREFIX = 700000, 'e7', 'pm_'
 
 
-def make_split(dset_train, min_len=52):
-    """Disjoint train-split trajectory sets J (judges), C (severity calibration), T (auxiliary evaluation)."""
-    lens = np.array([dset_train.get_seq_length(i) for i in range(len(dset_train))])
+def make_split(dset_train, min_len=None):
+    """Disjoint train-split trajectory sets J (judges), C (severity calibration), T (auxiliary evaluation).
+    Indices are positions in dset_train (a TrajSubset for PointMaze; base indices are resolved when episodes are drawn)."""
+    min_len = MIN_LEN if min_len is None else min_len
+    lens = np.array([int(dset_train.get_seq_length(i)) for i in range(len(dset_train))])
     ok = np.where(lens >= min_len)[0]
     perm = np.random.RandomState(SPLIT_SEED).permutation(ok)
     return dict(J=sorted(perm[:N_J].tolist()), C=sorted(perm[N_J:N_J + N_C].tolist()),
@@ -32,16 +38,18 @@ def sample_episodes_from(dset, trajs, n, H, seed):
     """n episodes (trajectory uniform from trajs, offset uniform with offset <= len - H*FS - 1), as R.sample_episodes."""
     rng = np.random.RandomState(seed)
     T = H * R.FS
-    trajs = np.asarray([t for t in trajs if dset.get_seq_length(int(t)) - T - 1 >= 0])
+    trajs = np.asarray([t for t in trajs if int(dset.get_seq_length(int(t))) - T - 1 >= 0])
     amean, astd = dset.action_mean.numpy(), dset.action_std.numpy()
     eps = []
     for _ in range(n):
-        bi = int(trajs[rng.randint(len(trajs))])
-        L = dset.get_seq_length(bi)
-        off = int(rng.randint(0, L - T))
-        acts = dset.actions[bi, off:off + T].numpy() * astd + amean
-        eps.append(dict(traj=bi, offset=off, shape=dset.shapes[bi], H=H,
-                        init_state=dset.states[bi, off].numpy().astype(np.float64), expert=acts.astype(np.float64)))
+        li = int(trajs[rng.randint(len(trajs))])             # position in dset (a TrajSubset for PointMaze)
+        base, bi = R.L._base_traj(dset, li)                 # underlying dataset and its trajectory index (PushT: identical)
+        Ln = int(dset.get_seq_length(li))
+        off = int(rng.randint(0, Ln - T))
+        acts = base.actions[bi, off:off + T].numpy() * astd + amean
+        shape = base.shapes[bi] if hasattr(base, 'shapes') else None
+        eps.append(dict(traj=int(bi), traj_local=li, offset=off, shape=shape, H=H,
+                        init_state=base.states[bi, off].numpy().astype(np.float64), expert=acts.astype(np.float64)))
     return eps
 
 
@@ -69,7 +77,7 @@ def counterfactual(env, ep, gst, fam, rstar, key, s_max, rng, n_bisect=N_BISECT)
     pat = pattern(fam, len(ep['expert']), rng)
 
     def f(s):
-        st, _ = R.sim_run(env, ep['shape'], ep['init_state'], ep['expert'] + s * pat / 100.0, render=False)
+        st, _ = R.sim_run(env, ep['shape'], ep['init_state'], ep['expert'] + s * pat / R.ACT_DIV, render=False)
         return R.margin_parts(gst, st)[key]
     rmax = f(s_max)
     calls = 1
@@ -87,7 +95,7 @@ def counterfactual(env, ep, gst, fam, rstar, key, s_max, rng, n_bisect=N_BISECT)
         else:
             hi = mid
     s = best[1]
-    return dict(acts=ep['expert'] + s * pat / 100.0, s=float(s), reachable=True, rmax=float(rmax), calls=calls)
+    return dict(acts=ep['expert'] + s * pat / R.ACT_DIV, s=float(s), reachable=True, rmax=float(rmax), calls=calls)
 
 
 def grid_episode_job(args):
@@ -98,7 +106,7 @@ def grid_episode_job(args):
     env = R.get_env()
     rng = np.random.RandomState(seed)
     gst, gimg = R.sim_run(env, ep['shape'], ep['init_state'], ep['expert'], render=render)
-    out = dict(goal_state=gst, goal_img=gimg, goal_proprio=np.concatenate([gst[:2], gst[5:]]).astype(np.float32),
+    out = dict(goal_state=gst, goal_img=gimg, goal_proprio=R.proprio_of(gst),
                done=[], unreachable=[])
     if render:
         s0, img0, p0 = R.start_obs(env, ep['shape'], ep['init_state'])
@@ -113,7 +121,7 @@ def grid_episode_job(args):
             continue
         st, img = R.sim_run(env, ep['shape'], ep['init_state'], cf['acts'], render=render)
         out['done'].append(dict(tid=tid, rstar=rstar, fam=fam, s=cf['s'], calls=cf['calls'], final_state=st, final_img=img,
-                                final_proprio=np.concatenate([st[:2], st[5:]]).astype(np.float32),
+                                final_proprio=R.proprio_of(st),
                                 margins=R.margin_parts(gst, st), acts=cf['acts']))
     return out
 

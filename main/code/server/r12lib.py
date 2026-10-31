@@ -26,11 +26,19 @@ POS_THR, ANG_THR = 20.0, np.pi / 9   # PushT evaluator (env.eval_state)
 
 # ------------------------------------------------------------------------------------------------ evaluator
 OBJ_POS_THR = 20.0          # B E0: object-pose-only definition uses the evaluator's 20 px on the block position alone
+TASK = BP.TASK               # 'pusht' (M1) or 'pointmaze' (B E7, DESIGN_main section 12)
+PM_THR = 0.5                 # E7: PointMazeWrapper.eval_state success threshold on |xy_final - xy_goal| (tau)
+ACT_DIV = 100.0 if TASK == 'pusht' else 1.0   # world-unit perturbation -> env action unit (PushT px/100; PointMaze force)
+SIG_SMALL = 1.0 if TASK == 'pusht' else 0.02  # small noise of the 'gross' family (world units)
+DEFS = ('r', 'r_obj') if TASK == 'pusht' else ('r',)
 
 
 def margin_parts(g, f):
     """Same formulas as PushTWrapper.eval_state. Returns r = max(pos/20, ang/(pi/9)) (success iff r < 1) and parts.
-    B E0 addition: object-pose-only failure distance r_obj = max(|block xy diff|/20, ang/(pi/9)) (agent ignored)."""
+    B E0 addition: object-pose-only failure distance r_obj = max(|block xy diff|/20, ang/(pi/9)) (agent ignored).
+    B E7: PointMaze dispatches to margin_parts_pm."""
+    if TASK == 'pointmaze':
+        return margin_parts_pm(g, f)
     g = np.asarray(g, np.float64)
     f = np.asarray(f, np.float64)
     pos = float(np.linalg.norm(g[:4] - f[:4]))
@@ -41,6 +49,26 @@ def margin_parts(g, f):
     return dict(r=max(pos / POS_THR, ang / ANG_THR), pos=pos, ang=ang, agent=agent, block=block,
                 r_pos=pos / POS_THR, r_ang=ang / ANG_THR,
                 r_obj=max(block / OBJ_POS_THR, ang / ANG_THR), r_obj_pos=block / OBJ_POS_THR)
+
+
+def margin_parts_pm(g, f):
+    """B E7 PointMaze (DESIGN_main 12.3): e = |xy_final - xy_goal|, tau = 0.5 (PointMazeWrapper.eval_state), r = e / tau.
+    Keys mirror the PushT dict so the E1 scripts run unchanged: single definition (r_obj = r), angle terms 0,
+    'agent' = e, 'block' = 0; 'dv' = speed difference (descriptive only)."""
+    g = np.asarray(g, np.float64)
+    f = np.asarray(f, np.float64)
+    e = float(np.linalg.norm(g[:2] - f[:2]))
+    r = e / PM_THR
+    dv = float(np.linalg.norm(g[2:4] - f[2:4])) if (len(g) >= 4 and len(f) >= 4) else 0.0
+    return dict(r=r, pos=e, ang=0.0, agent=e, block=0.0, r_pos=r, r_ang=0.0, r_obj=r, r_obj_pos=r, e=e, dv=dv)
+
+
+def proprio_of(st):
+    """Proprio vector of a simulator state: PushT agent xy + velocity (4,), PointMaze full state (x, y, vx, vy) (4,)."""
+    st = np.asarray(st, np.float64)
+    if TASK == 'pointmaze':
+        return st[:4].astype(np.float32)
+    return np.concatenate([st[:2], st[5:]]).astype(np.float32)
 
 
 def r_bin(r):
@@ -61,10 +89,17 @@ def load_traj_dsets():
     """Trajectory-level PushT datasets (train, valid) without the model (CPU workers)."""
     if 'train' not in _DS:
         L.setup_paths()
-        from datasets.pusht_dset import PushTDataset
-        root = os.environ['DATASET_DIR'] + '/pusht_noise'
-        _DS['train'] = PushTDataset(data_path=root + '/train', with_velocity=True)
-        _DS['valid'] = PushTDataset(data_path=root + '/val', with_velocity=True)
+        if TASK == 'pusht':
+            from datasets.pusht_dset import PushTDataset
+            root = os.environ['DATASET_DIR'] + '/pusht_noise'
+            _DS['train'] = PushTDataset(data_path=root + '/train', with_velocity=True)
+            _DS['valid'] = PushTDataset(data_path=root + '/val', with_velocity=True)
+        else:   # E7: the checkpoint's own hydra loader (random split, seed 42 -> TrajSubsets train 1,800 / valid 200)
+            import hydra
+            from omegaconf import OmegaConf
+            cfg = OmegaConf.load(f"{BP.CKPT_BASE}/outputs/{L.TASKS[TASK]['model']}/hydra.yaml")
+            _, tdset = hydra.utils.call(cfg.env.dataset, num_hist=cfg.num_hist, num_pred=cfg.num_pred, frameskip=cfg.frameskip)
+            _DS['train'], _DS['valid'] = tdset['train'], tdset['valid']
     return _DS
 
 
@@ -103,33 +138,33 @@ def make_actions(expert, fam, p, rng):
     if fam == 'expert':
         return expert.copy(), {}
     if fam == 'iid':
-        return expert + rng.normal(0, p['sigma'], size=(T, 2)) / 100.0, {}
+        return expert + rng.normal(0, p['sigma'], size=(T, 2)) / ACT_DIV, {}
     if fam == 'offset':
         b = rng.uniform(0, p['beta_max'])
         u = rng.normal(size=2)
         u /= np.linalg.norm(u) + 1e-12
-        return expert + (b * u)[None] / 100.0, {'beta': float(b)}
+        return expert + (b * u)[None] / ACT_DIV, {'beta': float(b)}
     if fam == 'scale':
         k = rng.uniform(-p['k_max'], p['k_max'])
         return expert * (1.0 + k), {'k': float(k)}
     if fam == 'gross':
         bad = rng.uniform() < p['q']
         s = p['sig_big'] if bad else p['sig_small']
-        return expert + rng.normal(0, s, size=(T, 2)) / 100.0, {'corrupted': bool(bad)}
+        return expert + rng.normal(0, s, size=(T, 2)) / ACT_DIV, {'corrupted': bool(bad)}
     if fam == 'clean':
-        return expert + rng.normal(0, p['sig_small'], size=(T, 2)) / 100.0, {}
+        return expert + rng.normal(0, p['sig_small'], size=(T, 2)) / ACT_DIV, {}
     if fam == 'mix':     # with prob q a gross corruption (far-miss), else offset(beta_max) + N(0, sig_small)
         if rng.uniform() < p['q']:
-            return expert + rng.normal(0, p['sig_big'], size=(T, 2)) / 100.0, {'corrupted': True}
+            return expert + rng.normal(0, p['sig_big'], size=(T, 2)) / ACT_DIV, {'corrupted': True}
         a = expert.copy()
         b = 0.0
         if p.get('beta_max', 0) > 0:
             b = rng.uniform(0, p['beta_max'])
             u = rng.normal(size=2)
             u /= np.linalg.norm(u) + 1e-12
-            a = a + (b * u)[None] / 100.0
+            a = a + (b * u)[None] / ACT_DIV
         if p.get('sig_small', 0) > 0:
-            a = a + rng.normal(0, p['sig_small'], size=(T, 2)) / 100.0
+            a = a + rng.normal(0, p['sig_small'], size=(T, 2)) / ACT_DIV
         return a, {'corrupted': False, 'beta': float(b)}
     raise ValueError(fam)
 
@@ -141,7 +176,11 @@ _ENV = {}
 def get_env():
     if 'e' not in _ENV:
         L.setup_paths()
-        _ENV['e'] = L.make_env('pusht')
+        env = L.make_env(TASK)
+        if TASK == 'pointmaze':
+            env.prepare_for_render()        # OSMesa context + top-down camera (azimuth 90, elevation -90), once per process
+            env.return_value = 'state'      # step without rendering; frames are rendered on demand (_render_frame)
+        _ENV['e'] = env
     return _ENV['e']
 
 
@@ -154,7 +193,10 @@ def sim_reset(env, shape, init_state):
 
 
 def sim_run(env, shape, init_state, acts, render=True):
-    """Fast replay (R2-1 replay_final_states without per-step reward/render). Returns final state (7,), image or None."""
+    """Fast replay (R2-1 replay_final_states without per-step reward/render). Returns final state (7,), image or None.
+    B E7: PointMaze dispatches to sim_run_pm (shape is unused)."""
+    if TASK == 'pointmaze':
+        return sim_run_pm(env, init_state, acts, render)
     from pymunk.vec2d import Vec2d
     sim_reset(env, shape, init_state)
     dt = 1.0 / env.sim_hz
@@ -172,7 +214,30 @@ def sim_run(env, shape, init_state, acts, render=True):
     return st, img
 
 
+def _pm_reset(env, init_state):
+    """PointMaze: reset to a controlled (x, y, vx, vy) state without rendering (as A's wmlib replay_final_states)."""
+    env.return_value = 'state'
+    env.set_init_state(np.asarray(init_state, dtype=np.float64))
+    env.reset()
+
+
+def sim_run_pm(env, init_state, acts, render=True):
+    """B E7 PointMaze fast replay: MazeEnv.step (action clipped to [-1, 1], frame_skip 5) without per-step rendering;
+    exact w.r.t. env.rollout and w.r.t. the recorded dataset states (checked 2026-10-31). The final frame is rendered once
+    (top-down 224 px, OSMesa) when render=True. Returns final state (4,), image or None."""
+    _pm_reset(env, init_state)
+    for a in acts:
+        env.step(np.asarray(a, dtype=np.float64))
+    st = env._get_obs()['proprio'].astype(np.float64)
+    img = np.asarray(env._render_frame()) if render else None
+    return st, img
+
+
 def start_obs(env, shape, init_state):
+    if TASK == 'pointmaze':
+        _pm_reset(env, init_state)
+        st = env._get_obs()['proprio'].astype(np.float64)
+        return st, np.asarray(env._render_frame()), proprio_of(st)
     sim_reset(env, shape, init_state)
     st = env._get_obs().astype(np.float64)
     img = env._render_frame('rgb_array')
@@ -192,13 +257,13 @@ def episode_job(args):
         out['start_img'], out['start_proprio'] = img0, p0
     gst, gimg = sim_run(env, ep['shape'], ep['init_state'], ep['expert'], render=render)
     out['goal_state'], out['goal_img'] = gst, gimg
-    out['goal_proprio'] = np.concatenate([gst[:2], gst[5:]]).astype(np.float32)
+    out['goal_proprio'] = proprio_of(gst)
     fin, imgs, pros, mps = [], [], [], []
     for name, acts in seqs:
         st, img = sim_run(env, ep['shape'], ep['init_state'], acts, render=render)
         fin.append(st)
         imgs.append(img)
-        pros.append(np.concatenate([st[:2], st[5:]]).astype(np.float32))
+        pros.append(proprio_of(st))
         mps.append(margin_parts(gst, st))
     out['final_states'] = np.stack(fin)
     out['final_imgs'] = np.stack(imgs) if render else None
@@ -218,7 +283,7 @@ def load_model():
     torch.backends.cuda.matmul.allow_tf32 = True
     torch.backends.cudnn.allow_tf32 = True
     L.patch_attention(True)
-    T = L.load_task('pusht', load_dset=True)
+    T = L.load_task(TASK, load_dset=True)
     return T
 
 

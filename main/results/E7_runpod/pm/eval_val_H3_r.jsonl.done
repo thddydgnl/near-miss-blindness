@@ -1,0 +1,1 @@
+{"set": "val", "H": 3, "defk": "r", "n_targets": 3600, "n_dropped": 38, "n_episodes": 1402, "n_unreachable_attempts": 4765, "reach_rate_per_attempt": 0.4277651014771226, "s_max": {"offset": 3.0, "iid": 3.0}, "tau": {"full": 0.10704169917851686}, "mean_sim_calls": 15.0, "time_s": 174.55359482765198}

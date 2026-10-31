@@ -1,0 +1,3 @@
+waiting for ssh on pod r9wyi7bs4icy4h (timeout 12m0s)
+still waiting for ssh on pod r9wyi7bs4icy4h (18s elapsed): ssh port not allocated yet
+ssh on pod r9wyi7bs4icy4h ready after 31s: ssh reachable at 194.68.245.113:22148

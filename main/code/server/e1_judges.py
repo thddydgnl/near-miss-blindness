@@ -13,6 +13,7 @@ from scipy.stats import mannwhitneyu
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import bpaths as BP
 import r12lib as R
+import e1lib as E
 
 SEEDS = (0, 1, 2, 3, 4)
 TAU = dict(full=0.2125, obj=0.345)
@@ -37,7 +38,7 @@ def summarize(pv, y, r, H):
 
 def main():
     t0 = time.time()
-    D = torch.load(f'{BP.FEAT}/judgeset_e1.pt', weights_only=False)
+    D = torch.load(f'{BP.FEAT}/judgeset_{E.SUF}.pt', weights_only=False)
     ep = D['ep'].numpy()
     isv = D['ep_is_val'].numpy()[ep]
     tr, va = np.where(~isv)[0], np.where(isv)[0]
@@ -45,8 +46,10 @@ def main():
     zg = D['z_goal'][D['ep']]
     res = dict(n_train=int(len(tr)), n_val=int(len(va)), seeds=list(SEEDS))
     sds = {}
-    for name, zkey, rkey in (('a_full', 'z_real', 'r'), ('a_obj', 'z_real', 'r_obj'),
-                             ('ai_full', 'z_imag', 'r'), ('ai_obj', 'z_imag', 'r_obj')):
+    JUDGES = [('a_full', 'z_real', 'r'), ('ai_full', 'z_imag', 'r')]
+    if 'r_obj' in E.DEFS:
+        JUDGES += [('a_obj', 'z_real', 'r_obj'), ('ai_obj', 'z_imag', 'r_obj')]
+    for name, zkey, rkey in JUDGES:
         r = D[rkey].numpy()
         y = (r < 1).astype(np.float32)
         lr = np.log(np.maximum(r, 1e-3))
@@ -68,21 +71,26 @@ def main():
         print(f"{name} ENSEMBLE held-out acc {ens['acc']:.4f} bacc {ens['bacc']:.4f} pass>=0.95 {ens['passes_0p95']}", flush=True)
     # (b): frozen thresholds; re-derived thresholds for reference only
     dv = torch.cat([R.d_vis(D['z_real'][i:i + 2000], zg[i:i + 2000]) for i in range(0, len(zg), 2000)]).numpy()
-    for key, rkey in (('full', 'r'), ('obj', 'r_obj')):
+    tau_used = {}
+    for key, rkey in [kv for kv in (('full', 'r'), ('obj', 'r_obj')) if kv[1] in E.DEFS]:
         r = D[rkey].numpy()
         y = r < 1
         tau_re, ba_re = R.best_threshold(dv[tr], y[tr])
-        pred = dv[va] < TAU[key]
+        # PushT: frozen DESIGN_main thresholds. E7 PointMaze (12.7): no frozen value exists, so the threshold derived on the
+        # training part is fixed here, before any evaluation set is imagined (auxiliary judge, not used for verdicts).
+        tau_used[key] = TAU[key] if R.TASK == 'pusht' else float(tau_re)
+        pred = dv[va] < tau_used[key]
         rb = np.array([R.r_bin(x) for x in r[va]])
-        res[f'b_{key}'] = dict(tau_frozen=TAU[key], tau_rederived_reference=tau_re, train_bacc_rederived=ba_re,
+        res[f'b_{key}'] = dict(tau_frozen=(TAU[key] if R.TASK == 'pusht' else None), tau_used=float(tau_used[key]),
+                               tau_rederived_reference=tau_re, train_bacc_rederived=ba_re,
                                heldout=dict(acc=float((pred == y[va]).mean()), bacc=R.balanced_acc(pred, y[va]),
                                             per_bin={b: (float(pred[rb == b].mean()) if (rb == b).any() else None) for b in BINS},
                                             auc_sn=auc(-dv[va][rb == 'success'], -dv[va][rb == 'near']),
                                             auc_sf=auc(-dv[va][rb == 'success'], -dv[va][rb == 'far'])))
-        print(f"b_{key}: frozen tau {TAU[key]} held-out acc {res[f'b_{key}']['heldout']['acc']:.4f}; re-derived {tau_re:.4f}", flush=True)
-    torch.save(dict(sds=sds, tau=TAU, seeds=SEEDS), f'{BP.FEAT}/judges_e1.pt')
+        print(f"b_{key}: tau used {tau_used[key]:.4f} held-out acc {res[f'b_{key}']['heldout']['acc']:.4f}; re-derived {tau_re:.4f}", flush=True)
+    torch.save(dict(sds=sds, tau=tau_used, seeds=SEEDS), f'{BP.FEAT}/judges_{E.SUF}.pt')
     res['time_s'] = time.time() - t0
-    R.jdump(res, f'{BP.RES}/judges_e1.json')
+    R.jdump(res, f'{BP.RES}/judges_{E.SUF}.json')
     print('JUDGES_E1_DONE', f'{time.time() - t0:.0f}s')
 
 

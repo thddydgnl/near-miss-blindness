@@ -12,9 +12,19 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import bpaths as BP
 import r12lib as R
 import e1lib as E
-from calib12 import GRIDS, interp_param
+from calib12 import GRIDS as GRIDS_PUSHT, interp_param
 
-S_GRID = [0, 1, 2, 3, 4, 6, 8, 10, 13, 16, 20, 25, 30, 40, 50, 60, 80, 100, 130, 160, 200]
+S_GRID_PUSHT = [0, 1, 2, 3, 4, 6, 8, 10, 13, 16, 20, 25, 30, 40, 50, 60, 80, 100, 130, 160, 200]   # world px (M1)
+S_GRID_PM = [0, 0.02, 0.05, 0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.7, 1.0, 1.5, 2.0, 3.0]              # force units (E7, 12.5)
+GRIDS_PM = {   # E7 judge-set magnitude calibration grids in force units (DESIGN_main 12.7)
+    'iid': ('sigma', [0.02, 0.05, 0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.7, 1.0, 1.5]),
+    'offset': ('beta_max', [0.01, 0.02, 0.05, 0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.7, 1.0]),
+    'scale': ('k_max', [0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.4, 0.5, 0.7, 1.0]),
+    'grossbig': ('sig_big', [0.3, 0.5, 0.7, 1.0, 1.5, 2.0]),   # q = 1 (always corrupted)
+    'clean': ('sig_small', [0.01, 0.02, 0.05]),
+}
+S_GRID = S_GRID_PUSHT if R.TASK == 'pusht' else S_GRID_PM
+GRIDS = GRIDS_PUSHT if R.TASK == 'pusht' else GRIDS_PM
 N_SWEEP, N_CHECK, N_MAG = 300, 400, 400
 
 
@@ -28,7 +38,7 @@ def sweep_job(args):
         pat = E.pattern(fam, len(ep['expert']), rng)
         rr, ro = [], []
         for s in S_GRID:
-            st, _ = R.sim_run(env, ep['shape'], ep['init_state'], ep['expert'] + s * pat / 100.0, render=False)
+            st, _ = R.sim_run(env, ep['shape'], ep['init_state'], ep['expert'] + s * pat / R.ACT_DIV, render=False)
             mp = R.margin_parts(gst, st)
             rr.append(mp['r']); ro.append(mp['r_obj'])
         out[fam] = dict(r=rr, r_obj=ro)
@@ -72,14 +82,14 @@ def main():
     D = R.load_traj_dsets()
     dt = D['train']
     split = E.make_split(dt)
-    E.jdump(split, f'{BP.RES}/split_e1.json')
+    E.jdump(split, f'{BP.RES}/split_{E.SUF}.json')
     print('split', {k: (len(v) if isinstance(v, list) else v) for k, v in split.items()}, flush=True)
     pool = R.pool()
     out = dict(s_grid=S_GRID, n_sweep=N_SWEEP, n_check=N_CHECK, n_mag=N_MAG, sweep={}, s_max={}, check={}, mags={})
     for H in E.HS:
         # (a) severity sweep
-        eps = E.sample_episodes_from(dt, split['C'], N_SWEEP, H, seed=5000 + H)
-        res = pool.map(sweep_job, [(ep, 7000 + 100 * H + i) for i, ep in enumerate(eps)], chunksize=4)
+        eps = E.sample_episodes_from(dt, split['C'], N_SWEEP, H, seed=E.SEED_BASE + 5000 + H)
+        res = pool.map(sweep_job, [(ep, E.SEED_BASE + 7000 + 100 * H + i) for i, ep in enumerate(eps)], chunksize=4)
         sm = {}
         out['sweep'][H] = {}
         for key in E.DEFS:
@@ -97,12 +107,12 @@ def main():
         out['s_max'][H] = sm
         print(f'H{H} S_MAX', sm, flush=True)
         # (b) bisection check
-        eps = E.sample_episodes_from(dt, split['C'], N_CHECK, H, seed=5100 + H)
-        rng = np.random.RandomState(5200 + H)
+        eps = E.sample_episodes_from(dt, split['C'], N_CHECK, H, seed=E.SEED_BASE + 5100 + H)
+        rng = np.random.RandomState(E.SEED_BASE + 5200 + H)
         jobs = []
         for i, ep in enumerate(eps):
             tg = [(key, fam, float(rng.uniform(0.8, 3.0))) for key in E.DEFS for fam in E.FAMS]
-            jobs.append((ep, tg, sm, 7500 + 100 * H + i))
+            jobs.append((ep, tg, sm, E.SEED_BASE + 7500 + 100 * H + i))
         res = [x for o in pool.map(check_job, jobs, chunksize=4) for x in o]
         out['check'][H] = {}
         for key in E.DEFS:
@@ -118,27 +128,32 @@ def main():
                 print(f"H{H} {key}/{fam}: reachable {out['check'][H][f'{key}/{fam}']['reachable']:.2f} "
                       f"|r-r*| med {out['check'][H][f'{key}/{fam}']['abs_err_median']:.4f}", flush=True)
         # (c) judge-set magnitudes (original definition, as R2-12 calib12)
-        eps = E.sample_episodes_from(dt, split['C'], N_MAG, H, seed=5300 + H)
+        eps = E.sample_episodes_from(dt, split['C'], N_MAG, H, seed=E.SEED_BASE + 5300 + H)
         fp = []
         for fam, (key, grid) in GRIDS.items():
             for x in grid:
                 if fam == 'grossbig':
-                    fp.append((f'{fam}_{x}', 'gross', {'q': 1.0, 'sig_big': x, 'sig_small': 1.0}))
+                    fp.append((f'{fam}_{x}', 'gross', {'q': 1.0, 'sig_big': x, 'sig_small': R.SIG_SMALL}))
                 else:
                     fp.append((f'{fam}_{x}', fam, {key: x}))
-        r = np.array(pool.map(mag_job, [(ep, fp, 7900 + 100 * H + i) for i, ep in enumerate(eps)], chunksize=4))
+        r = np.array(pool.map(mag_job, [(ep, fp, E.SEED_BASE + 7900 + 100 * H + i) for i, ep in enumerate(eps)], chunksize=4))
         succ = {name: float((r[:, j] < 1).mean()) for j, (name, _, _) in enumerate(fp)}
         far = {name: float((r[:, j] >= 3).mean()) for j, (name, _, _) in enumerate(fp)}
         def x50(fam):
             key, grid = GRIDS[fam]
-            return interp_param(grid, [succ[f'{fam}_{x}'] for x in grid], 0.5)
+            s_ = [succ[f'{fam}_{x}'] for x in grid]
+            v = interp_param(grid, s_, 0.5)
+            if v is None:   # grid does not bracket 50% success: nearest grid point (recorded; reported as a deviation)
+                v = float(grid[int(np.argmin([abs(x - 0.5) for x in s_]))])
+                out.setdefault('interp_fallback', []).append(dict(H=H, fam=fam, grid_success=s_, used=v))
+            return v
         sb = next((x for x in GRIDS['grossbig'][1] if far[f'grossbig_{x}'] >= 0.9), GRIDS['grossbig'][1][-1])
         out['mags'][H] = dict(sigma=x50('iid'), beta=x50('offset'), k=x50('scale'), sb=sb,
                               grid_success=succ, grid_far=far)
         print(f"H{H} mags sigma {out['mags'][H]['sigma']} beta {out['mags'][H]['beta']} k {out['mags'][H]['k']} sb {sb}", flush=True)
     pool.close()
     out['time_s'] = time.time() - t0
-    E.jdump(out, f'{BP.RES}/calib_e1.json')
+    E.jdump(out, f'{BP.RES}/calib_{E.SUF}.json')
     print('CALIB_E1_DONE', f'{time.time() - t0:.0f}s')
 
 
