@@ -4,7 +4,7 @@
 |---|---|---|
 | [`jkaia2026/`](jkaia2026/) | 2026 한국인공지능학회 추계학술대회(JKAIA 2026), **General (Poster) 트랙** | 초안 v1. 영문 제출본 `main.tex`·`main.pdf`(2쪽), 한국어 대조본 `main_ko.tex`·`main_ko.pdf`, EasyChair 입력값과 국문 초록 [`ABSTRACT_KO.md`](jkaia2026/ABSTRACT_KO.md) |
 | [`explainer/`](explainer/) | 연구설명 문서(DriveWAM 연구설명과 같은 형식, 한국어 25쪽) | 2026-10-26 완성. docx·pdf는 `research/papers/Near-Miss Blindness/`에도 있다 |
-| `tmlr/` (예정) | TMLR | 미착수. 11월 중순 제출 목표 |
+| [`tmlr/`](tmlr/) | TMLR | 초안 v3(2026-11-01, E7 반영). 익명 제출용 `tmlr/main.pdf`, 구성안 [`tmlr/OUTLINE.md`](tmlr/OUTLINE.md). 투고 전 할 일은 아래 6절. 11월 중순 제출 목표 |
 | `iclr2027_ws/` (예정) | ICLR 2027 워크숍 | 미착수. 워크숍 목록은 2026-11-29 공개 예정 |
 
 - 공통 파일
@@ -155,3 +155,72 @@ cd "/Users/song-yonghwi/Documents/physical ai - Neural Networks/B_near_miss_blin
 | 표 1 | FINAL_B §2 | e1_m1·e1_m3·`E1_m2/analysis/e1_analysis.json`·`h3_m2.json`·e2_m1·e2_m3·e3_m1 |
 | M3 용량-반응, 용량 sweep | E4E5 §2.2·§2.4 | `E4_server/e4_analysis.json` |
 | 처방 | E4E5 §3 | `E5_server/e5_analysis.json` |
+
+## 6. TMLR 원고 (2026-10-31 초안 v1 → 11-01 v3, E7 반영)
+
+- 구성과 그 이유: [`tmlr/OUTLINE.md`](tmlr/OUTLINE.md). 실험 단계(E1~E5)가 아니라 주장 순서로 썼고, M2는 같은 측정 절(4.3)에 대비로 넣었다.
+- 주장 범위: DESIGN_main §8·§10·§11, FINAL_B §3, JKAIA 포스터 최종본과 같다. FINAL_B §3.3의 "쓰지 않을 주장"은 쓰지 않았다.
+
+### 6.1 TMLR 양식 (2026-10-31 공식 페이지에서 확인)
+
+| 항목 | 내용 | 출처 |
+|---|---|---|
+| style 파일 | [JmlrOrg/tmlr-style-file](https://github.com/JmlrOrg/tmlr-style-file) 최신 커밋 `7bf90ef`(2023-06-30). DriveWAM 폴더 사본(10-15)과 4개 파일 모두 바이트 동일 | GitHub |
+| 제출 모드 | `\usepackage{tmlr}`(익명, "Anonymous authors" 표시). arXiv용은 `[preprint]`, 채택 뒤 `[accepted]` | 템플릿 `main.tex` |
+| 길이 | 제한 없음. 본문(참고문헌 전) 12쪽 이하면 심사 2주, 넘으면 4주. 부록은 PDF에 넣을 수 있다 | [author guide](https://jmlr.org/tmlr/author-guide.html), [reviewer guide](https://jmlr.org/tmlr/reviewer-guide.html), [FAQ](https://jmlr.org/tmlr/faq.html) |
+| 이중맹검 | 원고와 보충 자료 모두 익명. 저자 이름이 있는 다른 판(포스터, 실명 저장소)에 링크하지 않는다 | author guide |
+| 보충 자료 | 100MB 이하, PDF나 ZIP | author guide |
+| 심사 기준 | 주장이 정확하고 설득력 있는 증거로 뒷받침되는가, 일부 독자에게 흥미로운가. 기여가 작아도 기준을 채우면 채택 | [editorial policies](https://jmlr.org/tmlr/editorial-policies.html) |
+| 중복 게재 | archival venue와 글·그림·결과 공유 금지. 비archival venue(서면으로 비archival 선언)와 arXiv는 허용 | editorial policies |
+| **LLM 사용** | 사용 가능하지만 결과에 대한 책임은 저자에게 있다. **첫 쪽 각주로 사용 사실을 밝혀야 한다.** "아이디어, 주장, 결과는 사람에게서 나온 것"을 기대한다 | FAQ |
+| Broader Impact | 상당한 위해 위험이 있으면 필수, 아니면 선택. 짧게 넣었다 | author guide |
+
+### 6.2 파일
+
+| 경로 | 내용 |
+|---|---|
+| `tmlr/main.tex`, `tmlr/main.pdf` | 원고(본문 12쪽 이하 + 부록) |
+| `tmlr/refs.bib` | 참고문헌. 항목마다 arXiv·학회 페이지에서 서지 정보를 확인했다 |
+| `tmlr/build/make_figs.py` | 그림 6개 + 부록 그림 1개. 결과 JSON만 읽는다(새 계산 없음). 부록 그림은 `results/E1_m2/analysis/e1_frames_real_vs_imag_k1.png`에서 잘라 쓴다 |
+| `tmlr/build/make_tables.py` | 숫자가 많은 표 7개(본문 표 3·4, 부록 표; PointMaze 칸별 표 포함)를 결과 JSON에서 바로 만든다(`tmlr/tables/`). 손으로 옮긴 값이 없다 |
+| `tmlr/build/verify_numbers.py` | 본문 수치를 결과 JSON(일부는 단계 보고·LOG)과 대조한다. 분석 계획 해시 10개(§12 포함)와 현재 DESIGN_main.md의 해시도 확인한다 |
+| `tmlr/tmlr.sty` 외 | 공식 style 파일 4개 |
+
+- 빌드(맥북에서 수십 초)
+
+```bash
+cd "/Users/song-yonghwi/Documents/physical ai - Neural Networks/B_near_miss_blindness/paper/tmlr" && python3 build/make_figs.py && python3 build/make_tables.py && python3 build/verify_numbers.py && tectonic -X compile main.tex
+```
+
+### 6.3 확인한 것과 고친 것
+
+- `verify_numbers.py`: 원고 수치 검사 175개가 모두 통과한다. JSON에 없는 값(비용, 판정기 (b) 정확도, 서랍 과제 값 등)은 단계 보고 원문과 대조한다.
+- 사전등록 해시: LOG.md의 sha256 9개가 원고 부록 표와 같고, 현재 `main/DESIGN_main.md`의 해시가 마지막 기록(§11, `ea176a5ce46d…`)과 같다. 고정 뒤에 문서가 바뀌지 않았다.
+- **보고서 오기 1건(D9)**: E4E5 §3.1과 FINAL_B §2의 H5a M3 p = 0.03 "(ii) − (iv) +0.017 [−0.007, 0.041]"의 구간 상한은 JSON 값이 0.040494…라 0.040이 맞다(이중 반올림). 원고는 0.040으로 썼다. 판정에는 영향이 없다.
+- 부록 그림(M2 실제 대 상상 프레임): 연구설명 문서가 쓴 t8 행은 다시 그린 상상 프레임의 logit(−0.6)과 E1 기록의 logit 부호가 엇갈린다. 원고는 두 값의 부호가 같은 t4 두 행을 썼고, 고른 예시임을 캡션에 밝혔다.
+- 익명성: PDF 본문과 메타데이터에서 저자·소속·이메일·서버·저장소·KAIA 문자열이 나오지 않음을 확인했다.
+- **독립 검토(별도 에이전트, 2026-10-31)**: 보고서 [`tmlr/REVIEW_2026-10-31.md`](tmlr/REVIEW_2026-10-31.md). 필수 11건과 권장 24건을 근거 파일과 대조해 모두 반영했다. 주요 수정:
+  - M3 정책 순위를 "보존"이라 쓴 것은 틀렸다. π6(실제 0.526)가 상상에서 π3(0.716)와 π2(0.901) 위로 올라간다. 보존된 것은 성공률이 비슷한 세 정책의 순서뿐이다(초록, 서론, 7절, 9절 수정).
+  - 본 실험 M3는 파일럿 모델과 정책 bank를 비트 단위로 그대로 써서, H2a(M3) 값이 v1 고정 전에 알려져 있었다. 3.7절과 부록 A에 밝혔다. 다른 개정(v2, v2.1, v2.2, v3.1)이 무엇을 안 상태에서 정해졌는지도 부록 표에 적었다. H1 집계 규칙(v2.1)이 보수적 선택이었다는 점도 4.2절에 적었다.
+  - H5a를 "(ii)가 아무것도 이기지 못했다"고 쓴 것은 틀렸다(M1에서 (iv)는 이겼다). "둘 다 이긴 설정이 없다"로 고쳤다.
+  - M2 분할이 서로 겹치지 않는다고 쓴 것은 틀렸다(보정 데모 ⊂ 판정기 학습 데모). H6을 뺀 이유는 M2 no-go가 아니라 M1 편향이 작아서다.
+  - 요약 문장(서론 bullet, 9절, 결론)을 증거 범위에 맞췄다. 용량 결과는 사전등록 밖, 노출 효과는 탐색으로 표시했다. H3을 일반 명제로 쓰지 않았다. H2c(M1)를 표준 지표 맹점의 근거로 쓰지 않았다. M2 no-go를 약화하는 서술(probe 문장)을 바로잡았다.
+  - 상상 특징 probe는 "상한(ceiling)"이 아니라 남은 정보의 하한 추정이므로 표현을 바꿨다.
+  - 반영하지 않은 선택 항목: O12(용량 sweep 표시는 DESIGN_main §10-4대로 "not pre-registered" 유지), O21, O22.
+- 분량을 12쪽 안에 맞추려고 M3 실패율별 그림(옛 그림 5)의 곡선을 그림 2(c)에 합치고 막대는 뺐다(값은 본문에 있다). 용량 sweep 표는 부록으로 옮겼다.
+- **v2 (2026-10-31, 2차 수정)**: 사용자 결정으로 사전등록 서술을 낮췄다. 외부 등록소에 올린 것이 없으므로 "pre-registered" 대신 "analysis plan fixed before the main runs"로 쓰고, 초록·서론에서는 뺐으며, 3.7절을 "Analysis plan and statistics" 4문장으로 줄였다. 결과를 가설 판정으로 서술하던 문장을 효과 크기 중심으로 바꾸고 H 라벨은 표 2·부록 B 참조로만 남겼다. "exploratory"·"primary hypothesis"·"two-model criterion" 표현은 본문에서 뺐고, 사후 선택 방어(버전·해시·무엇을 안 상태였나, 보수적 집계 규칙)는 부록 A에 모았다. 함께 반영: 서론에 기여 단락 추가, 서론 bullet 숫자 절반으로, 판정기 이름 "oracle judge" → "reference judge", 6절 제목 "Rare Training Failures Make Imagination Optimistic", 용량 결과를 6절 끝으로 이동(a descriptive analysis, not a planned test), 문장 손질("Resolution is lost almost only…" 등). 본문은 11.5쪽.
+- **v3 (2026-11-01, E7 반영)**: 두 번째 공개 DINO-WM 과제 PointMaze(E7, [`../main/reports/E7_runpod.md`](../main/reports/E7_runpod.md), 설계 §12)를 반영했다. E7은 §12.0대로 모델 수에 넣지 않는 복제 단계이므로 본문에서는 "M1 on two tasks"로 부르고, 표 2에는 집계 밖 블록("Replication … not counted above": H1b 불성립 0.197 / 0.076, H4b 성립 0.203)으로 넣었다. 들어간 곳: 초록, 서론 bullet 1, 3.5~3.7절, 표 1, 4.1절 "A second public task" 단락, 그림 3(PointMaze 패널 (b) 추가, 3패널), 5.1절(share 0.766), 5.2절(probe 0.778 대 0.980), 9절 한계, 결론, 부록 A(§12 행, 편차 15), 부록 B(두 행), 새 부록 D "The Second Public Task: PointMaze"(설정·결과·편차, 칸별 표), 부록 H 비용($0.83). 서술 규칙: near-miss 특이성은 PushT r·H ≤ 5에 한정하고(v2.1 §6), 두 과제를 함께 설명하는 문장은 "손실은 경계에서 시작해 horizon과 함께 바깥으로 번진다"(Δr10: PushT 0.15→0.47, PointMaze 0.50→2.19). 분량을 12쪽 안에 맞추려고 중복 문장을 줄였다(4.2절 외삽 문장은 그림 2 캡션·9절에 있음, 7절 성공 판정 0.993→0.990, 6절 innovation energy 수치는 부록 F에 있음, 9절 (4)의 π5 수치, 결론의 M2 괄호) 그리고 그림 2·3·4·6 높이를 조금 줄였다. 수치 검사 219개 통과, 해시 10개 일치, 참고문헌이 12쪽 중간에서 시작(본문 12쪽 이하), PDF에 식별 문자열 없음. 원고는 2026-11-01에 따로 커밋했다(E7 자체는 E7 세션이 `c504758`로 커밋).
+
+### 6.4 투고 전에 사용자가 할 일
+
+- [ ] **LLM 사용 각주**: 원고 첫 쪽 각주에 초안을 넣었다. 실제 사용 방식에 맞게 문구를 확정한다. TMLR FAQ는 아이디어·주장·결과가 사람에게서 나온 것이기를 기대하므로, 그 기준에 비추어 서술을 판단한다.
+- [ ] 이건명 교수님께 공저자 등재와 원고를 확인받는다(포스터와 같은 항목).
+- [ ] **익명 보충 자료 ZIP**(100MB 이하): 코드(`main/code`), 설계 문서(`EXPERIMENT_DESIGN.md`, `main/DESIGN_main.md`), `main/LOG.md`, 단계 보고, `main/results`의 분석 JSON, `paper/tmlr/build`. 넣기 전에 `/Users/song-yonghwi`, 서버 별칭(`kiis-mvf-gpu`), Tailscale, 실명 저장소 URL, 학교 이름을 지운다(GitHub 저장소 메모의 공개 전 점검 목록과 같다). 원고 부록 H는 이 ZIP을 가리킨다. 실명 GitHub 링크는 쓰지 않는다.
+  - 지운 사본은 해시가 LOG와 달라진다. 원고 부록 A가 이 사실을 밝히고(원본은 비익명화 때 공개), `verify_numbers.py`의 해시 검사는 프로젝트 폴더의 원본에만 돈다.
+  - `paper/tmlr/main.tex` 원본에는 저자 이름·이메일·소속이 들어 있다(PDF에서는 숨겨짐). 보충 자료에 넣으려면 `\author{}`를 비우고 머리 주석을 지운다.
+  - 설계 문서와 보고서는 한국어다. 원고 3절과 부록 A·B가 영어로 요약한다.
+- [ ] E0b 원자료(15,000개 파일)를 보충 자료에 넣을지, 익명 미러(anonymous.4open.science 등)로 줄지 정한다. 부록 H는 "별도 archive"로 적었다.
+- [ ] OpenReview 프로필: 소속, 이해충돌, 지원기관을 채운다(심사자에게는 결정 전까지 보이지 않는다).
+- [ ] KAIA 결과 통보(11-09) 뒤에 제출한다(2절의 조건). 포스터는 논문집에 실리지 않는 발표라 허용 범위다.
+- [ ] arXiv에 올릴 때는 `\usepackage[preprint]{tmlr}`로 바꿔 저자 이름을 보인다.
+- [x] `paper/tmlr/`와 `paper/README.md`를 커밋했다(2026-11-01, E7 커밋 `c504758` 뒤). push는 사용자 지시가 있을 때 한다.

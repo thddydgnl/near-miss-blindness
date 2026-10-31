@@ -1,0 +1,702 @@
+% refs.bib -- verified bibliography for the TMLR paper
+% "Near-Miss Blindness: Latent World-Model Imagination Loses Resolution at the Outcome Boundary"
+% Built 2026-10-31. Every entry was checked against its arXiv abstract record or the official proceedings /
+% journal page; sources are listed per key in REPORT.md. Keys: firstauthorlastname + year + the paper's own
+% short name (system/benchmark/method) or, if it has none, the first non-stopword of the title.
+% CoRL entries use the conference year (PMLR's own BibTeX gives the volume year: v164 = 2022, v270 = 2025).
+
+% ==================================================================================================
+% Models, benchmarks, tools and statistics the paper uses
+% ==================================================================================================
+
+@inproceedings{zhou2025dinowm,
+  title         = {{DINO-WM}: World Models on Pre-trained Visual Features enable Zero-shot Planning},
+  author        = {Zhou, Gaoyue and Pan, Hengkai and LeCun, Yann and Pinto, Lerrel},
+  booktitle     = {Proceedings of the 42nd International Conference on Machine Learning (ICML)},
+  series        = {Proceedings of Machine Learning Research},
+  volume        = {267},
+  pages         = {79115--79135},
+  publisher     = {PMLR},
+  year          = {2025},
+  url           = {https://proceedings.mlr.press/v267/zhou25t.html},
+  eprint        = {2411.04983},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO}
+}
+
+@inproceedings{kim2026cosmospolicy,
+  title         = {Cosmos Policy: Fine-Tuning Video Models for Visuomotor Control and Planning},
+  author        = {Kim, Moo Jin and Gao, Yihuai and Lin, Tsung-Yi and Lin, Yen-Chen and Ge, Yunhao and Lam, Grace and Liang, Percy and Song, Shuran and Liu, Ming-Yu and Finn, Chelsea and Gu, Jinwei},
+  booktitle     = {International Conference on Learning Representations (ICLR)},
+  pages         = {71531--71552},
+  year          = {2026},
+  url           = {https://proceedings.iclr.cc/paper_files/paper/2026/hash/748becc400a57c0e31cfe6a2e7951467-Abstract-Conference.html},
+  eprint        = {2601.16163},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AI}
+}
+
+@misc{xu2026curewm,
+  title         = {World Models Dream of Success: Diagnosing and Repairing Failure Insensitivity in Robot World Models},
+  author        = {Xu, Jiuyi and Hu, Xiao and Chen, Meida and Gao, Peng and Ye, Yang and Shi, Yangming},
+  howpublished  = {arXiv preprint arXiv:2610.09134},
+  year          = {2026},
+  eprint        = {2610.09134},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2610.09134}
+}
+
+@inproceedings{liu2023libero,
+  title         = {{LIBERO}: Benchmarking Knowledge Transfer for Lifelong Robot Learning},
+  author        = {Liu, Bo and Zhu, Yifeng and Gao, Chongkai and Feng, Yihao and Liu, Qiang and Zhu, Yuke and Stone, Peter},
+  booktitle     = {Advances in Neural Information Processing Systems (NeurIPS), Datasets and Benchmarks Track},
+  volume        = {36},
+  pages         = {44776--44791},
+  year          = {2023},
+  doi           = {10.52202/075280-1939},
+  url           = {https://proceedings.neurips.cc/paper_files/paper/2023/hash/8c3c666820ea055a77726d66fc7d447f-Abstract-Datasets_and_Benchmarks.html},
+  eprint        = {2306.03310},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AI}
+}
+
+@inproceedings{chi2023diffusionpolicy,
+  title         = {Diffusion Policy: Visuomotor Policy Learning via Action Diffusion},
+  author        = {Chi, Cheng and Feng, Siyuan and Du, Yilun and Xu, Zhenjia and Cousineau, Eric and Burchfiel, Benjamin CM and Song, Shuran},
+  booktitle     = {Proceedings of Robotics: Science and Systems (RSS)},
+  address       = {Daegu, Republic of Korea},
+  year          = {2023},
+  doi           = {10.15607/RSS.2023.XIX.026},
+  url           = {https://www.roboticsproceedings.org/rss19/p026.html}
+}
+
+@article{chi2025diffusionpolicy,
+  title         = {Diffusion Policy: Visuomotor Policy Learning via Action Diffusion},
+  author        = {Chi, Cheng and Xu, Zhenjia and Feng, Siyuan and Cousineau, Eric and Du, Yilun and Burchfiel, Benjamin and Tedrake, Russ and Song, Shuran},
+  journal       = {The International Journal of Robotics Research},
+  volume        = {44},
+  number        = {10--11},
+  pages         = {1684--1704},
+  year          = {2025},
+  doi           = {10.1177/02783649241273668},
+  eprint        = {2303.04137},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO}
+}
+
+@inproceedings{florence2021ibc,
+  title         = {Implicit Behavioral Cloning},
+  author        = {Florence, Pete and Lynch, Corey and Zeng, Andy and Ramirez, Oscar A. and Wahid, Ayzaan and Downs, Laura and Wong, Adrian and Lee, Johnny and Mordatch, Igor and Tompson, Jonathan},
+  booktitle     = {Proceedings of the 5th Conference on Robot Learning (CoRL 2021)},
+  series        = {Proceedings of Machine Learning Research},
+  volume        = {164},
+  pages         = {158--168},
+  publisher     = {PMLR},
+  year          = {2021},
+  url           = {https://proceedings.mlr.press/v164/florence22a.html},
+  eprint        = {2109.00137},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO}
+}
+
+@article{oquab2024dinov2,
+  title         = {{DINOv2}: Learning Robust Visual Features without Supervision},
+  author        = {Oquab, Maxime and Darcet, Timoth{\'e}e and Moutakanni, Th{\'e}o and Vo, Huy V. and Szafraniec, Marc and Khalidov, Vasil and Fernandez, Pierre and Haziza, Daniel and Massa, Francisco and El-Nouby, Alaaeldin and Assran, Mido and Ballas, Nicolas and Galuba, Wojciech and Howes, Russell and Huang, Po-Yao and Li, Shang-Wen and Misra, Ishan and Rabbat, Michael and Sharma, Vasu and Synnaeve, Gabriel and Xu, Hu and Jegou, Herv{\'e} and Mairal, Julien and Labatut, Patrick and Joulin, Armand and Bojanowski, Piotr},
+  journal       = {Transactions on Machine Learning Research},
+  issn          = {2835-8856},
+  year          = {2024},
+  url           = {https://openreview.net/forum?id=a68SUt6zFt},
+  eprint        = {2304.07193},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV}
+}
+
+@misc{bai2025qwen25vl,
+  title         = {{Qwen2.5-VL} Technical Report},
+  author        = {Bai, Shuai and Chen, Keqin and Liu, Xuejing and Wang, Jialin and Ge, Wenbin and Song, Sibo and Dang, Kai and Wang, Peng and Wang, Shijie and Tang, Jun and Zhong, Humen and Zhu, Yuanzhi and Yang, Mingkun and Li, Zhaohai and Wan, Jianqiang and Wang, Pengfei and Ding, Wei and Fu, Zheren and Xu, Yiheng and Ye, Jiabo and Zhang, Xi and Xie, Tianbao and Cheng, Zesen and Zhang, Hang and Yang, Zhibo and Xu, Haiyang and Lin, Junyang},
+  howpublished  = {arXiv preprint arXiv:2502.13923},
+  year          = {2025},
+  eprint        = {2502.13923},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV},
+  url           = {https://arxiv.org/abs/2502.13923}
+}
+
+@misc{qwen2025qwen25vl32b,
+  title         = {{Qwen2.5-VL-32B-Instruct}},
+  author        = {{Qwen Team}},
+  year          = {2025},
+  howpublished  = {\url{https://huggingface.co/Qwen/Qwen2.5-VL-32B-Instruct}},
+  note          = {Hugging Face model card}
+}
+
+@inproceedings{he2016resnet,
+  title         = {Deep Residual Learning for Image Recognition},
+  author        = {He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
+  booktitle     = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  pages         = {770--778},
+  year          = {2016},
+  doi           = {10.1109/CVPR.2016.90},
+  eprint        = {1512.03385},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV}
+}
+
+@inproceedings{gal2016dropout,
+  title         = {Dropout as a {B}ayesian Approximation: Representing Model Uncertainty in Deep Learning},
+  author        = {Gal, Yarin and Ghahramani, Zoubin},
+  booktitle     = {Proceedings of the 33rd International Conference on Machine Learning (ICML)},
+  series        = {Proceedings of Machine Learning Research},
+  volume        = {48},
+  pages         = {1050--1059},
+  publisher     = {PMLR},
+  year          = {2016},
+  url           = {https://proceedings.mlr.press/v48/gal16.html},
+  eprint        = {1506.02142},
+  archivePrefix = {arXiv},
+  primaryClass  = {stat.ML}
+}
+
+@inproceedings{lakshminarayanan2017deepensembles,
+  title         = {Simple and Scalable Predictive Uncertainty Estimation using Deep Ensembles},
+  author        = {Lakshminarayanan, Balaji and Pritzel, Alexander and Blundell, Charles},
+  booktitle     = {Advances in Neural Information Processing Systems (NeurIPS)},
+  volume        = {30},
+  year          = {2017},
+  url           = {https://proceedings.neurips.cc/paper_files/paper/2017/hash/9ef2ed4b7fd2c810847ffa5fa85bce38-Abstract.html},
+  eprint        = {1612.01474},
+  archivePrefix = {arXiv},
+  primaryClass  = {stat.ML}
+}
+
+@article{holm1979simple,
+  title         = {A Simple Sequentially Rejective Multiple Test Procedure},
+  author        = {Holm, Sture},
+  journal       = {Scandinavian Journal of Statistics},
+  volume        = {6},
+  number        = {2},
+  pages         = {65--70},
+  year          = {1979},
+  url           = {https://www.jstor.org/stable/4615733}
+}
+
+@inproceedings{li2024simpler,
+  title         = {Evaluating Real-World Robot Manipulation Policies in Simulation},
+  author        = {Li, Xuanlin and Hsu, Kyle and Gu, Jiayuan and Mees, Oier and Pertsch, Karl and Walke, Homer Rich and Fu, Chuyuan and Lunawat, Ishikaa and Sieh, Isabel and Kirmani, Sean and Levine, Sergey and Wu, Jiajun and Finn, Chelsea and Su, Hao and Vuong, Quan and Xiao, Ted},
+  booktitle     = {Proceedings of the 8th Conference on Robot Learning (CoRL 2024)},
+  series        = {Proceedings of Machine Learning Research},
+  volume        = {270},
+  pages         = {3705--3728},
+  publisher     = {PMLR},
+  year          = {2024},
+  url           = {https://proceedings.mlr.press/v270/li25c.html},
+  eprint        = {2405.05941},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO}
+}
+
+@inproceedings{cadene2026lerobot,
+  title         = {{LeRobot}: An Open-Source Library for End-to-End Robot Learning},
+  author        = {Cadene, Remi and Alibert, Simon and Capuano, Francesco and Aractingi, Michel and Zouitine, Adil and Kooijmans, Pepijn and Choghari, Jade and Russi, Martino and Pascal, Caroline and Palma, Steven and Aubakirova, Dana and Shukor, Mustafa and Moss, Jess and Soare, Alexander and Lhoest, Quentin and Gallou{\'e}dec, Quentin and Wolf, Thomas},
+  booktitle     = {International Conference on Learning Representations (ICLR)},
+  pages         = {122398--122417},
+  year          = {2026},
+  url           = {https://proceedings.iclr.cc/paper_files/paper/2026/hash/c702175bc31584c52c28cc20731db371-Abstract-Conference.html},
+  eprint        = {2602.22818},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO}
+}
+
+@misc{nvidia2025cosmos,
+  title         = {Cosmos World Foundation Model Platform for Physical {AI}},
+  author        = {{NVIDIA} and Agarwal, Niket and Ali, Arslan and Bala, Maciej and Balaji, Yogesh and Barker, Erik and Cai, Tiffany and Chattopadhyay, Prithvijit and Chen, Yongxin and Cui, Yin and Ding, Yifan and Dworakowski, Daniel and Fan, Jiaojiao and Fenzi, Michele and Ferroni, Francesco and Fidler, Sanja and Fox, Dieter and Ge, Songwei and Ge, Yunhao and Gu, Jinwei and Gururani, Siddharth and He, Ethan and Huang, Jiahui and Huffman, Jacob and Jannaty, Pooya and Jin, Jingyi and Kim, Seung Wook and Kl{\'a}r, Gergely and Lam, Grace and Lan, Shiyi and Leal-Taixe, Laura and Li, Anqi and Li, Zhaoshuo and Lin, Chen-Hsuan and Lin, Tsung-Yi and Ling, Huan and Liu, Ming-Yu and Liu, Xian and Luo, Alice and Ma, Qianli and Mao, Hanzi and Mo, Kaichun and Mousavian, Arsalan and Nah, Seungjun and Niverty, Sriharsha and Page, David and Paschalidou, Despoina and Patel, Zeeshan and Pavao, Lindsey and Ramezanali, Morteza and Reda, Fitsum and Ren, Xiaowei and Sabavat, Vasanth Rao Naik and Schmerling, Ed and Shi, Stella and Stefaniak, Bartosz and Tang, Shitao and Tchapmi, Lyne and Tredak, Przemek and Tseng, Wei-Cheng and Varghese, Jibin and Wang, Hao and Wang, Haoxiang and Wang, Heng and Wang, Ting-Chun and Wei, Fangyin and Wei, Xinyue and Wu, Jay Zhangjie and Xu, Jiashu and Yang, Wei and Yen-Chen, Lin and Zeng, Xiaohui and Zeng, Yu and Zhang, Jing and Zhang, Qinsheng and Zhang, Yuxuan and Zhao, Qingqing and Zolkowski, Artur},
+  howpublished  = {arXiv preprint arXiv:2501.03575},
+  year          = {2025},
+  eprint        = {2501.03575},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV},
+  url           = {https://arxiv.org/abs/2501.03575}
+}
+
+% ==================================================================================================
+% Closest prior work: success-biased imagination, failure data, judges
+% ==================================================================================================
+
+@misc{yang2026mirabench,
+  title         = {{MiraBench}: Evaluating Action-Conditioned Reliability in Robotic World Models},
+  author        = {Yang, Tianzhuo and Shen, Zihan and Mi, Zirui and Zhang, Zhaoyi and Zhou, Jiayi and Ji, Jiaming and Dai, Juntao and Chen, Jiawei and Chen, Boyuan and Yang, Yaodong},
+  howpublished  = {arXiv preprint arXiv:2605.29360},
+  year          = {2026},
+  eprint        = {2605.29360},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AI},
+  url           = {https://arxiv.org/abs/2605.29360}
+}
+
+@misc{liu2026worldvlaloop,
+  title         = {{World-VLA-Loop}: Closed-Loop Learning of Video World Model and {VLA} Policy},
+  author        = {Liu, Xiaokang and Bai, Zechen and Ci, Hai and Ma, Kevin Yuchen and Shou, Mike Zheng},
+  howpublished  = {arXiv preprint arXiv:2602.06508},
+  year          = {2026},
+  eprint        = {2602.06508},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2602.06508}
+}
+
+@misc{tu2026hfwm,
+  title         = {Beyond Successful Robot Demonstrations: Learning from Human Interactions and Modeling Failure Dynamics},
+  author        = {Tu, Peiyan and Wang, Cong and Zhu, Hanxin and Jin, Xin and Chen, Zhibo},
+  howpublished  = {arXiv preprint arXiv:2610.13522},
+  year          = {2026},
+  eprint        = {2610.13522},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2610.13522}
+}
+
+@misc{li2026dreamtrue,
+  title         = {{DreamTrue}: Action-Faithful Robot World Model with Counterfactual Post-Training},
+  author        = {Li, Junyan and Li, Ruizhi and Liu, Yu and Liu, Xiangshuo and Sun, Mingchao and Pan, Hongyu and Xu, Mu and Fan, Lue and Zhang, Zhaoxiang},
+  howpublished  = {arXiv preprint arXiv:2610.12468},
+  year          = {2026},
+  eprint        = {2610.12468},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2610.12468}
+}
+
+@misc{chen2026worldsync,
+  title         = {Do Robotic World Models Really Follow Actions? Diagnosing and Aligning Action-Conditioned Generation for Policy Learning},
+  author        = {Chen, Sixiang and Liu, Jiaming and Wu, Jixian and Guo, Yichen and Wang, Tinghao and Li, QR and Qian, Siyuan and Co, Peterson and Chen, Hao and Cao, Jiajun and Li, Zhoujian and Zhai, Lingfei and Tang, Jian and Zhang, Shanghang},
+  howpublished  = {arXiv preprint arXiv:2608.24885},
+  year          = {2026},
+  eprint        = {2608.24885},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2608.24885}
+}
+
+@misc{pei2026farm,
+  title         = {{FARM}: Reading Failure Signals from the Internal Predictive States of a Frozen Robotic World Model},
+  author        = {Pei, Haoran and Luo, Mingrui and Wang, Senbao and Lv, Haoran and Guo, Jie and Zhong, Sheng and Ci, Ruixi},
+  howpublished  = {arXiv preprint arXiv:2609.11445},
+  year          = {2026},
+  eprint        = {2609.11445},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2609.11445}
+}
+
+@misc{kim2026cag,
+  title         = {Completion Aware Guidance for World Action Models},
+  author        = {Kim, Seungyeon and Lee, Junhoo and Kim, Baekseung and Kim, Minkyu and Kwak, Nojun},
+  howpublished  = {arXiv preprint arXiv:2610.01559},
+  year          = {2026},
+  eprint        = {2610.01559},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2610.01559},
+  note          = {NeurIPS 2026 Workshop on Robot Learning with World Models}
+}
+
+@misc{navasardyan2026failbench,
+  title         = {{FailBench}: How Reliable are {VLMs} at Judging Robot Task Success?},
+  author        = {Navasardyan, Zaruhi and Danielyan, Tatul and Davtyan, Hrant},
+  howpublished  = {arXiv preprint arXiv:2609.03611},
+  year          = {2026},
+  eprint        = {2609.03611},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2609.03611}
+}
+
+@misc{zhang2026foresight,
+  title         = {Foresight: Failure Detection for Long-Horizon Robotic Manipulation with Action-Conditioned World Model Latents},
+  author        = {Zhang, Haoran and Lu, Yifu and Wang, Boyang and Kang, Xuhui and Kuo, Yen-Ling and Cheng, Zezhou and Wang, Mengdi and Jenkins, Odest Chadwicke},
+  howpublished  = {arXiv preprint arXiv:2606.23085},
+  year          = {2026},
+  eprint        = {2606.23085},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2606.23085}
+}
+
+@misc{wan2026nofreechecker,
+  title         = {No Free Checker: A Survey of Verifiers for Robot Policies},
+  author        = {Wan, Yang and Yue, Xihang and Liu, Zhirui and Chu, Ziyuan and Wang, Shuxun and Chen, Yuhan and Jiang, Xiaonan and Zhu, Xukun and Dong, Yubo and Zhu, Linchao},
+  howpublished  = {arXiv preprint arXiv:2609.09250},
+  year          = {2026},
+  eprint        = {2609.09250},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2609.09250}
+}
+
+@misc{duan2026worldoracle,
+  title         = {{WorldOracle}: Benchmarking Action-Conditioned World Models against Real-World Executions},
+  author        = {Duan, Haoyi and Chen, Liliang and Wang, Nan and Zhang, Yang and Lu, Yuhang and Chen, Xiaotong and Tseng, Wei-Cheng and Gao, Shenyuan and Li, Zhaoshuo and Jin, Jingyi and Jannaty, Pooya and Shah, Dhruv and Zhu, Yuke and Liu, Ming-Yu and Yao, Maoqing and Ren, Guanghui},
+  howpublished  = {arXiv preprint arXiv:2610.18826},
+  year          = {2026},
+  eprint        = {2610.18826},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2610.18826}
+}
+
+@inproceedings{peng2026fact,
+  title         = {{FACT}: Failure-Aware Causal Training for World-Action Models},
+  author        = {Peng, Quanquan and Liang, Yutong and Yan, Rui and Hansen, Nicklas and Wang, Xiaolong},
+  booktitle     = {Conference on Robot Learning (CoRL)},
+  year          = {2026},
+  eprint        = {2608.10232},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2608.10232}
+}
+
+@inproceedings{li2026dworldeval,
+  title         = {Scaling Robot Policy Evaluation via Discrete Diffusion World Model},
+  author        = {Li, Yaxuan and Wen, Junjie and Zhou, Zhongyi and Chen, Yefei and Shen, Chaomin and Peng, Yaxin and Zhu, Yichen},
+  booktitle     = {Proceedings of the 43rd International Conference on Machine Learning (ICML)},
+  series        = {Proceedings of Machine Learning Research},
+  volume        = {306},
+  pages         = {71168--71186},
+  publisher     = {PMLR},
+  year          = {2026},
+  url           = {https://proceedings.mlr.press/v306/li26hi.html},
+  eprint        = {2604.22152},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO}
+}
+
+@inproceedings{cao2019ldam,
+  title         = {Learning Imbalanced Datasets with Label-Distribution-Aware Margin Loss},
+  author        = {Cao, Kaidi and Wei, Colin and Gaidon, Adrien and Arechiga, Nikos and Ma, Tengyu},
+  booktitle     = {Advances in Neural Information Processing Systems (NeurIPS)},
+  volume        = {32},
+  year          = {2019},
+  url           = {https://proceedings.neurips.cc/paper_files/paper/2019/hash/621461af90cadfdaf0e8d4cc25129f91-Abstract.html},
+  eprint        = {1906.07413},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG}
+}
+
+% ==================================================================================================
+% World models for policy evaluation and world-model RL
+% ==================================================================================================
+
+@inproceedings{guo2026ctrlworld,
+  title         = {{Ctrl-World}: A Controllable Generative World Model for Robot Manipulation},
+  author        = {Guo, Yanjiang and Shi, Lucy and Chen, Jianyu and Finn, Chelsea},
+  booktitle     = {International Conference on Learning Representations (ICLR)},
+  pages         = {6121--6138},
+  year          = {2026},
+  url           = {https://proceedings.iclr.cc/paper_files/paper/2026/hash/0ae94013da7cd459402fd77874e09ee3-Abstract-Conference.html},
+  eprint        = {2510.10125},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO}
+}
+
+@inproceedings{quevedo2026worldgym,
+  title         = {{WorldGym}: World Model as An Environment for Policy Evaluation},
+  author        = {Quevedo, Julian and Sharma, Ansh Kumar and Sun, Yixiang and Suryavanshi, Varad and Liang, Percy and Yang, Sherry},
+  booktitle     = {International Conference on Learning Representations (ICLR)},
+  pages         = {78932--78957},
+  year          = {2026},
+  url           = {https://proceedings.iclr.cc/paper_files/paper/2026/hash/7f5e909ac0324db03506b380c695ffaf-Abstract-Conference.html},
+  eprint        = {2506.00613},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO}
+}
+
+@inproceedings{gao2026dreamdojo,
+  title         = {{DreamDojo}: A Generalist Robot World Model from Large-Scale Human Videos},
+  author        = {Gao, Shenyuan and Liang, William and Zheng, Kaiyuan and Malik, Ayaan Naveed and Ye, Seonghyeon and Yu, Sihyun and Tseng, Wei-Cheng and Dong, Yuzhu and Mo, Kaichun and Lin, Chen-Hsuan and Xiang, Jiannan and Xie, Yuqi and Zheng, Ruijie and Niu, Dantong and Jannaty, Pooya and Gu, Jinwei and Zhang, Jun and Malik, Jitendra and Abbeel, Pieter and Liu, Ming-Yu and Zhu, Yuke and Jang, Joel and Fan, Linxi},
+  booktitle     = {Proceedings of the 43rd International Conference on Machine Learning (ICML)},
+  series        = {Proceedings of Machine Learning Research},
+  volume        = {306},
+  pages         = {33340--33366},
+  publisher     = {PMLR},
+  year          = {2026},
+  url           = {https://proceedings.mlr.press/v306/gao26q.html},
+  eprint        = {2602.06949},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO}
+}
+
+@inproceedings{zhu2026wmpo,
+  title         = {{WMPO}: World Model-based Policy Optimization for Vision-Language-Action Models},
+  author        = {Zhu, Fangqi and Yan, Zhengyang and Hong, Zicong and Shou, Quanxin and Ma, Xiao and Guo, Song},
+  booktitle     = {International Conference on Learning Representations (ICLR)},
+  pages         = {62486--62502},
+  year          = {2026},
+  url           = {https://proceedings.iclr.cc/paper_files/paper/2026/hash/6605c7d1c1ae1521b328d036df5be1ae-Abstract-Conference.html},
+  eprint        = {2511.09515},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO}
+}
+
+@misc{li2025worldeval,
+  title         = {{WorldEval}: World Model as Real-World Robot Policies Evaluator},
+  author        = {Li, Yaxuan and Zhu, Yichen and Wen, Junjie and Shen, Chaomin and Xu, Yi},
+  howpublished  = {arXiv preprint arXiv:2505.19017},
+  year          = {2025},
+  eprint        = {2505.19017},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2505.19017}
+}
+
+@misc{jeon2026roboworld,
+  title         = {{RoboWorld}: Fast and Reliable Neural Simulators for Generalist Robot Policy Evaluation},
+  author        = {Jeon, Byeongguk and Ye, Seonghyeon and Doo, JaeHyeok and Kim, Sungdong and Seo, Minjoon and Son, Hyungmok and Lee, Kimin},
+  howpublished  = {arXiv preprint arXiv:2607.01060},
+  year          = {2026},
+  eprint        = {2607.01060},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2607.01060}
+}
+
+@misc{geminirobotics2025veo,
+  title         = {Evaluating {Gemini Robotics} Policies in a {Veo} World Simulator},
+  author        = {{Gemini Robotics Team} and Choromanski, Krzysztof and Devin, Coline and Du, Yilun and Dwibedi, Debidatta and Gao, Ruiqi and Jindal, Abhishek and Kipf, Thomas and Kirmani, Sean and Leal, Isabel and Liu, Fangchen and Majumdar, Anirudha and Marmon, Andrew and Parada, Carolina and Rubanova, Yulia and Shah, Dhruv and Sindhwani, Vikas and Tan, Jie and Xia, Fei and Xiao, Ted and Yang, Sherry and Yu, Wenhao and Zhou, Allan},
+  howpublished  = {arXiv preprint arXiv:2512.10675},
+  year          = {2025},
+  eprint        = {2512.10675},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2512.10675}
+}
+
+@misc{gigaworld2026gigaworld1,
+  title         = {{GigaWorld-1}: A Roadmap to Build World Models for Robot Policy Evaluation},
+  author        = {{GigaWorld Team} and Ma, Angyuan and Wang, Boyuan and Li, Bohan and Ni, Chaojun and Li, Guo and Huang, Guan and Zhao, Guosheng and Li, Hao and Li, Hengtao and Liu, Jingyu and Lu, Jiwen and Deng, Qiuping and Yu, Tingdong and Xu, Xuancheng and Zhou, Xinyu and Xu, Xiuwei and Chen, Xinze and Wang, Xiaofeng and Tian, Xiaoyu and Wang, Yang and Chang, Yifan and Zhou, Yukun and Ye, Yun and Wu, Zhenyu and Wu, Zhanqian and Zhu, Zheng},
+  howpublished  = {arXiv preprint arXiv:2607.02642},
+  year          = {2026},
+  eprint        = {2607.02642},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2607.02642}
+}
+
+@misc{wang2026proworld,
+  title         = {{ProWorld}: Multi-View World Model with Proprioceptive Feedback for Closed-Loop Policy Evaluation},
+  author        = {Wang, Zijun and Yan, Tianyi and Lin, Haokun and Hu, Panwen and He, Bohang and Ren, Siyu and Guo, Xiaoyu and Liufu, Weijia and Xue, Shuoshuo and Chen, Fengjiao and Ye, Zipeng and Cao, Xuezhi and Jiang, Zutao and Li, Hanhui and Liang, Xiaodan},
+  howpublished  = {arXiv preprint arXiv:2610.15294},
+  year          = {2026},
+  eprint        = {2610.15294},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2610.15294}
+}
+
+@misc{chen2026hawmpo,
+  title         = {{HaWMPO}: Hallucination-Aware World Model-based Policy Optimization for Generalist Robot Policy},
+  author        = {Chen, Zengjue and Liu, Peidong and Li, Jiawei and Wang, Qi},
+  howpublished  = {arXiv preprint arXiv:2609.09941},
+  year          = {2026},
+  eprint        = {2609.09941},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2609.09941}
+}
+
+@misc{zhou2026wovrplus,
+  title         = {{WoVR+}: World Model as Reliable Simulator for Versatile {VLA} Policy Optimization with {RL}},
+  author        = {Zhou, Shangqing and Jiang, Zhennan and Ma, Ning and Fu, Xin and Zheng, Yupeng and Tian, Shuai and Li, Huangrui and Liu, Jiahao and Yu, Chao and Xia, Zhongpu and Li, Haoran and Zhao, Dongbin},
+  howpublished  = {arXiv preprint arXiv:2610.17922},
+  year          = {2026},
+  eprint        = {2610.17922},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2610.17922}
+}
+
+@inproceedings{jiang2026wovr,
+  title         = {{WoVR}: World Models as Reliable Simulators for Post-Training {VLA} Policies with {RL}},
+  author        = {Jiang, Zhennan and Zhou, Shangqing and Jiang, Yutong and Huang, Zefang and Wei, Mingjie and Chen, Yuhui and Zhou, Tianxing and Guo, Zhen and Lin, Hao and Zhang, Quanlu and Wang, Yu and Li, Haoran and Yu, Chao and Zhao, Dongbin},
+  booktitle     = {Conference on Robot Learning (CoRL)},
+  year          = {2026},
+  eprint        = {2602.13977},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2602.13977}
+}
+
+% ==================================================================================================
+% New related work found in the 2026-09/10 search (see REPORT.md)
+% ==================================================================================================
+
+@misc{zhang2026worldfailbench,
+  title         = {{WorldFailBench}: Do World Models Understand Policy Failures?},
+  author        = {Zhang, Zheng and Tang, Xiaoyang and Cheng, Shuaiqi and Huang, Jiakai and Wu, Zhongbo and Zhang, Ziyi and Si, Yuan and Liu, Zeyu and Gao, Weibo and Liu, Shunyu and You, Shan and Wang, Fei and Wang, Xiaogang and Tao, Dacheng},
+  howpublished  = {arXiv preprint arXiv:2610.33565},
+  year          = {2026},
+  eprint        = {2610.33565},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2610.33565}
+}
+
+@misc{liu2026worldguide,
+  title         = {{WorldGuide}: Learning Success-Failure Boundaries in Latent World Models for Vision-Language-Action Policies},
+  author        = {Liu, Lin and Zhang, Lu and Song, Ziying and Yang, Wu and Zhuang, Yuzheng and Zhuge, Yunzhi and Tao, Shuai and Liu, Wulong and Lu, Huchuan},
+  howpublished  = {arXiv preprint arXiv:2609.34206},
+  year          = {2026},
+  eprint        = {2609.34206},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV},
+  url           = {https://arxiv.org/abs/2609.34206}
+}
+
+@misc{xing2026physcanvas,
+  title         = {Physical Canvas: A Vision Tactile World Model For Robot Policy Evaluation And Learning},
+  author        = {Xing, Zebin and Zheng, Yuhang and Zheng, Yupeng and Zhang, Yichen and Li, Zichen and Zhou, Shangqing and Zang, Yujie and Liu, Yuchen and Xia, Zhongpu and Li, Haoran and Zhang, Qichao},
+  howpublished  = {arXiv preprint arXiv:2610.28613},
+  year          = {2026},
+  eprint        = {2610.28613},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2610.28613}
+}
+
+@misc{fan2026dreamavoid,
+  title         = {{DreamAvoid}: Critical-Phase Test-Time Dreaming to Avoid Failures in {VLA} Policies},
+  author        = {Fan, Xianzhe and Lu, Yuxiang and Gao, Shenyuan and Wu, Xiaoyang and Han, Ruihua and Li, Manling and Zhao, Hengshuang},
+  howpublished  = {arXiv preprint arXiv:2605.11750},
+  year          = {2026},
+  eprint        = {2605.11750},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2605.11750}
+}
+
+@misc{moukheiber2026tempo,
+  title         = {How Long, Not How Close: A Learned Temporal Metric for Planning in Latent World Models},
+  author        = {Moukheiber, Lama and Xue, Haotian and Chen, Yongxin},
+  howpublished  = {arXiv preprint arXiv:2610.04988},
+  year          = {2026},
+  eprint        = {2610.04988},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  url           = {https://arxiv.org/abs/2610.04988}
+}
+
+@misc{cao2026world,
+  title         = {When World Models Lie: Adaptive Safety Analysis Under Wrong Imaginations},
+  author        = {Cao, John and Bansal, Somil},
+  howpublished  = {arXiv preprint arXiv:2609.34300},
+  year          = {2026},
+  eprint        = {2609.34300},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2609.34300}
+}
+
+@inproceedings{kang2026drill,
+  title         = {{DRILL}: Training World Models to Improve Policies, Not Predict Pixels},
+  author        = {Kang, Zhaolu and Luo, Tailong and Wei, Lei and Dong, Guangyuan and Liu, Sihan and He, Yingjie and Wang, Siheng and Li, Shuaibo and Zhang, Rongchao and Tian, Zhen and Xuan, Richeng and Hu, Zhichao},
+  booktitle     = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year          = {2026},
+  eprint        = {2610.30814},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV},
+  url           = {https://arxiv.org/abs/2610.30814}
+}
+
+@misc{alrasheed2026mend,
+  title         = {{MEND}: Label-Free Detection, Localisation, and Correction of Latent Hallucination in World Models},
+  author        = {Alrasheed, Ali J and Parast, Aryan Yazdan and Azam, Basim and Bailey, James and Akhtar, Naveed},
+  howpublished  = {arXiv preprint arXiv:2609.39182},
+  year          = {2026},
+  eprint        = {2609.39182},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV},
+  url           = {https://arxiv.org/abs/2609.39182}
+}
+
+@inproceedings{badithela2026anyrank,
+  title         = {{AnyRank}: Reliable Anytime Policy Ranking via Sequential Testing},
+  author        = {Badithela, Apurva and Snyder, David and Yin, Tenny and Sceats, Jade and Pappas, George and Matni, Nikolai and Itkina, Masha and Nishimura, Haruki and Majumdar, Anirudha},
+  booktitle     = {Conference on Robot Learning (CoRL)},
+  year          = {2026},
+  eprint        = {2610.14603},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2610.14603}
+}
+
+@inproceedings{deng2026robofqe,
+  title         = {{RoboFQE}: Rollout-Free Evaluation of Visual Robot Policies from Offline Trajectories},
+  author        = {Deng, Yunfu and Shin, Sangwoo and Pavse, Brahma S. and Hanna, Josiah P.},
+  booktitle     = {Conference on Robot Learning (CoRL)},
+  year          = {2026},
+  eprint        = {2610.18699},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2610.18699}
+}
+
+@inproceedings{bateman2026aim,
+  title         = {Training Controllable World Models via Action Influence Maximization},
+  author        = {Bateman, Samuel M. and Yin, Tenny and Zheng, Chongyi and Huang, Lei and Wang, Brian and Eysenbach, Benjamin and Fern{\'a}ndez Fisac, Jaime and Shah, Dhruv},
+  booktitle     = {Conference on Robot Learning (CoRL)},
+  year          = {2026},
+  eprint        = {2610.27387},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2610.27387}
+}
+
+@inproceedings{chen2026dls,
+  title         = {Where Success Breaks: Failure-Boundary Learning for Robust Vision-Language-Action Models},
+  author        = {Chen, Yanzhe and Cao, Zhijun and Shou, Mike Zheng},
+  booktitle     = {Conference on Robot Learning (CoRL)},
+  year          = {2026},
+  eprint        = {2609.06114},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2609.06114}
+}
+
+@inproceedings{seo2026stressdream,
+  title         = {{StressDream}: Steering Video World Models for Robust Policy Evaluation and Improvement},
+  author        = {Seo, Junwon and Veer, Sushant and Tian, Ran and Ding, Wenhao and Sharma, Apoorva and Leung, Karen and Schmerling, Edward and Pavone, Marco and Bajcsy, Andrea},
+  booktitle     = {Conference on Robot Learning (CoRL)},
+  year          = {2026},
+  eprint        = {2606.00267},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV},
+  url           = {https://arxiv.org/abs/2606.00267}
+}
+
+@inproceedings{abbas2026predictive,
+  title         = {Predictive Sensitivity Across Contact Transitions in a Video World Model},
+  author        = {Abbas, Mohammed},
+  booktitle     = {NeurIPS 2026 Workshop on Robot Learning with World Models: Capabilities, Frontiers, and Challenges},
+  year          = {2026},
+  url           = {https://neurips.cc/virtual/2026/166153}
+}
+
+@inproceedings{liu2026prediction,
+  title         = {Prediction Fidelity Is Not Decision Fidelity: A Counterfactual Action-Ranking Diagnostic for Robot World Models},
+  author        = {Liu, Haipei and Ren, Xiaoyu and Zhao, Bingyi},
+  booktitle     = {NeurIPS 2026 Workshop on Robot Learning with World Models: Capabilities, Frontiers, and Challenges},
+  year          = {2026},
+  url           = {https://neurips.cc/virtual/2026/166125}
+}
+
+% ==================================================================================================
+% Motivation
+% ==================================================================================================
+
+@misc{cammarata2026neural,
+  title         = {Neural Networks Are Already Clean},
+  author        = {Cammarata, Nick},
+  year          = {2026},
+  howpublished  = {Goodfire research essay, \url{https://already-clean.goodfire.com/}},
+  note          = {Published 2026-10-15}
+}
