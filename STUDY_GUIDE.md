@@ -1161,4 +1161,3 @@ FINAL_B §3.3의 목록이다. 승인된 주장 범위(DESIGN_main §8·§10·§
 - [pilots/R2_4_optimism_bias_mechanism/REPORT.md](pilots/R2_4_optimism_bias_mechanism/REPORT.md), [pilots/R2_6_optimism_consolidation/REPORT.md](pilots/R2_6_optimism_consolidation/REPORT.md): 경계 팽창과 통합 가설.
 - [pilots/R2_11_crushing_world_model/REPORT.md](pilots/R2_11_crushing_world_model/REPORT.md): 손실 단계에서 미세 물리가 사라진다는 기전 후보.
 - [../literature/NOVELTY_R2.md](workspace/literature/NOVELTY_R2.md): §2의 선행연구 표, 공백, 포지셔닝, 피해야 할 주장.
-- [../archive/selection_process/FINAL_IDEAS.md](workspace/archive/selection_process/FINAL_IDEAS.md): 파일럿 22개에서 A·B·C를 고른 과정과 B의 근거(§3).
